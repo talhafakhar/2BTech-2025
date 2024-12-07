@@ -2,7 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  color:white;
-  background: black;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  animation: moveGradient 3s ease infinite;
 }
