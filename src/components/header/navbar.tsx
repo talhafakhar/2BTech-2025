@@ -76,12 +76,12 @@ export const Navbar = () => {
                         </Link>
                         <Link
                             data-track-click="true"
-                            data-track-name="blogs_navbar"
+                            data-track-name="blog_navbar"
                             data-track-hover="true"
-                            href="/blogs"
+                            href="/blog"
                             className="text-base font-medium  hover:text-primary font-bold  px-4 py-2"
                         >
-                            Blogs
+                            Blog
                         </Link>
                     </div>
                     <div className="lg:flex items-center"
