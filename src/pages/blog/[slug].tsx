@@ -7,7 +7,6 @@ import {ArticleJsonLd, NextSeo} from "next-seo";
 
 const BlogDetail = ({blog}: { blog: Blog }) => {
     const router = useRouter();
-    console.log(blog)
     const seoData = blog.dynamic_content?.find((content) => content.__component === 'shared.seo');
     const thumbnail = blog.featured_image?.find((image) => image.formats.thumbnail.url);
     // Fallback page handling
@@ -65,6 +64,7 @@ const BlogDetail = ({blog}: { blog: Blog }) => {
             <ReactMarkdown
                 rehypePlugins={[rehypeRaw]} // Allow raw HTML in Markdown
                 className="prose prose-invert prose-lg max-w-none"
+
             >
                 {blog.content}
             </ReactMarkdown>

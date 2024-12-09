@@ -34,16 +34,22 @@ const BlogList = ({blogs}: { blogs: Blog[] }) => {
             />
             <h1>Blog Listing</h1>
             <ul className="text-white">
-                {blogs.map((blog) => (
+                {blogs.map((blog, index) => (
                     <li key={blog.id}>
                         <Link href={`/blog/${blog.slug}`}>
                             <span>{blog.title}</span>
                             <Image
+                                loading={index < 7 ? 'eager' : 'lazy'}
                                 src={getFullImageUrl(blog.featured_image[0].formats.small.url)}
                                 alt={blog.featured_image[0].alternativeText}
                                 width={200}
                                 height={200}
                             />
+                            {/*image caption*/}
+                            <span>{blog.featured_image[0].caption}</span>
+                            <span>
+                            Published on: {new Date(blog.publishedAt).toDateString()}
+                            </span>
                         </Link>
                     </li>
                 ))}
