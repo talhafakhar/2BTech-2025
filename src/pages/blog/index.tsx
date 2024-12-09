@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {Blog} from "@/interfaces/blog";
 import {NextSeo} from "next-seo";
 import Image from "next/image";
-import {getFullImageUrl} from "@/helpers/helpers";
+import {getFullImageUrl, getImageUrlWithPriority} from "@/helpers/helpers";
 
 const BlogList = ({blogs}: { blogs: Blog[] }) => {
     return (
@@ -40,7 +40,7 @@ const BlogList = ({blogs}: { blogs: Blog[] }) => {
                             <span>{blog.title}</span>
                             <Image
                                 loading={index < 7 ? 'eager' : 'lazy'}
-                                src={getFullImageUrl(blog.featured_image[0].formats.small.url)}
+                                src={getFullImageUrl(getImageUrlWithPriority(blog.featured_image[0].formats))}
                                 alt={blog.featured_image[0].alternativeText}
                                 width={200}
                                 height={200}

@@ -20,14 +20,14 @@ export interface FeaturedImage {
     published_at: string;
 }
 
-interface Formats {
+export interface Formats {
     thumbnail: Format;
     small: Format;
     medium: Format;
     large: Format;
 }
 
-interface Format {
+export interface Format {
     name: string;
     hash: string;
     ext: string;
