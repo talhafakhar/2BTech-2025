@@ -1,0 +1,13 @@
+:global(.swiper-pagination-bullet) {
+    width: 30px !important;
+    height: 4px !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.3s !important;
+}
+
+:global(.swiper-pagination-bullet-active) {
+    opacity: 1 !important;
+    background: blue !important;
+}

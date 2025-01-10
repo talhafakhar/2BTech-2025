@@ -1,101 +1,170 @@
-import {useEffect} from "react";
-import Link from "next/link";
+import {Navbar} from "flowbite-react";
 import Image from "next/image";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleDown, faLongArrowRight} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
-export const Navbar = () => {
-    useEffect(() => {
-    }, []);
+export const Header = () => {
 
     return (
-        <div className="container mx-auto">
-            <header
-                data-track-hover="true"
-                data-track-name="navbar"
-                className="border p-1 mt-4 bg-gradient-to-r from-zinc-300 via-white to-zinc-300 rounded-2xl">
-                <nav className="flex items-center justify-between px-4 lg:px-8">
-                    <div className="flex">
-                        <Link href={"/"}
-                              data-track-click="true"
-                              data-track-name="logo_navbar"
-                              data-track-hover="true"
+        <div>
+            <header className="relative pt-5">
+                <Navbar fluid rounded className="container mx-auto bg-white bg-opacity-5 rounded-xl">
+                    <Navbar.Brand href="#">
+                        <Image
+                            loading="eager"
+                            width={100}
+                            height={100}
+                            src="/assets/svg/2btech_logo.svg"
+                            className="mr-3 h-8 sm:h-11"
+                            alt="2BTech Logo"
+                        />
+                    </Navbar.Brand>
+                    <div className="flex gap-1 md:order-2">
+                        <Link
+                            data-track-click="true"
+                            data-track-name="lets_connect_navbar"
+                            data-track-hover="true"
+                            href="#"
+                            className="bg-gradient-to-r p-2 rounded-md text-white from-blue-500 via-blue-700 to-primary font-bold"
                         >
-                            <Image
-                                alt="Logo"
-                                width={150}
-                                height={50}
-                                src="/assets/2btech_logo.svg"
-                                className="h-14 w-auto"
-                            />
+                            Get Innovate Together
                         </Link>
+                        <Navbar.Toggle
+                            data-track-click="true"
+                            data-track-name="menu_navbar"
+                            data-track-hover="true"
+                            className="text-white hover:bg-transparent"
+                        />
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-2">
-                        <Link
-                            data-track-click="true"
-                            data-track-name="home_navbar"
-                            data-track-hover="true"
-                            href="/"
-                            className="text-base font-medium  hover:text-primary font-bold  px-4 py-2"
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            data-track-click="true"
-                            data-track-name="about_navbar"
-                            data-track-hover="true"
-                            href="/about"
-                            className="text-base font-medium  hover:text-primary font-bold px-4 py-2"
-                        >
-                            About
-                        </Link>
-                        <Link
-                            data-track-click="true"
-                            data-track-name="pricing_navbar"
-                            data-track-hover="true"
-                            href="/pricing"
-                            className="text-base font-medium  hover:text-primary font-bold  px-4 py-2"
-                        >
-                            Pricing
-                        </Link>
-                        <Link
-                            data-track-click="true"
-                            data-track-name="features_navbar"
-                            data-track-hover="true"
-                            href="/features"
-                            className="text-base font-medium  hover:text-primary font-bold  px-4 py-2"
-                        >
-                            Features
-                        </Link>
-                        <Link
-                            data-track-click="true"
-                            data-track-name="use_case_navbar"
-                            data-track-hover="true"
-                            href="/use-case"
-                            className="text-base font-medium hover:text-primary font-bold px-4 py-2"
-                        >
-                            Use Case
-                        </Link>
-                        <Link
-                            data-track-click="true"
-                            data-track-name="blog_navbar"
-                            data-track-hover="true"
-                            href="/blog"
-                            className="text-base font-medium  hover:text-primary font-bold  px-4 py-2"
-                        >
-                            Blog
-                        </Link>
-                    </div>
-                    <div className="lg:flex items-center"
-                         data-track-click="true"
-                         data-track-name="lets_connect_navbar"
-                         data-track-hover="true"
-                    >
-                        <button
-                            className="text-white bg-gradient-to-r from-blue-500 via-blue-700 to-primary font-bold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 animate-gradient-bg">
-                            Let’s Innovate Together
-                        </button>
-                    </div>
-                </nav>
+                    <Navbar.Collapse className="transition-all duration-500">
+                        <div
+                            className="flex flex-col menu md:flex-row items-center justify-center   md:justify-start space-y-2 md:space-y-0 md:space-x-6">
+                            <Navbar.Link className="text-white border-none font-bold" href="/">Home</Navbar.Link>
+                            <div className="border-none font-bold relative group ms-2 md:ms-0">
+                                <div className="text-white hover:text-[#0c728e] flex items-center gap-2 cursor-pointer">
+                                    Development
+                                    <FontAwesomeIcon icon={faAngleDown}/>
+                                </div>
+                                <div
+                                    className="absolute top-12 left-1/2 transform -translate-x-1/2 p-4 bg-white cursor-pointer shadow-xl rounded-lg w-full md:w-72 max-w-md z-[99] opacity-0 translate-y-[-10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out"
+                                >
+                                    <p className="text-gray-600 text-sm mb-4 leading-relaxed tracking-wide">
+                                        We build secure, user-friendly software tailored to your business and
+                                        users&#39; needs
+                                    </p>
+                                    <ul className="grid grid-cols-2 gap-4 text-lg font-bold text-gray-800">
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+                                            <FontAwesomeIcon
+                                                icon={faLongArrowRight}
+                                                className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>Website</span>
+                                        </li>
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+                                            <FontAwesomeIcon
+                                                icon={faLongArrowRight}
+                                                className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>CMS</span>
+                                        </li>
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+                                            <FontAwesomeIcon
+                                                icon={faLongArrowRight}
+                                                className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>CRM</span>
+                                        </li>
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+                                            <FontAwesomeIcon
+                                                icon={faLongArrowRight}
+                                                className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>ERP</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="border-none font-bold relative group ms-2 md:ms-0">
+                                <div className="text-white hover:text-[#0c728e] flex items-center gap-2 cursor-pointer">
+                                    Marketing
+                                    <FontAwesomeIcon icon={faAngleDown}/>
+                                </div>
+                                <div
+                                    className="absolute top-12 left-1/2 transform -translate-x-1/2 p-4 bg-white cursor-pointer shadow-xl rounded-lg w-full md:w-72 max-w-md z-[99] opacity-0 translate-y-[-10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out"
+                                >
+                                    <p className="text-gray-600 text-sm mb-4 leading-relaxed tracking-wide">
+                                        We’ll help your business generate long-term value with our full-stack
+                                        digital marketing services.
+                                    </p>
+                                    <ul className="grid grid-cols-2 gap-4 text-lg font-bold ">
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+
+                                            <FontAwesomeIcon icon={faLongArrowRight}
+                                                             className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>SMM</span>
+                                        </li>
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+
+                                            <FontAwesomeIcon icon={faLongArrowRight}
+                                                             className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>SEO</span>
+                                        </li>
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+
+                                            <FontAwesomeIcon icon={faLongArrowRight}
+                                                             className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>PPC</span>
+                                        </li>
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+
+                                            <FontAwesomeIcon icon={faLongArrowRight}
+                                                             className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>Email</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="border-none font-bold relative group ms-2 md:ms-0">
+                                <div className="text-white hover:text-[#0c728e] flex items-center gap-2 cursor-pointer">
+                                    Design
+                                    <FontAwesomeIcon icon={faAngleDown}/>
+                                </div>
+                                <div
+                                    className="absolute top-12 left-1/2 transform -translate-x-1/2 p-4 bg-white cursor-pointer shadow-xl rounded-lg w-full md:w-72 max-w-md z-[99] opacity-0 translate-y-[-10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out"
+                                >
+                                    <p className="text-gray-600 text-sm mb-4 leading-relaxed tracking-wide">
+                                        We design your product, brand & services to enhance visual communication for
+                                        effective promotion.
+                                    </p>
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg font-bold">
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+                                            <FontAwesomeIcon icon={faLongArrowRight}
+                                                             className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>UI/UX</span>
+                                        </li>
+                                        <li className="flex items-center group-hover:scale-105 hover:text-blue-500 transition-all duration-300">
+
+                                            <FontAwesomeIcon icon={faLongArrowRight}
+                                                             className="text-blue-500 text-lg mr-2 group-hover:rotate-45 transition-all duration-300"
+                                            />
+                                            <span>Visual Design</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <Navbar.Link href="/blog" className="text-white border-none font-bold">Blog</Navbar.Link>
+                            <Navbar.Link className="text-white border-none font-bold" href="/about">About</Navbar.Link>
+                        </div>
+                    </Navbar.Collapse>
+                </Navbar>
             </header>
         </div>
+
     );
-}
+};

@@ -4,7 +4,6 @@ import {Blog} from "@/interfaces/blog";
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from "rehype-raw";
 import {ArticleJsonLd, NextSeo} from "next-seo";
-
 const BlogDetail = ({blog}: { blog: Blog }) => {
     const router = useRouter();
     const seoData = blog.dynamic_content?.find((content) => content.__component === 'shared.seo');
@@ -82,7 +81,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     });
     const data = await res.json();
 
-    const paths = data.data.map((blog: Blog) => ({
+    const paths = data.data?.map((blog: Blog) => ({
         params: {slug: blog.slug},
     }));
 
