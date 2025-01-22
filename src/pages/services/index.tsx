@@ -1,3 +1,4 @@
+"use client";
 import {Header} from "@/components/header/navbar";
 import {Footer} from "@/components/footer/footer";
 import {HaveQuestion} from "@/components/sections/HaveQuestion";

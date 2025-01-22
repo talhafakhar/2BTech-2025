@@ -1,3 +1,4 @@
+"use client";
 import {FAQPageJsonLd, NextSeo, OrganizationJsonLd, WebPageJsonLd} from 'next-seo';
 import {Header} from "@/components/header/navbar";
 import Link from "next/link";
