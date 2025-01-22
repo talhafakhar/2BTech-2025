@@ -19,7 +19,7 @@ export function DiscoveryCall() {
                     className="absolute inset-0 bg-black bg-opacity-50 z-0"
                 ></div>
 
-                <h2 className='text-white text-4xl py-5 font-bold w-full md:max-w-3xl px-2 border-l-[10px] relative z-10'>
+                <h2 className='text-white leading-1 text-4xl py-5 font-bold w-full md:max-w-3xl px-2 border-l-[10px] relative z-10'>
                     Your Partner In Providing Full-Fledged
                     <span
                         className='bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent'> Website Development Solutions</span>

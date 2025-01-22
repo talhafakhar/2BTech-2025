@@ -58,9 +58,6 @@ export function YourPartner() {
                             <div className="mt-4 flex justify-center md:justify-start">
                                 <Link
                                     href="#"
-                                    data-track-name='your_partner_free_consultation'
-                                    data-track-hover="true"
-                                    data-track-click="true"
                                     className="group bg-black flex gap-2 items-center text-white border border-white px-4 py-2 rounded-lg uppercase font-bold transition-all duration-300 hover:bg-white hover:text-black"
                                 >
                                     Free Consultation

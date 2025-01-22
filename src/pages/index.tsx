@@ -150,7 +150,7 @@ export default function Home() {
                             <Link href="/services"
                                   className="bg-white transition duration-200 hover:bg-gray-200 text-black font-medium py-3 px-4 rounded">Estimate
                                 Project</Link>
-                            <Link href='/services' data-track-hover="true"
+                            <Link href='#'
                                   className="flex items-center rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-white hover:bg-white hover:bg-opacity-5">
                                 Our Blogs
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"

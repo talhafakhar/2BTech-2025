@@ -60,16 +60,6 @@ export function ServicesSolution() {
             icon: "/assets/svg/about/outsourcing.svg",
         },
     ];
-
-    function pushToDataLayer(currentSlide: number, event: string) {
-        window.dataLayer.push({
-            event: event,
-            name: slidesData[currentSlide],
-            page_url: window.location.href,
-            timestamp: new Date().toISOString(),
-        });
-    }
-
     return (
         <section className="text-white flex flex-col justify-center mt-10">
             <div className="px-1">
@@ -83,29 +73,18 @@ export function ServicesSolution() {
                 <div className="h-[81vh] sm:h-[75vh] md:h-[70vh] lg:h-[40vh] mx-auto overflow-hidden">
                     <Swiper
                         direction={"vertical"}
-
                         mousewheel={{
                             forceToAxis: true,
                             releaseOnEdges: true,
                         }}
                         modules={[Mousewheel]}
-                        onSlideChange={(data) => {
-                            pushToDataLayer(data.realIndex, 'service_solution_slider_change');
-                        }}
                         className="h-full"
 
                     >
                         {slidesData.map((slide, index) => (
-                            <SwiperSlide
-                                key={index}
-                                className="rounded-2xl flex items-center justify-center p-4 pt-5 max-w-4xl mx-auto bg-gray-800"
-                            >
-                                <div
-                                    data-track-name="solution_services_slider"
-                                    data-track-hover="true"
-                                    data-track-label={slidesData[index]}
-                                    data-track-click="true"
-                                    className="px-6 flex flex-col lg:flex-row items-center gap-10">
+                            <SwiperSlide key={index}
+                                         className="rounded-2xl flex items-center justify-center p-4 pt-5 max-w-4xl mx-auto bg-gray-800">
+                                <div className="px-6 flex flex-col lg:flex-row items-center gap-10">
                                     <div className="lg:w-1/2">
                                         <h2 className="text-2xl font-bold text-white flex items-center gap-2">
                                             <Image width={40} height={40} src={slide.icon} alt={slide.title}/>

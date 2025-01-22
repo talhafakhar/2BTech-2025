@@ -5,7 +5,7 @@ import {faChevronRight} from "@fortawesome/free-solid-svg-icons";
 export function OtherServices() {
 
     return (
-        <div className='container mx-auto py-4 relative z-10'>
+        <div className='container mx-auto my-10 py-4 relative z-10'>
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between px-6">
                 {/* Left Section */}
                 <div className="lg:w-2/3 space-y-6 max-w-4xl">
@@ -24,7 +24,6 @@ export function OtherServices() {
                         to meet your unique needs.
                     </p>
                 </div>
-
                 {/* Right Section */}
                 <div className="lg:w-1/3 mt-10 lg:mt-0 mx-auto
                  bg-white bg-opacity-10 border-t-[10px] border-b-[10px] border-primary  p-6">

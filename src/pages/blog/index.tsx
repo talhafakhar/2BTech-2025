@@ -35,6 +35,7 @@ const BlogList = ({blogs}: { blogs: Blog[] }) => {
             <h1>Blog Listing</h1>
             <ul className="text-white">
                 {blogs.map((blog, index) => (
+
                     <li key={blog.id}>
                         <Link href={`/blog/${blog.slug}`}>
                             <span>{blog.title}</span>
@@ -59,7 +60,6 @@ const BlogList = ({blogs}: { blogs: Blog[] }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-    // Fetch blogs from the Strapi API
     const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/blogs?populate=*`, {
         headers: {
             'Content-Type': 'application/json',
@@ -67,12 +67,11 @@ export const getStaticProps: GetStaticProps = async () => {
         }
     });
     const data = await res.json();
-
     return {
         props: {
             blogs: data.data.map((item: Blog) => item),
         },
-        revalidate: 60, // Revalidate every 60 seconds
+        revalidate: 60,
     };
 };
 

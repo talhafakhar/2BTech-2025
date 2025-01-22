@@ -78,8 +78,7 @@ export function WorkFlow() {
             whileInView="visible"
             viewport={{once: false}}
         >
-            <div className="container mx-auto mt-20 px-5 text-white" data-track-name="work_flow_section"
-                 data-track-hover="true">
+            <div className="container mx-auto mt-20 px-5 text-white">
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-20">
                     <div className="flex flex-col justify-start lg:w-1/2">
                         <h2 className="shadow-white bg-text uppercase bg-clip-text text-transparent bg-[url('/assets/svg/text-bg.svg')]">

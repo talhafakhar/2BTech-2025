@@ -20,8 +20,7 @@ export function ReliableBusiness() {
     }
 
     return (
-        <div className="container mx-auto pt-10 mt-10 border-t-2 px-4" data-track-name="reliable_business_section"
-             data-track-hover="true">
+        <div className="container mx-auto pt-10 mt-10 border-t-2 px-4">
             <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-0">
                 <div className="flex flex-col gap-4 w-full m-1">
                     <div className="flex flex-col gap-2">

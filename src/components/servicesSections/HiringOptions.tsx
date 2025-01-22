@@ -1,9 +1,8 @@
 import React from "react";
 import {motion} from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
-export function StaffAugmentation() {
+export function HiringOptions() {
     const svgFromLeft = {
         hidden: {opacity: 0, x: -100},
         visible: (index: number) => ({
@@ -31,16 +30,14 @@ export function StaffAugmentation() {
             <div className="container mx-auto pt-10 mt-10 border-t-2 px-4">
                 <div className="flex flex-col items-center text-center">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                        Hire As You Please Using{" "}
-                        <span
-                            className="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-                Our Engagement Models
-            </span>
+                        Our Custom Web Developments Services{" "}
                     </h2>
+                    <span
+                        className="bg-gradient-to-r text-3xl sm:text-4xl font-bold from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+                Hiring Options
+            </span>
                     <p className="text-gray-300 mt-4 max-w-3xl text-base sm:text-lg">
-                        2BTech is your IT services partner in third-party outsourcing and IT staff augmentation
-                        services. We are one of the rare Business IT solutions company that is currently offering 2
-                        hiring models for you to choose from:
+                        You can use the following options to hire our custom web development services:
                     </p>
                 </div>
                 <div className="flex flex-col gap-10 lg:flex-row justify-between items-center mt-10">
@@ -53,7 +50,7 @@ export function StaffAugmentation() {
                     >
                         <div className="mb-8 lg:mb-0">
                             <Image
-                                src="/assets/svg/staffAugmentation.svg"
+                                src="/assets/svg/service/coding.svg"
                                 alt="staff augmentation"
                                 width={400}
                                 height={100}
@@ -110,21 +107,6 @@ export function StaffAugmentation() {
                                         within a specific time frame and an already set budget. </p>
                                 </div>
                             </div>
-                        </div>
-                        <div className='mt-5 flex justify-center md:justify-start'>
-                            <Link
-                                className="text-white bg-black flex gap-1 rounded-md border p-2 uppercase font-bold group duration-300 hover:bg-white hover:text-black transition-all "
-                                href="#"
-                            >
-                                Get in Touch
-                                <Image
-                                    src={'/assets/svg/contact.svg'}
-                                    width={25}
-                                    height={25}
-                                    className='transition-all duration-300 group-hover:filter group-hover:invert'
-                                    alt='arrow to button'
-                                />
-                            </Link>
                         </div>
                     </motion.div>
                 </div>

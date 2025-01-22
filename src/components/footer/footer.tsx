@@ -22,9 +22,6 @@ export function Footer() {
                         <p className="text-white font-bold">Follow Us:</p>
                         <Link
                             href="#"
-                            data-track-name="footer_facebook"
-                            data-track-click="true"
-                            data-track-hover="true"
                             aria-label="Visit our Facebook page"
                             className="bg-white px-2 py-1 rounded-full transition-transform transform hover:scale-[2] duration-300"
                         >
@@ -35,9 +32,6 @@ export function Footer() {
                         </Link>
                         <Link
                             href="#"
-                            data-track-name="footer_instagram"
-                            data-track-click="true"
-                            data-track-hover="true"
                             aria-label="Visit our Instagram profile"
                             className="bg-white px-2 py-1 rounded-full transition-transform transform hover:scale-[2] duration-300"
                         >
@@ -48,9 +42,6 @@ export function Footer() {
                         </Link>
                         <Link
                             href="#"
-                            data-track-name="footer_linkedin"
-                            data-track-click="true"
-                            data-track-hover="true"
                             aria-label="Visit our LinkedIn profile"
                             className="bg-white px-2 py-1 rounded-full transition-transform transform hover:scale-[2] duration-300"
                         >
@@ -61,9 +52,6 @@ export function Footer() {
                         </Link>
                         <Link
                             href="#"
-                            data-track-name="footer_twitter"
-                            data-track-click="true"
-                            data-track-hover="true"
                             aria-label="Visit our Twitter profile"
                             className="bg-white px-2 py-1 rounded-full transition-transform transform hover:scale-[2] duration-300"
                         >
@@ -74,9 +62,6 @@ export function Footer() {
                         </Link>
                         <Link
                             href="#"
-                            data-track-name="footer_google"
-                            data-track-click="true"
-                            data-track-hover="true"
                             aria-label="Visit our Google profile"
                             className="bg-white px-2 py-1 rounded-full transition-transform transform hover:scale-[2] duration-300"
                         >

@@ -1,12 +1,16 @@
 import {Header} from "@/components/header/navbar";
 import {Footer} from "@/components/footer/footer";
 import {HaveQuestion} from "@/components/sections/HaveQuestion";
-import {Review} from "@/components/sections/Review";
 import Image from "next/image";
 import React from "react";
 import {Brands} from "@/components/aboutSections/HorizontalScroll";
 import {OtherServices} from "@/components/servicesSections/OtherServices";
 import {DiscoveryCall} from "@/components/servicesSections/YourParter";
+import {ServicesCards} from "@/components/servicesSections/ServicesCards";
+import {WhyChoice} from "@/components/servicesSections/WhyChoice";
+import {HiringOptions} from "@/components/servicesSections/HiringOptions";
+import {Missing} from "@/components/servicesSections/Missing";
+import {BlogCards} from "@/components/servicesSections/BlogCards";
 
 
 export default function Services() {
@@ -21,11 +25,9 @@ export default function Services() {
                             {/* Left Section */}
                             <div className="text-center lg:text-left mb-8 lg:mb-0 lg:pr-10">
                                 <h1 style={{lineHeight: '1.2'}}
-                                    className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-relaxed">
-                                    Custom{" "}
+                                    className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Custom{" "}
                                     <span
-                                        className="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Web Development</span>{" "}
-                                    <br/>
+                                        className="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Web Development</span>{" "}<br/>
                                     Services to Boost Your{" "}<br/>
                                     <span
                                         className="bg-gradient-to-r  from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Brand Impact!</span>
@@ -51,69 +53,70 @@ export default function Services() {
                                     Speak to a digital advisor today to discuss the type of 2BTech’s custom web
                                     development services will suit you best.
                                 </p>
-                                {/*<form className="space-y-8 mt-5">*/}
-                                {/*    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">*/}
-                                {/*        <div>*/}
-                                {/*            <label htmlFor='name'*/}
-                                {/*                   className="block font-semibold text-white">Name</label>*/}
-                                {/*            <input*/}
-                                {/*                type="text"*/}
-                                {/*                id='name'*/}
-                                {/*                placeholder="Enter Name"*/}
-                                {/*                className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"*/}
-                                {/*            />*/}
-                                {/*        </div>*/}
-                                {/*        <div>*/}
-                                {/*            <label htmlFor='email' className="block font-semibold text-white">Email*/}
-                                {/*                Address</label>*/}
-                                {/*            <input*/}
-                                {/*                id='email'*/}
-                                {/*                type="email"*/}
-                                {/*                placeholder="Enter email address"*/}
-                                {/*                className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"*/}
-                                {/*            />*/}
-                                {/*        </div>*/}
-                                {/*    </div>*/}
-                                {/*    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">*/}
-                                {/*        <div>*/}
-                                {/*            <label htmlFor='phone' className="block font-semibold text-white">Phone*/}
-                                {/*                Number</label>*/}
-                                {/*            <input*/}
-                                {/*                type="tel"*/}
-                                {/*                id='phone'*/}
-                                {/*                placeholder="Enter your phone number"*/}
-                                {/*                className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"*/}
-                                {/*            />*/}
-                                {/*        </div>*/}
-                                {/*        <div>*/}
-                                {/*            <label htmlFor='subject'*/}
-                                {/*                   className="block font-semibold text-white">Business Name</label>*/}
-                                {/*            <input*/}
-                                {/*                type="text"*/}
-                                {/*                id='subject'*/}
-                                {/*                placeholder="Business Name"*/}
-                                {/*                className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"*/}
-                                {/*            />*/}
-                                {/*        </div>*/}
-                                {/*    </div>*/}
-                                {/*    <div>*/}
-                                {/*        <label htmlFor='massege' className="block text-white font-semibold">What do you want to achieve?</label>*/}
-                                {/*        <textarea*/}
-                                {/*            rows={4}*/}
-                                {/*            id='massege'*/}
-                                {/*            placeholder='What do you want to achieve?'*/}
-                                {/*            className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"*/}
-                                {/*        ></textarea>*/}
-                                {/*    </div>*/}
-                                {/*    <div className="text-center">*/}
-                                {/*        <button*/}
-                                {/*            type="submit"*/}
-                                {/*            className="border w-full text-white py-2 px-6 rounded-md font-semibold uppercase transition"*/}
-                                {/*        >*/}
-                                {/*            Get a free estimate*/}
-                                {/*        </button>*/}
-                                {/*    </div>*/}
-                                {/*</form>*/}
+                                <form className="space-y-8 mt-5">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label htmlFor='name'
+                                                   className="block font-semibold text-white">Name</label>
+                                            <input
+                                                type="text"
+                                                id='name'
+                                                placeholder="Enter Name"
+                                                className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label htmlFor='email' className="block font-semibold text-white">Email
+                                                Address</label>
+                                            <input
+                                                id='email'
+                                                type="email"
+                                                placeholder="Enter email address"
+                                                className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label htmlFor='phone' className="block font-semibold text-white">Phone
+                                                Number</label>
+                                            <input
+                                                type="tel"
+                                                id='phone'
+                                                placeholder="Enter your phone number"
+                                                className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label htmlFor='subject'
+                                                   className="block font-semibold text-white">Business Name</label>
+                                            <input
+                                                type="text"
+                                                id='subject'
+                                                placeholder="Business Name"
+                                                className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label htmlFor='massege' className="block text-white font-semibold">What do you
+                                            want to achieve?</label>
+                                        <textarea
+                                            rows={4}
+                                            id='massege'
+                                            placeholder='What do you want to achieve?'
+                                            className="w-full border rounded-md p-2 focus:ring-2 focus:ring-blue-500"
+                                        ></textarea>
+                                    </div>
+                                    <div className="text-center">
+                                        <button
+                                            type="submit"
+                                            className="border w-full text-white py-2 px-6 rounded-md font-semibold uppercase transition"
+                                        >
+                                            Get a free estimate
+                                        </button>
+                                    </div>
+                                </form>
 
                             </div>
                         </div>
@@ -123,7 +126,11 @@ export default function Services() {
             <Brands/>
             <OtherServices/>
             <DiscoveryCall/>
-            <Review/>
+            <ServicesCards/>
+            <WhyChoice/>
+            <Missing/>
+            <HiringOptions/>
+            <BlogCards/>
             <HaveQuestion/>
             <Footer/>
         </>

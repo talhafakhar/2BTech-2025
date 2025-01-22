@@ -46,19 +46,10 @@ export function Review() {
         },
     ];
 
-    function pushToDataLayer(currentSlide: number, event: string) {
-        window.dataLayer.push({
-            event: event,
-            name: testimonials[currentSlide],
-            page_url: window.location.href,
-            timestamp: new Date().toISOString(),
-        });
-    }
 
     return (
         <div className='m-2'>
-            <div className="container mx-auto mt-7 border rounded-2xl" data-track-name="review_section"
-                 data-track-hover="true">
+            <div className="container mx-auto mt-7 border rounded-2xl">
                 <div className="flex flex-col items-center p-5 text-center">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">What{" "}<span
                         className="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Clients Say</span>{" "} About
@@ -76,9 +67,6 @@ export function Review() {
                         navigation
                         centeredSlides={true}
                         loop={true}
-                        onSlideChange={(data) => {
-                            pushToDataLayer(data.realIndex, 'review_slider_change')
-                        }}
                         className="testimonial-swiper"
                         breakpoints={{
                             320: {
@@ -98,10 +86,6 @@ export function Review() {
                         {testimonials.map((testimonial, index) => (
                             <SwiperSlide key={index}>
                                 <div
-                                    data-track-name='review_slider'
-                                    data-track-hover="true"
-                                    data-track-label={testimonials[index]}
-                                    data-track-click="true"
                                     className="bg-gray-800  cursor-grab text-white max-w-md w-full sm:w-96 h-auto rounded-lg p-6 mx-auto flex flex-col">
                                     <div
                                         className="flex flex-col sm:flex-row items-center sm:justify-between gap-4 sm:gap-10">
