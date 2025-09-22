@@ -168,7 +168,7 @@ export default function Home({initialBlogs}: Props) {
             <Banner
                 title="Ready to Elevate Your Brand? Let's Talk!"
                 description="Schedule a free discovery call today and take the first step towards transforming your brand with us."
-                src="/assets/Home/banner-bg.webp"
+                src="/assets/Home/banner-bg.svg"
             />
             <ClutchReviews/>
             <IndustrySectors/>

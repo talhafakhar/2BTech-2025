@@ -109,7 +109,7 @@ export default function AiMvpDevelopment() {
                 heading="OUR AI MVP DEVELOPMENT SERVICES"
                 subHeading="From Idea to Prototype, Fast"
                 description="Our AI MVP services are designed to bring your concepts to life quickly, with a focus on usability, scalability, and validation."
-                arrowImage="/assets/services/down-arrow.webp"
+                arrowImage="/assets/services/down-arrow.svg"
                 services={[
                     {
                         id: 1,

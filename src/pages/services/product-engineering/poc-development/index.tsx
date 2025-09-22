@@ -97,7 +97,7 @@ export default function PocDevelopment() {
                 heading="TYPES OF POC DEVELOPMENT SERVICES"
                 subHeading="From Concept to Validation"
                 description="Accelerate innovation and validate your ideas with 2BTech’s POC Development Services. Our expert team helps startups and enterprises design, build, and test proof of concepts to reduce risks and set the stage for future growth."
-                arrowImage="/assets/services/down-arrow.webp"
+                arrowImage="/assets/services/down-arrow.svg"
                 services={[
                     {
                         id: 1,

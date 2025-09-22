@@ -10,52 +10,54 @@ interface Sector {
 }
 const sectors: Sector[] = [
     {
-        id: 'fintech',
-        title: 'Fintech',
-        description: 'Build secure, compliant financial applications that evolve with market trends, integrate with modern banking APIs, ensure seamless transactions, and offer predictive insights for smarter financial decisions.',
-        imageUrl: '/assets/Home/slide-1.webp',
-    },
-    {
-        id: 'healthtech',
-        title: 'Healthtech',
-        description: 'Deliver patient-centric healthcare platforms leveraging AI and advanced data insights, enabling personalized treatment plans, remote monitoring, telemedicine, and seamless integration with hospital systems.',
-        imageUrl: '/assets/Home/slide-2.webp',
-    },
-    {
-        id: 'saas',
-        title: 'SaaS',
-        description: 'Develop subscription-first software solutions with scalable backend architecture, real-time analytics, cloud infrastructure, and intuitive user interfaces designed to enhance productivity and customer retention.',
-        imageUrl: '/assets/Home/slide-3.webp',
-    },
-    {
-        id: 'retail-tech',
-        title: 'Retail Tech',
-        description: 'Enhance omnichannel digital experiences with intelligent inventory management, AI-driven personalization, seamless checkout flows, and analytics-driven marketing strategies for a smarter retail ecosystem.',
-        imageUrl: '/assets/Home/slide-4.webp',
-    },
-    {
-        id: 'ecommerce',
-        title: 'Ecommerce',
-        description: 'Create high-performance ecommerce platforms optimized for conversions, fast load times, secure payments, scalable architecture, and AI-powered product recommendations that drive revenue growth and customer engagement.',
-        imageUrl: '/assets/Home/slide-5.webp',
+        id: 'ai-as-a-service',
+        title: 'AI as a Service',
+        description: 'Productize AI capabilities with robust APIs, scalable infrastructure, automated workflows, and advanced machine learning models to integrate intelligent solutions into enterprise systems seamlessly.',
+        imageUrl: '/assets/Home/slide-1.svg',
     },
     {
         id: 'edtech',
         title: 'Edtech',
         description: 'Build engaging, AI-enhanced learning platforms with interactive lessons, personalized learning paths, gamification, and analytics-driven insights to boost knowledge retention and learner engagement.',
-        imageUrl: '/assets/Home/slide-6.webp',
+        imageUrl: '/assets/Home/slide-2.svg',
+    },
+    {
+        id: 'ecommerce',
+        title: 'Ecommerce',
+        description: 'Create high-performance ecommerce platforms optimized for conversions, fast load times, secure payments, scalable architecture, and AI-powered product recommendations that drive revenue growth and customer engagement.',
+       imageUrl: '/assets/Home/slide-3.svg',
+    },
+    {
+        id: 'retail-tech',
+        title: 'Retail Tech',
+        description: 'Enhance omnichannel digital experiences with intelligent inventory management, AI-driven personalization, seamless checkout flows, and analytics-driven marketing strategies for a smarter retail ecosystem.',
+        imageUrl: '/assets/Home/slide-4.svg',
+    },
+    {
+        id: 'saas',
+        title: 'SaaS',
+        description: 'Develop subscription-first software solutions with scalable backend architecture, real-time analytics, cloud infrastructure, and intuitive user interfaces designed to enhance productivity and customer retention.',
+
+        imageUrl: '/assets/Home/slide-5.svg',
     },
     {
         id: 'agritech',
         title: 'Agritech',
         description: 'Digitize farm-to-fork operations using cloud, IoT, and mobile solutions, enabling real-time monitoring, predictive crop analytics, supply chain optimization, and improved agricultural efficiency.',
-        imageUrl: '/assets/Home/slide-7.webp',
+        imageUrl: '/assets/Home/slide-6.svg',
     },
     {
-        id: 'ai-as-a-service',
-        title: 'AI as a Service',
-        description: 'Productize AI capabilities with robust APIs, scalable infrastructure, automated workflows, and advanced machine learning models to integrate intelligent solutions into enterprise systems seamlessly.',
-        imageUrl: '/assets/Home/slide-8.webp',
+        id: 'healthtech',
+        title: 'Healthtech',
+        description: 'Deliver patient-centric healthcare platforms leveraging AI and advanced data insights, enabling personalized treatment plans, remote monitoring, telemedicine, and seamless integration with hospital systems.',
+
+        imageUrl: '/assets/Home/slide-7.svg',
+    },
+    {
+        id: 'fintech',
+        title: 'Fintech',
+        description: 'Build secure, compliant financial applications that evolve with market trends, integrate with modern banking APIs, ensure seamless transactions, and offer predictive insights for smarter financial decisions.',
+        imageUrl: '/assets/Home/slide-8.svg',
     },
 ];
 
@@ -146,7 +148,7 @@ const IndustrySectors: React.FC = () => {
                 </div>
                 <div className="text-center mt-16">
                     <button className="inline-flex items-center border-black px-8 py-3 rounded border font-semibold   transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                        Explore Industry Use Cases
+                        Explore Our Services
                         <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>

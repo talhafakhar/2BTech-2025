@@ -158,7 +158,7 @@ const BlogNavbar: React.FC = () => {
                         <Link href="/our-work"
                               className={` flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200 text-black hover:text-secondary   after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
     after:w-0 after:transition-all after:duration-300 hover:after:w-full`}>
-                            <span className="font-medium">Case Studies</span>
+                            <span className="font-medium">Our Work</span>
                         </Link>
                         <Link href="/blogs"
                               className={` flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200 text-black hover:text-secondary   after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current

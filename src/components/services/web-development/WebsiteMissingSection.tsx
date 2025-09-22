@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import Image from "next/image";
 
 const WebsiteMissingSection = () => {
-    const missingElements = [
+    const missingElementsOne = [
         {
             title: "Speed That Converts",
             problem: "Your visitors leave in 3 seconds",
@@ -25,6 +25,8 @@ const WebsiteMissingSection = () => {
             color: "text-green-500",
             gradient: "from-green-400/20 to-teal-400/20"
         },
+    ];
+    const missingElementsTwo = [
         {
             title: "User Connection",
             problem: "Visitors don't engage or convert",
@@ -51,10 +53,8 @@ const WebsiteMissingSection = () => {
     return (
         <div className="relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <div
-                    className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
-                <div
-                    className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
+                <div className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
             </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
                 <div className="text-center mb-14">
@@ -66,12 +66,22 @@ const WebsiteMissingSection = () => {
                     </h3>
                     <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
                         Many websites miss critical elements that drive traffic, engage visitors, and convert leads.
-                        Here are the top issues we fix to transform your site into a powerful business tool.
                     </p>
                 </div>
-                <div className="block md:grid md:grid-cols-2 gap-10 items-center">
-                    <div className="space-y-8 order-2 md:order-1">
-                        {missingElements.map((element, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div className="mb-8 md:mb-0 md:block hidden">
+                        <div className="w-full max-w-md mx-auto">
+                            <Image
+                                src="/assets/services/missing.svg"
+                                alt="Missing Elements"
+                                width={500}
+                                height={500}
+                                className="w-full h-auto object-contain"
+                            />
+                        </div>
+                    </div>
+                    <div className="space-y-8">
+                        {missingElementsOne.map((element, index) => (
                             <div key={index}
                                  className="group flex items-start gap-6 p-3 rounded border border-black shadow-md cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                                 <div className="flex-1">
@@ -93,13 +103,38 @@ const WebsiteMissingSection = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="order-1 md:order-2 mb-8 md:mb-0">
-                        <div className="sticky top-0 w-full max-w-md mx-auto">
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div className="space-y-8">
+                        {missingElementsTwo.map((element, index) => (
+                            <div key={index}
+                                 className="group flex items-start gap-6 p-3 rounded border border-black shadow-md cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                                <div className="flex-1">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                                        {element.title}
+                                    </h3>
+                                    <div className="space-y-2">
+                                        <p className="text-gray-600 flex items-start gap-2">
+                                            <span className="text-red-500 font-semibold mt-0.5">✗</span>
+                                            <span><strong>Problem:</strong> {element.problem}</span>
+                                        </p>
+
+                                        <p className="text-gray-600 flex items-start gap-2">
+                                            <span className="text-green-500 font-semibold mt-0.5">✓</span>
+                                            <span><strong>Solution:</strong> {element.solution}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="mb-8 md:mb-0 md:block hidden">
+                        <div className="w-full max-w-sm mx-auto">
                             <Image
-                                src="/assets/services/missing.webp"
+                                src="/assets/services/bug.svg"
                                 alt="Missing Elements"
-                                width={500}
-                                height={500}
+                                width={400}
+                                height={400}
                                 className="w-full h-auto object-contain"
                             />
                         </div>

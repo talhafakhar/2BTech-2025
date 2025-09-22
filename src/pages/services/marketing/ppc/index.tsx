@@ -100,7 +100,7 @@ export default function PPC() {
                 heading="TYPES OF PPC SERVICES"
                 subHeading="Smart Campaigns. Better Results."
                 description="Our PPC services cover everything from keyword targeting to audience segmentation, ensuring your ads reach the right people at the right time."
-                arrowImage="/assets/services/down-arrow.webp"
+                arrowImage="/assets/services/down-arrow.svg"
                 services={[
                     {
                         id: 1,

@@ -1,6 +1,6 @@
 import type { BlogPost, BlogResponse } from '@/types/blog';
 const STRAPI_URL = process.env.STRAPI_URL || 'http://localhost:1337' ;
-const API_TOKEN = process.env.STRAPI_API_TOKEN || 'e276f296ef0a419436ea62f61398b85abae27d0af2682ee82001a03b35b1769cd4e18c46521c22418e6d2618faeeb8810c4c547bc8ec4e2489c27b84ee2a7b43b4ea4c6dead535da708f6e88f574402526c4aad70f67bfc911a164bee7bff3420353a87784c113ee97fb2c912c56f1050c68e0f92b1622b77d4c96ad5af544f0';
+const API_TOKEN = process.env.STRAPI_API_TOKEN || '8e7dda09c7d5d99c2f05438be1954f8f889eae9fd677f6b8c48870e0b784f10dfa064dc93f343d01aa4077558596064b7e9d99012ac7292aea4af998d98c9d59b442b204f867cab9a35531ce138a1e5dbf6e9929207789f8690016dfe9a35a5e1de6dfc8aebd3ae7c3ea3c774c07fb0f81eee95b0b3de94ec22966c0a8977bab';
 if (!API_TOKEN) {
     console.warn('⚠️ STRAPI_API_TOKEN is not set; Strapi calls may fail at build/revalidate.');
 }

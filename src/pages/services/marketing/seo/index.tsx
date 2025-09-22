@@ -98,7 +98,7 @@ export default function SEO() {
                 heading="TYPES OF SEO SERVICES"
                 subHeading="From Visibility to Sustainable Growth"
                 description="Enhance your online presence and attract the right audience with 2BTech’s SEO Services. Our expert team helps businesses improve rankings, drive organic traffic, and achieve measurable results that build a strong foundation for long-term digital success."
-                arrowImage="/assets/services/down-arrow.webp"
+                arrowImage="/assets/services/down-arrow.svg"
                 services={[
                     {
                         id: 1,

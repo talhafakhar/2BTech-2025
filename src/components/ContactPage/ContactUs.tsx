@@ -231,9 +231,9 @@ const ContactUsPage = () => {
                         </div>
                         <div className="flex  justify-center lg:justify-start items-center ">
                             <Image
-                                src="/assets/Home/contact.webp" alt="contact"
-                                width={400}
-                                height={400}
+                                src="/assets/Home/contact.svg" alt="contact"
+                                width={350}
+                                height={350}
                                 loading="lazy"
                             />
 
@@ -263,7 +263,6 @@ const ContactUsPage = () => {
                     </p>
                 </div>
 
-                {/* Join Our Community */}
                 <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                         <Users className="w-8 h-8 text-white" />

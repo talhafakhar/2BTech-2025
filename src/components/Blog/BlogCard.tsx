@@ -10,9 +10,9 @@ interface BlogCardProps {
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({ blog, id }) => {
-    const imageUrl = blog.media?.[0]?.url;
+    const imageUrl = blog.attributes.media?.data?.[0]?.attributes?.url;
     const fullImageUrl = imageUrl ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${imageUrl}` : null;
-    const imageAlt = blog.title;
+    const imageAlt = blog.attributes.title;
 
     const formatDate = (dateString: string) => {
         return new Date(dateString).toLocaleDateString("en-US", {
@@ -23,20 +23,21 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, id }) => {
     };
 
     return (
-        <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-500 hover:-translate-y-2"
+        <div
+            className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-500 hover:-translate-y-2"
             style={{ animation: `fadeInUp 0.6s ease-out ${id * 0.1}s both` }}
         >
             <div>
                 {fullImageUrl && (
-                    <div className="relative  overflow-hidden rounded-lg h-64">
+                    <div className="relative overflow-hidden rounded-lg h-64">
                         <div
                             className="absolute inset-0 bg-cover bg-center filter blur-[4px] scale-105"
-                            style={{backgroundImage: `url(${fullImageUrl})`}}
+                            style={{ backgroundImage: `url(${fullImageUrl})` }}
                         />
 
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/30 to-gray-900/40 z-10"/>
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/30 to-gray-900/40 z-10" />
 
-                        <div className="relative  h-full z-20">
+                        <div className="relative h-full z-20">
                             <Image
                                 src={fullImageUrl}
                                 alt={imageAlt}
@@ -47,10 +48,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, id }) => {
 
                         <div className="absolute top-4 right-4 z-30">
                             <Link
-                                href={`/blogs/${blog.slug}`}
+                                href={`/blogs/${blog.attributes.slug}`}
                                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
                             >
-                                <Eye size={16} className="text-white"/>
+                                <Eye size={16} className="text-white" />
                             </Link>
                         </div>
                     </div>
@@ -58,31 +59,33 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, id }) => {
 
                 <div className="p-4 space-y-2">
                     <div className="flex flex-wrap gap-2">
-                        {blog.tags.map((tag, index) => (
+                        {blog.attributes.tags.map((tag, index) => (
                             <span
                                 key={index}
                                 className="border border-black px-3 py-0.5 rounded text-xs font-semibold"
                             >
-                #{tag.trim()}
-              </span>
+                                #{tag.trim()}
+                            </span>
                         ))}
                     </div>
                     <h3 className="text-xl font-bold text-secondary leading-tight line-clamp-2">
-                        {blog.title}
+                        {blog.attributes.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                        {blog.excerpt.map((block) => block.children.map((child) => child.text).join(" ")).join(" ")}
+                        {blog.attributes.excerpt
+                            .map((block) => block.children.map((child) => child.text).join(" "))
+                            .join(" ")}
                     </p>
                 </div>
 
                 <div className="px-4 pb-2 flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-500">
                         <Calendar size={14} />
-                        <span className="font-medium">{formatDate(blog.publishedAt)}</span>
+                        <span className="font-medium">{formatDate(blog.attributes.date)}</span>
                     </div>
 
                     <Link
-                        href={`/blogs/${blog.slug}`}
+                        href={`/blogs/${blog.attributes.slug}`}
                         className="group/btn flex items-center gap-2 text-sm font-semibold text-black hover:text-primary transition-colors duration-300"
                     >
                         <span>Read More</span>

@@ -105,7 +105,7 @@ export default function generativeAi() {
                 heading="TYPES OF GENERATIVE AI SERVICES"
                 subHeading="AI-powered business transformation"
                 description="Unlock the power of Generative AI with Playno's services. Our expert team delivers innovative AI solutions that automate, accelerate, and enhance your business processes."
-                arrowImage="/assets/services/down-arrow.webp"
+                arrowImage="/assets/services/down-arrow.svg"
                 services={[
                     {
                         id: 1,

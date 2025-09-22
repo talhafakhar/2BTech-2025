@@ -106,7 +106,7 @@ export default function AiAsAService() {
                 heading="OUR AIaaS OFFERINGS"
                 subHeading="Scalable AI Solutions for Every Business"
                 description="Our AIaaS services provide businesses with flexible, on-demand AI solutions that accelerate innovation and digital transformation."
-                arrowImage="/assets/services/down-arrow.webp"
+                arrowImage="/assets/services/down-arrow.svg"
                 services={[
                     {
                         id: 1,

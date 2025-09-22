@@ -31,22 +31,35 @@ export interface Media {
 export interface BlogPost {
     id: number;
     documentId: string;
-    title: string;
-    slug: string;
-    author: string;
-    date: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    media: Media[];
-    excerpt: {
-        children: { text: string }[];
-    }[];
-    tags: string[];
-    content:{
-        children: { text: string; }[]
-        type:string;
-    }[];
+    attributes: {
+        title: string;
+        slug: string;
+        author: string;
+        date: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt: string;
+        media: {
+            data: Array<{
+                id: number;
+                attributes: {
+                    name: string;
+                    url: string;
+                    mime: string;
+                    size: number;
+                };
+            }>;
+        };
+        excerpt: Array<{
+            type: string;
+            children: Array<{ text: string; type?: string }>;
+        }>;
+        tags: string[];
+        content: Array<{
+            type: string;
+            children: Array<{ text: string; type?: string }>;
+        }>;
+    };
 }
 
 export interface BlogResponse {

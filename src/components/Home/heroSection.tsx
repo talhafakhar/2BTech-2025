@@ -109,7 +109,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({title}) => {
                             </h3>
                             <div className="flex items-center justify-center md:justify-start gap-4 sm:gap-6 flex-wrap">
                                 <Image
-                                    src="/assets/Home/body-factory.webp"
+                                    src="/assets/services/hero/body-factory.webp"
                                     alt="Body Factory"
                                     width={100}
                                     height={100}
@@ -117,7 +117,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({title}) => {
                                     className="filter invert brightness-0 max-w-[100px] h-auto"
                                 />
                                 <Image
-                                    src="/assets/Home/dapp.webp"
+                                    src="/assets/services/hero/dapp.webp"
                                     alt="DApp"
                                     width={100}
                                     height={100}
@@ -125,7 +125,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({title}) => {
                                     className="filter invert brightness-0 max-w-[100px] h-auto"
                                 />
                                 <Image
-                                    src="/assets/Home/lotte-kolson.webp"
+                                    src="/assets/services/hero/lotte-kolson.webp"
                                     alt="Lotte Kolson"
                                     width={110}
                                     height={110}

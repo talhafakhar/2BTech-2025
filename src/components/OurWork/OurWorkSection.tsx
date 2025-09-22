@@ -14,14 +14,14 @@ const projects: Project[] = [
         title: "Vasl",
         category: "Social Media Marketing",
         description: "Social media campaign",
-        image: "/assets/ourWork/vasal.webp"
+        image: "/assets/ourWork/vasl-1.webp"
     },
     {
         id: 2,
         title: "TF",
         category: "Social Media Marketing",
         description: "Consulting company",
-        image: "/assets/ourWork/tf.webp"
+        image: "/assets/ourWork/tf-1.webp"
     },
     {
         id: 3,
@@ -224,7 +224,7 @@ const projects: Project[] = [
         title: "TF",
         category: "Web Development",
         description: "Capital investment platform",
-        image: "/assets/ourWork/tf-2.webp"
+        image: "/assets/ourWork/tf.webp"
     },
     {
         id: 32,
@@ -232,6 +232,13 @@ const projects: Project[] = [
         category: "UI/UX Design",
         description: "Mobile app promotion",
         image: "/assets/ourWork/Abacus-1.webp"
+    },
+    {
+        id: 39,
+        title: "TF",
+        category: "UI/UX Design",
+        description: "Consulting company",
+        image: "/assets/ourWork/tf-2.webp"
     },
     {
         id: 33,

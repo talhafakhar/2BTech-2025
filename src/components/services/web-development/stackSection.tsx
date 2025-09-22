@@ -391,8 +391,6 @@ const OurStack = () => {
             rotate: "20deg",
         },
     ];
-
-
     const containerVariants = {
         hidden: {opacity: 0},
         visible: {
@@ -408,10 +406,8 @@ const OurStack = () => {
     return (
         <div className="px-4 py-14 relative overflow-hidden border-t">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <div
-                    className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
-                <div
-                    className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
+                <div className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
             </div>
             <div className="max-w-7xl mx-auto text-center relative">
                 <motion.div
@@ -433,7 +429,7 @@ const OurStack = () => {
                     <div className="flex justify-center md:flex-row flex-col items-center gap-10 md:gap-5">
                         <div>
                             <Image
-                                src="/assets/services/Code~Example.webp" alt="code example" width={200} height={200}/>
+                                src="/assets/services/code.svg" alt="code example" width={200} height={200}/>
                         </div>
                         <div className="md:rotate-0 rotate-90">
                             <svg width="72" height="30" viewBox="0 0 72 30" fill="none"
@@ -482,7 +478,7 @@ const OurStack = () => {
                         </div>
                         <div>
                             <Image
-                                src="/assets/services/ImagesEstimate.webp" alt="websites" width={200} height={200}/>
+                                src="/assets/services/website.svg" alt="websites" width={200} height={200}/>
                         </div>
                     </div>
                 </div>

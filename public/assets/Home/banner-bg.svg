@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="BG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5000 3004">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: url(#linear-gradient-2);
+            }
+
+            .cls-2 {
+            mask: url(#mask-1);
+            }
+
+            .cls-3 {
+            mask: url(#mask);
+            }
+
+            .cls-4 {
+            fill: none;
+            }
+
+            .cls-5 {
+            fill: url(#linear-gradient);
+            mix-blend-mode: multiply;
+            }
+
+            .cls-6 {
+            clip-path: url(#clippath);
+            }
+
+            .cls-7 {
+            filter: url(#luminosity-noclip);
+            }
+        </style>
+        <clipPath id="clippath">
+            <rect class="cls-4" y="4" width="5000" height="3000"/>
+        </clipPath>
+        <filter id="luminosity-noclip" x="0" y="0" width="5000" height="3000" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feFlood flood-color="#fff" result="bg"/>
+            <feBlend in="SourceGraphic" in2="bg"/>
+        </filter>
+        <filter id="luminosity-noclip-2" x="0" y="-9696" width="5000" height="32766" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+            <feFlood flood-color="#fff" result="bg"/>
+            <feBlend in="SourceGraphic" in2="bg"/>
+        </filter>
+        <mask id="mask-1" x="0" y="-9696" width="5000" height="32766" maskUnits="userSpaceOnUse"/>
+        <linearGradient id="linear-gradient" x1="-143.2" y1="2934.01" x2="5187.86" y2="41.76" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset=".45" stop-color="#fff"/>
+            <stop offset=".67" stop-color="#fbfbfb"/>
+            <stop offset=".89" stop-color="#efefef"/>
+            <stop offset="1" stop-color="#e6e6e6"/>
+        </linearGradient>
+        <mask id="mask" x="0" y="0" width="5000" height="3000" maskUnits="userSpaceOnUse">
+            <g class="cls-7">
+                <g class="cls-2">
+                    <rect class="cls-5" width="5000" height="3000"/>
+                </g>
+            </g>
+        </mask>
+        <linearGradient id="linear-gradient-2" x1="-143.2" y1="2934.01" x2="5187.86" y2="41.76" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#005eb5"/>
+            <stop offset=".09" stop-color="#004291"/>
+            <stop offset=".19" stop-color="#00286d"/>
+            <stop offset=".29" stop-color="#001453"/>
+            <stop offset=".38" stop-color="#000944"/>
+            <stop offset=".45" stop-color="#00053f"/>
+            <stop offset=".52" stop-color="#03053e"/>
+            <stop offset=".59" stop-color="#0f063b"/>
+            <stop offset=".66" stop-color="#230836"/>
+            <stop offset=".73" stop-color="#3f0b2f"/>
+            <stop offset=".79" stop-color="#630f26"/>
+            <stop offset=".86" stop-color="#8f141b"/>
+            <stop offset=".93" stop-color="#c3190e"/>
+            <stop offset="1" stop-color="#fd1f00"/>
+            <stop offset="1" stop-color="#ff2000"/>
+        </linearGradient>
+    </defs>
+    <g class="cls-6">
+        <g class="cls-3">
+            <rect class="cls-1" width="5000" height="3000"/>
+        </g>
+    </g>
+</svg>

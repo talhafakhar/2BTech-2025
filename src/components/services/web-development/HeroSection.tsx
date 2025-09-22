@@ -55,7 +55,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, buttonText
 
     return (
         <div
-            className="min-h-screen bg-center bg-cover"
+            className="min-h-screen  relative overflow-hidden"
             style={{backgroundImage: 'url("/assets/services/hero/hero-service-bg.svg")'}}
         >
             <Navbar/>

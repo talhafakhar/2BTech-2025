@@ -92,7 +92,7 @@ export default function MvpDevelopment() {
                 heading="TYPES OF MVP DEVELOPMENT SERVICES"
                 subHeading="From Idea to Scalable Product"
                 description="Validate your idea and bring it to market faster with 2BTech’s MVP Development Services. Our expert team helps startups and businesses design, build, and launch minimum viable products that reduce risks and pave the way for scalable digital growth."
-                arrowImage="/assets/services/down-arrow.webp"
+                arrowImage="/assets/services/down-arrow.svg"
                 services={[
                     {
                         id: 1,

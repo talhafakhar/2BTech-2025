@@ -8,7 +8,6 @@ const InfiniteLogoSlider:React.FC= () => {
         { name: "BookBlaze", url: "/assets/services/hero/book-bite.webp" },
         { name: "Dapp", url: "/assets/services/hero/dapp.webp" },
         { name: "Forland", url: "/assets/services/hero/forland.webp" },
-        { name: "Grit Coaches", url: "/assets/services/hero/grit-coaches.webp" },
         { name: "Italian Moda", url: "/assets/services/hero/italianmoda.webp" },
         { name: "Lotte Kolson", url: "/assets/services/hero/lotte-kolson.webp" },
         { name: "Maxima", url: "/assets/services/hero/maxima.webp" },
