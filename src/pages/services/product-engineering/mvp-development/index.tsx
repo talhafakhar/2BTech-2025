@@ -85,8 +85,8 @@ export default function MvpDevelopment() {
             <ExpertServices
                 title="Validate Your Idea with Expert MVP Development Services"
                 description="MVP development focuses on building a lean, functional product with core features to test your idea in real markets. At 2BTech, we specialize in delivering custom MVP solutions that help startups and businesses launch faster, reduce risk, and scale with confidence."
-                src="/assets/services/MVP.webp"
-                width={400}
+                src="/assets/services/mvp.webp"
+                width={500}
             />
             <WebServicesGrid
                 heading="TYPES OF MVP DEVELOPMENT SERVICES"
@@ -165,7 +165,7 @@ export default function MvpDevelopment() {
             <Banner
                 title="Kickstart Your MVP Project Today"
                 description="From idea to launch, we build custom MVPs quickly and efficiently"
-                src="/assets/services/mvp-bg.webp"
+                src="/assets/services/mvpBanner.webp"
             />
             <WhoWeBuildMVPsFor
                 audiences={
@@ -205,8 +205,8 @@ export default function MvpDevelopment() {
             />
             <AreYouReady
                 buttonText="Kick off now"
-                srcOne="/assets/services/Image1.webp"
-                srcTwo="/assets/services/Phone.webp"
+                srcOne="/assets/services/beforeMvp.svg"
+                srcTwo="/assets/services/afterMvp.svg"
             />
             <ContactFormUI/>
             <Footer/>

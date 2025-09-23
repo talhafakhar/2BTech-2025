@@ -12,15 +12,14 @@ type TransformProps = {
 
 const ExpertServices: React.FC<TransformProps> = ({ title, description, src, width }) => {
     return (
-        <section className="pt-10 pb-20 px-6 relative overflow-hidden">
+        <section className="py-20 px-6 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                 <div className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
             </div>
-
             <div className="max-w-7xl mx-auto flex md:flex-row flex-col justify-center md:justify-between gap-5 w-full items-center relative z-10">
                 <motion.div
-                    className="md:w-1/2 w-full"
+                    className="md:w-1/2 w-full "
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}

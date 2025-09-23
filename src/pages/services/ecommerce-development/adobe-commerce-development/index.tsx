@@ -7,9 +7,9 @@ import TestimonialSection from "@/components/Home/TestimonialSection";
 import Banner from "@/components/Home/bannerSection";
 import FaqSection from "@/components/Home/FaqSection";
 import ContactFormUI from "@/components/About/ContactFormSection";
-import ShopifyExpertise from "@/components/services/ecommerce/ServicesSection"; // reuse as Expertise grid
+import ShopifyExpertise from "@/components/services/ecommerce/ServicesSection";
 import OurProcess from "@/components/services/ecommerce/ProccessSection";
-import adobeAnimation from "@/assets/animations/adobe.json"; // <- replace with Adobe Commerce Lottie if available
+import adobeAnimation from "@/assets/animations/adobe.json";
 import {
     ArrowUpDown,
     Cloud,
@@ -99,7 +99,7 @@ export default function AdobeCommerceDevelopment() {
             <ExpertServices
                 title="Enterprise-Level eCommerce with Adobe Commerce"
                 description="We deliver custom Adobe Commerce development services, including migration, theme customization, B2B solutions, and integrations to accelerate your business growth."
-                src="/assets/services/otherImages/adobe.webp"
+                src="/assets/services/otherImages/adobeCommerce.svg"
                 width={400}
             />
 
@@ -166,17 +166,14 @@ export default function AdobeCommerceDevelopment() {
             <Banner
                 title="Scale Your Business with Adobe Commerce Experts"
                 description="Future-proof your eCommerce store with enterprise-level solutions."
-                src="/assets/services/otherImages/adobeBanner.webp"
+                src="/assets/services/otherImages/adobeBanner.svg"
             />
-
             <TestimonialSection />
-
             <FaqSection Faq={faqs} />
-
             <AreYouReady
                 buttonText="Let's Connect"
-                srcOne="/assets/services/purchase.webp"
-                srcTwo="/assets/services/website.webp"
+                srcOne="/assets/services/purchase.svg"
+                srcTwo="/assets/services/store.svg"
             />
 
             <ContactFormUI />

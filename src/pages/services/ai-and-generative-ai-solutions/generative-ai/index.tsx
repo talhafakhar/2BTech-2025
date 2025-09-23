@@ -10,7 +10,7 @@ import Banner from "@/components/Home/bannerSection";
 import CTASection from "@/components/Home/CTASection";
 import FaqSection from "@/components/Home/FaqSection";
 import DeployAISection from "@/components/services/Ai/PreferedPlatfromSection";
-import GenerativeAITrust from "@/components/services/Ai/GenerativeAiTrustSection";
+import KeyAndStackSection from "@/components/services/Ai/KeyAndStackSection";
 import {FAQPageJsonLd, NextSeo, WebPageJsonLd} from "next-seo";
 export default function generativeAi() {
     const faqs = [
@@ -85,21 +85,22 @@ export default function generativeAi() {
                 }))}
             />
             <HeroSection
-                title="ENTERPRISE-READY GENERATIVE AI SERVICES"
+                title="NEXT-GEN AI SOLUTIONS FOR YOUR NEEDS"
                 description="Unlock innovation and efficiency with our cutting-edge generative AI solutions tailored for your business needs."
-                path="/assets/services/hero/agentic.webp"
+                path="/assets/services/hero/agenticAi.webp"
                 buttonText="Get a Free Consultation"
+            />
+
+            <ExpertServices
+                title="What is generative AI?"
+                description="Generative AI refers to advanced algorithms that can create new content and solutions by learning from vast datasets. It goes beyond traditional analytical capabilities, enabling machines to generate original ideas, designs, and answers — mimicking human creativity and problem-solving skills. This technology is rapidly transforming industries by providing innovative approaches to data utilization and content creation."
+                src="/assets/services/robot.svg"
+                width={400}
             />
             <AiServiceIntro
                 title=" Generative AI Services"
                 description="Our generative AI services harness advanced ML technologies, providing customized solutions through a user-friendly interface.We support clients in adopting and simplifying the process through interactive workshops, aiding in solution design, implementation, and seamless integration."
-                path="/assets/services/growth.webp"
-            />
-            <ExpertServices
-                title="What is generative AI?"
-                description="Generative AI refers to advanced algorithms that can create new content and solutions by learning from vast datasets. It goes beyond traditional analytical capabilities, enabling machines to generate original ideas, designs, and answers — mimicking human creativity and problem-solving skills. This technology is rapidly transforming industries by providing innovative approaches to data utilization and content creation."
-                src="/assets/services/robot.webp"
-                width={400}
+                path="/assets/services/agenticAiService.svg"
             />
             <WebServicesGrid
                 heading="TYPES OF GENERATIVE AI SERVICES"
@@ -125,7 +126,7 @@ export default function generativeAi() {
                         description:
                             "Train and deploy bespoke AI models tailored to your industry challenges and data needs.",
                         highlightImage:
-                            "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&crop=center",
+                            "/assets/services/customAi.webp",
                     },
                     {
                         id: 4,
@@ -144,7 +145,7 @@ export default function generativeAi() {
                         title: "AI Security & Risk Management",
                         description:
                             "Implement AI-driven security systems to detect anomalies, prevent fraud, and safeguard your business.",
-                        smallImage:"https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=200&h=150&fit=crop&crop=center"
+                        smallImage:"/assets/services/securityAi.webp",
 
                     },
                     {
@@ -172,14 +173,7 @@ export default function generativeAi() {
                 description="Book call today and take the first step towards transforming your business with AI."
                 src="/assets/services/aiBanner.webp"
             />
-            <GenerativeAITrust
-                title="98%"
-                titleTwo="of global executives trust"
-                titleThree="Generative AI models"
-                titleFour="to design their business strategies for the next"
-                titleFive="3-5 years"
-                imageSrc="/assets/services/chip.webp"
-            />
+            <KeyAndStackSection/>
             <DeployAISection
                 titleOne="Let us help you deploy"
                 titleTwo="Generative AI"

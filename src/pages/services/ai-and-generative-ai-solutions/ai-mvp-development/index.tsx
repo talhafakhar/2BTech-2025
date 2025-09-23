@@ -10,8 +10,8 @@ import Banner from "@/components/Home/bannerSection";
 import CTASection from "@/components/Home/CTASection";
 import FaqSection from "@/components/Home/FaqSection";
 import DeployAISection from "@/components/services/Ai/PreferedPlatfromSection";
-import GenerativeAITrust from "@/components/services/Ai/GenerativeAiTrustSection";
 import {FAQPageJsonLd, NextSeo, WebPageJsonLd} from "next-seo";
+import KeyAndStackSection from "@/components/services/Ai/KeyAndStackSection";
 
 export default function AiMvpDevelopment() {
     const faqs = [
@@ -167,15 +167,7 @@ export default function AiMvpDevelopment() {
                 src="/assets/services/otherImages/aiMvpBanner.svg"
             />
 
-            <GenerativeAITrust
-                title="85%"
-                titleTwo="of startups succeed faster"
-                titleThree="with MVP-first approach"
-                titleFour="by reducing risks and validating ideas"
-                titleFive="before full investment"
-                imageSrc="/assets/services/otherImages/aiMvpTrust.webp"
-            />
-
+            <KeyAndStackSection/>
             <DeployAISection
                 titleOne="We help you launch"
                 titleTwo="AI MVPs"

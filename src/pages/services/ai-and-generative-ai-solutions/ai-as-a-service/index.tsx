@@ -10,8 +10,8 @@ import Banner from "@/components/Home/bannerSection";
 import CTASection from "@/components/Home/CTASection";
 import FaqSection from "@/components/Home/FaqSection";
 import DeployAISection from "@/components/services/Ai/PreferedPlatfromSection";
-import GenerativeAITrust from "@/components/services/Ai/GenerativeAiTrustSection";
 import {FAQPageJsonLd, NextSeo, WebPageJsonLd} from "next-seo";
+import KeyAndStackSection from "@/components/services/Ai/KeyAndStackSection";
 
 export default function AiAsAService() {
     const faqs = [
@@ -168,15 +168,7 @@ export default function AiAsAService() {
 
             />
 
-            <GenerativeAITrust
-                title="70%"
-                titleTwo="of enterprises accelerate innovation"
-                titleThree="with AI as a Service"
-                titleFour="by reducing costs and scaling faster"
-                titleFive="compared to in-house AI development"
-                imageSrc="/assets/services/otherImages/aiWithCash.webp"
-            />
-
+            <KeyAndStackSection/>
             <DeployAISection
                 titleOne="We help you deploy"
                 titleTwo="AIaaS Solutions"

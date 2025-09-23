@@ -16,7 +16,7 @@ const OurProcess: React.FC<OurProcessProps> = ({ title, description }) => {
                 <div
                     className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
             </div>
-            <div className="relative z-10  px-4 py-20">
+            <div className="relative z-10  px-4 pt-10">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
                         initial="hidden"
@@ -33,7 +33,7 @@ const OurProcess: React.FC<OurProcessProps> = ({ title, description }) => {
                         </p>
                     </motion.div>
                     <div className="max-w-4xl mx-auto ">
-<Image src="/assets/services/Process.webp" alt="Process" width={1200} height={400}/>
+<Image src="/assets/services/Process.svg" alt="Process" width={1100} height={400}/>
                     </div>
                 </div>
             </div>

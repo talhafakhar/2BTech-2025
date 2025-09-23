@@ -29,7 +29,7 @@ const WebServicesGrid: React.FC<WebServicesGridProps> = ({
                                                              services,
                                                          }) => {
     return (
-        <div className="bg-gray-50 px-4 pb-10">
+        <div className="bg-gray-50 px-4 py-10">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12 flex gap-2 items-center">
                     <div>
@@ -79,13 +79,13 @@ const WebServicesGrid: React.FC<WebServicesGridProps> = ({
                             <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                                 {service.title}
                             </h3>
-                            <div className="flex items-center gap-2">
+                            <div className="flex  gap-2">
                                 {service?.smallImage && (
                                     <div className="mb-6 md:block hidden">
                                         <img
                                             src={service?.smallImage}
                                             alt={service.title}
-                                            className="w-full lg:w-72 h-24 object-cover rounded-xl shadow-md"
+                                            className="w-full lg:w-80 h-24 object-cover rounded-xl shadow-md"
                                         />
                                     </div>
                                 )}

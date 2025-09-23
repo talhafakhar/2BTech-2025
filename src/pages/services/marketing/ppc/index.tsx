@@ -88,13 +88,13 @@ export default function PPC() {
                 title="RESULT-DRIVEN PPC SERVICES"
                 description="Maximize your ROI with powerful PPC campaigns designed to capture attention, drive traffic, and generate leads. At 2BTech, we create data-driven advertising strategies that deliver measurable results."
                 buttonText="Start Your Campaign"
-                path="/assets/services/hero/ppc.webp"
+                path="/assets/services/hero/PPC.webp"
             />
             <ExpertServices
                 title="Expert PPC Management for Maximum ROI"
                 description="At 2BTech, our PPC experts design and manage high-performing ad campaigns tailored to your business goals. We focus on optimizing ad spend, increasing clicks, and generating conversions that matter."
-                src="/assets/services/otherImages/Our-PPC-Experts.webp"
-                width={500}
+                src="/assets/services/otherImages/PPC_Management_Yellow_Chart.svg"
+                width={400}
             />
             <WebServicesGrid
                 heading="TYPES OF PPC SERVICES"
@@ -116,7 +116,7 @@ export default function PPC() {
                         id: 3,
                         title: "Remarketing Campaigns",
                         description: "Re-engage past visitors and turn them into loyal customers.",
-                        highlightImage: "/assets/services/otherImages/remarketing.webp",
+                        highlightImage: "/assets/services/otherImages/remarketing.svg",
                     },
                     {
                         id: 4,
@@ -131,11 +131,9 @@ export default function PPC() {
                 ]}
             />
             <Why2btech
-                title="Why 2BTech For"
                 titleTwo="PPC?"
                 titleThree="Your ROI-Focused PPC Partner"
                 descriptionOne="Our PPC experts bring years of experience running successful ad campaigns across multiple industries. We ensure every click counts by targeting the right audience and minimizing wasted ad spend."
-                path="/assets/services/otherImages/whyPPC.webp"
                 description="2BTech’s PPC services are designed to maximize ROI, increase conversions, and help your business grow faster with measurable results."
             />
             <Banner
@@ -146,8 +144,8 @@ export default function PPC() {
             <FaqSection Faq={faqs} />
             <AreYouReady
                 buttonText="Get a Free PPC Audit"
-                srcOne="/assets/services/otherImages/beforePPC.webp"
-                srcTwo="/assets/services/otherImages/afterPPC.webp"
+                srcOne="/assets/services/otherImages/beforePPC.svg"
+                srcTwo="/assets/services/otherImages/afterPPC.svg"
             />
             <ContactFormUI />
             <Footer />

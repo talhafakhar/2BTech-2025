@@ -160,8 +160,8 @@ export default function BubbleDevelopment() {
 
             <AreYouReady
                 buttonText="Let's Connect"
-                srcOne="/assets/services/otherImages/ideabubble.webp"
-                srcTwo="/assets/services/otherImages/afterBubble.webp"
+                srcOne="/assets/services/otherImages/ideabubble.svg"
+                srcTwo="/assets/services/store.svg"
             />
 
             <ContactFormUI />

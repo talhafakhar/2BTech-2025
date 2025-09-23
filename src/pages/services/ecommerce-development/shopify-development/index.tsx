@@ -88,13 +88,14 @@ export default function ShopifyDevelopment() {
             <ExpertServices
                 title="Launch Your Store with Expert Shopify Development Services"
                 description="Our Shopify development services focus on building fully functional, scalable online stores tailored to your brand. At 2BTech, we create custom Shopify solutions that help businesses launch faster, optimize performance, and grow sales with confidence."
-                src="/assets/services/ecommerce-website.webp"
+                src="/assets/services/onlineStore.webp"
                 width={400}
             />
-            <ShopifyExpertise
+ w           <ShopifyExpertise
                 title="Shopify Development"
                 titleTwo="Services to Elevate Your E-commerce Business"
-                path="/assets/services/onlineBusiness.webp"
+                description="Our comprehensive Shopify development services cover everything from custom store builds to theme customization, app integrations, and performance optimization. Whether you’re launching a new store or enhancing an existing one, our team has the expertise to deliver results."
+
                 expertiseItems={
                     [
                         {
@@ -156,14 +157,14 @@ export default function ShopifyDevelopment() {
             <Banner
                 title="Eveluate Your Business with Shopify Growth Specialists"
                 description="Unlock your store's full potential and revenue"
-                src="/assets/services/trolly.webp"
+                src="/assets/services/ecommerceBg.webp"
             />
             <TestimonialSection/>
             <FaqSection Faq={faqs}/>
             <AreYouReady
                 buttonText="Let's Connect"
-                srcOne="/assets/services/purchase.webp"
-                srcTwo="/assets/services/website.webp"
+                srcOne="/assets/services/purchase.svg"
+                srcTwo="/assets/services/store.svg"
             />
             <ContactFormUI/>
             <Footer/>

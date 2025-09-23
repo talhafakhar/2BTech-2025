@@ -3,11 +3,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface WhyTeamsChooseProps {
-    title: string;
     titleTwo?: string;
     titleThree?: string;
     descriptionOne?: string;
-    path: string;
     description?: string;
 }
 
@@ -17,12 +15,11 @@ const fadeInUp = {
 };
 
 const Why2btech: FC<WhyTeamsChooseProps> = ({
-                                                title,
                                                 titleTwo,
                                                 description,
                                                 titleThree,
                                                 descriptionOne,
-                                                path,
+
                                             }) => {
     return (
         <div className="relative overflow-hidden py-16 px-4">
@@ -42,7 +39,7 @@ const Why2btech: FC<WhyTeamsChooseProps> = ({
                         variants={fadeInUp}
                     >
                         <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-2">
-                            {title}
+                            Why <span className="text-secondary"> 2</span><span className="text-primary">B</span>Tech For
                             <span className="text-primary"> {titleTwo}</span>
                         </h2>
                         <p className="mb-14">{description}</p>
@@ -51,8 +48,6 @@ const Why2btech: FC<WhyTeamsChooseProps> = ({
                         </h3>
                         <p>{descriptionOne}</p>
                     </motion.div>
-
-                    {/* Image Section */}
                     <motion.div
                         className="md:w-1/2 w-full"
                         initial={{ opacity: 0, x: 50 }}
@@ -61,9 +56,9 @@ const Why2btech: FC<WhyTeamsChooseProps> = ({
                         viewport={{ once: true }}
                     >
                         <Image
-                            src={path}
-                            alt={title}
-                            width={500}
+                            src="/assets/services/Why-2btech-for-SEO.svg"
+                            alt={titleTwo || "Why 2BTech"}
+                            width={400}
                             height={400}
                             loading="lazy"
                             className="md:ml-auto"

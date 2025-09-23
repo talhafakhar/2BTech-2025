@@ -45,13 +45,6 @@ export default function WebDevelopment() {
                 description=""
                 lastReviewed={new Date().toISOString()}
             />
-            {/*<FAQPageJsonLd*/}
-            {/*    mainEntity={faqs.map((faq) => ({*/}
-            {/*        questionName: faq.question,*/}
-            {/*        acceptedAnswerText: faq.answer,*/}
-            {/*    }))}*/}
-            {/*/>*/}
-
             <HeroSection
                 title="END-TO-END WEB DEVELOPMENT SERVICES"
                 description="What do you want to [code, build, deploy. collaborate on, analyze, lean] today?"

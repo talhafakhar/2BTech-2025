@@ -59,11 +59,11 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, path, butt
                             variants={containerVariants}
                             initial="hidden"
                             animate="visible"
-                            className="flex-1"
+                            className="w-full md:w-1/2"
                         >
                             <motion.h1
                                 variants={itemVariants}
-                                className="text-2xl sm:text-4xl md:text-6xl font-bold max-w-4xl"
+                                className="text-3xl sm:text-6xl md:text-8xl font-bold max-w-4xl"
                             >
                                 {title}
                             </motion.h1>
@@ -84,18 +84,8 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, path, butt
                                         </span>
                                 </motion.button>
                             </motion.div>
-                            <div className="mt-10">
-                                <h2 className="font-semibold text-lg">Brands we work with:</h2>
-                                <div className="flex flex-wrap items-center gap-10">
-                                    <Image src="/assets/services/hero/aq.webp" alt="Brand" width={120} height={50}/>
-                                    <Image src="/assets/services/hero/mesha.webp" alt="Brand" width={120} height={50}/>
-                                    <Image src="/assets/services/hero/ways-tax.webp" alt="Brand" width={120}
-                                           height={50}/>
-                                </div>
-                            </div>
                         </motion.div>
-                        <motion.div variants={itemVariants} initial="hidden" animate="visible">
-                        <div className="flex-1 flex justify-center">
+                        <motion.div variants={itemVariants} initial="hidden" animate="visible"          className="w-full md:w-1/2">
                             <Image
                                 src={path}
                                 alt="Hero Image"
@@ -103,14 +93,8 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, path, butt
                                 height={700}
                                 priority
                                 loading="eager"
-                                className="  w-full
-
-    h-auto
-    object-contain
-    max-w-[900px]
-    md:h-[40rem]"
+                                className="w-full h-auto object-contain max-w-[900px] md:h-[38rem]"
                             />
-                        </div>
                         </motion.div>
                     </div>
                 </div>

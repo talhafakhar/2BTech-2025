@@ -9,7 +9,7 @@ interface ServiceIntroProps {
 }
 const AiServiceIntro: React.FC<ServiceIntroProps> = ({title,description,path}) => {
     return (
-        <section className="pt-20 pb-5 px-4 relative overflow-hidden">
+        <section className="pb-20  px-4 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                 <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
             </div>

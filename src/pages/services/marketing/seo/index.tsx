@@ -86,13 +86,13 @@ export default function SEO() {
                 title="RESULT-DRIVEN SEO SERVICES"
                 description="Boost your online visibility and drive organic growth with our expert SEO services. We specialize in tailored strategies that enhance search rankings, attract quality traffic, and increase conversions."
                 buttonText="Get a Free Consultation"
-                path="/assets/services/hero/seo.webp"
+                path="/assets/services/hero/seo.svg"
             />
             <ExpertServices
                 title="Expert SEO Services to Elevate Your Online Presence"
                 description="At 2BTech, we deliver result-driven SEO solutions to help your business rank higher, attract quality traffic, and boost conversions. Our customized strategies are designed to improve online visibility, reduce marketing costs, and achieve sustainable growth with confidence."
-                src="/assets/services/Our-International-SEO.webp"
-                width={500}
+                src="/assets/services/seoExpertService.svg"
+                width={400}
             />
             <WebServicesGrid
                 heading="TYPES OF SEO SERVICES"
@@ -130,7 +130,7 @@ export default function SEO() {
                         id: 6,
                         title: "Ecommerce SEO",
                         description: "Optimize product pages and categories to drive more online sales.",
-                        smallImage: "/assets/services/otherImages/ecommerceSeo.webp",
+                        smallImage: "/assets/services/otherImages/ecommerceSeo.svg",
                     },
                     {
                         id: 7,
@@ -145,23 +145,21 @@ export default function SEO() {
                 ]}
             />
             <Why2btech
-                title="Why 2BTech For"
                 titleTwo="SEO?"
                 titleThree="International SEO Experts"
                 descriptionOne="Our Team consists of some of the best international SEO Services experts across the country. Our SEO specialists are well equipped with modern SEO trends and techniques so that your keyword ranking produces specific and recurring customers for your business"
-                path="/assets/services/Why-2btech-for-SEO.webp"
                 description="2btech international SEO services are tailor made for your business requirements and we not only focus on ranking your website but also to get you organic traffic that is relevant to your business, so you are not only ranking but rolling in clients as well."
             />
             <Banner
                 title="Contact Us now For Best SEO Services"
-                src="/assets/services/seo-bg.webp"
+                src="/assets/services/seoBanner-bg.webp"
             />
             <TestimonialSection />
             <FaqSection Faq={faqs} />
             <AreYouReady
                 buttonText="Get a Free SEO Audit"
                 srcOne="/assets/services/errorSEO.svg"
-                srcTwo="/assets/services/bestSEO.webp"
+                srcTwo="/assets/services/bestSEO.svg"
             />
             <ContactFormUI />
             <Footer />
