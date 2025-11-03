@@ -12,6 +12,9 @@ export default {
                 primary: "#0F57BC",
                 secondary: "#bf1e2e",
             },
+            maxWidth:{
+                '8xl': '90rem',
+            },
             fontFamily: {
                 syne: ["Syne", "sans-serif"],
             },

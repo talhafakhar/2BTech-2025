@@ -48,7 +48,8 @@ const ClutchReviews: React.FC = () => {
             iframe.height = '375';
             iframe.style.border = 'none';
             iframe.style.overflow = 'hidden';
-            //@ts-ignore
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //@ts-expect-error
             iframe.allowTransparency = true;
 
             iframe.onload = () => {
@@ -121,7 +122,7 @@ const ClutchReviews: React.FC = () => {
                                     {review.title}
                                 </h2>
                                 <p className="text-gray-700 leading-relaxed mb-6 text-sm">
-                                    "{review.content}"
+                                    &#34;{review.content}&#34;
                                 </p>
                                 <div className="border-t border-gray-100 pt-4">
                                     <div className="flex items-center justify-between">

@@ -27,7 +27,7 @@ const Banner: React.FC<BannerProps> =  ({title,description,src}) => {
                         target="_blank"
                         className="group relative inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none"
                     >
-                        Let's Connect!
+                        Let&#39;s Connect!
                         <span
                             className="ml-3 inline-flex w-8 h-8 rounded-full bg-white text-primary items-center justify-center transition-transform duration-500 group-hover:translate-x-2 group-hover:rotate-12"
                         >

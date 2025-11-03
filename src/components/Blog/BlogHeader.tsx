@@ -84,7 +84,7 @@ const BlogNavbar: React.FC = () => {
 
     return (
         <nav style={{zIndex:99999}} className={`fixed top-0 w-full transition-all duration-300 bg-white ${scrolled && "shadow-lg border-b"}  border-gray-100`}>
-            <div className="container mx-auto px-4">
+            <div className="max-w-8xl mx-auto px-4">
                 <div className="flex justify-between items-center py-2">
                     <div className="flex items-center">
                         <Link href="/">

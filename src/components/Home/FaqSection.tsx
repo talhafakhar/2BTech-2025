@@ -1,6 +1,6 @@
 'use client';
 import * as React from "react";
-import { motion } from "framer-motion";
+import {AnimatePresence, motion } from "framer-motion";
 
 const svgIcons = {
     question: (
@@ -57,8 +57,12 @@ interface FAQSectionProps {
 }
 
 const FAQSection: React.FC<FAQSectionProps> = ({ Faq }) => {
+    const [showAll, setShowAll] = React.useState(false);
+
+    const displayedFaqs = showAll ? Faq : Faq.slice(0, 4);
+
     return (
-        <div className="relative  overflow-hidden">
+        <div className="relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                 <div className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
@@ -77,43 +81,68 @@ const FAQSection: React.FC<FAQSectionProps> = ({ Faq }) => {
                     </motion.div>
 
                     <div className="space-y-8 max-w-4xl mx-auto md:space-y-10">
-                        {Faq.map((faq) => (
-                            <div key={faq.id} className="text-left">
+                        <AnimatePresence>
+                            {displayedFaqs.map((faq) => (
                                 <motion.div
-                                    className="flex flex-col sm:flex-row items-start mb-4 md:mb-5"
-                                    initial={{ opacity: 0, x: -80 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.6 }}
-                                    viewport={{ once: true }}
+                                    key={faq.id}
+                                    className="text-left"
+                                    initial={{ opacity: 0, y: 40 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -30 }}
+                                    transition={{ duration: 0.4 }}
                                 >
-                                    <div className="flex items-center justify-center p-2 mb-3 sm:mb-0 sm:mr-4 rounded-full bg-secondary text-white border-4 border-white flex-shrink-0">
-                                        {svgIcons.question}
-                                    </div>
-                                    <div className="bg-gray-200 p-4 md:p-3 px-6 w-full flex items-center rounded-md">
-                                        <h3 className="text-base md:text-lg leading-6 font-semibold">
-                                            {faq.question}
-                                        </h3>
-                                    </div>
+                                    {/* Question */}
+                                    <motion.div
+                                        className="flex flex-col sm:flex-row items-start mb-4 md:mb-5"
+                                        initial={{ opacity: 0, x: -80 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.6 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <div className="flex items-center justify-center p-2 mb-3 sm:mb-0 sm:mr-4 rounded-full bg-secondary text-white border-4 border-white flex-shrink-0">
+                                            {svgIcons.question}
+                                        </div>
+                                        <div className="bg-gray-200 p-4 md:p-3 px-6 w-full flex items-center rounded-md">
+                                            <h3 className="text-base md:text-lg leading-6 font-semibold">
+                                                {faq.question}
+                                            </h3>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Answer */}
+                                    <motion.div
+                                        className="flex flex-col sm:flex-row items-start"
+                                        initial={{ opacity: 0, x: 80 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.6 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <div className="bg-primary/20 p-4 md:p-5 px-6 md:px-10 w-full flex items-center rounded-md order-2 sm:order-1">
+                                            <p className="text-sm md:text-base leading-relaxed">
+                                                {faq.answer}
+                                            </p>
+                                        </div>
+                                        <div className="flex items-center justify-center p-3 mb-3 sm:mb-0 sm:ml-4 rounded-full bg-primary text-white border-4 border-white flex-shrink-0 order-1 sm:order-2">
+                                            {svgIcons.answer}
+                                        </div>
+                                    </motion.div>
                                 </motion.div>
-                                <motion.div
-                                    className="flex flex-col sm:flex-row items-start"
-                                    initial={{ opacity: 0, x: 80 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.6 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <div className="bg-primary/20 p-4 md:p-5 px-6 md:px-10 w-full flex items-center rounded-md order-2 sm:order-1">
-                                        <p className="text-sm md:text-base leading-relaxed">
-                                            {faq.answer}
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center justify-center p-3 mb-3 sm:mb-0 sm:ml-4 rounded-full bg-primary text-white border-4 border-white flex-shrink-0 order-1 sm:order-2">
-                                        {svgIcons.answer}
-                                    </div>
-                                </motion.div>
-                            </div>
-                        ))}
+                            ))}
+                        </AnimatePresence>
                     </div>
+
+                    {Faq.length > 4 && (
+                        <div className="text-center mt-10">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={() => setShowAll(!showAll)}
+                                className="px-6 py-3 bg-primary text-white font-semibold rounded-full shadow-lg transition-all duration-300"
+                            >
+                                {showAll ? "Show Less" : "Show More"}
+                            </motion.button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
