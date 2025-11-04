@@ -13,9 +13,9 @@ interface WhatIsSectionProps {
     highlight: string;
     description: string;
     definitionOne: DefinitionItem[];
-    definitionTwo: DefinitionItem[];
+    definitionTwo?: DefinitionItem[];
     imageOne: string;
-    imageTwo: string;
+    imageTwo?: string;
 }
 
 const WhatIsSection: React.FC<WhatIsSectionProps> = ({
@@ -35,12 +35,12 @@ const WhatIsSection: React.FC<WhatIsSectionProps> = ({
             </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
                 <div className="text-center mb-14">
-                    <h3 className="text-2xl md:text-5xl font-bold">
+                    <h2 className="text-2xl md:text-5xl font-bold max-w-4xl mx-auto">
                         {heading}{' '}
                         <span className="text-primary">
               {highlight}
             </span>
-                    </h3>
+                    </h2>
                     <p className="mt-4 text-gray-600 max-w-4xl mx-auto">{description}</p>
                 </div>
 
@@ -74,9 +74,9 @@ const WhatIsSection: React.FC<WhatIsSectionProps> = ({
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-16">
+                {definitionTwo && (  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mt-16">
                     <div className="space-y-8">
-                        {definitionTwo.map((item, index) => (
+                        {definitionTwo?.map((item, index) => (
                             <div
                                 key={index}
                                 className="group flex items-start gap-6 p-3 rounded border border-black shadow-md cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
@@ -94,7 +94,7 @@ const WhatIsSection: React.FC<WhatIsSectionProps> = ({
                     <div className="mb-8 md:mb-0 md:block hidden">
                         <div className="w-full max-w-sm mx-auto">
                             <Image
-                                src={imageTwo}
+                                src={imageTwo || ''}
                                 alt="Section illustration 2"
                                 width={400}
                                 height={400}
@@ -102,7 +102,7 @@ const WhatIsSection: React.FC<WhatIsSectionProps> = ({
                             />
                         </div>
                     </div>
-                </div>
+                </div>)}
 
                 <div className="text-center mt-8">
                     <motion.button

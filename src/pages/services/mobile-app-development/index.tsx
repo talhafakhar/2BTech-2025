@@ -496,46 +496,46 @@ export default function MobileAppDevelopment() {
             ></path>
         </svg>,
         'Integration Tests': () => (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-10 h-10"
-            fill="none"
-            viewBox="0 0 109 113"
-            role="img"
-            aria-labelledby="integrationTestsTitle"
-        >
-            <title id="integrationTestsTitle">Integration Tests (IT)</title>
-            <defs>
-                <radialGradient id="g" cx="50%" cy="35%" r="65%">
-                    <stop offset="0%" stopColor="#7C3AED" />
-                    <stop offset="60%" stopColor="#5EEAD4" />
-                    <stop offset="100%" stopColor="#60A5FA" />
-                </radialGradient>
-            </defs>
-            <circle cx="54.5" cy="56.5" r="48" fill="url(#g)" />
-            <circle
-                cx="54.5"
-                cy="56.5"
-                r="48"
-                stroke="rgba(255,255,255,0.12)"
-                strokeWidth="4"
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-10 h-10"
                 fill="none"
-            />
-            <text
-                x="50%"
-                y="56.5"
-                textAnchor="middle"
-                dominantBaseline="middle"
-                fontFamily="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
-                fontWeight="700"
-                fontSize="34"
-                fill="#FFFFFF"
-                style={{ letterSpacing: "-0.02em" }}
+                viewBox="0 0 109 113"
+                role="img"
+                aria-labelledby="integrationTestsTitle"
             >
-                IT
-            </text>
-        </svg>
-    ),
+                <title id="integrationTestsTitle">Integration Tests (IT)</title>
+                <defs>
+                    <radialGradient id="g" cx="50%" cy="35%" r="65%">
+                        <stop offset="0%" stopColor="#7C3AED" />
+                        <stop offset="60%" stopColor="#5EEAD4" />
+                        <stop offset="100%" stopColor="#60A5FA" />
+                    </radialGradient>
+                </defs>
+                <circle cx="54.5" cy="56.5" r="48" fill="url(#g)" />
+                <circle
+                    cx="54.5"
+                    cy="56.5"
+                    r="48"
+                    stroke="rgba(255,255,255,0.12)"
+                    strokeWidth="4"
+                    fill="none"
+                />
+                <text
+                    x="50%"
+                    y="56.5"
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    fontFamily="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
+                    fontWeight="700"
+                    fontSize="34"
+                    fill="#FFFFFF"
+                    style={{ letterSpacing: "-0.02em" }}
+                >
+                    IT
+                </text>
+            </svg>
+        ),
         Riverpod: () =>  <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10" viewBox="0 0 1636 1096">
             <path
                 fill="#41D0FD"
@@ -729,7 +729,6 @@ export default function MobileAppDevelopment() {
                 description="2BTech Inc specializes in cross platform app development using React Native and Flutter—the two leading frameworks for building high-quality mobile apps. As a react native development company and flutter app development expert, we help businesses launch on iOS and Android simultaneously from a single codebase. This approach dramatically reduces mobile app development cost by 40-60% compared to building separate native apps. Whether you're a startup launching your first app or an enterprise modernizing legacy systems, our expertise in react native development company services and flutter app development delivers production-ready apps that perform beautifully on both platforms."
                 src="/assets/services/mobileApp/mobileappDevelopment.webp"
                 width={400}
-                buttonLabel="View Our Portfolio"
             />
             <ServiceSection
                 heading="React Native & Flutter Development Services"

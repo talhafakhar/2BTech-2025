@@ -7,7 +7,7 @@ interface BannerProps {
 }
 const Banner: React.FC<BannerProps> =  ({title,description,src}) => {
     return (
-        <div className='py-10 container mx-auto px-4'>
+        <div className='py-10 max-w-8xl mx-auto px-4'>
             <section className="relative rounded-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between bg-black text-white min-h-[300px] md:min-h-[400px]">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
@@ -19,7 +19,7 @@ const Banner: React.FC<BannerProps> =  ({title,description,src}) => {
                     <h2 className="text-2xl md:text-4xl font-bold mb-6">
                         {title}
                     </h2>
-                    <p className="text-lg md:text-xl font-light mb-8">
+                    <p className="text-lg font-normal mb-8">
                         {description}
                     </p>
                     <a

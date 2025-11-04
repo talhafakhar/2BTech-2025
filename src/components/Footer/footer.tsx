@@ -156,13 +156,6 @@ const Footer = () => {
                                     <div className="cursor-pointer">
                                         {opt.title}
                                     </div>
-                                    {opt.options.map((subLink) => (
-                                        <div className="mt-2">
-                                            <Link href={subLink.path} className="text-sm text-black/70 hover:underline">
-                                                {subLink.title}
-                                            </Link>
-                                        </div>
-                                    ))}
                                 </li>
                             ))}
                         </ul>

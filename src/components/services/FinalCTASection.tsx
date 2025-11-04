@@ -5,7 +5,7 @@ import {CheckCircle, LucideMail, Phone} from "lucide-react";
 interface FinalCTASectionProps {
     heading: string;
     description: string;
-    features: string[];
+    features?: string[];
 }
 
 const FinalCTASection: React.FC<FinalCTASectionProps> = ({
@@ -32,17 +32,19 @@ const FinalCTASection: React.FC<FinalCTASectionProps> = ({
                             {description}
                         </p>
                     </div>
-
-                    <div className="rounded-2xl p-6 mb-8 flex justify-center">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            {features.map((item, i) => (
-                                <div key={i} className="flex items-center gap-2">
-                                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                                    <span className="text-sm">{item}</span>
-                                </div>
-                            ))}
+                    {features &&(
+                        <div className="rounded-2xl p-6 mb-8 flex justify-center">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                {features?.map((item, i) => (
+                                    <div key={i} className="flex items-center gap-2">
+                                        <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                                        <span className="text-sm">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                    )}
+
 
                     <div className="text-center space-y-4">
                         <motion.button

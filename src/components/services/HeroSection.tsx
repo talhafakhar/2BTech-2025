@@ -102,6 +102,31 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, TrustBar, 
                                     </div>
                                 </motion.div>
                             )}
+                            <div className="flex gap-2 sm:gap-6 justify-center md:justify-start items-center mt-8">
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={() =>
+                                        window.open('https://calendly.com/talhafakhar/discoverycall', '_blank')
+                                    }
+                                    className="flex items-center  border-black px-6 py-3 rounded border font-semibold transform transition-all duration-300 shadow-lg hover:shadow-xl"
+                                >
+                                    Schedule Free Consultation
+                                    <svg
+                                        className="ml-2 w-5 h-5 transform transition-transform duration-300"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                        />
+                                    </svg>
+                                </motion.button>
+                            </div>
 
 
                         </motion.div>

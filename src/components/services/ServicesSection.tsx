@@ -103,7 +103,7 @@ const ServiceSection: React.FC<WebServicesGridProps> = ({
                                                 height={100}
                                                 src={service.smallImage}
                                                 alt={service.title}
-                                                className="w-full lg:w-80 h-24 object-cover rounded-xl shadow-md"
+                                                className="w-full lg:w-80 h-24 border object-cover rounded"
                                             />
                                         </div>
                                     )}
