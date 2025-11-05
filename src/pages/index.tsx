@@ -7,32 +7,32 @@ import Banner from "@/components/Home/bannerSection";
 import IndustrySectors from "@/components/Home/IndustrySection";
 import CTASection from "@/components/Home/CTASection";
 import ClutchReviews from "@/components/Home/TestimonialSection";
-import type {BlogResponse} from "@/types/blog";
-import BlogCard from "@/components/Blog/BlogCard";
+// import type {BlogResponse} from "@/types/blog";
+// import BlogCard from "@/components/Blog/BlogCard";
 import React from "react";
 import {motion} from "framer-motion";
-import {GetStaticProps} from 'next';
+// import {GetStaticProps} from 'next';
 import GrowthTeamSection from "@/components/Home/GrowthTeamSection";
 import FaqSection from "@/components/Home/FaqSection";
-import {fetchBlogs} from "@/lib/strapi";
+// import {fetchBlogs} from "@/lib/strapi";
 import {FAQPageJsonLd, NextSeo, OrganizationJsonLd, WebPageJsonLd} from "next-seo";
-
-type Props = {
-    initialBlogs: BlogResponse['data'];
-    pagination: BlogResponse['meta']['pagination'];
-};
-export const getStaticProps: GetStaticProps<Props> = async () => {
-    const {data, pagination} = await fetchBlogs(1, 10);
-    return {
-        props: {
-            initialBlogs: data,
-            pagination,
-        },
-        revalidate: 3600,
-    };
-};
-export default function Home({initialBlogs}: Props) {
-    const blogs = initialBlogs;
+//
+// type Props = {
+//     initialBlogs: BlogResponse['data'];
+//     pagination: BlogResponse['meta']['pagination'];
+// };
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//     const {data, pagination} = await fetchBlogs(1, 10);
+//     return {
+//         props: {
+//             initialBlogs: data,
+//             pagination,
+//         },
+//         revalidate: 3600,
+//     };
+// };
+export default function Home() {
+    // const blogs = initialBlogs;
     const faqs = [
         {
             id: 1,
@@ -193,17 +193,17 @@ export default function Home({initialBlogs}: Props) {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {blogs && blogs.length > 0 ? (
-                            blogs.slice(0, 3).map((blog, index) => (
-                                <BlogCard key={blog.id} blog={blog} id={index}/>
-                            ))
-                        ) : (
-                            <div className="col-span-full text-center text-gray-500">
-                                No blogs available at the moment.
-                            </div>
-                        )}
-                    </div>
+                    {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">*/}
+                    {/*    {blogs && blogs.length > 0 ? (*/}
+                    {/*        blogs.slice(0, 3).map((blog, index) => (*/}
+                    {/*            <BlogCard key={blog.id} blog={blog} id={index}/>*/}
+                    {/*        ))*/}
+                    {/*    ) : (*/}
+                    {/*        <div className="col-span-full text-center text-gray-500">*/}
+                    {/*            No blogs available at the moment.*/}
+                    {/*        </div>*/}
+                    {/*    )}*/}
+                    {/*</div>*/}
                 </div>
             </div>
             <CTASection/>
