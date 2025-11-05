@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import {
-    ArrowRight,
-    Bot,
-    ChevronDown, Cloud, Code,
-    CodeXml, Cpu, Database,
-    Flag,
-    Home, Layout,
+    ChevronDown,
+    Home,
     Mail,
-    Pencil, PenTool, Rocket, ShoppingBag, ShoppingBagIcon, Smartphone, Workflow,
 } from 'lucide-react';
 import Link from 'next/link';
 import {servicesItems} from "@/components/Header/Navbar";
@@ -27,68 +22,6 @@ const BlogNavbar: React.FC = () => {
         setIsOpen(!isOpen);
         setActiveDropdown(null);
     };
-    const servicesItems = [
-        {
-            icon: Bot,
-            title: "AI Agent as a Service",
-            path: "/services/ai-agent-as-a-service",
-        },
-
-        {
-            icon: Cpu,
-            title: "AI Software Development",
-            path: "/services/ai-software-development",
-        },
-        {
-            icon: Cloud,
-            title: "Cloud Migration",
-            path: "/services/cloud-migration",
-        },
-
-        {
-            icon: Smartphone,
-            title: "Mobile App Development",
-            path: "/services/mobile-app-development",
-        },
-        {
-            icon: Rocket,
-            title: "MVP Development",
-            path: "/services/mvp-development",
-        },
-        {
-            icon: PenTool,
-            title: "Product Design",
-            path: "/services/product-design",
-        },
-
-        {
-            icon: Database,
-            title: "Salesforce Consulting",
-            path: "/services/salesforce-consulting",
-        },
-
-        {
-            icon: ShoppingBag,
-            title: "Shopify Development",
-            path: "/services/shopify-development",
-        },
-
-        {
-            icon: Layout,
-            title: "Webflow Development",
-            path: "/services/webflow-development",
-        },
-        {
-            icon: Code,
-            title: "Custom Software Development",
-            path: "/services/custom-software-development",
-        },
-        {
-            icon: Workflow,
-            title: "AI Digital Transformation Service",
-            path: "/services/ai-digital-transformation-service",
-        },
-    ];
 
     return (
         <nav style={{zIndex:99999}} className={`fixed top-0 w-full transition-all duration-300 bg-white ${scrolled && "shadow-lg border-b"}  border-gray-100`}>
@@ -240,14 +173,7 @@ const BlogNavbar: React.FC = () => {
                                             key={index}
                                             className="border-b border-gray-100 last:border-b-0"
                                         >
-                                            <button
-                                                onClick={() =>
-                                                    setActiveSubmenu(
-                                                        activeSubmenu === `service-${index}` ? null : `service-${index}`
-                                                    )
-                                                }
-                                                className="w-full flex items-center justify-between p-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
-                                            >
+                                            <button className="w-full flex items-center justify-between p-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200">
                                                 <div className="flex items-center space-x-3">
                                                     <item.icon className="h-4 w-4" />
                                                     <div className="text-left">
