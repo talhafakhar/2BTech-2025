@@ -119,8 +119,8 @@ export default function WebFlowDevelopment() {
             <AboutSection
                 title="Partner With Our Agency That Delivers Excellence"
                 description="At 2BTech, we specialize in transforming your vision into powerful Webflow websites that drive results. As a leading webflow development agency, we combine technical expertise with strategic thinking to deliver custom solutions that scale with your business. When you hire webflow developer talent from our team, you're gaining access to specialists who understand the platform inside and out. From complex animations to advanced CMS implementations, our webflow expert team handles projects of any complexity with precision and speed, ensuring your website becomes your most valuable marketing asset"
-                src="/assets/services/aiDigital/aiDigitalTrasnformation.webp"
-                width={500}
+                src="/assets/services/webflow/aboutWebflow.svg"
+                width={450}
             />
             <ServiceSection
                 heading="Comprehensive Services"
@@ -143,7 +143,7 @@ export default function WebFlowDevelopment() {
                     {
                         id: 3,
                         title: "Webflow Migration Services",
-                        highlightImage: "/assets/services/webflow/migration.webp",
+                        highlightImage: "/assets/services/webflow/webflowMigration.svg",
                         description:
                             "We migrate websites from WordPress, Wix, Shopify, or other platforms to Webflow—preserving SEO, maintaining content integrity, and enhancing site performance throughout the process.",
                     },
@@ -162,9 +162,9 @@ export default function WebFlowDevelopment() {
                     {
                         id: 6,
                         title: "Custom JavaScript & Integrations",
-                        smallImage: "/assets/services/webflow/integrations.webp",
+                        smallImage: "/assets/services/webflow/jsIntegration.svg",
                         description:
-                            "Extend Webflow’s power with custom JavaScript, API integrations, Zapier automations, and advanced functionality tailored to your business workflows.",
+                            "Extend Webflow’s power with custom JavaScript, API integrations, Zapier automations, and advanced functionality",
                     },
                     {
                         id: 7,
@@ -185,12 +185,12 @@ export default function WebFlowDevelopment() {
                 highlight="Your Webflow Expert"
                 description="Choosing 2BTech as your Webflow development agency means partnering with a team dedicated to excellence, innovation, and your success. Here’s why we stand out:"
                 definitionOne={definitionOne}
-                imageOne="/assets/services/aiDigital/whyAiDigital.jpeg"
+                imageOne="/assets/services/webflow/experts.svg"
             />
             <OurModals
                 headingHighlight="Flexible Engagement Models"
                 heading="Designed for Your Project Success"
-                src="/assets/services/aiDigital/AiDigitalModal.webp"
+                src="/assets/services/webflow/webflowModal.webp"
                 description=" At 2BTech, we understand every project has unique requirements and budgets. Choose the engagement model that best fits your timeline, scope, and collaboration preferences"
                 subheading="Fixed-Price Model"
                 subDescription="Perfect for well-defined projects with clear deliverables and timelines. You receive a comprehensive fixed quote upfront with defined milestones, ensuring complete budget predictability and peace of mind throughout development"
@@ -198,6 +198,12 @@ export default function WebFlowDevelopment() {
                 subDescriptionTwo="Ideal for ongoing projects requiring continuous collaboration and flexibility. You get a dedicated webflow expert working exclusively on your projects, functioning as an integrated extension of your internal team"
             />
             <AIStackSection/>
+
+            <Banner
+                title="Empower Your Brand with Webflow"
+                description="Design, build, and launch stunning websites faster."
+                src="/assets/services/webflow/webflowBanner.webp"
+            />
             <OurFlowSection
                 heading="Critical Elements Missing"
                 headingHighlight="Webflow Sites"
@@ -242,12 +248,6 @@ export default function WebFlowDevelopment() {
                 ]}
             />
 
-            <Banner
-                title="Empower Your Brand with Webflow"
-                description="Design, build, and launch stunning websites faster."
-                src="/assets/services/aiDigital/aiBanner.webp"
-            />
-            <TestimonialSection/>
             <FaqSection
                 Faq={faqs}
             />

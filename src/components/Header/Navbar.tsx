@@ -24,11 +24,7 @@ export const servicesItems = [
         title: "AI Agent as a Service",
         path: "/services/ai-agent-as-a-service",
     },
-    {
-        icon: Workflow,
-        title: "AI Digital Transformation Service",
-        path: "/services/ai-digital-transformation-service",
-    },
+
     {
         icon: Cpu,
         title: "AI Software Development",
@@ -39,11 +35,7 @@ export const servicesItems = [
         title: "Cloud Migration",
         path: "/services/cloud-migration",
     },
-    {
-        icon: Code,
-        title: "Custom Software Development",
-        path: "/services/custom-software-development",
-    },
+
     {
         icon: Smartphone,
         title: "Mobile App Development",
@@ -59,20 +51,33 @@ export const servicesItems = [
         title: "Product Design",
         path: "/services/product-design",
     },
+
     {
         icon: Database,
         title: "Salesforce Consulting",
         path: "/services/salesforce-consulting",
     },
+
     {
         icon: ShoppingBag,
         title: "Shopify Development",
         path: "/services/shopify-development",
     },
+
     {
         icon: Layout,
         title: "Webflow Development",
         path: "/services/webflow-development",
+    },
+    {
+        icon: Code,
+        title: "Custom Software Development",
+        path: "/services/custom-software-development",
+    },
+    {
+        icon: Workflow,
+        title: "AI Digital Transformation Service",
+        path: "/services/ai-digital-transformation-service",
     },
 ];
 
@@ -157,23 +162,22 @@ const Navbar: React.FC = () => {
                             </button>
 
                             {activeDropdown === "services" && (
-                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[950px] bg-white shadow-2xl rounded-2xl py-6 px-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[950px] bg-white shadow-2xl rounded-md py-6 px-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                                     <div className="grid grid-cols-3 gap-4">
                                         {servicesItems.map((item, index) => (
                                             <a
                                                 key={index}
                                                 href={item.path}
-                                                className="flex flex-col items-start p-5 rounded-xl border border-gray-100 hover:border-blue-500 hover:shadow-md transition-all duration-200 group bg-gray-50 hover:bg-blue-50"
+                                                className="flex flex-col items-start p-5 rounded  hover:border-primary border  hover:shadow-md transition-all duration-200 group bg-gray-50 hover:bg-blue-50"
                                             >
-                                                <div className="flex items-center space-x-3 mb-2">
-                                                    <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-blue-600 transition-colors">
-                                                        <item.icon className="h-5 w-5 text-blue-600 group-hover:text-white transition-colors" />
+                                                <div className="flex items-center space-x-3">
+                                                    <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-primary transition-colors">
+                                                        <item.icon className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
                                                     </div>
-                                                    <h4 className="font-semibold text-gray-800 group-hover:text-blue-700 transition-colors text-sm">
+                                                    <h4 className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">
                                                         {item.title}
                                                     </h4>
                                                 </div>
-                                                <div className="h-[2px] w-full bg-gray-200 group-hover:bg-blue-400 transition-all duration-200"></div>
                                             </a>
                                         ))}
                                     </div>
@@ -256,7 +260,7 @@ const Navbar: React.FC = () => {
                 >
                     <div className="py-4 space-y-2 border-t border-black">
                         <Link href="/" className="flex items-center space-x-2 px-2 py-3   hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                        <Home className="h-5 w-5" />
+                            <Home className="h-5 w-5" />
                             <span className="font-medium">Home</span>
                         </Link>
                         <div className="max-h-[calc(100vh-120px)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
@@ -295,7 +299,6 @@ const Navbar: React.FC = () => {
                                                     <item.icon className="h-4 w-4" />
                                                     <div className="text-left">
                                                         <span className="font-medium block">{item.title}</span>
-                                                        <p className="text-sm text-gray-500">{item.description}</p>
                                                     </div>
                                                 </div>
                                             </button>

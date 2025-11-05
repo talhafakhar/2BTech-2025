@@ -218,7 +218,26 @@ export default function aiDigitalTransformationService() {
                 subheadingTwo="Dedicated Team Model"
                 subDescriptionTwo="Scale your capabilities with dedicated AI specialists who integrate seamlessly with your team. Full control over resources, flexible scaling, and direct communication ensure alignment with evolving needs"
             />
-            <AIStackSection/>
+            <AIStackSection
+                heading={
+                    <>
+                        <span className="text-primary">Stack</span> we use
+                    </>
+                }
+                stackLogos={[
+                    { src: "/assets/services/aiDigital/stack/stack-1.svg", alt: "Logo 1" },
+                    { src: "/assets/services/aiDigital/stack/stack-2.svg", alt: "Logo 2" },
+                    { src: "/assets/services/aiDigital/stack/stack-3.svg", alt: "Logo 3" },
+                    { src: "/assets/services/aiDigital/stack/stack-4.svg", alt: "Logo 4" },
+                    { src: "/assets/services/aiDigital/stack/stack-5.svg", alt: "Logo 5" },
+                    { src: "/assets/services/aiDigital/stack/stack-6.svg", alt: "Logo 6" },
+                    { src: "/assets/services/aiDigital/stack/stack-7.svg", alt: "Logo 7" },
+                    { src: "/assets/services/aiDigital/stack/stack-8.svg", alt: "Logo 8" },
+                    { src: "/assets/services/aiDigital/stack/stack-9.svg", alt: "Logo 9" },
+                    { src: "/assets/services/aiDigital/stack/stack-10.svg", alt: "Logo 10" },
+                ]}
+            />
+
             <OurFlowSection
                 heading="Transform Your Business"
                 headingHighlight="Operations with AI"

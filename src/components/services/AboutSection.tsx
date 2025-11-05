@@ -41,7 +41,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ title, description, src, wi
                     transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
                     viewport={{ once: true, amount: 0.3 }}
                 >
-                    <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-6">
+                    <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-2">
                         {title}
                     </h2>
                     <p >{description}</p>

@@ -80,13 +80,13 @@ const ServiceSection: React.FC<WebServicesGridProps> = ({
                                 viewport={{ once: true, amount: 0.2 }}
                             >
                                 {service.highlightImage && (
-                                    <div className="mb-6 hidden lg:block">
+                                    <div className="mb-2 hidden lg:block">
                                         <Image
                                             width={200}
                                             height={100}
                                             src={service.highlightImage}
                                             alt={service.title}
-                                            className="w-full h-48 lg:h-56 object-cover rounded-xl shadow-md"
+                                            className="w-full object-cover rounded-xl border shadow-md"
                                         />
                                     </div>
                                 )}
@@ -95,15 +95,15 @@ const ServiceSection: React.FC<WebServicesGridProps> = ({
                                     {service.title}
                                 </h3>
 
-                                <div className="flex flex-col md:flex-row gap-2">
+                                <div className="flex flex-col md:flex-row gap-2 w-full">
                                     {service.smallImage && (
-                                        <div className="mb-6 hidden lg:block">
+                                        <div className="hidden lg:block w-96">
                                             <Image
                                                 width={200}
                                                 height={100}
                                                 src={service.smallImage}
                                                 alt={service.title}
-                                                className="w-full lg:w-80 h-24 border object-cover rounded"
+                                                className="w-full h-full border object-cover rounded shadow"
                                             />
                                         </div>
                                     )}

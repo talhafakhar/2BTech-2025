@@ -73,31 +73,33 @@ interface OurModalsProps {
     heading: string;
     headingHighlight: string;
     src: string;
+    width?: number;
     description: string;
-    subheading:string;
-    subDescription:string
-    subheadingTwo:string;
-    subDescriptionTwo:string;
+    subheading: string;
+    subDescription: string
+    subheadingTwo: string;
+    subDescriptionTwo: string;
 }
 
 const OurModals: React.FC<OurModalsProps> = ({
-                                                 heading ,
+                                                 heading,
                                                  headingHighlight,
                                                  description,
                                                  src,
-    subheading,
-    subDescription,
-    subheadingTwo,
-    subDescriptionTwo,
+                                                 width,
+                                                 subheading,
+                                                 subDescription,
+                                                 subheadingTwo,
+                                                 subDescriptionTwo,
                                              }) => {
     return (
         <div className="bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 py-16">
+            <div className={`max-w-7xl mx-auto px-4 ${width ? "py-3" : "py-16"}`}>
                 <motion.div
                     initial={{opacity: 0, y: -30}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.8}}
-                    className="mb-16 text-center"
+                    className={`${width ? "mb-3" : "mb-16"}  text-center`}
                 >
                     <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight max-w-3xl mx-auto">
                         <span className="text-primary">{headingHighlight} </span>
@@ -110,14 +112,14 @@ const OurModals: React.FC<OurModalsProps> = ({
                 <div className="grid lg:grid-cols-2 gap-5 md:gap-2 items-center">
                     <div className="flex justify-center lg:justify-start">
                         <div className="max-w-md w-full">
-                            <Image src={src} alt="Modals" width={430} height={400}/>
+                            <Image src={src} alt="Modals" width={width ? width : 430} height={400}/>
                         </div>
                     </div>
                     <div className="space-y-6">
                         <div className="border-2 bg-white rounded-xl p-4">
                             <div className="flex items-start gap-4">
                                 <div className="flex-shrink-0">
-                                    <CubeIcon />
+                                    <CubeIcon/>
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -132,7 +134,7 @@ const OurModals: React.FC<OurModalsProps> = ({
                         <div className="border-2 md:ml-10 rounded-xl p-4 bg-white">
                             <div className="flex items-start gap-4">
                                 <div className="flex-shrink-0">
-                                    <TeamIcon />
+                                    <TeamIcon/>
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -150,11 +152,14 @@ const OurModals: React.FC<OurModalsProps> = ({
                                     window.open('https://calendly.com/talhafakhar/discoverycall', '_blank')
                                 }
                                 className="px-6 sm:px-8 py-2 border flex items-center bg-white border-black rounded"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.97 }}
+                                whileHover={{scale: 1.05}}
+                                whileTap={{scale: 0.97}}
                             >
-                                CHOOSE A PLAN <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                CHOOSE A PLAN <svg
+                                className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
                             </motion.button>
                         </div>

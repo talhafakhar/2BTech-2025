@@ -549,7 +549,7 @@ export default function MvpDevelopment() {
             <Banner
                 title="Kickstart Your MVP Project Today"
                 description="From idea to launch, we build custom MVPs quickly and efficiently"
-                src="/assets/services/mvpBanner.webp"
+                src="/assets/services/mvp/mvpBanner.webp"
             />
             <TestimonialSection/>
             <FaqSection

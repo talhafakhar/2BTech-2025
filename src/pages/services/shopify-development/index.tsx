@@ -118,7 +118,7 @@ export default function ShopifyDevelopment() {
             <AboutSection
                 title="Partner With a Shopify Development Company That Delivers Exceptional Results"
                 description="At 2BTech, we specialize in building high-converting Shopify stores that drive revenue growth and customer satisfaction. As a leading shopify development company, we combine technical expertise with ecommerce strategy to create custom solutions that scale with your business. When you hire shopify expert talent from our team, you're gaining access to seasoned professionals who understand every aspect of the platform. From custom shopify development to complex integrations and performance optimization, our shopify developer team delivers solutions that transform your online presence into a powerful revenue-generating machine"
-                src="/assets/services/aiDigital/aiDigitalTrasnformation.webp"
+                src="/assets/services/shopify/onlineStore.webp"
                 width={500}
             />
             <ServiceSection
@@ -142,7 +142,7 @@ export default function ShopifyDevelopment() {
                     {
                         id: 3,
                         title: "Shopify App Development",
-                        highlightImage: "/assets/services/shopify/appDevelopment.webp",
+                        highlightImage: "/assets/services/shopify/shopifyApp.svg",
                         description:
                             "We create custom Shopify apps and integrations that extend functionality, automate workflows, and solve unique business challenges with scalable, maintainable solutions built for growth.",
                     },
@@ -160,10 +160,10 @@ export default function ShopifyDevelopment() {
                     },
                     {
                         id: 6,
-                        title: "Shopify SEO & Performance Optimization",
-                        smallImage: "/assets/services/shopify/seoOptimization.webp",
+                        title: "SEO & Performance Optimization",
+                        smallImage: "/assets/services/shopify/ecommerceSeo.svg",
                         description:
-                            "Boost visibility and speed with technical SEO, schema markup, image optimization, and page performance tuning for higher rankings and engagement.",
+                            "Boost visibility and speed with technical SEO, schema markup, image optimization, and page performance",
                     },
                     {
                         id: 7,
@@ -185,19 +185,24 @@ export default function ShopifyDevelopment() {
                 highlight="Your Shopify  Expert"
                 description=""
                 definitionOne={definitionOne}
-                imageOne="/assets/services/aiDigital/whyAiDigital.jpeg"
+                imageOne="/assets/services/shopify/store.svg"
             />
             <OurModals
                 headingHighlight="Flexible Engagement Models"
                 heading="Designed for Your Ecommerce Goals"
-                src="/assets/services/aiDigital/AiDigitalModal.webp"
+                src="/assets/services/shopify/shopifyModal.webp"
+                width={350}
                 description=" At 2BTech, we understand every Shopify project has unique requirements, timelines, and budgets. Choose the engagement model that best fits your business needs and growth stage"
                 subheading="Fixed-Price Model"
                 subDescription="Perfect for well-defined Shopify projects with clear scope and deliverables. You receive a comprehensive fixed quote upfront with defined milestones, timelines, and outcomes, ensuring complete budget predictability and transparency"
                 subheadingTwo="Dedicated Team Model"
                 subDescriptionTwo="Ideal for ongoing development requiring continuous collaboration and flexibility. You get dedicated shopify expert developers working exclusively on your store, functioning as an integrated extension of your internal ecommerce team"
             />
-            <AIStackSection/>
+            <Banner
+                title="Empower Your Brand with Shopify expert"
+                description="Design, build, and launch stunning websites faster."
+                src="/assets/services/shopify/ecommerceBg.webp"
+            />
             <OurFlowSection
                 heading="Essential Features Limiting"
                 headingHighlight="Shopify Growth"
@@ -241,13 +246,6 @@ export default function ShopifyDevelopment() {
                     },
                 ]}
             />
-
-            <Banner
-                title="Empower Your Brand with Shopify expert"
-                description="Design, build, and launch stunning websites faster."
-                src="/assets/services/aiDigital/aiBanner.webp"
-            />
-            <TestimonialSection/>
             <FaqSection
                 Faq={faqs}
             />

@@ -117,7 +117,7 @@ export default function productDesign() {
             <AboutSection
                 title="Partner Leading Product Design Agency That Delivers Results"
                 description="At 2BTech, we specialize in creating exceptional digital experiences that captivate users and drive measurable business outcomes. As a trusted user experience design agency, we combine strategic thinking with innovative design to transform your vision into powerful digital products. Our comprehensive approach to digital product design ensures every touchpoint is optimized for engagement, retention, and conversion. From initial research to final implementation, we craft solutions that resonate with your audience and align perfectly with your business objectives, delivering interfaces that users love and results that matter"
-                src="/assets/services/aiDigital/aiDigitalTrasnformation.webp"
+                src="/assets/services/product/about.webp"
                 width={500}
             />
             <ServiceSection
@@ -129,21 +129,18 @@ export default function productDesign() {
                     {
                         id: 1,
                         title: "User Research & Strategy",
-                        description:
-                            "We conduct comprehensive user research, competitive analysis, and stakeholder interviews to craft data-driven strategies that guide every design decision and ensure alignment with target audiences.",
+                        description: "We conduct comprehensive user research, competitive analysis, and stakeholder interviews to craft data-driven strategies that guide every design decision and ensure alignment with target audiences.",
                     },
                     {
                         id: 2,
                         title: "Mobile App Design Services",
-                        description:
-                            "Our mobile app design services create intuitive, engaging experiences for iOS and Android, delivering seamless navigation, stunning visuals, and high user retention.",
+                        description: "Our mobile app design services create intuitive, engaging experiences for iOS and Android, delivering seamless navigation, stunning visuals, and high user retention.",
                     },
                     {
                         id: 3,
                         title: "Web App Design Services",
-                        highlightImage: "/assets/services/uiux/webAppDesign.webp",
-                        description:
-                            "We design responsive, conversion-focused web applications that blend elegant aesthetics with flawless functionality across all devices and browsers.",
+                        highlightImage: "/assets/services/product/websiteDesign.svg",
+                        description: "We design responsive, conversion-focused web applications that blend elegant aesthetics with flawless functionality across all devices and browsers.",
                     },
                     {
                         id: 4,
@@ -160,7 +157,7 @@ export default function productDesign() {
                     {
                         id: 6,
                         title: "Usability Testing & Optimization",
-                        smallImage: "/assets/services/uiux/usabilityTesting.webp",
+                        smallImage: "/assets/services/product/UsabilityTestingOptimization.svg",
                         description:
                             "Through real-user testing and analytics, we identify friction points, refine interactions, and continuously optimize usability for peak performance.",
                     },
@@ -184,19 +181,40 @@ export default function productDesign() {
                 highlight="Your Product Design Company"
                 description="Choosing 2BTech as your user experience design agency means gaining a strategic partner dedicated to your success. Here's why businesses trust us for their UI UX design services:"
                 definitionOne={definitionOne}
-                imageOne="/assets/services/aiDigital/whyAiDigital.jpeg"
+                imageOne="/assets/services/product/expert.webp"
             />
             <OurModals
                 headingHighlight="Flexible Engagement Models"
                 heading="Tailored to Your Business Needs"
-                src="/assets/services/aiDigital/AiDigitalModal.webp"
+                src="/assets/services/product/modal.webp"
                 description="t 2BTech, we understand that every project is unique. That's why we offer flexible hiring models designed to fit your timeline, budget, and specific requirements"
                 subheading="Fixed Model"
                 subDescription="Perfect for well-defined projects with clear scope and timelines. You receive a fixed quote upfront with defined deliverables, milestones, and deadlines, ensuring complete budget predictability and peace of mind"
                 subheadingTwo="Dedicated Team"
                 subDescriptionTwo="Ideal for ongoing projects requiring continuous collaboration. You get a dedicated team of designers who work exclusively on your project, functioning as an extension of your in-house team"
             />
-            <AIStackSection/>
+            <AIStackSection
+                heading={
+                    <>
+                        <span className="text-primary">Stack</span> we use
+                    </>
+                }
+                stackLogos={[
+                    { src: "/assets/services/product/stack/stack-1.svg", alt: "Logo 1" },
+                    { src: "/assets/services/product/stack/stack-2.svg", alt: "Logo 2" },
+                    { src: "/assets/services/product/stack/stack-3.svg", alt: "Logo 3" },
+                    { src: "/assets/services/product/stack/stack-4.svg", alt: "Logo 4" },
+                    { src: "/assets/services/product/stack/stack-5.svg", alt: "Logo 5" },
+                    { src: "/assets/services/product/stack/stack-6.svg", alt: "Logo 6" },
+                    { src: "/assets/services/product/stack/stack-7.svg", alt: "Logo 7" },
+                    { src: "/assets/services/product/stack/stack-8.svg", alt: "Logo 8" },
+                    { src: "/assets/services/product/stack/stack-9.svg", alt: "Logo 9" },
+                    { src: "/assets/services/product/stack/stack-10.svg", alt: "Logo 10" },
+                    { src: "/assets/services/product/stack/stack-11.svg", alt: "Logo 10" },
+                    { src: "/assets/services/product/stack/stack-12.svg", alt: "Logo 10" },
+                    { src: "/assets/services/product/stack/stack-13.svg", alt: "Logo 10" },
+                ]}
+            />
             <OurFlowSection
                 heading="Growth-Driving"
                 headingHighlight="Design Elements"
@@ -243,7 +261,7 @@ export default function productDesign() {
             <Banner
                 title="Innovative Product Design Services"
                 description="Designing intuitive digital products that drive growth"
-                src="/assets/services/aiDigital/aiBanner.webp"
+                src="/assets/services/product/bannerBg.jpg"
             />
          <TestimonialSection/>
             <FaqSection

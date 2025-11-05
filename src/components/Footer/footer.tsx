@@ -1,15 +1,9 @@
 "use client";
-import {
-    Facebook,
-    Linkedin,
-    Mail,
-    Phone,
-    Twitter,
-    Instagram,
-} from "lucide-react";
+import {Facebook, Instagram, Linkedin, Mail, Phone, Twitter,} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {servicesItems} from "@/components/Header/Navbar";
+
 const DiscordIcon = () => (
     <svg viewBox="0 0 48 48" width="28" xmlns="http://www.w3.org/2000/svg" fill="#000000">
         <g id="SVGRepo_bgCarrier" strokeWidth={0}></g>
@@ -58,7 +52,8 @@ const Footer = () => {
     return (
         <footer className="bg-[#f0f7ff] rounded-t-[3%]">
             <div className="flex flex-col gap-10 border-b container mx-auto px-4 py-5">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-4 w-full border-b py-3">
+                <div
+                    className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-4 w-full border-b py-3">
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 w-full">
                         <Link href="/" className="flex items-center">
                             <div className="transform transition-all duration-300 group-hover:rotate-3">
@@ -80,14 +75,15 @@ const Footer = () => {
                                         key={index}
                                         className="bg-primary w-8 h-8 rounded-full flex items-center justify-center text-white"
                                     >
-                                        <SocialIcon className="w-5 h-5 text-white cursor-pointer" />
+                                        <SocialIcon className="w-5 h-5 text-white cursor-pointer"/>
                                     </div>
                                 );
                             })}
                         </div>
                     </div>
-                    <hr className="rotate-90 border border-gray-200 w-[80px] hidden md:block" />
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-3 md:gap-0 mt-4 md:mt-0">
+                    <hr className="rotate-90 border border-gray-200 w-[80px] hidden md:block"/>
+                    <div
+                        className="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-3 md:gap-0 mt-4 md:mt-0">
                         <h4 className="font-semibold">Join Newsletter</h4>
                         <div className="flex w-full md:w-auto items-center rounded-full overflow-hidden">
                             <input
@@ -101,7 +97,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16 lg:gap-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16">
                     <div className="flex flex-col gap-6 md:col-span-1">
                         <div className="border border-black rounded-lg p-4 w-full">
                             <div className="flex items-center gap-2 font-bold text-lg">
@@ -118,11 +114,11 @@ const Footer = () => {
                                 5900 Balcones Drive, STE 4000 Austin TX, USA 78731
                             </p>
                             <div className="flex items-center text-sm mt-2">
-                                <Mail className="w-4 h-4 mr-2" />
+                                <Mail className="w-4 h-4 mr-2"/>
                                 info@2techinc.com
                             </div>
                             <div className="flex items-center text-sm mt-2">
-                                <Phone className="w-4 h-4 mr-2 text-red-500" />
+                                <Phone className="w-4 h-4 mr-2 text-red-500"/>
                                 +1 (858) 386-7630 | +1 (737) 299-0421
                             </div>
                         </div>
@@ -140,30 +136,52 @@ const Footer = () => {
                             </div>
                             <p className="mt-1 text-sm">Gulberg 3 Block C2, 62, Lahore, Pakistan</p>
                             <div className="flex items-center text-sm mt-2">
-                                <Mail className="w-4 h-4 mr-2" />
+                                <Mail className="w-4 h-4 mr-2"/>
                                 info@2techinc.com
                             </div>
                             <div className="flex items-center text-sm mt-2">
-                                <Phone className="w-4 h-4 mr-2 text-red-500" />
+                                <Phone className="w-4 h-4 mr-2 text-red-500"/>
                                 +92-344-9889555
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-2">
-                        <ul className="flex flex-wrap gap-8">
+                    <div className="col-span-1">
+                        <h3 className="mb-2 font-semibold text-gray-900">Services</h3>
+                        <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                             {servicesItems.map((opt, i) => (
-                                <li key={i}>
-                                    <div className="cursor-pointer">
-                                        {opt.title}
-                                    </div>
-                                </li>
+                                <Link
+                                    key={i}
+                                    href={opt.path}
+                                    className="cursor-pointer text-gray-500 hover:text-primarytransition-colors text-sm text-nowrap"
+                                >
+                                    {opt.title}
+                                </Link>
                             ))}
-                        </ul>
+                        </div>
+                    </div>
 
+                    <div className="col-span-1">
+                        <h3 className="mb-2">Quick Links</h3>
+                        <ul className="flex flex-col gap-1">
+                            <li className="cursor-pointer text-gray-500">
+                                <Link href="/">Home</Link>
+                            </li>
+                            <li className="cursor-pointer text-gray-500">
+                                <Link href="/about-us">About us</Link>
+                            </li>
+                            <li className="cursor-pointer text-gray-500">
+                                <Link href="/contact-us">Contact us</Link>
+                            </li>
+                            <li className="cursor-pointer text-gray-500">
+                                <Link href="/blogs">Blogs</Link>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div className="mt-6 flex flex-col container mx-auto md:flex-row justify-between text-sm  items-center gap-2">
+            <div
+                className="mt-6 flex flex-col container mx-auto md:flex-row justify-between text-sm  items-center gap-2">
                 <div>© 2025. 2BTech All Rights Reserved.</div>
                 <div className="flex gap-4 underline">
                     <a href="#">Support</a>

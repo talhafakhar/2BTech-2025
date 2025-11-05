@@ -3,14 +3,15 @@ import Image from 'next/image';
 import {
     ArrowRight,
     Bot,
-    ChevronDown,
-    CodeXml,
+    ChevronDown, Cloud, Code,
+    CodeXml, Cpu, Database,
     Flag,
-    Home,
+    Home, Layout,
     Mail,
-    Pencil, ShoppingBagIcon,
+    Pencil, PenTool, Rocket, ShoppingBag, ShoppingBagIcon, Smartphone, Workflow,
 } from 'lucide-react';
 import Link from 'next/link';
+import {servicesItems} from "@/components/Header/Navbar";
 const BlogNavbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -28,57 +29,64 @@ const BlogNavbar: React.FC = () => {
     };
     const servicesItems = [
         {
-            icon: CodeXml,
-            title: "Custom Software Development",
-            description: "We design and build secure and user-friendly software tailored to your business needs.",
-            options: [
-                { title: "Web Development", path: "/services/custom-software-development/web-development" },
-                { title: "Hybrid App Development", path: "/services/custom-software-development/hybrid-app-development" },
-                { title: "Cloud Engineering", path: "/services/custom-software-development/cloud-engineering" },
-                { title: "Salesforce Development & Integration", path: "/services/custom-software-development/salesforce-development-integration" },
-                { title: "Offshore Development Centre", path: "/services/custom-software-development/offshore-development-centre" },
-                { title: "Dedicated Development Teams", path: "/services/custom-software-development/dedicated-development-teams" },
-            ],
-        },
-        {
             icon: Bot,
-            title: "AI & Generative AI Solutions",
-            description: "Leverage the power of AI to transform your business with our cutting-edge AI and Generative AI solutions.",
-            options: [
-                { title: "Generative AI (Gen AI)", path: "/services/ai-and-generative-ai-solutions/generative-ai" },
-                { title: "AI MVP Development", path: "/services/ai-and-generative-ai-solutions/ai-mvp-development" },
-                { title: "AI as a Service (AIaaS)", path: "/services/ai-and-generative-ai-solutions/ai-as-a-service" },
-            ],
+            title: "AI Agent as a Service",
+            path: "/services/ai-agent-as-a-service",
+        },
+
+        {
+            icon: Cpu,
+            title: "AI Software Development",
+            path: "/services/ai-software-development",
         },
         {
-            icon: Pencil,
-            title: "Product Engineering",
-            description: "From concept to launch, we provide end-to-end product engineering services to bring your ideas to life.",
-            options: [
-                { title: "MVP Development", path: "/services/product-engineering/mvp-development" },
-                { title: "POC Development", path: "/services/product-engineering/poc-development" },
-                { title: "Full-Scale Product Development", path: "/services/product-engineering/full-scale-product-development" },
-                { title: "UI/UX Design", path: "/services/product-engineering/ui-ux-design" },
-            ],
+            icon: Cloud,
+            title: "Cloud Migration",
+            path: "/services/cloud-migration",
+        },
+
+        {
+            icon: Smartphone,
+            title: "Mobile App Development",
+            path: "/services/mobile-app-development",
         },
         {
-            icon: ShoppingBagIcon,
-            title: "Ecommerce Development",
-            description: "We create seamless and engaging eCommerce experiences that drive sales and customer loyalty.",
-            options: [
-                { title: "Adobe Commerce", path: "/services/ecommerce-development/adobe-commerce-development" },
-                { title: "Shopify Development", path: "/services/ecommerce-development/shopify-development" },
-                { title: "Bubble Development", path: "/services/ecommerce-development/bubble-development" },
-            ],
+            icon: Rocket,
+            title: "MVP Development",
+            path: "/services/mvp-development",
         },
         {
-            icon: Flag,
-            title: "Marketing",
-            description: "We’ll help your business generate long-term value with our full-stack digital marketing services.",
-            options: [
-                { title: "SEO", path: "/services/marketing/seo" },
-                { title: "PPC", path: "/services/marketing/ppc" },
-            ],
+            icon: PenTool,
+            title: "Product Design",
+            path: "/services/product-design",
+        },
+
+        {
+            icon: Database,
+            title: "Salesforce Consulting",
+            path: "/services/salesforce-consulting",
+        },
+
+        {
+            icon: ShoppingBag,
+            title: "Shopify Development",
+            path: "/services/shopify-development",
+        },
+
+        {
+            icon: Layout,
+            title: "Webflow Development",
+            path: "/services/webflow-development",
+        },
+        {
+            icon: Code,
+            title: "Custom Software Development",
+            path: "/services/custom-software-development",
+        },
+        {
+            icon: Workflow,
+            title: "AI Digital Transformation Service",
+            path: "/services/ai-digital-transformation-service",
         },
     ];
 
@@ -120,30 +128,24 @@ const BlogNavbar: React.FC = () => {
                                     }`}
                                 />
                             </button>
-
                             {activeDropdown === "services" && (
-                                <div className="absolute top-full left-1/2 -translate-x-1/2  w-[900px] bg-white shadow-xl rounded-xl py-3 px-4 animate-in slide-in-from-top-2 duration-200 z-50">
-                                    <div className="grid grid-cols-3 gap-3">
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[950px] bg-white shadow-2xl rounded-md py-6 px-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                    <div className="grid grid-cols-3 gap-4">
                                         {servicesItems.map((item, index) => (
-                                            <div key={index}
-                                                 className="flex flex-col space-y-4 p-4 border border-gray-200 rounded-lg hover:shadow-md transition">
+                                            <a
+                                                key={index}
+                                                href={item.path}
+                                                className="flex flex-col items-start p-5 rounded  hover:border-primary border  hover:shadow-md transition-all duration-200 group bg-gray-50 hover:bg-blue-50"
+                                            >
                                                 <div className="flex items-center space-x-3">
-                                                    <div className="bg-blue-100 p-3 rounded-lg">
-                                                        <item.icon className="h-6 w-6 text-blue-600"/>
+                                                    <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-primary transition-colors">
+                                                        <item.icon className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
                                                     </div>
-                                                    <h3 className="font-semibold text-gray-900">{item.title}</h3>
+                                                    <h4 className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">
+                                                        {item.title}
+                                                    </h4>
                                                 </div>
-                                                <p className="text-sm text-gray-600">{item.description}</p>
-                                                <ul className="space-y-2">
-                                                    {item.options.map((opt, i) => (
-                                                        <Link href={opt.path} key={i}
-                                                            className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 cursor-pointer">
-                                                            <ArrowRight className="h-4 w-4"/>
-                                                            <span>{opt.title}</span>
-                                                        </Link>
-                                                    ))}
-                                                </ul>
-                                            </div>
+                                            </a>
                                         ))}
                                     </div>
                                 </div>
@@ -232,25 +234,28 @@ const BlogNavbar: React.FC = () => {
                                 />
                             </button>
                             {activeDropdown === "mobile-services" && (
-                                <div className="mt-2 space-y-1 pl-4">
+                                <div className="mt-2 space-y-1  animate-slideDown">
                                     {servicesItems.map((item, index) => (
                                         <div
                                             key={index}
-                                            className="flex flex-col space-y-1 p-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
-                                        ><div className="flex items-center space-x-3">
-                                            <item.icon className="h-4 w-4" />
-                                            <span className="font-medium">{item.title}</span>
-                                        </div>
+                                            className="border-b border-gray-100 last:border-b-0"
+                                        >
+                                            <button
+                                                onClick={() =>
+                                                    setActiveSubmenu(
+                                                        activeSubmenu === `service-${index}` ? null : `service-${index}`
+                                                    )
+                                                }
+                                                className="w-full flex items-center justify-between p-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
+                                            >
+                                                <div className="flex items-center space-x-3">
+                                                    <item.icon className="h-4 w-4" />
+                                                    <div className="text-left">
+                                                        <span className="font-medium block">{item.title}</span>
+                                                    </div>
+                                                </div>
+                                            </button>
 
-                                            <p className="text-sm text-gray-500">{item.description}</p>
-                                            <div className="flex flex-col space-y-4 pl-1">
-                                                {item.options.map((opt, i) => (
-                                                    <Link href={opt.path} key={i} className="flex items-center space-x-2 text-sm">
-                                                        <ArrowRight className="h-4 w-4 text-blue-500" />
-                                                        <span>{opt.title}</span>
-                                                    </Link>
-                                                ))}
-                                            </div>
                                         </div>
                                     ))}
                                 </div>
