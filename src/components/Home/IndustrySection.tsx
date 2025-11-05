@@ -10,56 +10,55 @@ interface Sector {
 }
 const sectors: Sector[] = [
     {
-        id: 'ai-as-a-service',
-        title: 'AI as a Service',
-        description: 'Productize AI capabilities with robust APIs, scalable infrastructure, automated workflows, and advanced machine learning models to integrate intelligent solutions into enterprise systems seamlessly.',
+        id: 'healthcare-life-sciences',
+        title: 'Healthcare & Life Sciences',
+        description: 'HIPAA-compliant applications, patient portals, clinical tools, healthcare data systems',
         imageUrl: '/assets/Home/slide-1.svg',
     },
     {
-        id: 'edtech',
-        title: 'Edtech',
-        description: 'Build engaging, AI-enhanced learning platforms with interactive lessons, personalized learning paths, gamification, and analytics-driven insights to boost knowledge retention and learner engagement.',
+        id: 'financial-services',
+        title: 'Financial Services',
+        description: 'Trading platforms, payment systems, compliance tools, financial analytics dashboards',
         imageUrl: '/assets/Home/slide-2.svg',
     },
     {
-        id: 'ecommerce',
-        title: 'Ecommerce',
-        description: 'Create high-performance ecommerce platforms optimized for conversions, fast load times, secure payments, scalable architecture, and AI-powered product recommendations that drive revenue growth and customer engagement.',
-       imageUrl: '/assets/Home/slide-3.svg',
+        id: 'ecommerce-retail',
+        title: 'E-commerce & Retail',
+        description: 'Custom storefronts, inventory systems, recommendation engines, omnichannel solutions',
+        imageUrl: '/assets/Home/slide-3.svg',
     },
     {
-        id: 'retail-tech',
-        title: 'Retail Tech',
-        description: 'Enhance omnichannel digital experiences with intelligent inventory management, AI-driven personalization, seamless checkout flows, and analytics-driven marketing strategies for a smarter retail ecosystem.',
+        id: 'saas-technology',
+        title: 'SaaS & Technology',
+        description: 'B2B platforms, API development, integrations, microservices architectures',
         imageUrl: '/assets/Home/slide-4.svg',
     },
     {
-        id: 'saas',
-        title: 'SaaS',
-        description: 'Develop subscription-first software solutions with scalable backend architecture, real-time analytics, cloud infrastructure, and intuitive user interfaces designed to enhance productivity and customer retention.',
-
+        id: 'education-elearning',
+        title: 'Education & E-learning',
+        description: 'Learning management systems, student platforms, assessment tools, content delivery',
         imageUrl: '/assets/Home/slide-5.svg',
     },
     {
-        id: 'agritech',
-        title: 'Agritech',
-        description: 'Digitize farm-to-fork operations using cloud, IoT, and mobile solutions, enabling real-time monitoring, predictive crop analytics, supply chain optimization, and improved agricultural efficiency.',
+        id: 'manufacturing-supply-chain',
+        title: 'Manufacturing & Supply Chain',
+        description: 'ERP systems, warehouse management, IoT integrations, logistics optimization',
         imageUrl: '/assets/Home/slide-6.svg',
     },
     {
-        id: 'healthtech',
-        title: 'Healthtech',
-        description: 'Deliver patient-centric healthcare platforms leveraging AI and advanced data insights, enabling personalized treatment plans, remote monitoring, telemedicine, and seamless integration with hospital systems.',
-
+        id: 'professional-services',
+        title: 'Professional Services',
+        description: 'Client portals, project management tools, billing systems, workflow automation',
         imageUrl: '/assets/Home/slide-7.svg',
     },
     {
-        id: 'fintech',
-        title: 'Fintech',
-        description: 'Build secure, compliant financial applications that evolve with market trends, integrate with modern banking APIs, ensure seamless transactions, and offer predictive insights for smarter financial decisions.',
+        id: 'real-estate-property',
+        title: 'Real Estate & Property',
+        description: 'Listing platforms, CRM systems, virtual tour technology, transaction management',
         imageUrl: '/assets/Home/slide-8.svg',
     },
 ];
+
 
 const IndustrySectors: React.FC = () => {
     const [expandedCard, setExpandedCard] = useState<string | null>(sectors[0].id);
@@ -75,7 +74,7 @@ const IndustrySectors: React.FC = () => {
                 <div className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
             </div>
-            <div className="relative container mx-auto">
+            <div className="relative max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -147,7 +146,9 @@ const IndustrySectors: React.FC = () => {
                     </button>
                 </div>
                 <div className="text-center mt-16">
-                    <button className="inline-flex items-center border-black px-8 py-3 rounded border font-semibold   transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <button   onClick={() =>
+                        window.open('https://calendly.com/talhafakhar/discoverycall', '_blank')
+                    } className="inline-flex items-center border-black px-8 py-3 rounded border font-semibold   transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                         Explore Our Services
                         <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

@@ -1,9 +1,8 @@
 'use client';
 import * as React from "react";
 import {easeInOut, motion} from "framer-motion";
-import {ArrowDown, Code, Globe, LucideMail, Phone, User, Zap} from "lucide-react";
-
-const CTASection: React.FC = () => {
+import {ArrowDown, Code, Globe, User, Zap} from "lucide-react";
+const AboutCTASection: React.FC = () => {
     const containerVariants = {
         hidden: {opacity: 0},
         visible: {
@@ -85,27 +84,18 @@ const CTASection: React.FC = () => {
                         animate="visible"
                     >
                         <h2 className="text-2xl sm:text-4xl  font-bold mb-4 leading-tight max-w-3xl mx-auto text-center">
-                            Ready to Build
+                            Let’s Build Something
                             <span className="text-primary">
-                            {" "} Your Next Product?{" "}
+                            {" "}Brilliant Together{" "}
                         </span>
                         </h2>
                         <p className="text-lg  text-black/70 text-center max-w-4xl mb-8">
-                            Let&#39;s discuss how our on-demand team can accelerate your growth. Schedule a free consultation and get a project roadmap within 48 hours
+                            Have a project in mind? Facing a technical challenge? Not sure where to start? Let&#39;s talk.
+                            We offer free consultations where we&#39;ll discuss your needs, explore potential solutions, and give you an honest assessment of what&#39;s possible. No sales pressure, no obligations, just a conversation about how we might help
+
                         </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
-                            <a href={`mailto:hello@2btech.com`} className="flex items-center gap-2 hover:text-primary transition-colors">
-                                <span className="text-xl"><LucideMail/></span>
-                                <span className="font-medium">hello@2btech.com</span>
-                            </a>
-                            <span className="hidden sm:block text-gray-300">|</span>
-                            <p className="flex items-center gap-2 hover:text-primary transition-colors">
-                                <span className="text-xl"><Phone/></span>
-                                <span className="font-medium">+1 (234) 567-890</span>
-                            </p>
-                        </div>
                         <motion.span
-                            className="flex justify-center my-4"
+                            className="flex justify-center mb-2"
                             animate={{y: [0, 10, 0]}}
                             transition={{
                                 duration: 1.5,
@@ -115,14 +105,15 @@ const CTASection: React.FC = () => {
                         ><ArrowDown/></motion.span>
                         <motion.div
                             variants={itemVariants}
-                            className="flex justify-center mt-8"
+                            className="flex justify-center mt-10"
                         >
                             <motion.button
                                 className="group  px-[32px] bg-white py-3  border border-black  rounded      ease-in-out "
                                 whileHover={{scale: 1.05}}
                                 whileTap={{scale: 0.97}}
                             >
-                                Schedule Free Consultation
+                                Schedule a Free Consultation
+
                             </motion.button>
                         </motion.div>
 
@@ -133,4 +124,4 @@ const CTASection: React.FC = () => {
     );
 };
 
-export default CTASection;
+export default AboutCTASection;

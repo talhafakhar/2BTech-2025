@@ -11,23 +11,34 @@ interface Step {
 const steps: Step[] = [
     {
         id: 1,
-        title: "Discover & Plan",
-        description: " Align your goals, users, and roadmap with deep product thinking.",
+        title: "Discovery",
+        description:
+            "We align on goals, requirements, and success metrics. Define scope, timeline, and team structure.",
         position: { x: 5, y: 10 },
     },
     {
         id: 2,
-        title: "Design & Build",
-        description: "Rapid prototyping and agile development for faster iteration.",
-        position: { x: 70, y: 40 },
+        title: "Design & Validation",
+        description:
+            "Create prototypes and validate with user testing. Refine before a single line of code is written.",
+        position: { x: 70, y: 30 },
     },
     {
         id: 3,
-        title: "Launch & Scale",
-        description: "Deploy to production, monitor performance, and scale with confidence.",
-        position: { x: 15, y: 80 },
+        title: "Development",
+        description:
+            "Build in 2-week sprints with continuous testing. You see progress weekly, not monthly.",
+        position: { x: 5, y: 50 },
+    },
+    {
+        id: 4,
+        title: "Launch & Support",
+        description:
+            "Deploy with monitoring and support. Iterate based on real user feedback.",
+        position: { x: 70, y: 70 },
     },
 ];
+
 
 const Workflow = () => {
     const [isNarrowScreen, setIsNarrowScreen] = useState(false);
@@ -65,7 +76,7 @@ const Workflow = () => {
     };
 
     return (
-        <section className="relative overflow-hidden py-10 px-4">
+        <section className="relative overflow-hidden py-10 ">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                 <div className="absolute top-20 left-0 w-[400px] h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-0 w-[400px] h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
@@ -75,21 +86,21 @@ const Workflow = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-4 relative z-10"
+                className="text-center mb-4 relative z-10  max-w-7xl mx-auto px-4"
             >
                 <h2 className="text-2xl sm:text-4xl font-bold mb-4 leading-tight text-black">
-                    A Process Designed for
-                    <span className="text-primary"> Speed and Clarity </span> Process
+                    How
+                    <span className="text-primary"> We Work </span>
                 </h2>
-                <p className="text-lg text-black/70 max-w-3xl mx-auto">
+                <p className=" text-black/70 ">
                     How We Turn Ideas Into Scalable Products
                 </p>
             </motion.div>
 
-            <div className="relative max-w-6xl mx-auto">
+            <div className="relative max-w-7xl mx-auto px-4">
                 <div
                     className={`relative w-full ${
-                        isNarrowScreen ? "flex flex-col items-center space-y-10" : "h-[500px]"
+                        isNarrowScreen ? "flex flex-col items-center space-y-10" : "h-[550px]"
                     }`}
                 >
 
@@ -179,7 +190,7 @@ const Workflow = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-center mt-16 relative z-10"
+                className="text-center mt-5 relative z-10"
             >
                 <motion.button
                     className="px-8 py-3 border mt-10 border-black font-semibold rounded shadow-lg hover:shadow-xl transition-all duration-300"

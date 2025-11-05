@@ -1,9 +1,8 @@
 "use client";
-import {Facebook, Instagram, Linkedin, Mail, Phone, Twitter,} from "lucide-react";
+import {Facebook, Instagram, Linkedin ,Twitter,} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {servicesItems} from "@/components/Header/Navbar";
-
 const DiscordIcon = () => (
     <svg viewBox="0 0 48 48" width="28" xmlns="http://www.w3.org/2000/svg" fill="#000000">
         <g id="SVGRepo_bgCarrier" strokeWidth={0}></g>
@@ -47,27 +46,61 @@ const socialLinks = [
     {icon: Instagram, href: "https://www.instagram.com/thetalhafakhar/", label: "Instagram"},
     {icon: DiscordIcon, href: "https://lnkd.in/dwA5nG5t", label: "Discord"},
 ];
-
 const Footer = () => {
     return (
-        <footer className="bg-[#f0f7ff] rounded-t-[3%]">
-            <div className="flex flex-col gap-10 border-b container mx-auto px-4 py-5">
-                <div
-                    className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-4 w-full border-b py-3">
-                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 w-full">
+        <footer className="bg-[#f0f7ff]">
+            <div className="border-b container mx-auto px-4 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-16">
+                    <div className="flex flex-col gap-4">
                         <Link href="/" className="flex items-center">
-                            <div className="transform transition-all duration-300 group-hover:rotate-3">
-                                <Image
-                                    src="/assets/header/2btech_header_logo.svg"
-                                    alt="2btech Footer logo"
-                                    width={100}
-                                    height={100}
-                                    loading="lazy"
-                                />
-                            </div>
+                            <Image
+                                src="/assets/header/2btech_header_logo.svg"
+                                alt="2btech Footer logo"
+                                width={100}
+                                height={100}
+                                loading="lazy"
+                            />
                         </Link>
-                        <div className="flex flex-wrap gap-2 items-center mt-2 md:mt-0">
-                            <span className="font-semibold">Follow Us:</span>
+                      <p>
+                          Your on-demand design to engineering partner. Building intelligent software for VC-backed startups and SMEs.
+                      </p>
+                    </div>
+                    <div className="col-span-1">
+                        <h3 className="mb-2 font-semibold text-gray-900">Services</h3>
+                        <div className="grid  grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+                            {servicesItems.map((opt, i) => (
+                                <Link
+                                    key={i}
+                                    href={opt.path}
+                                    className="cursor-pointer text-gray-500 hover:text-primary transition-colors text-sm text-nowrap"
+                                >
+                                    {opt.title}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="col-span-1 flex flex-col items-center">
+                        <h3 className="mb-2">Quick Links</h3>
+                        <ul className="flex flex-col gap-1">
+                            <li className="cursor-pointer text-gray-500 hover:text-primary transition-colors">
+                                <Link href="/">Home</Link>
+                            </li>
+                            <li className="cursor-pointer text-gray-500 hover:text-primary transition-colors">
+                                <Link href="/about-us">About us</Link>
+                            </li>
+                            <li className="cursor-pointer text-gray-500 hover:text-primary transition-colors">
+                                <Link href="/contact-us">Contact us</Link>
+                            </li>
+                            <li className="cursor-pointer text-gray-500 hover:text-primary transition-colors">
+                                <Link href="/blogs">Blogs</Link>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div className="col-span-1">
+                        <span className="font-semibold">Follow Us:</span>
+                        <div className="flex flex-wrap gap-2 items-center mt-4">
                             {socialLinks.map((social, index) => {
                                 const SocialIcon = social.icon;
                                 return (
@@ -81,107 +114,9 @@ const Footer = () => {
                             })}
                         </div>
                     </div>
-                    <hr className="rotate-90 border border-gray-200 w-[80px] hidden md:block"/>
-                    <div
-                        className="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-3 md:gap-0 mt-4 md:mt-0">
-                        <h4 className="font-semibold">Join Newsletter</h4>
-                        <div className="flex w-full md:w-auto items-center rounded-full overflow-hidden">
-                            <input
-                                type="email"
-                                placeholder="Your Email Address"
-                                className="px-4 py-3 italic outline-none bg-primary/10 w-full text-black"
-                            />
-                            <button className="bg-primary text-white px-4 py-3 rounded-none">
-                                Submit
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16">
-                    <div className="flex flex-col gap-6 md:col-span-1">
-                        <div className="border border-black rounded-lg p-4 w-full">
-                            <div className="flex items-center gap-2 font-bold text-lg">
-                                <Image
-                                    alt="uk flag"
-                                    src="/assets/Home/uk.svg"
-                                    width={30}
-                                    height={20}
-                                    loading="lazy"
-                                />
-                                USA
-                            </div>
-                            <p className="mt-1 text-sm">
-                                5900 Balcones Drive, STE 4000 Austin TX, USA 78731
-                            </p>
-                            <div className="flex items-center text-sm mt-2">
-                                <Mail className="w-4 h-4 mr-2"/>
-                                info@2techinc.com
-                            </div>
-                            <div className="flex items-center text-sm mt-2">
-                                <Phone className="w-4 h-4 mr-2 text-red-500"/>
-                                +1 (858) 386-7630 | +1 (737) 299-0421
-                            </div>
-                        </div>
-
-                        <div className="border border-black rounded-lg p-4 w-full">
-                            <div className="flex items-center gap-2 font-bold text-lg">
-                                <Image
-                                    alt="pak flag"
-                                    src="/assets/Home/pakistan.svg"
-                                    width={30}
-                                    height={20}
-                                    loading="lazy"
-                                />
-                                PAKISTAN
-                            </div>
-                            <p className="mt-1 text-sm">Gulberg 3 Block C2, 62, Lahore, Pakistan</p>
-                            <div className="flex items-center text-sm mt-2">
-                                <Mail className="w-4 h-4 mr-2"/>
-                                info@2techinc.com
-                            </div>
-                            <div className="flex items-center text-sm mt-2">
-                                <Phone className="w-4 h-4 mr-2 text-red-500"/>
-                                +92-344-9889555
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-span-1">
-                        <h3 className="mb-2 font-semibold text-gray-900">Services</h3>
-                        <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-                            {servicesItems.map((opt, i) => (
-                                <Link
-                                    key={i}
-                                    href={opt.path}
-                                    className="cursor-pointer text-gray-500 hover:text-primarytransition-colors text-sm text-nowrap"
-                                >
-                                    {opt.title}
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="col-span-1">
-                        <h3 className="mb-2">Quick Links</h3>
-                        <ul className="flex flex-col gap-1">
-                            <li className="cursor-pointer text-gray-500">
-                                <Link href="/">Home</Link>
-                            </li>
-                            <li className="cursor-pointer text-gray-500">
-                                <Link href="/about-us">About us</Link>
-                            </li>
-                            <li className="cursor-pointer text-gray-500">
-                                <Link href="/contact-us">Contact us</Link>
-                            </li>
-                            <li className="cursor-pointer text-gray-500">
-                                <Link href="/blogs">Blogs</Link>
-                            </li>
-
-                        </ul>
-                    </div>
                 </div>
             </div>
-            <div
-                className="mt-6 flex flex-col container mx-auto md:flex-row justify-between text-sm  items-center gap-2">
+            <div className="mt-6 flex flex-col container mx-auto md:flex-row justify-between text-sm  items-center gap-2">
                 <div>© 2025. 2BTech All Rights Reserved.</div>
                 <div className="flex gap-4 underline">
                     <a href="#">Support</a>

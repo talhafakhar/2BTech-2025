@@ -6,8 +6,9 @@ import {Code, Globe, Zap} from "lucide-react";
 import Image from "next/image";
 interface HeroSectionProps {
     title?: string;
+    buttonText?: string;
 }
-const HeroSection: React.FC<HeroSectionProps> = ({title}) => {
+const HeroSection: React.FC<HeroSectionProps> = ({title,buttonText}) => {
     const containerVariants = {
         hidden: {opacity: 0},
         visible: {
@@ -89,7 +90,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({title}) => {
                                     whileTap={{ scale: 0.97 }}
                                 >
                                     <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                    <span className="relative z-10">Get an Estimate</span>
+                                    <span className="relative z-10">{buttonText ? buttonText : "Get an Estimate"} </span>
                                 </motion.button>
                             </motion.div>
                         </motion.div>

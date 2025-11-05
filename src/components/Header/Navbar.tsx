@@ -15,7 +15,7 @@ import {
     Database,
     ChevronDown,
     Home,
-    Mail,
+    Mail, Network,
 } from "lucide-react";
 
 export const servicesItems = [
@@ -47,9 +47,9 @@ export const servicesItems = [
         path: "/services/mvp-development",
     },
     {
-        icon: PenTool,
-        title: "Product Design",
-        path: "/services/product-design",
+        icon: Network,
+        title: "AI & Generative Ai Solution",
+        path: "/services/ai-and-generative-ai-solution",
     },
 
     {
@@ -74,6 +74,12 @@ export const servicesItems = [
         title: "Custom Software Development",
         path: "/services/custom-software-development",
     },
+    {
+        icon: PenTool,
+        title: "Product Design",
+        path: "/services/product-design",
+    },
+
     {
         icon: Workflow,
         title: "AI Digital Transformation Service",

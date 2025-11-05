@@ -2,25 +2,10 @@
 import Image from 'next/image';
 import React from 'react';
 import {motion} from 'framer-motion';
-
-type AboutSectionProps = {
-    title: string;
-    description: string;
-    src: string;
-    width?: number;
-};
-
-const AboutSection: React.FC<AboutSectionProps> = ({title, description, src, width}) => {
+const HomeAboutSection: React.FC= () => {
     return (
-        <section className={`${width === 500 ? "py-5" : "py-20"} px-6 relative overflow-hidden`}>
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <div
-                    className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
-                <div
-                    className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
-            </div>
-            <div
-                className="max-w-7xl mx-auto flex md:flex-row flex-col justify-center md:justify-between gap-5 w-full items-center relative z-10">
+        <section className={`py-14`}>
+            <div className="max-w-7xl px-4 mx-auto flex md:flex-row flex-col justify-center md:justify-between gap-5 w-full items-center ">
                 <motion.div
                     className="md:w-1/2 w-full"
                     initial={{opacity: 0, x: -50}}
@@ -29,11 +14,10 @@ const AboutSection: React.FC<AboutSectionProps> = ({title, description, src, wid
                     viewport={{once: true, amount: 0.3}}
                 >
                     <Image
-                        src={src}
+                        src="/assets/services/AaaS/about.webp"
                         alt="3d"
-                        width={width}
+                        width={500}
                         loading="lazy"
-                        className={`${width === 450 ? "rounded-2xl" : ""}`}
                         height={400}
                     />
                 </motion.div>
@@ -45,13 +29,16 @@ const AboutSection: React.FC<AboutSectionProps> = ({title, description, src, wid
                     transition={{duration: 0.8, ease: "easeInOut", delay: 0.2}}
                     viewport={{once: true, amount: 0.3}}
                 >
-                    <h2 className={`${width === 450 ? "text-4xl md:text-5xl " : "text-2xl md:text-3xl"}  font-bold leading-tight mb-2`}>
-                        {title}
+                    <h2 className={`text-2xl md:text-3xl  font-bold leading-tight mb-2`}>
+                        Transform Your Vision Into Market-Ready Products
                     </h2>
-                    <p className={`${width === 450 ? "mt-6" : ""}`}>{description}</p>
+                    <p className="mt-2">2BTech  is a custom software and AI agent development company partnering with VC-backed startups and SMEs to build products that matter. We&#39;re your complete design to engineering team, delivering end-to-end solutions from initial concept to launch and beyond</p>
+                    <p className="mt-4">Skip the lengthy hiring process. Our on-demand team of designers, engineers, and AI specialists integrates seamlessly with your business, moving at startup speed with enterprise-level expertise. Whether you&#39;re validating an MVP, building a SaaS platform, or deploying AI agents, we bring technical excellence and strategic thinking to every project.
+                    </p>
+                    <p className="mt-4">We understand your challenges: investor milestones, tight budgets, and the pressure to prove market fit fast. That&#39;s why we deliver quality products on time, helping you hit your KPIs and scale with confidence</p>
                     <div>
                         <div
-                            className={`${width === 450 ? "mt-8" : "mt-4"} flex gap-2 sm:gap-6 justify-center md:justify-start items-center `}>
+                            className={`mt-4 flex gap-2 sm:gap-6 justify-center md:justify-start items-center `}>
                             <motion.button
                                 whileHover={{scale: 1.05}}
                                 whileTap={{scale: 0.95}}
@@ -83,4 +70,4 @@ const AboutSection: React.FC<AboutSectionProps> = ({title, description, src, wid
     );
 };
 
-export default AboutSection;
+export default HomeAboutSection;

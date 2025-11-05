@@ -1,34 +1,43 @@
 import React from 'react';
 import {easeOut, motion} from 'framer-motion';
-import {ArrowRight, Brain, Globe, Rocket, Settings, Star} from 'lucide-react';
+import {ArrowRight, Users,
+    CheckCircle,
+    Zap,
+    Trophy,
+    Eye} from 'lucide-react';
 
-const GrowthTeamSection = () => {
+const WhyChooseUs = () => {
     const features = [
         {
-            icon: <Star className="w-8 h-8"/>,
-            title: "Top 3% Engineers & Product Talent",
-            description: "Vetted developers, designers, and PMs who hit the ground running.",
+            icon: <Users className="w-8 h-8" />,
+            title: "On-Demand Team Model",
+            description:
+                "Access a complete product team instantly. No hiring, no onboarding delays. Scale up or down as your needs evolve.",
         },
         {
-            icon: <Rocket className="w-8 h-8"/>,
-            title: "MVPs in Under 30 Days",
-            description: "Rapid launches without sacrificing quality or UX.",
+            icon: <CheckCircle className="w-8 h-8" />,
+            title: "Complete Accountability",
+            description:
+                "One partner from design through deployment. No coordinating multiple vendors. We own the entire journey.",
         },
         {
-            icon: <Brain className="w-8 h-8"/>,
-            title: "AI & GenAI Experts",
-            description: "From OpenAI to open source — we build AI that works.",
+            icon: <Zap className="w-8 h-8" />,
+            title: "Startup Speed, Enterprise Quality",
+            description:
+                "Fast iterations with rigorous testing. Launch quickly without compromising on reliability or security.",
         },
         {
-            icon: <Globe className="w-8 h-8"/>,
-            title: "Global Delivery Models",
-            description: "Flexible teams onshore, offshore, or hybrid as you scale.",
+            icon: <Trophy className="w-8 h-8" />,
+            title: "Proven Track Record",
+            description:
+                "We've helped 200+ startups and SMEs launch, scale, and secure funding. Our clients close deals, raise rounds, and grow revenue.",
         },
         {
-            icon: <Settings className="w-8 h-8"/>,
-            title: "Flexible Engagements",
-            description: "Choose fixed scope, dedicated resources, or full offshore centers.",
-        }
+            icon: <Eye className="w-8 h-8" />,
+            title: "Transparent Process",
+            description:
+                "Weekly demos, direct team access, and real-time project tracking. No black boxes or surprises.",
+        },
     ];
 
     const containerVariants = {
@@ -88,7 +97,7 @@ const GrowthTeamSection = () => {
                     >
                         Built for{" "}
                         <span className="text-primary">
-              Growth
+            Startups and SMEs
             </span>
                     </motion.h2>
 
@@ -196,4 +205,4 @@ const GrowthTeamSection = () => {
     );
 };
 
-export default GrowthTeamSection;
+export default WhyChooseUs;
