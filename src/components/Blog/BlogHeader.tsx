@@ -113,23 +113,18 @@ const BlogNavbar: React.FC = () => {
                         >
                             <div className="w-6 h-6 flex flex-col justify-center items-center relative">
     <span
-        className={`block absolute h-0.5 w-6  transition-all duration-300 ${
-            isOpen  ? "bg-black" : "bg-white"
-        } ${
+        className={`block absolute h-0.5 w-6  transition-all duration-300 bg-black ${
             isOpen  ? "rotate-45 top-2.5" : "top-1"
         }`}
     />
                                 <span
-                                    className={`block absolute h-0.5 w-6 bg-gray-700 transition-all duration-300 ${
-                                        isOpen  ? "bg-black" : "bg-white"
-                                    } ${
+                                    className={`block absolute h-0.5 w-6  transition-all duration-300 bg-black
+                                     ${
                                         isOpen ? "opacity-0" : "top-2.5"
                                     }`}
                                 />
                                 <span
-                                    className={`block absolute h-0.5 w-6 bg-gray-700 transition-all duration-300  ${
-                                        isOpen  ? "bg-black" : "bg-white"
-                                    } ${
+                                    className={`block absolute h-0.5 w-6  transition-all duration-300 bg-black ${
                                         isOpen ? "-rotate-45 top-2.5" : "top-4"
                                     }`}
                                 />
