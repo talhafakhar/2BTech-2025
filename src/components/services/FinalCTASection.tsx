@@ -5,6 +5,7 @@ import {CheckCircle, LucideMail, Phone} from "lucide-react";
 interface FinalCTASectionProps {
     heading: string;
     description: string;
+    subHeading?: string;
     features?: string[];
 }
 
@@ -12,6 +13,7 @@ const FinalCTASection: React.FC<FinalCTASectionProps> = ({
                                                              heading ,
                                                              description,
                                                              features,
+                                                             subHeading
 
                                                          }) => {
     return (
@@ -25,10 +27,10 @@ const FinalCTASection: React.FC<FinalCTASectionProps> = ({
                     className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-8 lg:p-12 border border-primary"
                 >
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl lg:text-5xl font-bold mb-4">
+                        <h2 className="text-3xl lg:text-5xl font-bold mb-4 max-w-3xl mx-auto">
                             {heading}
                         </h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+                        <p className="text-gray-600 max-w-4xl mx-auto mb-6">
                             {description}
                         </p>
                     </div>
@@ -44,6 +46,16 @@ const FinalCTASection: React.FC<FinalCTASectionProps> = ({
                             </div>
                         </div>
                     )}
+                    {subHeading && (
+                        <div className="text-center mb-4 text-secondary font-bold text-xl">
+                            Get Started Today!
+                        </div>
+                    )}
+                    <div className="text-center mb-8 max-w-2xl mx-auto">
+                        <p>
+                            {subHeading}
+                        </p>
+                    </div>
 
 
                     <div className="text-center space-y-4">
@@ -57,8 +69,7 @@ const FinalCTASection: React.FC<FinalCTASectionProps> = ({
                         >
                             Schedule Free Consultation
                         </motion.button>
-
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
+                        {!subHeading && (   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
                             <a href={`mailto:hello@2btech.com`} className="flex items-center gap-2 hover:text-primary transition-colors">
                                 <span className="text-xl"><LucideMail/></span>
                                 <span className="font-medium">hello@2btech.com</span>
@@ -68,7 +79,8 @@ const FinalCTASection: React.FC<FinalCTASectionProps> = ({
                                 <span className="text-xl"><Phone/></span>
                                 <span className="font-medium">+1 (234) 567-890</span>
                             </p>
-                        </div>
+                        </div>)}
+
                     </div>
                 </motion.div>
             </div>

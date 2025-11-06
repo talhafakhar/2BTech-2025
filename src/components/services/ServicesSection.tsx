@@ -35,9 +35,9 @@ const ServiceSection: React.FC<WebServicesGridProps> = ({
                         <p className="text-primary text-sm font-bold tracking-wider uppercase mb-4">
                             {heading}
                         </p>
-                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                             {subHeading}
-                        </h1>
+                        </h2>
                         <p className="text-gray-600 max-w-2xl leading-relaxed">
                             {description}
                         </p>

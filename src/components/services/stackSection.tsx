@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 interface OurStackProps {
     heading: string;
     highlightHeading: string;
-    description: string;
+    description?: string;
     stackIcons: any;
     techCategories: any[];
 }
@@ -18,16 +18,12 @@ const OurStack: React.FC<OurStackProps> = ({
                                                techCategories,
                                            }) => {
     return (
-        <section className="relative py-20">
-            {/* Background Effects */}
+        <section className="relative py-20 overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/10 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/10 rounded-full blur-3xl"></div>
+                <div className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
             </div>
-
-            {/* Content */}
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                {/* Heading Section */}
                 <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 30 }}
@@ -35,7 +31,7 @@ const OurStack: React.FC<OurStackProps> = ({
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold max-w-3xl mx-auto mb-4">
                         {heading}
                         <span className="text-blue-600">{" "}{highlightHeading}</span>
                     </h2>
@@ -44,10 +40,12 @@ const OurStack: React.FC<OurStackProps> = ({
                     </p>
                 </motion.div>
 
-                {/* Tech Categories Grid */}
                 <motion.div
-                    className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 justify-items-center"
-                    initial="hidden"
+                    className={`grid gap-10 ${
+                        techCategories.length === 4
+                            ? 'sm:grid-cols-2'
+                            : 'sm:grid-cols-2 lg:grid-cols-3'
+                    }`}                    initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={{
@@ -60,11 +58,11 @@ const OurStack: React.FC<OurStackProps> = ({
                             <motion.div
                                 key={i}
                                 className="
-                                    bg-white border border-gray-100
+                                    border bg-white
                                     rounded-2xl shadow-sm hover:shadow-lg
                                     transition-all duration-300
                                     p-8 flex flex-col items-center text-center
-                                    w-full max-w-sm
+
                                 "
                                 variants={{
                                     hidden: { opacity: 0, y: 40 },

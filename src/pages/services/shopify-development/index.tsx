@@ -10,8 +10,6 @@ import ServiceSection from "@/components/services/ServicesSection";
 import OurFlowSection from "@/components/services/OurFlowSection";
 import OurModals from "@/components/services/ModalSection";
 import WhatIsSection from "@/components/services/WhatIsSection";
-import AIStackSection from "@/components/services/AIStackSection";
-import TestimonialSection from "@/components/Home/TestimonialSection";
 
 export default function ShopifyDevelopment() {
     const faqs = [

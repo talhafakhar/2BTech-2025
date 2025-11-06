@@ -19,7 +19,7 @@ export default {
                 syne: ["Syne", "sans-serif"],
             },
             animation: {
-                scroll: 'scroll 3000s linear infinite',
+                scroll: 'scroll 2000s linear infinite',
             },
             keyframes: {
                 'scroll': {

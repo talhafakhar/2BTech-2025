@@ -26,7 +26,7 @@ const InfiniteLogoSlider: React.FC = () => {
         {name: "XA Studios", url: "/assets/services/hero/xa-studios.webp"},
     ];
 
-    const duplicatedLogos = Array.from({length: 100}, () => logos).flat();
+    const duplicatedLogos = Array.from({length: 12}, () => logos).flat();
     return (
         <section className="relative w-full overflow-hidden bg-white/60">
             <div className="max-w-8xl mx-auto  w-full flex flex-col md:flex-row px-4 items-center  gap-6 md:gap-0 ">
@@ -35,9 +35,7 @@ const InfiniteLogoSlider: React.FC = () => {
                 </h2>
                 <div className="relative w-full md:w-4/5">
                     <div className="overflow-hidden">
-                        <div
-                            className="flex w-max animate-scroll gap-6 sm:gap-8 md:gap-12 items-center"
-                        >
+                        <div className="flex w-max animate-scroll gap-6 sm:gap-8 md:gap-12 items-center">
                             {duplicatedLogos.map((logo, index) => {
                                 return (
                                     <div

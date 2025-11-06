@@ -3,12 +3,12 @@ import React from "react";
 import HeroSection from "@/components/Home/heroSection";
 import GetToKnowUs from "@/components/About/WhoWeAreSection";
 import HowWeWork from "@/components/About/HowWeWork";
-import ServicesSection from "@/components/Home/ServicesSection";
+import ServicesSection from "@/components/About/ServicesSection";
 import Banner from "@/components/Home/bannerSection";
 import AdvantagesSection from "@/components/About/AdvantagesSection";
 import {NextSeo, WebPageJsonLd} from "next-seo";
 import AboutCTASection from "@/components/About/CallToActionSection";
-import IndustrySectors from "@/components/Home/IndustrySection";
+import IndustrySectors from "@/components/About/IndustrySection";
 import AboutSection from "@/components/services/AboutSection";
 import TechStack from "@/components/About/TechStackSection";
 

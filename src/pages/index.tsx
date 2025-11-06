@@ -3,13 +3,14 @@ import HeroSection from '@/components/Home/heroSection';
 import WorkFlow from '@/components/Home/OurWorkingProcessSection';
 import Banner from "@/components/Home/bannerSection";
 import HomeServicesSection from "@/components/Home/HomeServicesSection";
-import IndustrySectors from "@/components/Home/IndustrySection";
 import CTASection from "@/components/Home/CTASection";
 import WhyChooseUs from "@/components/Home/WhyChooseUsSection";
 import React from "react";
 import {FAQPageJsonLd, NextSeo, OrganizationJsonLd, WebPageJsonLd} from "next-seo";
 import CustomTestimonialSection from "@/components/Home/TestimonialSectionCustom";
 import HomeAboutSection from "@/components/Home/AboutSection";
+import TechStackHome from "@/components/Home/StackSectionHome";
+import HomeIndustrySection from "@/components/Home/HomeIndustrySection";
 export default function Home() {
     return (
         <div className="font-syne">
@@ -106,17 +107,17 @@ export default function Home() {
             <HeroSection
                 title="Transforming Ideas Into Tomorrow’s Solutions!"
             />
-          <HomeAboutSection/>
+            <HomeAboutSection/>
             <HomeServicesSection/>
             <WhyChooseUs/>
-            {/*STACK SECTION*/}
             <WorkFlow/>
+            <TechStackHome/>
             <Banner
                 title="Ready to Elevate Your Brand? Let's Talk!"
                 description="Schedule a free discovery call today and take the first step towards transforming your brand with us."
                 src="/assets/Home/banner-bg.svg"
             />
-            <IndustrySectors/>
+            <HomeIndustrySection/>
             <CustomTestimonialSection/>
             <CTASection/>
             <Footer/>

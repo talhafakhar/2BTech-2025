@@ -74,11 +74,13 @@ interface OurModalsProps {
     headingHighlight: string;
     src: string;
     width?: number;
-    description: string;
+    description?: string;
     subheading: string;
     subDescription: string
+    BestFor?:string;
     subheadingTwo: string;
     subDescriptionTwo: string;
+    BestForTwo?:string;
 }
 
 const OurModals: React.FC<OurModalsProps> = ({
@@ -89,8 +91,10 @@ const OurModals: React.FC<OurModalsProps> = ({
                                                  width,
                                                  subheading,
                                                  subDescription,
+                                                 BestFor,
                                                  subheadingTwo,
                                                  subDescriptionTwo,
+                                                 BestForTwo
                                              }) => {
     return (
         <div className="bg-gray-50">
@@ -102,8 +106,8 @@ const OurModals: React.FC<OurModalsProps> = ({
                     className={`${width ? "mb-3" : "mb-16"}  text-center`}
                 >
                     <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight max-w-3xl mx-auto">
-                        <span className="text-primary">{headingHighlight} </span>
                         {heading}
+                        <span className="text-primary">{" "}{headingHighlight} </span>
                     </h2>
                     <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed">
                         {description}
@@ -125,9 +129,14 @@ const OurModals: React.FC<OurModalsProps> = ({
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                                         {subheading}
                                     </h3>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-gray-600 leading-relaxed mb-2">
                                         {subDescription}
                                     </p>
+                                    <span className="text-sm text-primary">
+                                        <span className="text-secondary">
+                                            Best for:
+                                        </span> {BestFor}
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -140,9 +149,14 @@ const OurModals: React.FC<OurModalsProps> = ({
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                                         {subheadingTwo}
                                     </h3>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-gray-600 leading-relaxed mb-2">
                                         {subDescriptionTwo}
                                     </p>
+                                    <span className="text-sm text-primary">
+                                        <span className="text-secondary">
+                                            Best for:
+                                        </span> {BestForTwo}
+                                    </span>
                                 </div>
                             </div>
                         </div>

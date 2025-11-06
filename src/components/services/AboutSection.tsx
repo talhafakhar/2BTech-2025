@@ -6,11 +6,13 @@ import {motion} from 'framer-motion';
 type AboutSectionProps = {
     title: string;
     description: string;
+    descriptionTwo?:string;
+    descriptionThree?:string;
     src: string;
     width?: number;
 };
 
-const AboutSection: React.FC<AboutSectionProps> = ({title, description, src, width}) => {
+const AboutSection: React.FC<AboutSectionProps> = ({title, description,descriptionTwo,descriptionThree, src, width}) => {
     return (
         <section className={`${width === 500 ? "py-5" : "py-20"} px-6 relative overflow-hidden`}>
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
@@ -48,10 +50,12 @@ const AboutSection: React.FC<AboutSectionProps> = ({title, description, src, wid
                     <h2 className={`${width === 450 ? "text-4xl md:text-5xl " : "text-2xl md:text-3xl"}  font-bold leading-tight mb-2`}>
                         {title}
                     </h2>
-                    <p className={`${width === 450 ? "mt-6" : ""}`}>{description}</p>
+                    <p className={`${width === 450 ? "mt-6" : "mb-2"}`}>{description}</p>
+                    <p className="mb-2">{descriptionTwo}</p>
+                    <p>{descriptionThree}</p>
                     <div>
                         <div
-                            className={`${width === 450 ? "mt-8" : "mt-4"} flex gap-2 sm:gap-6 justify-center md:justify-start items-center `}>
+                            className={`${width === 450 ? "mt-8" : "mt-2"} flex gap-2 sm:gap-6 justify-center md:justify-start items-center `}>
                             <motion.button
                                 whileHover={{scale: 1.05}}
                                 whileTap={{scale: 0.95}}
