@@ -49,7 +49,7 @@ export const servicesItems = [
     {
         icon: Network,
         title: "AI & Generative Ai Solution",
-        path: "/services/ai-and-generative-ai-solution",
+        path: "/services/ai-and-generative-ai-solutions",
     },
 
     {

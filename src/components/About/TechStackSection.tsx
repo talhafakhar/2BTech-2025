@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion";
+import {easeOut, motion} from "framer-motion";
 
 const TechStack = () => {
     const techCategories = [
@@ -511,7 +511,6 @@ const TechStack = () => {
                     </svg>)},
                 {name: "Heroku", icon: (  <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        ariaLabel="Heroku"
                         viewBox="0 0 512 512"
                     >
                         <g id="SVGRepo_iconCarrier">
@@ -749,7 +748,6 @@ const TechStack = () => {
                     </svg>)},
                 {name: "Hugging Face", icon: (<svg
                         xmlns="http://www.w3.org/2000/svg"
-                        ariaHidden="true"
                         className="iconify iconify--noto"
                         viewBox="0 0 128 128"
                     >
@@ -1368,7 +1366,7 @@ const TechStack = () => {
             y: 0,
             transition: {
                 duration: 0.6,
-                ease: "easeOut"
+                ease: easeOut
             }
         }
     };
@@ -1380,7 +1378,7 @@ const TechStack = () => {
             scale: 1,
             transition: {
                 duration: 0.4,
-                ease: "easeOut"
+                ease: easeOut
             }
         }
     };
