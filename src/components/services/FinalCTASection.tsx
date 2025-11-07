@@ -26,11 +26,11 @@ const FinalCTASection: React.FC<FinalCTASectionProps> = ({
                     viewport={{ once: true }}
                     className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-3xl p-8 lg:p-12 border border-primary"
                 >
-                    <div className="text-center mb-8">
-                        <h2 className="text-3xl lg:text-5xl font-bold mb-4 max-w-3xl mx-auto">
+                    <div className="text-center mb-4">
+                        <h2 className="text-3xl lg:text-[45px] font-bold mb-6 max-w-3xl mx-auto">
                             {heading}
                         </h2>
-                        <p className="text-gray-600 max-w-4xl mx-auto mb-6">
+                        <p className="text-gray-600 max-w-4xl mx-auto">
                             {description}
                         </p>
                     </div>
@@ -61,15 +61,15 @@ const FinalCTASection: React.FC<FinalCTASectionProps> = ({
                     <div className="text-center space-y-4">
                         <motion.button
                             onClick={() =>
-                                window.open('https://calendly.com/talhafakhar/discoverycall', '_blank')
+                                window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
                             }
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="px-10 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                            className="px-6 py-3 bg-secondary text-white rounded-lg font-bold text-lg  transition-all duration-300 shadow-lg hover:shadow-xl"
                         >
                             Schedule Free Consultation
                         </motion.button>
-                        {!subHeading && (   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
+                        {subHeading && (   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
                             <a href={`mailto:hello@2btech.com`} className="flex items-center gap-2 hover:text-primary transition-colors">
                                 <span className="text-xl"><LucideMail/></span>
                                 <span className="font-medium">hello@2btech.com</span>

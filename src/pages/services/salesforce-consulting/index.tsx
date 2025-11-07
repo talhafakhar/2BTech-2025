@@ -2,74 +2,46 @@ import Footer from '@/components/Footer/footer';
 import HeroSection from '@/components/services/HeroSection';
 import React from "react";
 import AboutSection from "@/components/services/AboutSection";
-import TestimonialSection from "@/components/Home/TestimonialSection";
 import Banner from "@/components/Home/bannerSection";
 import FaqSection from "@/components/Home/FaqSection";
 import {FAQPageJsonLd, NextSeo, WebPageJsonLd} from "next-seo";
-import FinalCTASection from "@/components/services/FinalCTASection";
-import ServiceSection from "@/components/services/ServicesSection";
 import OurFlowSection from "@/components/services/OurFlowSection";
-import OurModals from "@/components/services/ModalSection";
-import OurStack from "@/components/services/stackSection";
 import WhatIsSection from "@/components/services/WhatIsSection";
-import {Globe, Rocket, Star} from "lucide-react";
+import { Rocket, Star} from "lucide-react";
 import {easeInOut, motion} from "framer-motion";
-
+import SubServicesSection from "@/components/services/CustomSoftwareServicesSection";
+import IndustriesSection from "@/components/services/SalesindustorySection";
 export default function SalesforceConsulting() {
     const faqs = [
         {
             id: 1,
             question: "What are Salesforce consulting services?",
             answer:
-                "Salesforce consulting services provide expert guidance for adopting and optimizing Salesforce CRM. As a Salesforce development company, we help with CRM strategy, implementation planning, customization, integration, training, and ongoing support to maximize your Salesforce investment.",
+                "Salesforce consulting services provide expert guidance for adopting and optimizing Salesforce CRM. As a Salesforce development company, we help with strategy, implementation, customization, integration, and ongoing support.",
         },
         {
             id: 2,
             question: "How long does Salesforce implementation take?",
             answer:
-                "Simple implementations take 4–6 weeks. Standard implementations require 8–12 weeks. Complex enterprise implementations span 12–24 weeks. Timeline depends on scope, number of users, customization requirements, integrations, and data migration complexity.",
+                "Simple implementations: 4–6 weeks. Standard implementations: 8–12 weeks. Complex enterprise implementations: 12–24 weeks. Timeline depends on scope, customization, and integrations.",
         },
         {
             id: 3,
-            question: "What's included in Salesforce integration services?",
+            question: "How much do Salesforce implementation services cost?",
             answer:
-                "Salesforce integration services connect your CRM with ERP, marketing automation, e-commerce, and business systems. Includes API development, data mapping, real-time sync configuration, middleware setup, testing, and monitoring for seamless data flow.",
+                "Costs range from $15,000 for quick start packages to $250,000+ for enterprise implementations. Factors include users, products, customization, integrations, and data migration.",
         },
         {
             id: 4,
-            question: "Should I hire Salesforce developers or use contractors?",
+            question: "What's included in Salesforce integration services?",
             answer:
-                "Hire Salesforce developers when you need ongoing development, customization, and dedicated resources. Contractors work well for defined projects with clear scope. We offer flexible engagement models including dedicated teams, fixed-price projects, and staff augmentation.",
+                "Salesforce integration services connect your CRM with ERP, marketing, e-commerce, and business systems. Includes API development, data mapping, sync configuration, and testing.",
         },
         {
             id: 5,
-            question: "What Salesforce products can you implement?",
+            question: "Should I hire Salesforce developers or use contractors?",
             answer:
-                "We implement Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, CPQ, Field Service, and Einstein Analytics. Our Salesforce implementation services cover all Salesforce products with industry-specific customizations.",
-        },
-        {
-            id: 6,
-            question: "Do you provide ongoing Salesforce support?",
-            answer:
-                "Yes. We provide managed Salesforce services including 24/7 admin support, user training, system maintenance, security updates, seasonal release upgrades, performance monitoring, and custom development requests with dedicated support teams.",
-        },
-        {
-            id: 7,
-            question: "Can you migrate data from our current CRM to Salesforce?",
-            answer:
-                "Yes. Our Salesforce consulting services include complete data migration from legacy systems. We handle data extraction, cleansing, mapping, validation, and migration with zero data loss using proven migration tools.",
-        },
-        {
-            id: 8,
-            question: "What is Salesforce app development?",
-            answer:
-                "Salesforce app development creates custom applications on the Salesforce platform using Lightning Web Components, Apex, and Visualforce. Build internal apps, AppExchange marketplace apps, mobile solutions, and portal applications extending Salesforce functionality.",
-        },
-        {
-            id: 9,
-            question: "How do you ensure successful Salesforce adoption?",
-            answer:
-                "We ensure adoption through comprehensive training programs, user documentation, change management strategies, and ongoing support. Monitor adoption metrics, gather feedback, and provide continuous optimization to maximize user engagement and ROI.",
+                "Hire Salesforce developers when you need ongoing development and customization. Contractors work well for defined projects. We offer flexible engagement models including dedicated teams, fixed-price projects, and staff augmentation.",
         },
     ];
     const itemVariants: any = {
@@ -91,368 +63,177 @@ export default function SalesforceConsulting() {
             transition: {duration: 0.5, ease: easeInOut},
         },
     };
-    const StackIcons = {
-
-        'Lightning web Components': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#00A1E0"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">LW</text>
-        </svg>,
-
-        Apex: () =>   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-14 h-14">
-            <g id="SVGRepo_iconCarrier" fill="none" fillRule="evenodd">
-                <circle cx="16" cy="16" r="16" fill="#1F4C9F"></circle>
-                <path
-                    fill="#FFF"
-                    d="M6 19.25 16 6.5l10 12.75v4.25L16 10.75 6 23.5zm10.5 1.25a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5"
-                ></path>
-            </g>
-        </svg>,
-
-        'Visual Force': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#54698D"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">VF</text>
-        </svg>,
-
-        'Lightning Flow': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#032D60"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">LF</text>
-        </svg>,
-
-        SOQL: () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#00A1E0"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">SQ</text>
-        </svg>,
-
-        MuleSoft: () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <rect width="128" height="128" fill="#00A0DF" rx="15"/>
-            <path d="M64 20C75 20 85 28 85 40C85 48 80 54 73 57L73 70C80 73 85 79 85 88C85 100 75 108 64 108C53 108 43 100 43 88C43 79 48 73 55 70L55 57C48 54 43 48 43 40C43 28 53 20 64 20Z" fill="white"/>
-        </svg>,
-
-        "REST/SOAP APIs": () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#61DAFB"/>
-            <text x="64" y="74" fontSize="36" fill="white" textAnchor="middle" fontWeight="bold">API</text>
-        </svg>,
-
-        Heroku: () => <svg
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMinYMin meet"
-        className="w-14 h-14"
-        viewBox="-72 0 400 400"
-    >
-        <g id="SVGRepo_iconCarrier">
-            <path
-                fill="#6762A6"
-                d="M28.083 398.289V363.51c0-2.452-1.798-3.51-3.917-3.51-4.248 0-9.554 1.058-14.37 3.181v35.108H0v-64.576h9.795v21.304c4.656-1.712 10.206-3.18 15.758-3.18 8.898 0 12.246 5.469 12.246 12.976v33.476zm27.999-21.063c.326 11.674 2.613 13.961 9.794 13.961 5.634 0 12.002-1.879 16.902-3.757l1.632 7.346c-5.226 2.37-11.593 4.655-19.183 4.655-16.33 0-18.862-8.978-18.862-23.268 0-7.835.573-14.939 2.45-21.47 4.898-1.878 11.43-2.857 19.673-2.857 13.393 0 17.473 7.43 17.473 20.41v4.98zM68.488 360c-2.935 0-7.59.082-11.427.813-.406 1.96-.899 4.655-1.062 9.636h20.41c0-6.778-1.225-10.449-7.921-10.449m35.837 3.181v35.108h-9.797v-39.515c8.246-4.489 16.981-5.877 22.698-6.285v8.164c-4 .326-9.064.816-12.9 2.528zm38.778 36.25c-14.616 0-21.228-7.183-21.228-23.594 0-17.389 8.735-24 21.228-24 14.612 0 21.226 7.182 21.226 23.592 0 17.39-8.737 24.002-21.226 24.002m0-39.43c-7.512 0-11.675 4.325-11.675 15.836 0 12.574 3.51 15.35 11.675 15.35 7.51 0 11.674-4.247 11.674-15.758 0-12.574-3.51-15.429-11.674-15.429zm68.49 38.288H200.08c-2.692-7.184-6.45-14.532-12.246-20.9h-5.144v20.9h-9.796v-64.576h9.796v37.062h4.573c4.98-5.144 8.816-11.509 11.511-17.797h11.02c-3.754 7.593-8.57 14.287-13.959 19.757 6.45 8.164 11.511 16.818 15.757 25.554zm18.363 1.142c-8.897 0-12.244-5.468-12.244-12.98v-33.473h9.714v34.697c0 2.452 1.794 3.512 3.917 3.512 4.246 0 10.042-1.06 14.86-3.184v-35.025H256v39.35c-11.593 6.369-20.493 7.103-26.044 7.103m-4.328-82.178H30.258C13.545 317.253 0 303.708 0 286.998V30.256C0 13.546 13.546 0 30.257 0h195.37c16.71 0 30.26 13.546 30.26 30.256v256.742c0 16.71-13.55 30.255-30.26 30.255z"
-            ></path>
-            <path
-                fill="#FFF"
-                d="M160.36 273.6V147.61s8.195-30.15-100.943 12.334c-.2.539-.2-116.504-.2-116.504l35.66-.22v74.991s99.846-39.325 99.846 29.824V273.6h-34.362zm20.32-184.994h-37.824c13.615-16.646 25.94-45.167 25.94-45.167h39.11s-6.696 18.587-27.225 45.167zM59.865 273.382v-71.748l35.878 35.877z"
-            ></path>
-        </g>
-    </svg>,
-        Informatica: () =>   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-14 h-14">
-            <path
-                id="SVGRepo_iconCarrier"
-                d="m12 0 3.547 10.788-4.5-1.255-.25 4.43 7.121 4.035V18h.001l5.919-6zm-.64.65L.162 12l6.32 6.407L12 24l5.184-5.255-9.736-3.856z"
-            ></path>
-        </svg>,
-        Zapier: () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="w-14 h-14">
-            <g id="SVGRepo_iconCarrier">
-                <circle cx="512" cy="512" r="512" fill="#ff4a00"></circle>
-                <path
-                    fill="#fff"
-                    d="M576 512.11a153.1 153.1 0 0 1-9.83 54 153.2 153.2 0 0 1-54.06 9.89h-.22a153.2 153.2 0 0 1-54-9.83 153.2 153.2 0 0 1-9.89-54.06v-.22a153.3 153.3 0 0 1 9.83-54 153.1 153.1 0 0 1 54.06-9.89h.22a153.1 153.1 0 0 1 54.06 9.84 153.1 153.1 0 0 1 9.83 54v.22zm188.44-42.78H615l105.67-105.66A257 257 0 0 0 693 331a257.4 257.4 0 0 0-32.67-27.63L554.67 409V259.56a257.6 257.6 0 0 0-42.53-3.56h-.27a257.6 257.6 0 0 0-42.53 3.56V409L363.67 303.33A257.3 257.3 0 0 0 331 331a257 257 0 0 0-27.62 32.65L409 469.33H259.56S256 497.4 256 511.91v.18a257.7 257.7 0 0 0 3.56 42.58H409L303.33 660.33a257.5 257.5 0 0 0 60.34 60.34L469.33 615v149.44a258 258 0 0 0 42.49 3.56h.37a258 258 0 0 0 42.48-3.56V615l105.66 105.67A257.3 257.3 0 0 0 693 693a257.5 257.5 0 0 0 27.64-32.67L615 554.67h149.44a258 258 0 0 0 3.56-42.49v-.37a258 258 0 0 0-3.56-42.48"
-                ></path>
-            </g>
-        </svg>,
-        "Salesforce DX": () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#00A1E0"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">DX</text>
-        </svg>,
-        'Visual Studio': () =>  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-14 h-14">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="url(#paint0_linear_87_8101)"
-                    d="M21.002 3.117c0-.88-.985-.88-1.422-.77.612-.483 1.33-.366 1.586-.219l5.913 2.9c.563.276.92.85.92 1.48v19.075c0 .639-.366 1.22-.941 1.491l-5.564 2.631c-.383.165-1.214.572-1.914 0 .875.165 1.349-.457 1.422-.879z"
-                ></path>
-                <path
-                    fill="url(#paint1_linear_87_8101)"
-                    d="M19.651 2.332c.464-.092 1.35-.05 1.35.785v6.566L3.075 23.245a.763.763 0 0 1-1.022-.09l-1.847-2a.77.77 0 0 1 .045-1.092L19.58 2.348z"
-                ></path>
-                <path
-                    fill="url(#paint2_linear_87_8101)"
-                    d="M21.002 22.37 3.074 8.809a.763.763 0 0 0-1.022.091l-1.847 2A.77.77 0 0 0 .25 11.99l19.33 17.716c.875.164 1.349-.458 1.422-.88z"
-                ></path>
-                <defs>
-                    <linearGradient
-                        id="paint0_linear_87_8101"
-                        x1="23.79"
-                        x2="23.79"
-                        y1="2"
-                        y2="30"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stopColor="#32B5F1"></stop>
-                        <stop offset="1" stopColor="#2B9FED"></stop>
-                    </linearGradient>
-                    <linearGradient
-                        id="paint1_linear_87_8101"
-                        x1="21.002"
-                        x2="1.022"
-                        y1="5.534"
-                        y2="22.305"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stopColor="#0F6FB3"></stop>
-                        <stop offset="0.271" stopColor="#1279B7"></stop>
-                        <stop offset="0.421" stopColor="#1176B5"></stop>
-                        <stop offset="0.618" stopColor="#0E69AC"></stop>
-                        <stop offset="0.855" stopColor="#0F70AF"></stop>
-                        <stop offset="1" stopColor="#0F6DAD"></stop>
-                    </linearGradient>
-                    <linearGradient
-                        id="paint2_linear_87_8101"
-                        x1="1.155"
-                        x2="21.079"
-                        y1="9.984"
-                        y2="26.481"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stopColor="#1791D2"></stop>
-                        <stop offset="1" stopColor="#1173C5"></stop>
-                    </linearGradient>
-                </defs>
-            </g>
-        </svg>,
-        Git: () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <path d="M124.7 58.7L69.3 3.3C66.8 0.8 63.4 0 60 0C56.6 0 53.2 0.8 50.7 3.3L40.2 13.8L53.5 27.1C56.8 26 60.8 26.9 63.5 29.6C66.2 32.3 67.1 36.3 66 39.6L78.8 52.4C82.1 51.3 86.1 52.2 88.8 54.9C92.6 58.7 92.6 64.9 88.8 68.7C85 72.5 78.8 72.5 75 68.7C72.1 65.8 71.3 61.5 72.9 57.9L61 46V88.4C62.1 89 63.1 89.7 64 90.6C67.8 94.4 67.8 100.6 64 104.4C60.2 108.2 54 108.2 50.2 104.4C46.4 100.6 46.4 94.4 50.2 90.6C51.3 89.5 52.6 88.7 54 88.2V45.6C52.6 45.1 51.3 44.3 50.2 43.2C47.2 40.2 46.5 35.8 48.2 32.2L35.1 19.1L3.3 50.9C0.8 53.4 0 56.8 0 60.2C0 63.6 0.8 67 3.3 69.5L58.7 124.9C61.2 127.4 64.6 128.2 68 128.2C71.4 128.2 74.8 127.4 77.3 124.9L124.7 77.5C127.2 75 128 71.6 128 68.2C128 64.8 127.2 61.4 124.7 58.9Z" fill="#F05032"/>
-        </svg>,
-        Jenkins: () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="none"
-                    d="M19.513 25.173c-.068 0-.136 0-.2-.01q.098.01.2.01M18.919 25.087a2 2 0 0 0 .392.076 2 2 0 0 1-.392-.076M20.091 27.511a5.135 5.135 0 0 1 0 0"
-                ></path>
-                <path
-                    fill="#f0d6b7"
-                    d="M7.436 14.214A.8.8 0 0 1 7.6 14.1a.6.6 0 0 0-.164.114M10.412 18.253c.06.421.24 4.164 2.766 6.25a16 16 0 0 0 1.549.162c.28-.6 1.312-.554 1.985-.4a6.65 6.65 0 0 1-2.176-1.778 4.47 4.47 0 0 1-1.472-2.656c1.348 1.87 2.462 3.5 4.913 4.326 1.855.622 4.021-.285 5.446-1.286a6.3 6.3 0 0 0 1.365-1.68 14.24 14.24 0 0 0 2.145-8.621 9.6 9.6 0 0 0-.5-3.446c-.453-.908-1.984-1.72-2.88-.9a1 1 0 0 1-.016-.246c-.143.134-.23.232-.23.232a1.2 1.2 0 0 1-.122-.487 1.55 1.55 0 0 1 1.5-1.5 8.7 8.7 0 0 0-1.479-1.563 10.5 10.5 0 0 0-6.047-.222 8.06 8.06 0 0 0-5.975 5.4 14 14 0 0 0-.388 2.263c-.031.884.416 1.655.45 2.617-.239.394-.969.443-1.474.416a7 7 0 0 0-.136-.566 5.2 5.2 0 0 0-1.265-.5 1.72 1.72 0 0 1 1.009 2.038c-.373-.213-.462-1.15-.9-1.177-.626-.038-.512 1.216-.509 1.95a2.29 2.29 0 0 1-.19-2.213c-.284-.139-.444.061-.6.217-.222 1.036-.547 1.873.062 2.92a1.73 1.73 0 0 0 1.414.6c.567-.056.706-.624 1.324-.618a.51.51 0 0 1 .431.468m6.449 1.947-.3-.061s-.314-1.1-.163-1.306c.08-.107.52-.268 1.136.028-.004.001-.734.123-.673 1.339m5.706 1.341a5.27 5.27 0 0 1-3.426-.014 4.7 4.7 0 0 1-1.283-1.427c-.155-.2-.927-.708-.012-.709.717 1.8 3.18 1.592 5.257 1.543a1.1 1.1 0 0 1-.536.608Zm.3-1.6a4 4 0 0 1 0-1.063 8.5 8.5 0 0 0 2.96-1.185 3.43 3.43 0 0 1-2.961 2.246Zm2.756-8.073c-.183.061-1.37.762-1.278-.122a1.35 1.35 0 0 1 1.026-1.077 3 3 0 0 1 0-.4h.079a17 17 0 0 0 1.172 2.29c-.317.738-2.4 1.39-2.366.066.45-.2 1.227-.04 1.626-.291-.094-.257-.2-.5-.3-.756Zm-5.187 4.75a1 1 0 0 1 .046.1c.091-.507.259-1.1.548-1.013a.68.68 0 0 1 .5.638 7 7 0 0 0-.948.738c.065.3.144.6.523.668 1.106.189 2.393-.677 3.189-.979.493-.832-.043-1.138-.487-1.673-.91-1.1-2.13-2.456-2.086-4.1.368-.267.4.407.452.53a15 15 0 0 0 2.543 3.486c.214.234.567.459.606.614.113.451-.294.991-.247 1.29a6.6 6.6 0 0 1-4.466 1.4 1.32 1.32 0 0 1-.175-1.702Zm1.958 2.321A5 5 0 0 1 22.47 20c-1.811.09-3.952-.358-4.427-1.629a10.3 10.3 0 0 0 4.35.565Zm-4.256-8.648a7 7 0 0 0 .977 1.829c.228.222.67.492.451 1.109a1.4 1.4 0 0 1-.642.534c-.79.233-2.631.048-2.008-.937.653.03 1.532.424 2.02-.05a10 10 0 0 1-.322-.551c-.5.316-1.874.33-1.874-.479 0-.852 1.339-1.034 1.339-1.034l.01.024a1.1 1.1 0 0 1 .048-.448Zm-3.224-2.928c1.195-.815 1.8-.35 2.1.188a.568.568 0 0 1 .274.828c-1.658-.386-2.482.694-2.985 1.814-.129.234-.136.068-.21-.136a.4.4 0 0 1-.061-.136.6.6 0 0 0-.092-.121c-.24-.247-.365-1.524.974-2.437"
-                ></path>
-                <path
-                    fill="#335061"
-                    d="M6.283 29.28h8.753q-.06-.204-.118-.394a12 12 0 0 1-.476-1.948 21 21 0 0 1-3.087-1.655 2.4 2.4 0 0 1-.24-.257l-5.266 2.353s.189.754.434 1.901"
-                ></path>
-                <path
-                    fill="#6d6b6d"
-                    d="M9.433 7a2 2 0 0 1 .467-.088 4 4 0 0 0 .747.029c.494-.123.912-1.231 1.285-1.644a11 11 0 0 1 .941-.776A7.35 7.35 0 0 0 9.433 7M7.177 12.586a2.147 2.147 0 0 1 3.145 1.747c.694-.018.259-.866.134-1.413-.369-1.608.487-3.34.192-4.861-3.866.578-3.648 3.547-3.471 4.527"
-                ></path>
-                <path
-                    fill="#dcd9d8"
-                    d="M13.249 3.851c-1.82.516-4.152 1.838-4.9 3.473A7.4 7.4 0 0 0 9.433 7a7.35 7.35 0 0 1 3.44-2.479 2 2 0 0 0 .159-.166c.192-.093.476-.086.487-.375-.083-.089-.171-.157-.27-.129M7.5 8.985c-.8.885-.636 2.542-.538 3.721a2 2 0 0 1 .218-.12c-.18-.979-.394-3.949 3.471-4.527a3 3 0 0 0-.142-.493A4.4 4.4 0 0 0 7.5 8.985"
-                ></path>
-                <path
-                    fill="#f7e4cd"
-                    d="M10.412 18.253a.51.51 0 0 0-.42-.468c.335.668-.516.878-.6 1.355a4 4 0 0 0 .125.832 11.4 11.4 0 0 0 1.445 3.365 3.18 3.18 0 0 0 2.22 1.166c-2.53-2.085-2.71-5.829-2.77-6.25M21.525 16.338a.68.68 0 0 0-.5-.638c-.289-.082-.457.506-.548 1.013a2.4 2.4 0 0 1 .1.363 7 7 0 0 1 .948-.738M24.344 11.744c-.092.884 1.1.183 1.278.122l-.043-.286a3.2 3.2 0 0 1-.209-.913 1.35 1.35 0 0 0-1.026 1.077M16.739 11.744c0 .809 1.371.795 1.874.479a4.1 4.1 0 0 1-.525-1.489l-.01-.024s-1.339.182-1.339 1.034M7.192 14.885a1 1 0 0 1-.125.109 1.22 1.22 0 0 1 .37-.781.6.6 0 0 1 .163-.113.98.98 0 0 1 .782-.032 5.2 5.2 0 0 1 1.265.5c-.193-.664-.524-1.263-1.208-1.338a2.034 2.034 0 0 0-2.2 1.963A3.86 3.86 0 0 0 7.254 17.8c-.61-1.042-.284-1.879-.062-2.915M17.165 4.443a10.5 10.5 0 0 1 6.047.222 4 4 0 0 0-.49-.329c-1.889-1.066-5.086-1.867-7.1-.866-1.621.808-3.813 2.146-4.56 3.841a4.1 4.1 0 0 1 .123 2.532 8.06 8.06 0 0 1 5.98-5.4M23.188 7.728a1.2 1.2 0 0 0 .122.487s.087-.1.23-.232c.031-.734.865-1.152 1.832-.866-.222-.286-.447-.589-.681-.889a1.55 1.55 0 0 0-1.503 1.5M14.092 10.058c.074.2.082.37.21.136a.35.35 0 0 1-.21-.136"
-                ></path>
-                <path
-                    fill="#f7e4cd"
-                    d="M14.032 9.922a1.5 1.5 0 0 1 .114-.758 2.82 2.82 0 0 1 2.47-1.755 1.2 1.2 0 0 1 .4.143c-.3-.538-.9-1-2.1-.188-1.338.913-1.217 2.19-.973 2.434a.6.6 0 0 1 .089.124"
-                ></path>
-                <path
-                    fill="#49728b"
-                    d="m5.849 27.379 5.266-2.353c-.386-.448-1.079-1.3-1.2-1.257a24 24 0 0 0-5.61 3.485 20 20 0 0 1 .81 2.026h1.168a61 61 0 0 0-.434-1.901"
-                ></path>
-                <path
-                    fill="#335061"
-                    d="M27 29.307a21 21 0 0 0 .548-2.058c.036-.181.106-.475.156-.756l-2.886-2.144a5.12 5.12 0 0 1 .13 3.9c.1.372.454.515.6.85q-.052.09-.1.179h1.476a.15.15 0 0 1 .076.029M24.441 28.074a1.1 1.1 0 0 0 .172-.381 1.1 1.1 0 0 1-.172.381M23.617 23.946a.95.95 0 0 1 .514-.106l-.238-.177a1.5 1.5 0 0 0-.276.283"
-                ></path>
-                <path
-                    fill="#49728b"
-                    d="M27.756 25.879c-.074-.537-.8-.935-1.172-1.266-.684-.613-1.112-1.153-1.823-1.726a4.4 4.4 0 0 1-.869.776l.238.177a.93.93 0 0 1 .686.51l2.884 2.143a2.3 2.3 0 0 0 .056-.614"
-                ></path>
-                <path
-                    fill="#fff"
-                    d="M20.572 29.2a.4.4 0 0 0 .009.076h.479a.333.333 0 0 1 .666 0h.774v-.03a21 21 0 0 0-1.2-.593c-.424-.178-.728.547-.728.547"
-                ></path>
-                <path
-                    fill="#dcd9d8"
-                    d="M20.572 29.2s.3-.73.73-.548c.322.138.921.449 1.2.593q.014-.33.034-.66c-.618.039-.961-.559-1.394-.605-.378-.041-.7.435-1.19.229-.113.124-.215.259-.33.381a6 6 0 0 1 .489.685h.476a.4.4 0 0 1-.015-.075"
-                ></path>
-                <path
-                    fill="#fff"
-                    d="M14.511 25.169a6.7 6.7 0 0 1-2.269-.4.282.282 0 0 0 .017.421 7.7 7.7 0 0 0 2.14.578 1.8 1.8 0 0 0 .112-.599"
-                ></path>
-                <path
-                    fill="#dcd9d8"
-                    d="M14.357 26.069a1.2 1.2 0 0 1 .041-.3 7.7 7.7 0 0 1-2.14-.578 4.24 4.24 0 0 0 2.099.878"
-                ></path>
-                <path
-                    fill="#d33833"
-                    d="M24.613 27.693a3 3 0 0 0 .073-.87 7 7 0 0 0-.2-1.378 3 3 0 0 0-1.009.049c-.3.061-.609.122-.669.487s.122.548-.061.852-.487.122-.791.3c-.207.124-.076.445.029.638a12 12 0 0 0 2.459.3 1.1 1.1 0 0 0 .169-.378M15.562 29.219l.047.128c.014.04.029.093.042.139l-.009-.117Z"
-                ></path>
-                <path
-                    fill="#d33833"
-                    d="m19.563 27.925.021-.527a1.3 1.3 0 0 1-.96-.074c-.937-.511-.05-.36-.382-1.038a3.2 3.2 0 0 0-1.224-.365c-1.228 0-1.7-.247-1.568 1.169q.102 1.14.191 2.28c.1.188.19.357.262.5a4.8 4.8 0 0 0 1.833-.559 21 21 0 0 0 1.827-1.386M20.027 27.2c.021.089.043.189.064.31a.7.7 0 1 0 .428-1.31.95.95 0 0 1-.492 1"
-                ></path>
-                <path
-                    fill="#ef3d3a"
-                    d="M21.953 27.137c.3-.183.609 0 .791-.3s0-.487.061-.852.365-.426.669-.487a3 3 0 0 1 1.009-.049 1.13 1.13 0 0 0-.348-.652c-.747-.436-2.056.825-2.665 1.093l-.057.023a1.7 1.7 0 0 1 .175.558 1.5 1.5 0 0 1 .412-.042 2 2 0 0 1 .276.033q.067.014.133.032a1.5 1.5 0 0 1 .243.092 4 4 0 0 0-.757.1.7.7 0 0 0-.2.095 9 9 0 0 0-.035.9q.158.045.322.084c-.105-.183-.236-.504-.029-.628M15.651 29.485c.051.183.095.348.253.385-.072-.144-.163-.313-.262-.5ZM15.45 27.089c-.129-1.416.34-1.169 1.568-1.169a3.2 3.2 0 0 1 1.224.365c.332.678-.555.527.382 1.038a1.3 1.3 0 0 0 .96.074v-.063a3 3 0 0 0-.916-.29 4 4 0 0 0-.371-.036 1.6 1.6 0 0 1 .291-.106 3.3 3.3 0 0 0 .906-.281c0-.079.006-.158.009-.236a2 2 0 0 1-.2-.027 2 2 0 0 1-.177-.044 1.6 1.6 0 0 1-.294-.127c-.178-.1-.331-.216-.525-.322a9 9 0 0 0-2.408-.881c-.921-.176-.929 1.105-.89 2.049 0 .1.008.192.013.28a6.6 6.6 0 0 0 .544 1.9l.079.15q-.093-1.133-.195-2.274M20.52 26.2a1 1 0 0 0-.582.2 1.7 1.7 0 0 0 .007.412c.011.079.028.155.048.238l.031.131v.017a.95.95 0 0 0 .496-.998"
-                ></path>
-                <path
-                    fill="#231f20"
-                    d="M14.146 9.164a1.5 1.5 0 0 0-.114.758.4.4 0 0 0 .061.136.35.35 0 0 0 .21.136c.5-1.12 1.327-2.2 2.985-1.814a.568.568 0 0 0-.274-.828 1.2 1.2 0 0 0-.4-.143 2.82 2.82 0 0 0-2.468 1.755M24.252 12.627c-.032 1.324 2.049.672 2.366-.066a17 17 0 0 1-1.172-2.29h-.079a3 3 0 0 0 0 .4 3.2 3.2 0 0 0 .209.913c.095.256.205.5.3.756-.397.247-1.176.09-1.624.287M18.934 12.773c-.488.474-1.367.08-2.02.05-.623.985 1.218 1.17 2.008.937a1.4 1.4 0 0 0 .642-.534c.219-.617-.223-.887-.451-1.109a7 7 0 0 1-.977-1.829 1.1 1.1 0 0 0-.049.445 4.1 4.1 0 0 0 .525 1.489c.114.21.227.399.322.551M20.605 18.315a6.6 6.6 0 0 0 4.466-1.4c-.047-.3.36-.84.247-1.29-.039-.155-.392-.38-.606-.614a15 15 0 0 1-2.543-3.486c-.053-.123-.085-.8-.452-.53-.044 1.642 1.176 3 2.086 4.1.444.535.98.841.487 1.673-.8.3-2.083 1.169-3.189.979-.379-.065-.458-.365-.523-.668a2.4 2.4 0 0 0-.1-.363 1 1 0 0 0-.046-.1 1.32 1.32 0 0 0 .173 1.699M7.6 14.1a1 1 0 0 0-.159.111 1.22 1.22 0 0 0-.37.781 1 1 0 0 0 .125-.109c.153-.156.313-.357.6-.217a2.29 2.29 0 0 0 .19 2.213c0-.733-.117-1.987.509-1.95.438.027.527.964.9 1.177a1.72 1.72 0 0 0-1.017-2.036.98.98 0 0 0-.778.03M22.868 18.875a4 4 0 0 0 0 1.063 3.43 3.43 0 0 0 2.962-2.249 8.5 8.5 0 0 1-2.962 1.186M22.47 20a5 5 0 0 0-.077-1.066 10.3 10.3 0 0 1-4.35-.562c.475 1.272 2.616 1.72 4.427 1.628M17.846 19.39c-.915 0-.143.51.012.709a4.7 4.7 0 0 0 1.284 1.428 5.27 5.27 0 0 0 3.426.014 1.1 1.1 0 0 0 .536-.609c-2.078.05-4.541.257-5.258-1.542"
-                ></path>
-                <path
-                    fill="#81b0c4"
-                    d="M24.96 29.28a1.7 1.7 0 0 0-1.042-.753 1.43 1.43 0 0 0-.918.12c-.008.2-.018.415-.031.632Z"
-                ></path>
-                <path
-                    fill="#f0d6b7"
-                    d="M21.971 24.749c-.686.061-1.493.373-2.252.419-.069 0-.138.006-.206.006s-.136 0-.2-.01a2 2 0 0 1-.392-.076 2 2 0 0 1-.188-.07c0 .052-.071.033-.082.076q.127.1.247.179c.12.079.159.1.238.143a2.2 2.2 0 0 0 .475.19 3 3 0 0 0 .816.09c.1 0 .212 0 .327-.009.415-.303.783-.656 1.217-.938"
-                ></path>
-                <path
-                    fill="#81b0c4"
-                    d="m19.086 29.048-.351.233h.527q-.086-.119-.176-.233"
-                ></path>
-                <path
-                    fill="#231f20"
-                    d="M4.681 29.769v-.335a.153.153 0 0 1 .153-.153h.283a20 20 0 0 0-.81-2.026 24 24 0 0 1 5.61-3.485c.118-.047.811.809 1.2 1.257a2.4 2.4 0 0 0 .24.257 21 21 0 0 0 3.087 1.655 12 12 0 0 0 .476 1.948q.058.191.118.394h.162a.153.153 0 0 1 .153.153v.158h.139a.153.153 0 0 1 .153.153V30h1.691v-.255a.153.153 0 0 1 .153-.153h.78v-.158a.153.153 0 0 1 .153-.153h.317l.351-.233q.09.114.176.233h.843a6 6 0 0 0-.489-.685c.115-.122.217-.256.33-.381.492.206.812-.27 1.19-.229.433.046.776.644 1.394.605q-.02.33-.034.66v.03h.474q.019-.326.031-.632a1.43 1.43 0 0 1 .918-.12 1.7 1.7 0 0 1 1.042.753h.481q.052-.09.1-.179c-.143-.335-.495-.477-.6-.85a5.12 5.12 0 0 0-.13-3.9.93.93 0 0 0-.686-.51.95.95 0 0 0-.514.106 1.5 1.5 0 0 1 .275-.283 4.4 4.4 0 0 0 .869-.776c.712.573 1.141 1.112 1.824 1.725.37.332 1.1.73 1.172 1.266a2.3 2.3 0 0 1-.054.614c-.051.281-.12.575-.156.756A21 21 0 0 1 27 29.307a.15.15 0 0 1 .072.127V30h.368c.258-.808.511-1.635.766-2.489a6.2 6.2 0 0 0 .478-2.187c-.078-.617-1.04-1.265-1.547-1.754-.281-.271-1.593-1.267-1.669-1.64s.535-1.178.731-1.586a11.7 11.7 0 0 0 .621-1.788c1.032-3.627 1.137-8.611-.339-11.592a12.5 12.5 0 0 0-3.1-3.428c-2.3-1.742-6.563-1.935-9.339-.913a13.5 13.5 0 0 0-2.2.939c-1.818 1.066-3.748 1.78-4.287 3.928-1.328.6-1.729 2.3-1.662 4.268a6.2 6.2 0 0 1 .149 1.227c-.037.184-.286.419-.336.538a5.3 5.3 0 0 0 .609 4.592A3.23 3.23 0 0 0 8.468 19.5a4.6 4.6 0 0 0 .447 1.672c.17.373.805 1.043.571 1.519a7 7 0 0 1-1.495.966c-1.158.695-2 1.12-3.066 1.89-.692.5-1.773.562-1.6 1.71a18 18 0 0 0 .808 2.513q.038.117.08.232h.47Zm8.351-25.414a2 2 0 0 1-.159.166 11 11 0 0 0-.941.776c-.373.413-.79 1.521-1.285 1.644a4 4 0 0 1-.747-.029A2 2 0 0 0 9.433 7a7.4 7.4 0 0 1-1.084.325c.748-1.635 3.08-2.957 4.9-3.473.1-.028.188.04.271.129-.011.287-.296.281-.488.374m-2.385 3.7c.3 1.521-.561 3.254-.192 4.861.125.546.56 1.394-.134 1.413a2.147 2.147 0 0 0-3.145-1.747 2 2 0 0 0-.218.12c-.1-1.179-.266-2.836.538-3.721a4.4 4.4 0 0 1 3.009-1.419 3 3 0 0 1 .142.497ZM7.254 17.8a3.86 3.86 0 0 1-1.022-2.6 2.034 2.034 0 0 1 2.2-1.963c.684.075 1.014.674 1.208 1.338.054.187.1.379.136.566.505.027 1.235-.022 1.474-.416-.034-.962-.481-1.733-.45-2.617a14 14 0 0 1 .388-2.263 4.1 4.1 0 0 0-.123-2.532c.747-1.695 2.939-3.032 4.56-3.841 2.009-1 5.207-.2 7.1.866a4 4 0 0 1 .49.329 8.7 8.7 0 0 1 1.479 1.563c.234.3.459.6.681.889-.967-.287-1.8.132-1.832.866a1 1 0 0 0 .016.246c.9-.821 2.427-.009 2.88.9a9.6 9.6 0 0 1 .5 3.446 14.24 14.24 0 0 1-2.145 8.621 6.3 6.3 0 0 1-1.365 1.68c-1.425 1-3.591 1.908-5.446 1.286-2.451-.823-3.565-2.456-4.913-4.326a4.47 4.47 0 0 0 1.472 2.656 6.65 6.65 0 0 0 2.176 1.778c-.673-.158-1.7-.208-1.985.4a16 16 0 0 1-1.549-.162 3.18 3.18 0 0 1-2.22-1.166 11.4 11.4 0 0 1-1.445-3.365 4 4 0 0 1-.125-.832c.088-.478.939-.687.6-1.355-.618-.006-.757.562-1.324.618a1.73 1.73 0 0 1-1.416-.61m12.77 9.38-.031-.131a3 3 0 0 1-.048-.238 1.7 1.7 0 0 1-.007-.412 1 1 0 0 1 .582-.2.7.7 0 1 1-.428 1.31 5 5 0 0 0-.064-.31Zm-7.782-2.419a6.7 6.7 0 0 0 2.269.4 1.8 1.8 0 0 1-.112.6 1.2 1.2 0 0 0-.041.3 4.24 4.24 0 0 1-2.1-.882.28.28 0 0 1-.016-.413Zm7.367.839a2.2 2.2 0 0 1-.475-.19 3.3 3.3 0 0 1-.485-.322c.011-.043.079-.024.082-.076a2 2 0 0 0 .188.07 2 2 0 0 0 .392.076 3 3 0 0 0 .406.004c.759-.046 1.566-.358 2.252-.419-.433.283-.8.636-1.218.938a6 6 0 0 1-.327.009 3 3 0 0 1-.815-.085Zm-1.872 3.706a4.8 4.8 0 0 1-1.833.559c-.158-.037-.2-.2-.253-.385a3 3 0 0 0-.089-.267 6.6 6.6 0 0 1-.544-1.9c0-.088-.009-.182-.013-.28-.039-.944-.031-2.225.89-2.049a9 9 0 0 1 2.408.881c.194.106.347.225.525.322a1.6 1.6 0 0 0 .294.127 2 2 0 0 0 .177.044 2 2 0 0 0 .2.027c0 .078-.006.157-.009.236a3.3 3.3 0 0 1-.906.281 1.6 1.6 0 0 0-.291.106 4 4 0 0 1 .371.036 3 3 0 0 1 .916.29v.063l-.021.527a21 21 0 0 1-1.822 1.387Zm4.245-1.536q-.164-.039-.322-.084a9 9 0 0 1 .035-.9.7.7 0 0 1 .2-.095 4 4 0 0 1 .757-.1 1.5 1.5 0 0 0-.243-.092 2 2 0 0 0-.133-.032 2 2 0 0 0-.276-.038 1.5 1.5 0 0 0-.407.038 1.7 1.7 0 0 0-.175-.558l.057-.023c.609-.268 1.918-1.529 2.665-1.093a1.13 1.13 0 0 1 .348.652 7 7 0 0 1 .2 1.378 3 3 0 0 1-.073.87 1.1 1.1 0 0 1-.172.381 12 12 0 0 1-2.461-.3Z"
-                ></path>
-                <path
-                    fill="#f7e4cd"
-                    d="M17.53 18.862c-.616-.3-1.056-.135-1.136-.028-.152.2.163 1.306.163 1.306l.3.061c-.057-1.217.673-1.339.673-1.339"
-                ></path>
-                <path
-                    fill="#1d1919"
-                    d="M21.393 28.961a.334.334 0 0 0-.333.319h.666a.334.334 0 0 0-.333-.319"
-                ></path>
-                <path
-                    fill="#231f20"
-                    d="M15.642 29.745a.153.153 0 0 0-.153-.153h-.139v.177a.153.153 0 0 1-.153.153H4.834a.153.153 0 0 1-.153-.153V30h10.961ZM26.918 29.922h-8.5a.153.153 0 0 1-.153-.153v-.177h-.78a.153.153 0 0 0-.153.153V30h9.737v-.231a.153.153 0 0 1-.151.153"
-                ></path>
-                <path
-                    fill="#231f20"
-                    d="M4.834 29.922H15.2a.153.153 0 0 0 .153-.153v-.335a.153.153 0 0 0-.153-.153H4.834a.153.153 0 0 0-.153.153v.335a.153.153 0 0 0 .153.153M18.266 29.769a.153.153 0 0 0 .153.153h8.5a.153.153 0 0 0 .153-.153v-.335a.15.15 0 0 0-.072-.127.15.15 0 0 0-.081-.026h-8.5a.153.153 0 0 0-.153.153z"
-                ></path>
-            </g>
-        </svg>,
-
-        Selenium: () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-14 h-14">
-            <g id="SVGRepo_iconCarrier">
-                <path d="m20.606 19.981-.066-.001a2.2 2.2 0 0 0-2.182 1.94l-.001.01v.008c0 .041.034.075.075.075h4.364a.076.076 0 0 0 .075-.075v-.008a2.123 2.123 0 0 0-2.271-1.949h.007zm4.604 3.434a.24.24 0 0 1-.24.24h-6.501a.076.076 0 0 0-.075.075v.008a2.486 2.486 0 0 0 2.641 2.046l-.009.001a4.06 4.06 0 0 0 2.262-.758l-.012.008a.24.24 0 0 1 .148-.051c.081 0 .153.041.197.102v.001l.795 1.162a.245.245 0 0 1-.052.329 5.84 5.84 0 0 1-3.463 1.127l-.159-.002h.008a4.656 4.656 0 0 1-4.911-4.845v.009l-.002-.136a4.68 4.68 0 0 1 4.768-4.678h-.004.021a4.605 4.605 0 0 1 4.581 5.081l.002-.02zM9.667 27.704a7.1 7.1 0 0 1-5.068-1.806l.007.006a.276.276 0 0 1 .001-.36l1.102-1.545a.28.28 0 0 1 .412-.045 5.4 5.4 0 0 0 3.687 1.447h.018-.001c1.447 0 2.152-.667 2.152-1.372 0-2.189-7.123-.69-7.123-5.346 0-2.062 1.784-3.749 4.694-3.749a6.928 6.928 0 0 1 4.646 1.562l-.012-.01a.276.276 0 0 1 0 .375l-1.132 1.5a.28.28 0 0 1-.398.045 5.33 5.33 0 0 0-3.343-1.17h-.041.002c-1.132 0-1.762.502-1.762 1.245 0 1.964 7.108.652 7.108 5.248.007 2.264-1.605 3.974-4.949 3.974zM29.963 5.338l-9.267 10.4a.285.285 0 0 1-.412 0l-4.731-4.874a.287.287 0 0 1 0-.353l1.537-2.009a.284.284 0 0 1 .457-.001l.001.001 2.632 2.932a.285.285 0 0 0 .427 0L28.03 1.319a.203.203 0 0 0-.157-.315H1.899a.217.217 0 0 0-.217.217v29.556c0 .12.097.217.217.217h28.199c.12 0 .217-.097.217-.217V5.502l.003-.032a.202.202 0 0 0-.354-.133z"></path>
-            </g>
-        </svg>,
-
-        'Salesforce Mobile SDK': () =>  <svg
-            xmlns="http://www.w3.org/2000/svg"
-            id="icon"
-            fill="#000"
-            viewBox="0 0 32 32"
-            className="w-14 h-14"
-        >
-            <g id="SVGRepo_iconCarrier">
-                <path d="M30 9h-2.1L24 15.6V9h-2v14h2v-4.3l.9-1.5 3 5.8H30l-3.9-7.6zM16 23h-4V9h4a4.01 4.01 0 0 1 4 4v6a4.01 4.01 0 0 1-4 4m-2-2h2a2.006 2.006 0 0 0 2-2v-6a2.006 2.006 0 0 0-2-2h-2ZM8 23H2v-2h6v-4H4a2.006 2.006 0 0 1-2-2v-4a2.006 2.006 0 0 1 2-2h6v2H4v4h4a2.006 2.006 0 0 1 2 2v4a2.006 2.006 0 0 1-2 2"></path>
-                <path
-                    id="_Transparent_Rectangle_"
-                    fill="none"
-                    d="M0 0h32v32H0z"
-                    data-name="&lt;Transparent Rectangle&gt;"
-                ></path>
-            </g>
-        </svg>,
-
-        "React Native": () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="11.4" fill="#61dafb"/>
-            <g stroke="#61dafb" strokeWidth="6" fill="none">
-                <ellipse rx="56" ry="22" cx="64" cy="64"/>
-                <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(60 64 64)"/>
-                <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(120 64 64)"/>
-            </g>
-        </svg>,
-
-        "iOS/Android": () =>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-14 h-14">
-            <g id="SVGRepo_iconCarrier">
-                <path d="M1.119 12.633v10.576h2.49V12.633zm10.763-1.865c2.553 0 4.193 2.04 4.193 5.232 0 3.217-1.64 5.257-4.193 5.257-2.578 0-4.206-2.04-4.206-5.257 0-3.192 1.627-5.232 4.206-5.232m13.568-2.19c-3.129 0-5.357 1.727-5.357 4.293 0 2.04 1.264 3.317 3.918 3.93l1.865.451c1.815.413 2.553 1.014 2.553 2.053 0 1.202-1.214 2.053-2.941 2.053-1.765 0-3.092-.864-3.229-2.19h-2.503c.1 2.654 2.278 4.281 5.582 4.281 3.492 0 5.683-1.715 5.683-4.443 0-2.14-1.252-3.354-4.155-4.018l-1.665-.376c-1.765-.426-2.491-.989-2.491-1.94 0-1.202 1.101-2.003 2.729-2.003 1.64 0 2.766.814 2.891 2.153h2.453c-.063-2.528-2.153-4.243-5.332-4.243zm-13.568 0c-4.205 0-6.834 2.866-6.834 7.422 0 4.594 2.628 7.447 6.834 7.447 4.181 0 6.821-2.854 6.821-7.447 0-4.556-2.641-7.422-6.822-7.422zm-9.525-.025h-.024a1.352 1.352 0 1 0 0 2.704h.026-.001l.037.001a1.352 1.352 0 1 0 0-2.704l-.039.001h.002z"></path>
-            </g>
-        </svg>,
-
-        'Sales Cloud': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#1798C1"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">SC</text>
-        </svg>,
-
-        'Service Cloud': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#41B658"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">SE</text>
-        </svg>,
-
-        'Marketing Cloud': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#E8773D"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">MC</text>
-        </svg>,
-
-        'Commerce Cloud': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#8A69C8"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">CC</text>
-        </svg>,
-
-        'Experience Cloud': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="60" fill="#F2A23C"/>
-            <text x="64" y="74" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold">EC</text>
-        </svg>,
-    };
-    const techCategories = [
-        {title: 'Development', icons: ['Lightning web Components', 'Apex', 'Visual Force', 'Lightning Flow','SOQL']},
-        {title: 'Mobile', icons: ['Salesforce Mobile SDK', 'React Native', 'iOS/Android']},
-        {title: 'Integration', icons: ['MuleSoft', 'REST/SOAP APIs', 'Heroku', 'Informatica','Zapier']},
-        {title: 'Tools', icons: ['Salesforce DX', 'Visual Studio', 'Git', 'Jenkins', 'Selenium']},
-        {title: 'Salesforce Products', icons: ['Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud','Experience Cloud']},
-    ];
     const definitionOne = [
         {
             title: "Complete CRM Platform",
             description:
-                "Unified platform for sales, service, marketing, and commerce managing the entire customer lifecycle in one system. Eliminate data silos and streamline operations across all departments.",
+                "Unified platform for sales, service, marketing, and commerce. Manage entire customer lifecycle in one system.",
         },
         {
             title: "Scalable & Flexible",
             description:
-                "Grows with your business from startup to enterprise with highly customizable features to fit any industry or process. Adapt quickly to changing requirements.",
+                "Grows with your business from startup to enterprise. Highly customizable to fit any industry or process.",
         },
         {
             title: "Cloud-Based Access",
             description:
-                "Access your data anywhere, anytime with mobile apps keeping teams connected on the go. Work seamlessly across devices with real-time synchronization.",
-        },
-        {
-            title: "AI-Powered Insights",
-            description:
-                "Einstein AI delivers predictive analytics, lead scoring, and intelligent recommendations. Make smarter decisions with machine learning capabilities built into your CRM.",
+                "Access your data anywhere, anytime. Mobile apps keep teams connected on the go.",
         },
     ];
     const definitionTwo = [
         {
+            title: "AI-Powered Insights",
+            description:
+                "Einstein AI delivers predictive analytics, lead scoring, and intelligent recommendations.",
+        },
+        {
             title: "Extensive Ecosystem",
             description:
-                "AppExchange offers 5,000+ pre-built apps and integrations with a large community of developers and consultants. Extend functionality without custom development.",
+                "AppExchange offers 5,000+ pre-built apps and integrations. Large community of developers and consultants.",
         },
         {
             title: "Proven ROI",
             description:
-                "Average 25% increase in revenue, 35% improvement in customer satisfaction, and 37% faster sales cycles. Measurable results that directly impact the bottom line.",
-        },
-        {
-            title: "Enterprise Security",
-            description:
-                "Bank-level security with encryption, compliance certifications, and granular permissions. Meet regulatory requirements with HIPAA, GDPR, and SOC 2 compliance.",
-        },
-        {
-            title: "Continuous Innovation",
-            description:
-                "Three major releases annually with new features and improvements. Stay ahead with cutting-edge CRM capabilities without migration or upgrade costs.",
+                "Average 25% increase in revenue, 35% improvement in customer satisfaction, 37% faster sales cycles.",
         },
     ];
-
+    const servicesData = [
+        {
+            title: "Salesforce Consulting Services",
+            description:
+                "Strategic Salesforce consulting that aligns CRM capabilities with your business goals — from strategy and process design to change management and ROI tracking.",
+            keyFeatures: [
+                "CRM Strategy & Planning",
+                "Business Process Analysis",
+                "Solution Architecture",
+                "Change Management",
+                "ROI Assessment",
+                "Vendor Selection",
+            ],
+        },
+        {
+            title: "Salesforce Implementation Services",
+            description:
+                "End-to-end Salesforce implementation — from discovery to deployment. We follow Salesforce best practices for seamless rollouts.",
+            keyFeatures: [
+                "Discovery & Design Phases",
+                "Configuration & Customization",
+                "Integration Development",
+                "Testing & Deployment",
+                "Training & Documentation",
+            ],
+        },
+        {
+            title: "Salesforce Development Company",
+            description:
+                "Custom Salesforce app development using Lightning Web Components, Apex, and API integrations. Extend functionality to match your needs.",
+            keyFeatures: [
+                "Custom Lightning Components",
+                "Apex & Visualforce Development",
+                "API & Integration Development",
+                "AppExchange Packages",
+                "Mobile & Heroku Solutions",
+            ],
+        },
+        {
+            title: "Salesforce Integration Services",
+            description:
+                "Seamless integrations connecting Salesforce with ERP, Marketing, and Financial systems to unify customer data and automate workflows.",
+            keyFeatures: [
+                "ERP & Marketing Automation",
+                "E-commerce & Financial Systems",
+                "Communication Tools (Slack, Teams)",
+                "Data Warehouses & BI Tools",
+                "ETL & Middleware Integration",
+            ],
+        },
+        {
+            title: "Hire Salesforce Developers",
+            description:
+                "Hire certified Salesforce developers, architects, admins, and consultants on-demand. Flexible engagement models to fit your goals.",
+            keyFeatures: [
+                "Certified Experts (PD1, PD2)",
+                "Dedicated & Flexible Teams",
+                "Rapid Onboarding (1-2 weeks)",
+                "Cost-Effective Staffing",
+                "Ongoing Expert Support",
+            ],
+        },
+        {
+            title: "Salesforce App Development",
+            description:
+                "Custom Salesforce app development — internal, mobile, or AppExchange apps designed for scalability, user experience, and performance.",
+            keyFeatures: [
+                "Internal Custom Apps",
+                "AppExchange Apps",
+                "Mobile & Portal Apps",
+                "Industry-Specific Solutions",
+                "Project & Contract Management",
+            ],
+        },
+        {
+            title: "Salesforce Optimization & Support",
+            description:
+                "Ongoing optimization, support, and managed services to ensure your Salesforce runs efficiently and evolves with your business.",
+            keyFeatures: [
+                "Performance Tuning",
+                "User Adoption Programs",
+                "Data Quality Management",
+                "Security & Compliance Audits",
+                "24/7 Managed Services",
+            ],
+        },
+    ];
+    const industriesData = [
+        {
+            icon: Heart,
+            title: "Healthcare & Life Sciences",
+            description: "HIPAA-compliant patient management and care coordination",
+            color: "from-blue-50 to-blue-100"
+        },
+        {
+            icon: TrendingUp,
+            title: "Financial Services",
+            description: "Wealth management, banking, insurance CRM solutions",
+            color: "from-blue-100 to-blue-50"
+        },
+        {
+            icon: Factory,
+            title: "Manufacturing",
+            description: "Sales force automation, channel management, service optimization",
+            color: "from-blue-50 to-blue-100"
+        },
+        {
+            icon: ShoppingCart,
+            title: "Retail & E-commerce",
+            description: "Customer engagement, loyalty programs, unified commerce",
+            color: "from-blue-100 to-blue-50"
+        },
+        {
+            icon: Briefcase,
+            title: "Professional Services",
+            description: "Project management, resource planning, client portals",
+            color: "from-blue-50 to-blue-100"
+        },
+        {
+            icon: Cpu,
+            title: "Technology & SaaS",
+            description: "Subscription management, usage tracking, customer success",
+            color: "from-blue-100 to-blue-50"
+        },
+        {
+            icon: GraduationCap,
+            title: "Education",
+            description: "Student recruitment, alumni management, fundraising",
+            color: "from-blue-50 to-blue-100"
+        },
+        {
+            icon: Building2,
+            title: "Nonprofit",
+            description: "Donor management, grant tracking, volunteer coordination",
+            color: "from-blue-100 to-blue-50"
+        }
+    ];
     return (
         <div className="font-syne">
             <NextSeo
@@ -492,9 +273,10 @@ export default function SalesforceConsulting() {
                 }))}
             />
             <HeroSection
-                title="Salesforce Consulting Services Excellence"
-                description="Maximize your CRM investment with expert Salesforce implementation, development, and strategic guidance"
+                title="Maximize Your CRM Investment With Expert Guidance"
+                description="Transform your customer relationships with professional salesforce consulting services. Our certified team delivers salesforce implementation services, custom development, and strategic guidance that drives revenue growth and operational efficiency"
                 formLabel="Free CRM Assessment Consultation?"
+                buttonText="Get Free CRM Assessment"
                 TrustBar={() => (
                     <motion.div
                         variants={itemVariants}
@@ -509,145 +291,88 @@ export default function SalesforceConsulting() {
                             <Star className="w-5 h-5 text-yellow-500"/>
                             <span>35% Average Revenue Increase</span>
                         </div>
-                        <div className="hidden sm:block w-[1px] h-6 bg-black"></div>
-                        <div className="flex items-center gap-2">
-                            <Globe className="w-5 h-5 text-green-600"/>
-                            <span>Certified Salesforce Partner</span>
-                        </div>
                     </motion.div>
                 )}
             />
             <AboutSection
                 title="Complete Salesforce Consulting Services for Business Growth"
-                description="2BTech Inc is a trusted salesforce development company delivering end-to-end Salesforce solutions that transform how you engage with customers. Our salesforce consulting services combine strategic planning, technical implementation, and ongoing optimization to maximize your Salesforce investment. We provide comprehensive salesforce implementation services covering Sales Cloud, Service Cloud, Marketing Cloud, and custom applications. Our salesforce integration services connect your CRM with ERP systems, marketing platforms, and third-party applications for seamless data flow. When you hire salesforce developers from 2BTech, you gain certified experts with proven experience in salesforce app development and Lightning components"
+                description="2BTech Inc is a trusted salesforce development company delivering end-to-end Salesforce solutions that transform how you engage with customers. Our salesforce consulting services combine strategic planning, technical implementation, and ongoing optimization to maximize your Salesforce investment"
+                descriptionTwo="We provide comprehensive salesforce implementation services covering Sales Cloud, Service Cloud, Marketing Cloud, and custom applications. Our team of certified developers handles salesforce integration services, connecting your CRM with ERP systems, marketing platforms, and third-party applications for seamless data flow"
+                descriptionThree="When you hire salesforce developers from 2BTech, you gain access to experts with proven experience across industries. We specialize in salesforce app development, building custom Lightning components, AppExchange apps, and mobile solutions that extend Salesforce capabilities to meet your unique business requirement"
                 src="/assets/services/salesForce/salesForce.webp"
-                width={500}
+                width={600}
             />
-            <ServiceSection
-                heading="Cloud Migration Services"
-                subHeading="Comprehensive Cloud Migration & Infrastructure Services"
-                description="Our end-to-end cloud migration services ensure a seamless transition to the cloud with minimal disruption. From initial assessment and planning to execution and ongoing management, we handle every aspect of your cloud migration journey. Our cloud infrastructure services include"
-                arrowImage="/assets/services/down-arrow.svg"
-                services={[
-
-                    {
-                        id: 1,
-                        title: "Salesforce Consulting",
-                        description:
-                            "Strategic Salesforce consulting services that align CRM capabilities with business goals. CRM strategy, process analysis, solution architecture, and ROI assessment for successful adoption.",
-                    },
-                    {
-                        id: 2,
-                        title: "Salesforce Implementation",
-                        description:
-                            "Complete Salesforce implementation services from requirements gathering through go-live. Sales Cloud, Service Cloud, Marketing Cloud, and CPQ implementations following best practices.",
-                    },
-                    {
-                        id: 3,
-                        title: "Salesforce Integration",
-                        highlightImage: "/assets/services/salesForce/integration.svg",
-                        description:
-                            "Seamless Salesforce integration services connecting CRM with ERP, marketing automation, e-commerce, and financial systems. Eliminate data silos with real-time synchronization.",
-                    },
-                    {
-                        id: 4,
-                        title: "Salesforce Development",
-                        description:
-                            "Expert Salesforce app development creating custom Lightning components, Apex code, and AppExchange apps. Hire Salesforce developers for custom solutions extending platform functionality.",
-                    },
-                ]}
+            <SubServicesSection
+                heading="OUR SALESFORCE SERVICES"
+                headingHighlight="Our Expertise"
+                services={servicesData}
             />
             <WhatIsSection
-                heading="Salesforce Benefits"
-                highlight="Benefits"
-                description="Salesforce consulting services provide expert guidance and implementation support for businesses adopting or optimizing Salesforce CRM. As a specialized salesforce development company, we help organizations leverage Salesforce to improve sales productivity, enhance customer service, automate marketing, and drive data-driven decisions"
+                heading="what are"
+                highlight="Salesforce consulting services?"
+                description="Salesforce consulting services provide expert guidance and implementation support for businesses adopting or optimizing Salesforce CRM. As a specialized salesforce development company, we help organizations leverage Salesforce to improve sales productivity, enhance customer service, automate marketing, and drive data-driven decision-making"
                 definitionOne={definitionOne}
                 definitionTwo={definitionTwo}
                 imageOne="/assets/services/salesForce/crm.svg"
                 imageTwo="/assets/services/salesForce/security.svg"
             />
-
-            <OurModals
-                headingHighlight="Flexible Engagement Models for"
-                src="/assets/services/salesForce/salesForceModal.svg"
-                heading="Your Salesforce Needs"
-                description=" Choose the engagement model that fits your project scope and budget. Hire salesforce developers through dedicated teams, fixed-price projects, or flexible staff augmentation"
-                subheading="Fixed-Price Projects"
-                subDescription="Defined scope, timeline, and budget for well-defined Salesforce projects. Best for implementations, migrations, and integrations with clear requirements. Predictable costs with guaranteed deliverables"
-                subheadingTwo="Dedicated Salesforce Team"
-                subDescriptionTwo="Full-time dedicated developers, administrators, and consultants working exclusively on your projects. Integrated with your team for ongoing development, support, and optimization. Monthly engagement with flexible scope"
-            />
-            <OurStack
-                heading="Salesforce Platform & Technologies"
-                description="Certified expertise across the complete Salesforce ecosystem"
-                highlightHeading="Expertise"
-                stackIcons={StackIcons}
-                techCategories={techCategories}
-            />
             <OurFlowSection
-                heading="Implementation Process"
-                headingHighlight="Six-Phase"
-                description="Proven salesforce implementation services methodology following Salesforce best practices ensuring on-time delivery with maximum user adoption and ROI"
+                heading="for Saleforce?"
+                headingHighlight="Why Choose 2BTech"
                 services={[
                     {
-                        title: "Discovery Phase",
-                        duration: "(1–2 Weeks)",
+                        title: "Certified Salesforce Experts",
+                        duration: "",
                         description:
-                            "Stakeholder interviews and requirements gathering with current state analysis. Define success criteria, identify gaps, and establish project scope and timeline with detailed documentation.",
+                            "Team of certified Salesforce Administrators, Developers, Architects, and Consultants.",
                     },
                     {
-                        title: "Design Phase",
-                        duration: "(2–3 Weeks)",
+                        title: "Industry Experience",
+                        duration: "",
                         description:
-                            "Data model design with object relationships, workflow automation design, integration architecture planning, and UI/UX customization. Create comprehensive solution architecture aligned with business goals.",
+                            "10+ Salesforce projects across healthcare, financial services, manufacturing, retail, and technology. We understand your industry challenges.",
                     },
                     {
-                        title: "Build Phase",
-                        duration: "(4–8 Weeks)",
+                        title: "Full-Service Partner",
+                        duration: "",
                         description:
-                            "Salesforce configuration and customization with custom development when needed. Integration development, data migration preparation, and Lightning component creation following coding best practices.",
+                            "End-to-end services from strategy through implementation, integration, and ongoing support. One partner for complete Salesforce journey.",
                     },
                     {
-                        title: "Testing Phase",
-                        duration: "(2–3 Weeks)",
+                        title: "Proven Methodology",
+                        duration: "",
                         description:
-                            "Unit testing, integration testing, and user acceptance testing ensuring quality. Performance and security testing with bug fixes and refinements before production deployment.",
+                            "Follow Salesforce implementation best practices and Agile methodology. Predictable, on-time delivery with quality assurance.",
                     },
                     {
-                        title: "Deployment & Training",
-                        duration: "(1–2 Weeks)",
+                        title: "Custom Development Excellence",
+                        duration: "",
                         description:
-                            "Production deployment with user training and enablement programs. Documentation delivery including admin guides, user manuals, and go-live support with monitoring.",
+                            "Expert developers building Lightning components, Apex code, and AppExchange apps. Extend Salesforce to meet any requirement.",
                     },
                     {
-                        title: "Optimization & Support",
-                        duration: "(Ongoing)",
+                        title: "Integration Specialists",
+                        duration: "",
                         description:
-                            "Post-implementation support with performance monitoring, user adoption tracking, and continuous optimization. Regular health checks, seasonal release upgrades, and enhancement requests.",
+                            "Deep expertise connecting Salesforce with ERP, marketing, e-commerce, and business systems. Seamless data flow across platforms.",
+                    },
+                    {
+                        title: "Post-Implementation Support",
+                        duration: "",
+                        description:
+                            "We don't disappear after go-live. Managed services, optimization, and strategic guidance to maximize long-term value.",
                     },
                 ]}
 
             />
+            <IndustriesSection industries={industriesData} />
             <Banner
                 title="Transform Relationships with Expert Salesforce Consulting"
                 description="Leverage our certified Salesforce developers"
                 src="/assets/services/salesForce/salesForceBanner.webp"
             />
-            <TestimonialSection/>
             <FaqSection
                 Faq={faqs}
-            />
-            <FinalCTASection
-                heading="Ready to Transform Your CRM?"
-                description="Schedule a free CRM assessment. We'll evaluate your current processes, discuss your Salesforce needs, provide implementation timeline and cost estimate, and create a customized roadmap for success"
-                features={[
-                    "Business process analysis",
-                    "Salesforce solution recommendation",
-                    "Implementation timeline and cost",
-                    "ROI calculation and success metrics",
-                    "Integration architecture planning",
-                    "No-obligation proposal"
-                ]}
             />
             <Footer/>
         </div>

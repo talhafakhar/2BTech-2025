@@ -12,7 +12,7 @@ interface ServiceHeroProps {
     formLabel?: string;
     TrustBar?: ReactNode | (() => ReactNode);
 }
-const HeroSection: React.FC<ServiceHeroProps> = ({title, description, TrustBar, formLabel}) => {
+const HeroSection: React.FC<ServiceHeroProps> = ({title, description, TrustBar, formLabel,buttonText}) => {
     const containerVariants = {
         hidden: {opacity: 0},
         visible: {
@@ -49,21 +49,17 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, TrustBar, 
         },
     };
     return (
-        <div
-            className="min-h-screen relative overflow-hidden"
-            style={{backgroundImage: 'url("/assets/services/hero/hero-service-bg.svg")'}}
-        >
+        <div className="min-h-screen relative overflow-hidden" style={{backgroundImage: 'url("/assets/services/hero/hero-service-bg.svg")'}}>
             <Navbar/>
             <div className="inset-0 bg-white/60 absolute z-0"></div>
 
             <div className="min-h-screen px-4 flex flex-col justify-between items-center relative z-10 py-8">
-                <div className="w-full max-w-8xl mx-auto flex-1 flex items-center">
-                    <div className="w-full">
-                        <div className="mt-32 md:mt-20 flex md:flex-row flex-col justify-between items-center gap-6 mb-10 px-2">
-                            <motion.div variants={containerVariants} initial="hidden" animate="visible">
+                <div className="w-full max-w-8xl mx-auto flex-1 flex items-center px-4">
+                    <div className="mt-32 md:mt-20 flex md:flex-row flex-col justify-between items-center gap-6 w-full">
+                            <motion.div variants={containerVariants} className="w-full md:w-1/2" initial="hidden" animate="visible">
                                 <motion.h1
                                     variants={itemVariants}
-                                    className="text-2xl sm:text-4xl md:text-6xl font-bold max-w-4xl"
+                                    className="text-2xl sm:text-4xl md:text-6xl font-bold"
                                 >
                                     {title}
                                 </motion.h1>
@@ -105,11 +101,11 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, TrustBar, 
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         onClick={() =>
-                                            window.open('https://calendly.com/talhafakhar/discoverycall', '_blank')
+                                            window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
                                         }
-                                        className="flex items-center border-black px-6 py-3 rounded border font-semibold transform transition-all duration-300 shadow-lg hover:shadow-xl"
+                                        className="flex items-center border-black px-4 py-2.5 rounded border font-semibold transform transition-all duration-300 shadow-lg hover:shadow-xl"
                                     >
-                                        Schedule Free Consultation
+                                        {buttonText}
                                         <svg
                                             className="ml-2 w-5 h-5 transform transition-transform duration-300"
                                             fill="none"
@@ -126,10 +122,9 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, TrustBar, 
                                     </motion.button>
                                 </div>
                             </motion.div>
-
-                            <motion.div variants={itemVariants} initial="hidden" animate="visible">
-                                <div className="max-w-lg mx-auto bg-white shadow-lg rounded-xl p-6 border border-gray-200">
-                                    <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+                            <motion.div variants={itemVariants} initial="hidden" className="w-full md:w-1/3" animate="visible">
+                                <div className="  bg-white shadow-lg rounded-xl p-6 border border-gray-200">
+                                    <h2 className="text-xl  font-bold text-secondary">
                                         {formLabel}
                                     </h2>
                                     <form className="mt-6 space-y-4">
@@ -186,9 +181,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({title, description, TrustBar, 
                                 </div>
                             </motion.div>
                         </div>
-                    </div>
                 </div>
-
                 <motion.div
                     className="w-full mt-8 md:mt-12"
                     variants={itemVariants}
