@@ -22,9 +22,10 @@ const Banner: React.FC<BannerProps> =  ({title,description,src}) => {
                     <p className="text-lg font-normal mb-8">
                         {description}
                     </p>
-                    <a
-                        href="https://calendly.com/talhafakhar/discoverycall"
-                        target="_blank"
+                    <button
+                        onClick={() =>
+                            window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                        }
                         className="group relative inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none"
                     >
                         Let&#39;s Connect!
@@ -34,7 +35,7 @@ const Banner: React.FC<BannerProps> =  ({title,description,src}) => {
     <ArrowRight className="w-4 h-4" />
   </span>
 
-                    </a>
+                    </button>
 
 
                 </div>

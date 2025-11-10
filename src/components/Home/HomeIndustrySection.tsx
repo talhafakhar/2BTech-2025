@@ -78,7 +78,7 @@ const HomeIndustrySection: React.FC = () => {
                 <div className="text-center mt-16">
                     <button
                         onClick={() =>
-                            window.open("https://calendly.com/talhafakhar/discoverycall", "_blank")
+                            window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
                         }
                         className="inline-flex items-center border-black px-8 py-3 rounded border font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                     >
@@ -99,8 +99,6 @@ const HomeIndustrySection: React.FC = () => {
                     </button>
                 </div>
             </div>
-
-            {/* Custom animation */}
             <style jsx>{`
                 @keyframes infinite-scroll {
                     0% {

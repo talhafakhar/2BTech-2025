@@ -37,7 +37,7 @@ const WhatIsSection: React.FC<WhatIsSectionProps> = ({
             </div>
             <div className="relative z-10 max-w-7xl mx-auto px-4 ">
                 <div className="text-center mb-10">
-                    <h2 className="text-2xl md:text-5xl font-bold max-w-4xl mx-auto">
+                    <h2 className="text-2xl md:text-5xl font-bold max-w-3xl mx-auto">
                         {heading}{' '}
                         <span className="text-primary">
               {highlight}

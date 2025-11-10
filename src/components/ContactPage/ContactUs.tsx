@@ -3,7 +3,7 @@ import Image from "next/image";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import ReCAPTCHA from 'react-google-recaptcha';
-import {ArrowRight, Mail, MapPin, Phone, Clock, Users, Send} from "lucide-react";
+import {ArrowRight, Mail, MapPin, Phone} from "lucide-react";
 
 const ContactUsPage = () => {
     const [formData, setFormData] = useState({
@@ -62,12 +62,30 @@ const ContactUsPage = () => {
     const handleModalClose = () => {
         setShowModal(false);
         if (isSuccess) {
-            setFormData({name: '', email: '', phone: '', message: ''});
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                message: '',
+            });
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                message: '',
+                helpType: '',
+                budget: '',
+                subject: '',
+                requirements: '',
+            });
             setRecaptchaValue(null);
+            if (typeof window !== 'undefined' && window.grecaptcha) {
+                window.grecaptcha.reset();
+            }
         }
     };
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        let value = e.target.value;
+        const value = e.target.value;
         setFormData({...formData, [e.target.name]: value});
     };
     return (
@@ -241,43 +259,58 @@ const ContactUsPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-6xl mx-auto ">
-                <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-6xl mx-auto px-4">
+                {/* Address */}
+                <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                         <MapPin className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-black mb-4">Visit Us</h3>
+                    <h3 className="text-xl font-bold text-black mb-4">Address</h3>
                     <p className="text-gray-600 leading-relaxed">
-                        62-C2, Gulberg 3 , Lahore
+                        5900 Balcones Drive, STE 4000 <br />
+                        Austin, TX 78731 USA
                     </p>
                 </div>
 
-                {/* Working Hours (Updated) */}
-                <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow">
+                {/* Email */}
+                <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Clock className="w-8 h-8 text-white" />
+                        <Mail className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-black mb-4">Working Hours</h3>
+                    <h3 className="text-xl font-bold text-black mb-4">Email</h3>
                     <p className="text-gray-600 leading-relaxed">
-                        Monday – Friday <br /> 9:00 AM – 6:00 PM
+                        <a href="mailto:info@2btechinc.com" className="hover:text-primary transition-colors">
+                            info@2btechinc.com
+                        </a>
+                        <br />
+                        <a href="mailto:projects@2btechinc.com" className="hover:text-primary transition-colors">
+                            projects@2btechinc.com
+                        </a>
                     </p>
                 </div>
 
-                <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow">
+                {/* Phone */}
+                <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Users className="w-8 h-8 text-white" />
+                        <Phone className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-black mb-4">Join Our Community</h3>
-                    <p className="text-gray-600">
-                        Connect with <span className="text-primary font-semibold">StartUPulse</span><br />
-                        and stay updated.
+                    <h3 className="text-xl font-bold text-black mb-4">Phone Number</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                        <a href="tel:+18563867630" className="hover:text-primary transition-colors">
+                            +1 (856) 386-7630
+                        </a>
+                        <br />
+                        <a href="tel:+17372990421" className="hover:text-primary transition-colors">
+                            +1 (737) 299-0421
+                        </a>
                     </p>
                 </div>
             </div>
             <div className=" flex justify-center mt-12">
-                <a
-                    href="https://calendly.com/talhafakhar/discoverycall"
-                    target="_blank"
+                <button
+                    onClick={() =>
+                        window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                    }
                     className="group relative inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-secondary text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none"
                 >
                     Schedule a Free Discovery Call
@@ -287,7 +320,7 @@ const ContactUsPage = () => {
     <ArrowRight className="w-4 h-4" />
   </span>
 
-                </a>
+                </button>
             </div>
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">

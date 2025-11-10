@@ -103,6 +103,9 @@ const BlogNavbar: React.FC = () => {
                     </div>
                     <div className="hidden lg:flex">
                         <button
+                            onClick={() =>
+                                window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                            }
                             className={`px-6 py-2 rounded   font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border border-gray-800 text-gray-800 hover:bg-gray-100`}> Get a purposal
                         </button>
                     </div>

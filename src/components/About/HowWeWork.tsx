@@ -89,10 +89,7 @@ const HowWeWork = () => {
                 <div className="mt-16 text-center">
                     <button
                         onClick={() =>
-                            window.open(
-                                "https://calendly.com/talhafakhar/discoverycall",
-                                "_blank"
-                            )
+                            window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
                         }
                         className="relative bg-white border border-black rounded px-6 py-2"
                     >

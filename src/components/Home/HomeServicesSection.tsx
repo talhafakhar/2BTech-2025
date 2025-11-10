@@ -83,8 +83,7 @@ const HomeServicesSection: React.FC = () => {
     ];
 
     const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => (
-        <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border overflow-hidden h-full flex flex-col justify-between">
-            {/* Hover gradient border */}
+        <div className="group relative bg-white rounded p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border overflow-hidden h-full flex flex-col justify-between">
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary to-secondary p-0.5">
                     <div className="w-full h-full bg-white rounded-2xl" />
@@ -121,13 +120,12 @@ const HomeServicesSection: React.FC = () => {
                 <div className="absolute top-20 left-0 w-[400px] h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-0 w-[400px] h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
             </div>
-
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
                         Our <span className="text-primary">Services</span>
                     </h2>
-                    <p className="text-lg lg:text-xl text-gray-600 mt-6 max-w-3xl mx-auto leading-relaxed">
+                    <p className=" text-gray-600 mt-6 max-w-3xl mx-auto leading-relaxed">
                         End-to-end product development — from discovery and design to AI-powered solutions and enterprise-grade systems.
                     </p>
                 </div>
@@ -141,7 +139,9 @@ const HomeServicesSection: React.FC = () => {
                 </div>
 
                 <div className="text-center mt-16">
-                    <button className="inline-flex items-center border-black px-8 py-3 rounded border font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <button    onClick={() =>
+                        window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                    } className="inline-flex items-center border-black px-8 py-3 rounded border font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                         Get Started Today
                         <svg
                             className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"

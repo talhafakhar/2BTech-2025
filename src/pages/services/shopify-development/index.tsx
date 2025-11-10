@@ -109,6 +109,7 @@ export default function ShopifyDevelopment() {
                 title="Expert Shopify Developer for Revenue"
                 description="Transform your online store with a trusted shopify development company driving measurable results"
                 formLabel="Get Free Shopify development Consultation"
+                buttonText="Get Free Quote"
                 TrustBar={() => (
                     <div></div>
                 )}

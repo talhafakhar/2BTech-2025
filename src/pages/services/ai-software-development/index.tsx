@@ -1602,7 +1602,6 @@ export default function AiSoftwareDevelopment() {
 
 
     ];
-
     const definitionOne = [
         {
             title: "Proven Expertise",
@@ -1625,7 +1624,6 @@ export default function AiSoftwareDevelopment() {
                 "From initial consultation through deployment and beyond, 2BTech provides comprehensive support throughout your AI journey. Our dedicated team ensures seamless integration, continuous optimization, training, and ongoing maintenance for sustained success.",
         },
     ];
-
     return (
         <div className="font-syne">
             <NextSeo
@@ -1669,6 +1667,7 @@ export default function AiSoftwareDevelopment() {
                 title=" AI Software Development That Drives Results"
                 description="Transform your business with custom AI software development services designed to deliver innovation and measurable growth"
                 formLabel="Get Free AI Software Development Consultation"
+                buttonText="Get Free Consultation"
                 TrustBar={() => (
                     <div></div>
                 )}

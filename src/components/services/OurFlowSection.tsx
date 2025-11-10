@@ -116,7 +116,7 @@ const OurFlowSection: React.FC<OurFlowSectionProps> = ({
         <section className="bg-gray-50 py-16">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="mb-16 text-center">
-                    <h2 className="text-4xl sm:text-5xl font-bold">
+                    <h2 className="text-4xl sm:text-5xl font-bold max-w-3xl mx-auto">
                         <span className="text-primary">{headingHighlight} </span>
                         {heading}
                     </h2>

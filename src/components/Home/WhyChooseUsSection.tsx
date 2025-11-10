@@ -93,7 +93,7 @@ const WhyChooseUs = () => {
                 >
                     <motion.h2
                         variants={itemVariants}
-                        className="text-2xl sm:text-4xl  text-center font-bold  mb-6 leading-tight"
+                        className="text-2xl sm:text-4xl  text-center font-bold  mb-4 leading-tight"
                     >
                         Built for{" "}
                         <span className="text-primary">
@@ -103,7 +103,7 @@ const WhyChooseUs = () => {
 
                     <motion.p
                         variants={itemVariants}
-                        className="text-lg  text-black/70 text-center  mb-8"
+                        className=" text-black/70 text-center  mb-8"
                     >
                         Why Fast-Growing Teams Choose 2BTech
                     </motion.p>
@@ -125,7 +125,7 @@ const WhyChooseUs = () => {
                                 whileHover="hover"
                                 className="group relative"
                             >
-                                <div className="relative bg-white border border-gray-300 rounded-2xl p-6 lg:p-8 h-full hover:border-secondary transition-all duration-300">
+                                <div className="relative bg-white border border-gray-300 rounded p-6 lg:p-8 h-full hover:border-secondary transition-all duration-300">
                                     <div className="inline-flex items-center justify-center w-16 h-16 border rounded-xl mb-6 shadow-lg bg-gradient-to-r from-secondary to-primary text-white">
                                         {feature.icon}
                                     </div>
@@ -155,7 +155,7 @@ const WhyChooseUs = () => {
                                 className="group relative"
                             >
                                 <div
-                                    className="relative bg-white  border border-gray-300 rounded-2xl p-6 lg:p-8 h-full hover:border-secondary transition-all duration-300">
+                                    className="relative bg-white  border  rounded p-6 lg:p-8 h-full hover:border-secondary transition-all duration-300">
                                     <div className="inline-flex items-center justify-center w-16 h-16 border rounded-xl mb-6 shadow-lg bg-gradient-to-r from-secondary to-primary text-white">
                                         {feature.icon}
                                     </div>
@@ -191,6 +191,9 @@ const WhyChooseUs = () => {
                         className="flex justify-center mt-10"
                     >
                         <motion.button
+                            onClick={() =>
+                                window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                            }
                             className="group relative bg-white px-[32px] py-3  border border-black  rounded  transition-all duration-300 ease-in-out hover:text-black"
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.97}}

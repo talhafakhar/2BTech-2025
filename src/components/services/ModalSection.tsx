@@ -105,7 +105,7 @@ const OurModals: React.FC<OurModalsProps> = ({
                     transition={{duration: 0.8}}
                     className={`${width ? "mb-3" : "mb-16"}  text-center`}
                 >
-                    <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight max-w-3xl mx-auto">
+                    <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight max-w-2xl mx-auto">
                         {heading}
                         <span className="text-primary">{" "}{headingHighlight} </span>
                     </h2>
@@ -132,11 +132,11 @@ const OurModals: React.FC<OurModalsProps> = ({
                                     <p className="text-gray-600 leading-relaxed mb-2">
                                         {subDescription}
                                     </p>
-                                    <span className="text-sm text-primary">
+                                    {BestFor && (  <span className="text-sm text-primary">
                                         <span className="text-secondary">
                                             Best for:
                                         </span> {BestFor}
-                                    </span>
+                                    </span>)}
                                 </div>
                             </div>
                         </div>
@@ -152,20 +152,21 @@ const OurModals: React.FC<OurModalsProps> = ({
                                     <p className="text-gray-600 leading-relaxed mb-2">
                                         {subDescriptionTwo}
                                     </p>
-                                    <span className="text-sm text-primary">
+                                    {BestForTwo && (  <span className="text-sm text-primary">
                                         <span className="text-secondary">
                                             Best for:
                                         </span> {BestForTwo}
-                                    </span>
+                                    </span>)}
+
                                 </div>
                             </div>
                         </div>
                         <div className="flex justify-center">
                             <motion.button
                                 onClick={() =>
-                                    window.open('https://calendly.com/talhafakhar/discoverycall', '_blank')
+                                    window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
                                 }
-                                className="px-6 sm:px-8 py-2 border flex items-center bg-white border-black rounded"
+                                className="px-6  py-2 border flex items-center bg-white border-black rounded"
                                 whileHover={{scale: 1.05}}
                                 whileTap={{scale: 0.97}}
                             >

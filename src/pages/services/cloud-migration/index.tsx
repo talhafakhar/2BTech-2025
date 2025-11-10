@@ -1080,19 +1080,19 @@ export default function CloudMigration() {
                         variants={itemVariants}
                         className="mt-12 flex flex-col sm:flex-row gap-3 items-center  text-sm  font-medium"
                     >
-                        <div className="flex  flex-col  gap-2">
-                            <Rocket className="w-5 h-5 text-primary"/>
-                            <span>10+ Cloud Migrations Completed</span>
+                        <div className="flex flex-col  gap-2">
+                            <div className="flex gap-1 item-center"><Rocket className="w-5 h-5 text-primary"/><span className="text-lg">10+</span></div>
+                            <span> Cloud Migrations Completed</span>
                         </div>
                         <div className="hidden sm:block w-[1px] h-10 bg-black"></div>
                         <div className="flex flex-col  gap-2">
-                            <Star className="w-5 h-5 text-yellow-500"/>
-                            <span>99.9% Uptime Guarantee</span>
+                            <div className="flex gap-1 item-center"><Star className="w-5 h-5 text-yellow-500"/><span className="text-lg">99.9%</span></div>
+                            <span> Uptime Guarantee</span>
                         </div>
                         <div className="hidden sm:block w-[1px] h-10 bg-black"></div>
                         <div className="flex flex-col  gap-2">
-                            <Calculator className="w-5 h-5 text-secondary"/>
-                            <span>40% Average Cost Savings</span>
+                            <div className="flex gap-1 item-center">  <Calculator className="w-5 h-5 text-secondary"/><span className="text-lg">40%</span></div>
+                            <span> Average Cost Savings</span>
                         </div>
                     </motion.div>
                 )}

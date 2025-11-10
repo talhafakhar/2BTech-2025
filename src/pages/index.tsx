@@ -40,7 +40,7 @@ export default function Home() {
                             alt: '2BTech  | Custom Software and AI Agent Development Company ',
                         },
                     ],
-                    site_name: '2btech',
+                    site_name: 'https://2btech.com/',
                 }}
                 twitter={{
                     handle: '@2btech',

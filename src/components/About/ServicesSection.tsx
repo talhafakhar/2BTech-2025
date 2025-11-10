@@ -114,11 +114,10 @@ const ServicesSection: React.FC = () => {
     ];
 
     const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => (
-        <div className="group relative bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border  overflow-hidden h-full flex flex-col justify-between">
-            {/* Hover border glow */}
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary to-secondary p-0.5">
-                    <div className="w-full h-full bg-white rounded-2xl" />
+        <div className="group relative bg-white rounded p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border  overflow-hidden h-full flex flex-col justify-between">
+            <div className="absolute inset-0 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                <div className="absolute inset-0 rounded bg-gradient-to-r from-primary to-secondary p-0.5">
+                    <div className="w-full h-full bg-white rounded" />
                 </div>
             </div>
 
@@ -155,7 +154,6 @@ const ServicesSection: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Equal-height grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {services.map((service, index) => (
                         <div key={service.id} className="h-full">
@@ -164,9 +162,10 @@ const ServicesSection: React.FC = () => {
                     ))}
                 </div>
 
-                {/* CTA */}
                 <div className="text-center mt-16">
-                    <button className="inline-flex items-center border-black px-8 py-3 rounded border font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <button     onClick={() =>
+                        window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                    } className="inline-flex items-center border-black px-8 py-3 rounded border font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                         Get Started Today
                         <svg
                             className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"

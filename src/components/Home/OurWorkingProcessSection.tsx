@@ -193,6 +193,9 @@ const Workflow = () => {
                 className="text-center mt-5 relative z-10"
             >
                 <motion.button
+                    onClick={() =>
+                        window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                    }
                     className="px-8 py-3 border mt-10 border-black font-semibold rounded shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                     whileTap={{ scale: 0.98 }}

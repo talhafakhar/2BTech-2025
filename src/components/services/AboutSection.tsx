@@ -44,10 +44,10 @@ const AboutSection: React.FC<AboutSectionProps> = ({title, description,descripti
                     transition={{duration: 0.8, ease: "easeInOut", delay: 0.2}}
                     viewport={{once: true, amount: 0.3}}
                 >
-                    <h2 className={`${width === 450 ? "text-4xl md:text-5xl " : "text-2xl md:text-3xl"}  font-bold leading-tight mb-2`}>
+                    <h2 className={`${title === "Who We Are?" ? "text-4xl md:text-5xl " : "text-2xl md:text-3xl"}  font-bold leading-tight mb-2`}>
                         {title}
                     </h2>
-                    <p className={`${width === 450 ? "mt-6" : "mb-2"} text-black/60`}>{description}</p>
+                    <p className={`${title === "Who We Are?" ? "mt-6" : "mb-2"} text-black/70`}>{description}</p>
                     <p className="mb-2 text-black/60">{descriptionTwo}</p>
                     <p className="text-black/60">{descriptionThree}</p>
                 </motion.div>

@@ -11,8 +11,6 @@ import OurFlowSection from "@/components/services/OurFlowSection";
 import OurModals from "@/components/services/ModalSection";
 import WhatIsSection from "@/components/services/WhatIsSection";
 import AIStackSection from "@/components/services/AIStackSection";
-import TestimonialSection from "@/components/Home/TestimonialSection";
-
 export default function WebFlowDevelopment() {
     const faqs = [
         {
@@ -68,8 +66,6 @@ export default function WebFlowDevelopment() {
                 "Beyond design, we focus on conversions, SEO, speed, UX, and analytics to ensure your website drives measurable business growth and ROI.",
         },
     ];
-
-
     return (
         <div className="font-syne">
             <NextSeo
@@ -112,6 +108,7 @@ export default function WebFlowDevelopment() {
                 title="Expert Webflow Developer for Growth"
                 description="Scale your business with a trusted webflow development agency delivering exceptional results fast"
                 formLabel="Get Free Webflow development Consultation"
+                buttonText="Get a Free Consultation"
                 TrustBar={() => (
                     <div></div>
                 )}
@@ -120,7 +117,7 @@ export default function WebFlowDevelopment() {
                 title="Partner With Our Agency That Delivers Excellence"
                 description="At 2BTech, we specialize in transforming your vision into powerful Webflow websites that drive results. As a leading webflow development agency, we combine technical expertise with strategic thinking to deliver custom solutions that scale with your business. When you hire webflow developer talent from our team, you're gaining access to specialists who understand the platform inside and out. From complex animations to advanced CMS implementations, our webflow expert team handles projects of any complexity with precision and speed, ensuring your website becomes your most valuable marketing asset"
                 src="/assets/services/webflow/aboutWebflow.svg"
-                width={450}
+                width={430}
             />
             <ServiceSection
                 heading="Comprehensive Services"

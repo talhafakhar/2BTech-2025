@@ -283,7 +283,6 @@ export default function MvpDevelopment() {
                         xmlns="http://www.w3.org/2000/svg"
                         width="75"
                         height="65"
-                        ariaLabel="Vercel Logo"
                         viewBox="0 0 75 65"
                     >
                         <path d="m37.59.25 36.95 64H.64z"></path>

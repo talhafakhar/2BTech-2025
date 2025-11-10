@@ -108,6 +108,9 @@ const AboutCTASection: React.FC = () => {
                             className="flex justify-center mt-10"
                         >
                             <motion.button
+                                onClick={() =>
+                                    window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                                }
                                 className="group  px-[32px] bg-white py-3  border border-black  rounded      ease-in-out "
                                 whileHover={{scale: 1.05}}
                                 whileTap={{scale: 0.97}}

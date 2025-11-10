@@ -121,6 +121,9 @@ const HeroSection: React.FC = () => {
 
                             <motion.div variants={itemVariants} className="mt-4 sm:mt-6 flex justify-center">
                                 <motion.button
+                                    onClick={() =>
+                                        window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                                    }
                                     className="group relative px-6 sm:px-8 py-3 border border-white rounded text-white backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out hover:text-black"
                                     whileHover={{scale: 1.05}}
                                     whileTap={{scale: 0.97}}

@@ -32,21 +32,20 @@ const GetToKnowUs = () => {
     return (
         <div className="bg-gray-50 px-4 py-16 ">
             <div className="max-w-7xl mx-auto">
-                {/* Heading */}
                 <div className="border-b-2 pb-6 mb-8">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 md:mb-0">
                         Why Work With <span className="text-primary">2BTech</span>
                     </h2>
                 </div>
 
-                {/* Subheading + Button */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-                    <p className="text-gray-600 text-lg max-w-md leading-relaxed">
+                    <p className="text-gray-600  max-w-md leading-relaxed">
                         At 2BTech, we combine deep technical expertise with strategic thinking to deliver software that actually drives results.
                     </p>
-                    <a
-                        href="https://calendly.com/talhafakhar/discoverycall"
-                        target="_blank"
+                    <button
+                        onClick={() =>
+                            window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                        }
                         className="group relative inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-500 to-secondary text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none"
                     >
                         Let&#39;s Connect!
@@ -55,7 +54,7 @@ const GetToKnowUs = () => {
                         >
                             <ArrowRight className="w-4 h-4" />
                         </span>
-                    </a>
+                    </button>
                 </div>
 
                 {/* Reasons Grid */}
