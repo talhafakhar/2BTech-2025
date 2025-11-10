@@ -7,7 +7,18 @@ import FaqSection from "@/components/Home/FaqSection";
 import {FAQPageJsonLd, NextSeo, WebPageJsonLd} from "next-seo";
 import OurFlowSection from "@/components/services/OurFlowSection";
 import WhatIsSection from "@/components/services/WhatIsSection";
-import { Rocket, Star} from "lucide-react";
+import {
+    Briefcase,
+    Building2,
+    Cpu,
+    Factory,
+    GraduationCap,
+    Heart,
+    Rocket,
+    ShoppingCart,
+    Star,
+    TrendingUp
+} from "lucide-react";
 import {easeInOut, motion} from "framer-motion";
 import SubServicesSection from "@/components/services/CustomSoftwareServicesSection";
 import IndustriesSection from "@/components/services/SalesindustorySection";
@@ -317,53 +328,52 @@ export default function SalesforceConsulting() {
                 imageTwo="/assets/services/salesForce/security.svg"
             />
             <OurFlowSection
-                heading="for Saleforce?"
+                heading="for Mobile apps?"
                 headingHighlight="Why Choose 2BTech"
                 services={[
                     {
-                        title: "Certified Salesforce Experts",
+                        title: "Full-Stack Mobile Expertise",
                         duration: "",
                         description:
-                            "Team of certified Salesforce Administrators, Developers, Architects, and Consultants.",
+                            "Expert teams for iOS, Android, React Native, and Flutter. 300+ apps launched across all platforms and industries.",
                     },
                     {
-                        title: "Industry Experience",
+                        title: "Design Excellence",
                         duration: "",
                         description:
-                            "10+ Salesforce projects across healthcare, financial services, manufacturing, retail, and technology. We understand your industry challenges.",
+                            "Award-winning designers creating beautiful, intuitive interfaces. 4.8★ average rating across client apps.",
                     },
                     {
-                        title: "Full-Service Partner",
+                        title: "Proven Development Process",
                         duration: "",
                         description:
-                            "End-to-end services from strategy through implementation, integration, and ongoing support. One partner for complete Salesforce journey.",
+                            "Agile methodology with two-week sprints. Regular demos and continuous client involvement.",
                     },
                     {
-                        title: "Proven Methodology",
+                        title: "Quality Assurance",
                         duration: "",
                         description:
-                            "Follow Salesforce implementation best practices and Agile methodology. Predictable, on-time delivery with quality assurance.",
+                            "Rigorous testing on hundreds of devices. Automated and manual QA ensures bug-free launches.",
                     },
                     {
-                        title: "Custom Development Excellence",
+                        title: "App Store Success",
                         duration: "",
                         description:
-                            "Expert developers building Lightning components, Apex code, and AppExchange apps. Extend Salesforce to meet any requirement.",
+                            "95% first-time approval rate. Expert guidance through App Store and Google Play processes.",
                     },
                     {
-                        title: "Integration Specialists",
+                        title: "Post-Launch Support",
                         duration: "",
                         description:
-                            "Deep expertise connecting Salesforce with ERP, marketing, e-commerce, and business systems. Seamless data flow across platforms.",
+                            "We don't disappear after launch. Ongoing support, updates, and optimization included.",
                     },
                     {
-                        title: "Post-Implementation Support",
+                        title: "Cost-Effective Solutions",
                         duration: "",
                         description:
-                            "We don't disappear after go-live. Managed services, optimization, and strategic guidance to maximize long-term value.",
+                            "Transparent pricing with no hidden fees. Cross-platform development saves 40-60% vs native.",
                     },
                 ]}
-
             />
             <IndustriesSection industries={industriesData} />
             <Banner

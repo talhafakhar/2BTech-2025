@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {motion, AnimatePresence, easeOut, easeIn} from "framer-motion";
 
 interface Industry {
     icon: React.ElementType;
@@ -45,13 +45,12 @@ export default function IndustriesSection({ industries }: IndustriesSectionProps
 
     const cardVariants = {
         hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-        exit: { opacity: 0, y: -30, transition: { duration: 0.4, ease: "easeIn" } }
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+        exit: { opacity: 0, y: -30, transition: { duration: 0.4, ease: easeIn } }
     };
 
     return (
         <div className="py-16 relative overflow-hidden">
-            {/* Background Blurs */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                 <div className="absolute top-20 left-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-0 w-[300px] md:w-[400px] h-[150px] md:h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
@@ -80,7 +79,7 @@ export default function IndustriesSection({ industries }: IndustriesSectionProps
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -40 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4"
                     >
                         <AnimatePresence mode="popLayout">
                             {visibleIndustries.map((industry, idx) => {

@@ -127,7 +127,6 @@ const OurFlowSection: React.FC<OurFlowSectionProps> = ({
                     )}
                 </div>
 
-                {/* === First Row === */}
                 <motion.div
                     className={`grid gap-6 md:gap-8 ${
                         isFiveItems || isSevenItems
@@ -142,7 +141,6 @@ const OurFlowSection: React.FC<OurFlowSectionProps> = ({
                     {firstRow.map((service, index) => renderCard(service, index))}
                 </motion.div>
 
-                {/* === Second Row (for 5 or 7 cards) === */}
                 {(isFiveItems || isSevenItems) && (
                     <motion.div
                         className={`mt-8 ${
@@ -157,10 +155,11 @@ const OurFlowSection: React.FC<OurFlowSectionProps> = ({
                     >
                         {secondRow.map((service, index) =>
                             isSevenItems ? (
-                                <div key={index} className="max-w-lg w-full">
+                                <div key={index} className="max-w-[400px] w-full">
                                     {renderCard(service, index + firstRow.length)}
                                 </div>
                             ) : (
+
                                 renderCard(service, index + firstRow.length)
                             )
                         )}

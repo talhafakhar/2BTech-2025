@@ -2,74 +2,54 @@ import Footer from '@/components/Footer/footer';
 import HeroSection from '@/components/services/HeroSection';
 import React from "react";
 import AboutSection from "@/components/services/AboutSection";
-import TestimonialSection from "@/components/Home/TestimonialSection";
+import {
+    Bike,
+    Briefcase,
+    Film,
+    Globe,
+    GraduationCap,
+    Heart,
+    Rocket,
+    ShoppingCart,
+    Star,
+    TrendingUp,
+    Users
+} from "lucide-react";
 import Banner from "@/components/Home/bannerSection";
 import FaqSection from "@/components/Home/FaqSection";
 import {FAQPageJsonLd, NextSeo, WebPageJsonLd} from "next-seo";
 import FinalCTASection from "@/components/services/FinalCTASection";
-import ServiceSection from "@/components/services/ServicesSection";
 import OurFlowSection from "@/components/services/OurFlowSection";
-import OurModals from "@/components/services/ModalSection";
-import OurStack from "@/components/services/stackSection";
-import WhatIsSection from "@/components/services/WhatIsSection";
-import {Globe, Rocket, Star} from "lucide-react";
 import {easeInOut, motion} from "framer-motion";
-
+import IndustriesSection from "@/components/services/SalesindustorySection";
+import CloudMigrationProcess from "@/components/services/cloudFlowSection";
+import TechStackServices from "@/components/services/ServicesStackSection";
+import MobileServicesSection from "@/components/services/mobileSubServicesSection";
 export default function MobileAppDevelopment() {
     const faqs = [
         {
             id: 1,
-            question: "Why don't you build native iOS and Android apps?",
+            question: "How much does it cost to develop a mobile app?",
             answer:
-                "React Native and Flutter deliver native-quality performance while drastically reducing costs and timelines. In 2025, cross platform app development has matured to the point where native-only development makes sense only for extremely specialized use cases we don't target.",
+                "The cost of mobile-app development varies based on factors such as app complexity, required features, design sophistication, and target platforms. We deliver customised solutions to match both your business goals and budget.",
         },
         {
             id: 2,
-            question: "Which is better: React Native or Flutter?",
+            question: "How long will it take to launch my mobile app?",
             answer:
-                "Both are excellent for cross platform app development. As a react native development company and flutter app development expert, we recommend React Native for teams with JavaScript experience and Flutter for apps prioritizing custom UI and animations.",
+                "Timeline depends on your app’s scope, the number of platforms (iOS/Android), and the integration needs. Our agile development approach enables efficient delivery, simple apps may launch within a few months, while more complex ones require a longer timeframe.",
         },
         {
             id: 3,
-            question: "How long does app development take?",
+            question: "Which platforms do you build mobile apps for?",
             answer:
-                "Simple apps: 8–12 weeks. Medium complexity: 12–20 weeks. Complex apps: 20–32 weeks. Cross platform app development using React Native or Flutter is typically 40–50% faster than building separate native apps.",
+                "We develop for iOS and Android, using either native code or cross-platform frameworks (such as React Native / Flutter) depending on your goals. Whether you seek maximum performance or broader reach, we tailor the strategy to match your business and users.",
         },
         {
             id: 4,
-            question: "Can React Native and Flutter apps match native performance?",
+            question: "How do you ensure user privacy and app security?",
             answer:
-                "Yes. Modern React Native and Flutter apps deliver indistinguishable performance from native apps for the vast majority of use cases. Both achieve 60 FPS animations and native component rendering.",
-        },
-        {
-            id: 5,
-            question: "Do you handle App Store and Google Play submissions?",
-            answer:
-                "We prepare your app for submission including all required assets, metadata, and builds. While you handle the final submission on App Store Connect and Google Play Console, we provide full guidance throughout the process.",
-        },
-        {
-            id: 6,
-            question: "What happens after development is complete?",
-            answer:
-                "We deliver complete source code, documentation, and deployment guides. You can continue with our ongoing support plan for maintenance and updates, or take full ownership in-house — we’re flexible.",
-        },
-        {
-            id: 7,
-            question: "Can you maintain our existing React Native or Flutter app?",
-            answer:
-                "Yes. We provide ongoing maintenance, performance optimization, and feature development for apps built by other teams. We start with a full audit before implementing improvements.",
-        },
-        {
-            id: 8,
-            question: "Do you work with startups or only enterprises?",
-            answer:
-                "Both! We’ve built apps for pre-seed startups and Fortune 500 companies. As a react native development company and flutter app development specialist, we tailor our approach to your stage, goals, and budget.",
-        },
-        {
-            id: 9,
-            question: "What if I need features only available in native code?",
-            answer:
-                "React Native and Flutter both support native code extensions through platform-specific modules. We can write custom Swift or Kotlin code when necessary for hardware integrations or advanced use cases.",
+                "Protecting user data and delivering secure apps is integral to our process. We apply industry-leading practices such as encryption, secure-coding standards, regular vulnerability assessments and penetration testing at each stage of development.",
         },
     ];
     const itemVariants: any = {
@@ -91,573 +71,1303 @@ export default function MobileAppDevelopment() {
             transition: {duration: 0.5, ease: easeInOut},
         },
     };
-    const StackIcons = {
-        React: () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="11.4" fill="#61dafb"/>
-            <g stroke="#61dafb" strokeWidth="6" fill="none">
-                <ellipse rx="56" ry="22" cx="64" cy="64"/>
-                <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(60 64 64)"/>
-                ;
-                <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(120 64 64)"/>
-            </g>
-        </svg>,
-        TypeScript: () => <svg viewBox="0 0 256 256" className="w-8 h-8">
-            <rect width="256" height="256" rx="24" fill="#3178C6"/>
-            <text x="128" y="165" textAnchor="middle" fontSize="100" fill="#fff" fontWeight="bold">TS</text>
-        </svg>,
-        'Node js': () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier" fill="#8CC84B">
-                <path
-                    d="M17.173 2.299a2.45 2.45 0 0 0-2.346 0L4.152 8.189C3.46 8.553 2.992 9.297 3 10.07v11.864c-.005.787.486 1.538 1.197 1.897 1.022.544 2.015 1.143 3.055 1.65 1.203.59 2.706.721 3.923.105.988-.51 1.427-1.646 1.425-2.689.008-3.915.002-7.83.003-11.746.024-.174-.107-.36-.297-.356-.454-.007-.91-.004-1.364-.001-.172-.017-.34.126-.327.299-.006 3.89.001 7.781-.004 11.672a1.32 1.32 0 0 1-.872 1.237c-1.198.42-4.617-1.8-4.617-1.8a.34.34 0 0 1-.193-.33V10.13a.36.36 0 0 1 .225-.365q5.318-2.93 10.637-5.862a.38.38 0 0 1 .418.001q5.318 2.93 10.638 5.86a.37.37 0 0 1 .224.366q.001 5.87-.001 11.741a.34.34 0 0 1-.19.334c-3.514 1.941-7.067 3.82-10.548 5.818-.152.087-.325.186-.495.09-.915-.507-1.82-1.033-2.732-1.544-.1-.062-.226-.089-.33-.02-.408.216-.793.39-1.263.577-.66.261-.554.368.04.714q1.603.905 3.204 1.81c.703.439 1.646.47 2.372.065q5.337-2.943 10.675-5.886c.708-.361 1.202-1.109 1.197-1.896V10.069c.007-.756-.442-1.487-1.114-1.856-3.57-1.974-7.142-3.942-10.713-5.914"></path>
-                <path
-                    d="M22.542 11.206c-1.397-.747-3.058-.787-4.61-.69-1.122.112-2.301.421-3.118 1.225-.838.808-1.02 2.113-.622 3.168.285.745 1.003 1.23 1.745 1.486.957.338 1.96.442 2.966.546.916.096 1.833.19 2.714.463.36.12.778.302.889.693.101.464-.01 1.003-.387 1.325-1.195.946-4.521.801-5.702.056-.478-.317-.684-.879-.768-1.414-.009-.167-.143-.32-.324-.307a69 69 0 0 0-1.36 0c-.159-.014-.323.099-.332.26-.093 2.452 2.158 3.52 4.27 3.756 1.208.115 2.441.108 3.63-.15.893-.204 1.789-.579 2.404-1.267.758-.836.907-2.081.567-3.123-.26-.777-1.003-1.276-1.762-1.532-1.033-.354-2.258-.545-3.193-.634-1.36-.13-2.976-.076-3.361-.97-.153-.468-.023-1.049.407-1.337 1.138-.771 3.453-.669 4.632-.092.54.27.854.827.983 1.389.024.165.135.337.326.33.45.008.901.002 1.351.002.155.011.325-.076.355-.234-.02-1.174-.619-2.376-1.7-2.949"></path>
-            </g>
-        </svg>,
-        'AWS Amplify': () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="w-8 h-8">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="#252F3E"
-                    d="M4.51 7.687q0 .297.058.475.061.175.17.384a.23.23 0 0 1 .037.123q.001.08-.1.16l-.336.224a.26.26 0 0 1-.138.048q-.08-.001-.16-.074a1.7 1.7 0 0 1-.192-.251 4 4 0 0 1-.165-.315q-.622.737-1.564.737-.672 0-1.064-.385-.393-.384-.394-1.025-.001-.682.484-1.1c.325-.278.756-.416 1.304-.416q.27.002.564.042c.197.027.4.07.612.118v-.39q-.001-.608-.25-.854-.254-.248-.868-.246-.279-.001-.574.07a4 4 0 0 0-.575.181 2 2 0 0 1-.186.07.3.3 0 0 1-.085.016q-.112.001-.112-.166v-.262c0-.085.01-.15.037-.186a.4.4 0 0 1 .15-.113q.278-.144.67-.24.39-.103.83-.101.948 0 1.394.432.44.432.442 1.314v1.73h.01zm-2.161.811q.261 0 .548-.096c.191-.064.362-.182.505-.342a.85.85 0 0 0 .181-.341c.032-.129.054-.283.054-.465V7.03a4 4 0 0 0-.49-.09 4 4 0 0 0-.5-.033c-.357 0-.618.07-.793.214q-.262.215-.26.614-.002.374.196.566.192.198.559.197m4.273.577c-.096 0-.16-.016-.202-.054-.043-.032-.08-.106-.112-.208l-1.25-4.127a1 1 0 0 1-.049-.214c0-.085.043-.133.128-.133h.522q.15-.001.207.053c.043.032.075.107.107.208l.894 3.535.83-3.535q.038-.16.1-.208a.37.37 0 0 1 .214-.053h.425c.102 0 .17.016.213.053.043.032.08.107.101.208l.841 3.578.92-3.578a.46.46 0 0 1 .107-.208.35.35 0 0 1 .208-.053h.495c.085 0 .133.043.133.133q-.002.04-.01.086a1 1 0 0 1-.038.133l-1.283 4.127q-.048.16-.111.209a.34.34 0 0 1-.203.053h-.457q-.15.001-.213-.053c-.043-.038-.08-.107-.101-.214L8.213 5.37l-.82 3.439q-.038.159-.1.213c-.043.038-.118.054-.213.054h-.458zm6.838.144a3.5 3.5 0 0 1-.82-.096c-.266-.064-.473-.134-.612-.214-.085-.048-.143-.101-.165-.15a.4.4 0 0 1-.031-.149v-.272q.001-.167.122-.166a.3.3 0 0 1 .096.016c.032.011.08.032.133.054.18.08.378.144.585.187.213.042.42.064.633.064q.505 0 .777-.176a.57.57 0 0 0 .277-.508.52.52 0 0 0-.144-.373q-.144-.152-.537-.278l-.772-.24c-.388-.123-.676-.305-.851-.545a1.27 1.27 0 0 1-.266-.774q0-.336.143-.593c.096-.17.224-.32.384-.438a1.7 1.7 0 0 1 .553-.277c.213-.064.436-.091.67-.091.118 0 .24.005.357.021a3.4 3.4 0 0 1 .649.145q.143.048.224.096a.5.5 0 0 1 .16.133.3.3 0 0 1 .047.176v.251q-.001.17-.122.171a.6.6 0 0 1-.202-.064 2.4 2.4 0 0 0-1.022-.208c-.303 0-.543.048-.708.15q-.249.148-.25.475 0 .225.16.379c.106.101.303.202.585.293l.756.24q.576.184.825.513.246.33.244.748 0 .345-.138.619a1.4 1.4 0 0 1-.388.47q-.247.197-.591.299a2.5 2.5 0 0 1-.761.112"
-                ></path>
-                <g fill="#F90" fillRule="evenodd" clipRule="evenodd">
-                    <path
-                        d="M14.465 11.813c-1.75 1.297-4.294 1.986-6.481 1.986-3.065 0-5.827-1.137-7.913-3.027-.165-.15-.016-.353.18-.235 2.257 1.313 5.04 2.109 7.92 2.109 1.941 0 4.075-.406 6.039-1.239.293-.133.543.192.255.406"></path>
-                    <path
-                        d="M15.194 10.98c-.223-.287-1.479-.138-2.048-.069-.17.022-.197-.128-.043-.24 1-.705 2.645-.502 2.836-.267.192.24-.053 1.89-.99 2.68-.143.123-.281.06-.218-.1.213-.53.687-1.72.463-2.003z"></path>
-                </g>
-            </g>
-        </svg>,
-        JavaScript: () =>   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier">
-                <path fill="#FFCA28" d="M2 2h28v28H2z"></path>
-                <path
-                    fill="#3E3E3E"
-                    d="m19 25.288 2.061-1.364c.162.507 1.185 1.713 2.477 1.713 1.293 0 1.893-.706 1.893-1.174 0-1.275-1.32-1.725-1.954-1.94a4 4 0 0 1-.246-.09l-.133-.053c-.705-.269-3.306-1.262-3.306-4.143 0-3.172 3.062-3.537 3.754-3.537.453 0 2.63.056 3.716 2.094l-2 1.396c-.439-.889-1.167-1.182-1.616-1.182-1.108 0-1.338.812-1.338 1.182 0 1.037 1.203 1.502 2.22 1.894.265.103.518.2.734.303 1.107.523 2.738 1.38 2.738 4.076C28 25.813 26.867 28 24.015 28c-3.83 0-4.846-2.3-5.015-2.712M9 25.559l2.149-1.364c.168.508.822 1.443 1.772 1.443.949 0 1.435-.975 1.435-1.443V15h2.642v9.195c.043 1.269-.66 3.805-3.765 3.805C10.38 28 9.193 26.304 9 25.56"
-                ></path>
-            </g>
-        </svg>,
-        'React Navigation': () => <svg viewBox="0 0 128 128" className="w-14 h-14">
-            <circle cx="64" cy="64" r="11.4" fill="#61dafb"/>
-            <g stroke="#61dafb" strokeWidth="6" fill="none">
-                <ellipse rx="56" ry="22" cx="64" cy="64"/>
-                <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(60 64 64)"/>
-                ;
-                <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(120 64 64)"/>
-            </g>
-        </svg>,
-        Redux: () =>  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-12 h-12">
-            <path
-                id="SVGRepo_iconCarrier"
-                fill="#764ABC"
-                d="M21.787 21.556a2.114 2.114 0 0 0 1.909-2.177c-.039-1.126-.993-2.027-2.138-2.027h-.077a2.115 2.115 0 0 0-2.061 2.177c.038.563.267 1.051.61 1.389-1.297 2.515-3.283 4.354-6.26 5.893-2.024 1.05-4.123 1.426-6.223 1.163-1.718-.225-3.054-.976-3.894-2.214-1.222-1.84-1.336-3.829-.305-5.818.725-1.426 1.87-2.477 2.596-3.003a20 20 0 0 1-.497-1.914c-5.535 3.941-4.963 9.27-3.283 11.786 1.26 1.876 3.818 3.04 6.643 3.04.763 0 1.527-.075 2.29-.263 4.887-.938 8.59-3.79 10.69-8.032m6.719-4.654c-2.901-3.34-7.177-5.18-12.064-5.18h-.61a2.1 2.1 0 0 0-1.871-1.126h-.077a2.115 2.115 0 0 0-2.061 2.177c.038 1.126.992 2.027 2.138 2.027h.076a2.15 2.15 0 0 0 1.87-1.276h.688c2.901 0 5.65.825 8.132 2.44 1.908 1.238 3.283 2.852 4.046 4.804.65 1.576.61 3.115-.076 4.429-1.07 1.989-2.863 3.077-5.23 3.077-1.527 0-2.978-.45-3.742-.788a23 23 0 0 1-1.718 1.351c1.642.751 3.322 1.164 4.925 1.164 3.665 0 6.376-1.99 7.406-3.979 1.107-2.177 1.031-5.93-1.832-9.12M9.112 22.194c.039 1.126.993 2.027 2.138 2.027h.077a2.115 2.115 0 0 0 2.061-2.177c-.038-1.126-.993-2.027-2.138-2.027h-.076c-.076 0-.191 0-.267.037-1.566-2.552-2.215-5.33-1.985-8.332.152-2.252.916-4.204 2.252-5.818 1.107-1.388 3.245-2.064 4.696-2.101 4.046-.076 5.764 4.879 5.879 6.868.496.113 1.336.376 1.909.563-.459-6.08-4.276-9.233-7.941-9.233-3.436 0-6.605 2.44-7.865 6.043-1.756 4.804-.61 9.42 1.527 13.061-.19.263-.305.676-.267 1.089"
-            ></path>
-        </svg>,
-        Expo: () =>  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="#fff"
-                    d="M3.979 20.059 11.252 6.2l7.155-3.835 2.127 1.074-7.112 4.018 7.349 22.088-2.364-1.375-5.5-12.677-7.22 5.479Z"
-                ></path>
-                <ellipse
-                    cx="25.24"
-                    cy="13.967"
-                    fill="#fff"
-                    rx="2.686"
-                    ry="2.503"
-                ></ellipse>
-                <path
-                    fill="#4630eb"
-                    d="M27.2 12.85a2.433 2.433 0 0 0-4.158.3 2.19 2.19 0 0 0 .419 2.449A3.546 3.546 0 0 0 27.2 12.85M19.976 3.4l-1.547-.849L11.693 6.3l.537.29 1.02.537L15.1 6.1l4.878-2.718Zm.623-.258a.24.24 0 0 1 .172.161l2.256 6.657a.223.223 0 0 1-.108.29 4.36 4.36 0 0 0-2.105 4.985 4.61 4.61 0 0 0 4.92 3.244.28.28 0 0 1 .279.172l2.331 6.833a.275.275 0 0 1-.107.3l-7.166 4.189a.3.3 0 0 1-.107.022.3.3 0 0 1-.193-.032l-2.514-1.58a.25.25 0 0 1-.108-.107l-4.909-11.29-7.478 4.254a.3.3 0 0 1-.053.022.26.26 0 0 1-.237-.011l-1.7-.967a.247.247 0 0 1-.108-.322L10.93 6.178a.26.26 0 0 1 .118-.107l7.241-4.039a.27.27 0 0 1 .258 0Zm-8.982 3.702-.354-.182-7 13.332 1.279.72 6.037-7.9a.3.3 0 0 1 .248-.108.3.3 0 0 1 .214.161l6.575 15.148 1.757 1.085-7.058-20.633-.3-.86-1.407-.773Zm10.829 7.95a2.73 2.73 0 0 1 1.343-3.115 2.965 2.965 0 0 1 3.481.43 2.717 2.717 0 0 1 .078 3.843q-.037.039-.078.078a2.932 2.932 0 0 1-4.824-1.236"
-                ></path>
-            </g>
-        </svg>,
-        Dart: () =>  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="w-8 h-8">
-            <path
-                id="SVGRepo_iconCarrier"
-                fill="#000"
-                d="M8.207.13c.26.075.458.286.517.55l1.199 5.397 5.396 1.2a.741.741 0 0 1 .364 1.247l-7.159 7.159a.74.74 0 0 1-.685.2L1.982 14.58a.74.74 0 0 1-.563-.563L.118 8.16a.74.74 0 0 1 .2-.685L7.475.317A.74.74 0 0 1 8.207.13m.283 6.332-.92-4.141-5.917 5.915.92 4.142zm-4.868 6.964 4.142.92 5.915-5.915-4.141-.92z"
-            ></path>
-        </svg>,
-        'Material 3': () =>  <svg
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid"
-            viewBox="0 -26 256 256"
-            className="w-10 h-10"
-        >
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="#00B0FF"
-                    d="M0 110.848V0l96 55.424v36.95l-64-36.95v73.899z"
-                ></path>
-                <path
-                    fill="#0081CB"
-                    d="M96 55.424 192 0v110.848l-64 36.95-32-18.475 64-36.95V55.424l-64 36.95z"
-                ></path>
-                <path fill="#00B0FF" d="M96 129.323v36.949l64 36.95v-36.95z"></path>
-                <path
-                    fill="#0081CB"
-                    d="m160 203.221 96-55.424V73.9l-32 18.474v36.95l-64 36.949zm64-147.797v-36.95L256 0v36.95z"
-                ></path>
-            </g>
-        </svg>,
-        Provider: () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="w-10 h-10">
-            <path
-                id="SVGRepo_iconCarrier"
-                fill="#000"
-                fillRule="evenodd"
-                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m-.5 1.519a6.5 6.5 0 0 0-2 .48V5.19l2-1.09V1.518zM1.532 7.356A6.5 6.5 0 0 1 4 2.876V6.01zm.05 1.68L4 7.719v5.406a6.5 6.5 0 0 1-2.418-4.087zM7.5 11.423l-2 1.143V6.9l2-1.091zm1.5-.857V4.991L11 3.9v5.522zm2 .585-2 1.143v2.13a6.5 6.5 0 0 0 2-.655zm1.5 1.54v-2.397l1.887-1.079A6.5 6.5 0 0 1 12.5 12.69zm0-4.125V3.31a6.48 6.48 0 0 1 1.976 4.126L12.5 8.565zm-5 4.585-1.697.97a6.5 6.5 0 0 0 1.697.361zM9 3.282V1.576a6.5 6.5 0 0 1 1.961.636z"
-                clipRule="evenodd"
-            ></path>
-        </svg>,
-        BloC: () =>  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="#55a3bf"
-                    d="M27.417 5.5H18.19l-2.083 4.2H4.5v16.8h25v-21Zm0 4.2h-8.135l1.091-2.1h7.044Z"
-                ></path>
-                <path
-                    d="m31 26-8.571 5-8.572-5V16l8.572-5L31 16z"
-                    style={{ isolation: "isolate" }}
-                ></path>
-                <path
-                    fill="#0084c1"
-                    d="M15.624 17.071 22.429 21l6.804-3.929-6.804-3.928z"
-                ></path>
-                <path fill="#82eddf" d="M15.624 17.071v7.858l6.805 3.928V21z"></path>
-                <path fill="#00d3b9" d="M22.429 28.857V21l6.804-3.929v7.858z"></path>
-            </g>
-        </svg>,
-        GetX: () =>  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="w-8 h-8">
-            <path
-                id="SVGRepo_iconCarrier"
-                fill="#000"
-                d="M8.207.13c.26.075.458.286.517.55l1.199 5.397 5.396 1.2a.741.741 0 0 1 .364 1.247l-7.159 7.159a.74.74 0 0 1-.685.2L1.982 14.58a.74.74 0 0 1-.563-.563L.118 8.16a.74.74 0 0 1 .2-.685L7.475.317A.74.74 0 0 1 8.207.13m.283 6.332-.92-4.141-5.917 5.915.92 4.142zm-4.868 6.964 4.142.92 5.915-5.915-4.141-.92z"
-            ></path>
-        </svg>,
-        Supabase: () => <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-10 h-10"
-            fill="none"
-            viewBox="0 0 109 113"
-        >
-            <path
-                fill="url(#paint0_linear)"
-                d="M63.708 110.284c-2.86 3.601-8.658 1.628-8.727-2.97l-1.007-67.251h45.22c8.19 0 12.758 9.46 7.665 15.874z"
-            ></path>
-            <path
-                fill="url(#paint1_linear)"
-                fillOpacity="0.2"
-                d="M63.708 110.284c-2.86 3.601-8.658 1.628-8.727-2.97l-1.007-67.251h45.22c8.19 0 12.758 9.46 7.665 15.874z"
-            ></path>
-            <path
-                fill="#3ECF8E"
-                d="M45.317 2.071c2.86-3.601 8.657-1.628 8.726 2.97l.442 67.251H9.83c-8.19 0-12.759-9.46-7.665-15.875z"
-            ></path>
-            <defs>
-                <linearGradient
-                    id="paint0_linear"
-                    x1="53.974"
-                    x2="94.163"
-                    y1="54.974"
-                    y2="71.829"
-                    gradientUnits="userSpaceOnUse"
-                >
-                    <stop stopColor="#249361"></stop>
-                    <stop offset="1" stopColor="#3ECF8E"></stop>
-                </linearGradient>
-                <linearGradient
-                    id="paint1_linear"
-                    x1="36.156"
-                    x2="54.484"
-                    y1="30.578"
-                    y2="65.081"
-                    gradientUnits="userSpaceOnUse"
-                >
-                    <stop></stop>
-                    <stop offset="1" stopOpacity="0"></stop>
-                </linearGradient>
-            </defs>
-        </svg>,
-        GraphQL: () =>   <svg
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid"
-            viewBox="-16 0 288 288"
-            className="w-10 h-10"
-        >
-            <path
-                id="SVGRepo_iconCarrier"
-                fill="#E535AB"
-                fillRule="evenodd"
-                d="m152.576 32.963 59.146 34.15a25.8 25.8 0 0 1 5.818-4.604c12.266-7.052 27.912-2.865 35.037 9.402 7.052 12.267 2.865 27.912-9.402 35.037a25.7 25.7 0 0 1-6.831 2.72v68.325a25.7 25.7 0 0 1 6.758 2.702c12.34 7.125 16.527 22.771 9.402 35.038-7.052 12.266-22.771 16.453-35.038 9.402a25.5 25.5 0 0 1-6.34-5.147l-58.786 33.94a25.7 25.7 0 0 1 1.295 8.08c0 14.103-11.458 25.636-25.635 25.636s-25.635-11.46-25.635-25.636c0-2.52.362-4.954 1.037-7.253l-59.13-34.14a25.8 25.8 0 0 1-5.738 4.52c-12.34 7.051-27.986 2.864-35.038-9.402-7.051-12.267-2.864-27.913 9.402-35.038a25.7 25.7 0 0 1 6.758-2.703v-68.324a25.7 25.7 0 0 1-6.831-2.72C.558 99.897-3.629 84.178 3.423 71.911s22.77-16.454 35.037-9.402a25.8 25.8 0 0 1 5.79 4.575l59.163-34.159a25.7 25.7 0 0 1-1.048-7.29C102.365 11.46 113.823 0 128 0s25.635 11.459 25.635 25.635c0 2.548-.37 5.007-1.059 7.328m-6.162 10.522 59.287 34.23a25.6 25.6 0 0 0 2.437 19.831c3.609 6.278 9.488 10.44 16.013 12.062v68.41q-.5.122-.993.264L145.725 44.17q.351-.336.689-.684m-36.123.7-77.432 134.11a26 26 0 0 0-1.01-.27v-68.417c6.525-1.622 12.404-5.784 16.013-12.062a25.6 25.6 0 0 0 2.427-19.869l59.27-34.22q.359.371.732.727m24.872 6.075 77.414 134.08a25.5 25.5 0 0 0-4.513 5.757 25.7 25.7 0 0 0-2.702 6.758H50.64a25.7 25.7 0 0 0-2.704-6.758 25.8 25.8 0 0 0-4.506-5.724l77.429-134.107A25.7 25.7 0 0 0 128 51.27c2.487 0 4.89-.352 7.163-1.01m11.795 194.478 58.902-34.008a26 26 0 0 1-.473-1.682H50.607q-.123.499-.266.992l59.19 34.175A25.56 25.56 0 0 1 128 236.373a25.56 25.56 0 0 1 18.958 8.365"
-            ></path>
-        </svg>,
-        Jest: () =><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="#99425b"
-                    d="M27.089 15.786a2.606 2.606 0 0 0-2.606-2.606q-.14 0-.274.014l3.58-10.557H12.577l3.574 10.548c-.052 0-.105-.005-.158-.005a2.607 2.607 0 0 0-.792 5.09 11.4 11.4 0 0 1-2.049 2.579A10.4 10.4 0 0 1 9.5 23.116a3.324 3.324 0 0 1-1.665-4.23q.116-.27.23-.544a2.608 2.608 0 1 0-2.09-.4 20 20 0 0 0-1.889 4.788c-.354 2.135 0 4.4 1.845 5.681 4.3 2.981 8.969-1.848 13.891-3.061 1.784-.44 3.742-.369 5.313-1.28a4.44 4.44 0 0 0 2.179-3.088 4.64 4.64 0 0 0-.831-3.521 2.6 2.6 0 0 0 .606-1.671ZM18.6 15.8v-.009a2.6 2.6 0 0 0-1.256-2.23L20.188 7.8l2.85 5.814a2.6 2.6 0 0 0-1.161 2.169v.057z"
-                ></path>
-                <path
-                    fill="#fff"
-                    d="M27.726 15.786a3.25 3.25 0 0 0-2.643-3.186L28.677 2H11.689l3.6 10.621a3.242 3.242 0 0 0-1.005 5.919 11 11 0 0 1-1.568 1.846 9.8 9.8 0 0 1-3.16 2.03 2.66 2.66 0 0 1-1.134-3.281l.04-.093.074-.175a3.244 3.244 0 1 0-3.34-.754q-.163.346-.339.706a14 14 0 0 0-1.4 3.8c-.465 2.8.285 5.043 2.111 6.308A5.75 5.75 0 0 0 8.934 30c2.132 0 4.289-1.071 6.4-2.119a23.6 23.6 0 0 1 4.642-1.917 18 18 0 0 1 1.8-.319 10 10 0 0 0 3.679-1.028 5.09 5.09 0 0 0 2.487-3.53 5.26 5.26 0 0 0-.69-3.613 3.2 3.2 0 0 0 .475-1.688Zm-1.273 0a1.97 1.97 0 1 1-1.97-1.97 1.973 1.973 0 0 1 1.97 1.97M26.9 3.273l-3.174 9.36a3 3 0 0 0-.4.125l-3.135-6.4-3.145 6.362a3 3 0 0 0-.419-.114l-3.163-9.333ZM15.993 13.816a1.97 1.97 0 1 1-1.97 1.97 1.97 1.97 0 0 1 1.97-1.97m-8.523.019a1.97 1.97 0 1 1-1.97 1.97 1.97 1.97 0 0 1 1.969-1.97Zm19.217 7.034a3.82 3.82 0 0 1-1.871 2.646 8.9 8.9 0 0 1-3.223.87c-.632.091-1.285.185-1.924.343a24.6 24.6 0 0 0-4.9 2.013c-3.164 1.571-5.9 2.928-8.472 1.143-1.887-1.308-1.8-3.728-1.58-5.054A12.8 12.8 0 0 1 6 19.376l.27-.559a3.3 3.3 0 0 0 .838.21 3.96 3.96 0 0 0 2.1 4.655l.245.126.259-.093a11 11 0 0 0 3.876-2.4 12 12 0 0 0 1.918-2.32 3.241 3.241 0 0 0 2.64-5.627l2.038-4.121 2.059 4.2a3.24 3.24 0 0 0 4.088 5 3.95 3.95 0 0 1 .355 2.421Z"
-                ></path>
-            </g>
-        </svg>,
-        Firebase: () =>   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="#ffc24a"
-                    d="m5.8 24.6.17-.237 8.02-15.214.017-.161-3.535-6.64a.656.656 0 0 0-1.227.207Z"
-                ></path>
-                <path
-                    fill="#ffa712"
-                    d="m5.9 24.42.128-.25 7.937-15.056-3.526-6.666a.6.6 0 0 0-1.133.206Z"
-                ></path>
-                <path
-                    fill="#f4bd62"
-                    d="m16.584 14.01 2.632-2.7-2.633-5.021a.678.678 0 0 0-1.195 0l-1.407 2.682V9.2Z"
-                ></path>
-                <path
-                    fill="#ffa50e"
-                    d="m16.537 13.9 2.559-2.62-2.559-4.88a.589.589 0 0 0-1.074-.047l-1.414 2.729-.042.139Z"
-                ></path>
-                <path
-                    fill="#f6820c"
-                    d="m5.802 24.601.077-.078.279-.113 10.26-10.222.13-.354-2.559-4.878z"
-                ></path>
-                <path
-                    fill="#fde068"
-                    d="m16.912 29.756 9.288-5.179-2.654-16.331a.635.635 0 0 0-1.075-.346L5.8 24.6l9.233 5.155a1.93 1.93 0 0 0 1.878 0"
-                ></path>
-                <path
-                    fill="#fcca3f"
-                    d="M26.115 24.534 23.483 8.326a.557.557 0 0 0-.967-.353L5.9 24.569l9.131 5.1a1.91 1.91 0 0 0 1.863 0Z"
-                ></path>
-                <path
-                    fill="#eeab37"
-                    d="M16.912 29.6a1.93 1.93 0 0 1-1.878 0l-9.158-5.078-.076.078 9.233 5.155a1.93 1.93 0 0 0 1.878 0l9.289-5.178-.023-.14Z"
-                ></path>
-            </g>
-        </svg>,
-        Detox: () => (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-10 h-10"
-                fill="none"
-                viewBox="0 0 109 113"
-            >
-                <defs>
-                    <linearGradient
-                        id="detoxGradient"
-                        x1="0"
-                        y1="0"
-                        x2="109"
-                        y2="113"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stopColor="#22C55E" />
-                        <stop offset="1" stopColor="#16A34A" />
-                    </linearGradient>
-                </defs>
-
-                {/* background rounded square */}
-                <rect
-                    x="14"
-                    y="18"
-                    width="80"
-                    height="80"
-                    rx="20"
-                    fill="url(#detoxGradient)"
-                />
-
-                {/* subtle highlight */}
-                <rect
-                    x="14"
-                    y="18"
-                    width="80"
-                    height="35"
-                    rx="20"
-                    fill="white"
-                    fillOpacity="0.15"
-                />
-
-                {/* centered text */}
-                <text
-                    x="50%"
-                    y="57%"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontFamily="Inter, sans-serif"
-                    fontWeight="700"
-                    fontSize="28"
-                    fill="#FFFFFF"
-                >
-                    DT
-                </text>
-            </svg>
-        ),
-
-        'Flutter Test': () =>   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="#40d0fd"
-                    d="m15.383 18.316 3.361-3.274h8.349l-7.396 7.396z"
-                ></path>
-                <path
-                    fill="#41d0fd"
-                    d="m4.907 16.125 4.199 4.299L27.093 2.287h-8.349z"
-                    style={{ isolation: "isolate" }}
-                ></path>
-                <path
-                    fill="#1fbcfd"
-                    d="m11.176 22.479 4.259 4.196 4.262-4.237-4.314-4.122z"
-                ></path>
-                <path
-                    fill="#095a9d"
-                    d="m15.435 26.675 4.262-4.237 7.292 7.375h-8.396z"
-                ></path>
-                <path fill="#0e5199" d="m15.435 26.675 3.971-1.321-1.338-1.297z"></path>
-            </g>
-        </svg>,
-        'VS Code': () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-12 h-12">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="url(#paint0_linear_87_8101)"
-                    d="M21.002 3.117c0-.88-.985-.88-1.422-.77.612-.483 1.33-.366 1.586-.219l5.913 2.9c.563.276.92.85.92 1.48v19.075c0 .639-.366 1.22-.941 1.491l-5.564 2.631c-.383.165-1.214.572-1.914 0 .875.165 1.349-.457 1.422-.879z"
-                ></path>
-                <path
-                    fill="url(#paint1_linear_87_8101)"
-                    d="M19.651 2.332c.464-.092 1.35-.05 1.35.785v6.566L3.075 23.245a.763.763 0 0 1-1.022-.09l-1.847-2a.77.77 0 0 1 .045-1.092L19.58 2.348z"
-                ></path>
-                <path
-                    fill="url(#paint2_linear_87_8101)"
-                    d="M21.002 22.37 3.074 8.809a.763.763 0 0 0-1.022.091l-1.847 2A.77.77 0 0 0 .25 11.99l19.33 17.716c.875.164 1.349-.458 1.422-.88z"
-                ></path>
-                <defs>
-                    <linearGradient
-                        id="paint0_linear_87_8101"
-                        x1="23.79"
-                        x2="23.79"
-                        y1="2"
-                        y2="30"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stopColor="#32B5F1"></stop>
-                        <stop offset="1" stopColor="#2B9FED"></stop>
-                    </linearGradient>
-                    <linearGradient
-                        id="paint1_linear_87_8101"
-                        x1="21.002"
-                        x2="1.022"
-                        y1="5.534"
-                        y2="22.305"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stopColor="#0F6FB3"></stop>
-                        <stop offset="0.271" stopColor="#1279B7"></stop>
-                        <stop offset="0.421" stopColor="#1176B5"></stop>
-                        <stop offset="0.618" stopColor="#0E69AC"></stop>
-                        <stop offset="0.855" stopColor="#0F70AF"></stop>
-                        <stop offset="1" stopColor="#0F6DAD"></stop>
-                    </linearGradient>
-                    <linearGradient
-                        id="paint2_linear_87_8101"
-                        x1="1.155"
-                        x2="21.079"
-                        y1="9.984"
-                        y2="26.481"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stopColor="#1791D2"></stop>
-                        <stop offset="1" stopColor="#1173C5"></stop>
-                    </linearGradient>
-                </defs>
-            </g>
-        </svg>,
-        Xcode: () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className='w-12 h-12'>
-            <g id="SVGRepo_iconCarrier">
-                <path d="M6.759 23.232c0-.081.968-1.774.968-1.774a2.156 2.156 0 0 1 2.336.642l.002.003a21 21 0 0 1-1.414 2.24l.043-.063a1.2 1.2 0 0 1-1.137.321l.008.002a1.05 1.05 0 0 1-.804-1.378zM3.291 9.765v13.548a4.475 4.475 0 0 0 4.433 4.435h.728c0-.081.968-1.774 3.064-5.322.242-.484.564-.968.887-1.532H6.516l-.068.002a1.18 1.18 0 0 1-1.14-.881l-.002-.008a1.148 1.148 0 0 1 1.108-1.452h.022-.001 2.984l3.79-6.613s-.887-1.613-1.129-2.016a1.179 1.179 0 0 1 .162-1.452c.484-.484 1.29-.726 2.097.564l.323.484.323-.484c.726-1.048 1.21-.968 1.613-.887.645.161 1.048.887.484 2.016l-5 8.387h1.694c.564-.968 1.129-1.935 1.694-2.984a3.4 3.4 0 0 1-.078-1.308l-.002.017a3.3 3.3 0 0 1 .809-1.697l-.003.003.484.806a48 48 0 0 0 2.856-5.484l.127-.322c.159-.418.252-.902.252-1.407a4 4 0 0 0-.095-.878l.005.027H7.716A4.423 4.423 0 0 0 3.293 9.75v.014-.001zm23.225-.081v13.638a5.23 5.23 0 0 1-5.231 5.231h-5.414s-.484 1.29 1.048 1.29h4.851a5.954 5.954 0 0 0 5.954-5.954v-.014.001-11.854c.081-1.129-.887-1.855-1.209-2.339zM8.049 28.554h-.413a5.23 5.23 0 0 1-5.231-5.231v-.011.001V9.755a5.23 5.23 0 0 1 5.231-5.231h11.703a3.34 3.34 0 0 0-2.19-.563l.013-.001a3.113 3.113 0 0 1-1.714-.169l.021.007c-.484-.403-.403-.645-1.129-.645H7.149a5.954 5.954 0 0 0-5.954 5.954v.014-.001 14.677l-.002.135a5.756 5.756 0 0 0 5.556 5.752h.01c.806 0 1.048-.645 1.29-1.129zm12.258-9.999h1.935c1.29 0 1.532.645 1.532.887.081.645-.242 1.452-1.532 1.452h-1.21L22 22.507c.564.968.323 1.452 0 1.774a1.336 1.336 0 0 1-2.094-.556l-.003-.009-1.129-1.935c-.806 1.774-1.613 3.709-2.581 5.967h5a4.475 4.475 0 0 0 4.435-4.433V9.201c-.081-.161-.242-.081-.323 0a46 46 0 0 0-4.887 9.04l-.112.314zm4.516-10.887a2.23 2.23 0 0 1 1.383-.241l-.012-.001c.497.171.91.48 1.205.88l.005.007c.372.505.9.876 1.513 1.044l.02.005c.323.081.887-.806 1.29-1.613a3.9 3.9 0 0 0 .564-1.93v-.006a3.1 3.1 0 0 0-1.432-.722l-.02-.003a3 3 0 0 1-1.061.08l.013.001a2.67 2.67 0 0 1-1.445-1.197l-.007-.013a5.95 5.95 0 0 0-2.062-1.678l-.035-.015a9.3 9.3 0 0 0-2.524-.799l-.056-.008a10.4 10.4 0 0 0-3.013-.438q-.453 0-.897.037l.039-.003c-.825.054-1.595.198-2.33.422l.072-.019c-.081 0-.242.242-.081.242s.726.081.726.081-.726.161-.726.323.081.161.161.161 1.855-.081 2.581 0c.965.16 1.772.728 2.25 1.518l.008.014a4.8 4.8 0 0 1 .616 2.369c0 .597-.108 1.169-.304 1.697l.011-.034c-1.21 2.661-10.806 19.031-11.29 20.16s-.645 1.855.726 2.581 2.097.403 2.5-.081c.484-.645 8.79-21.451 11.612-22.821"></path>
-            </g>
-        </svg>,
-        'Android Studio': () =>  <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlSpace="preserve"
-            id="Camada_1"
-            fill="#000"
-            version="1.1"
-            className="w-10 h-10"
-            viewBox="0 0 32 32"
-        >
-            <path
-                id="SVGRepo_iconCarrier"
-                fillRule="evenodd"
-                d="M13.8 4h4.5v2.2h1.2c.6 0 1 .4 1 1v4.6l-.6.8 6.2 10.8.9 3.9c.1.5-.5.9-.9.5l-2.9-2.7-2-3.5c-1.6.9-3.3 1.4-5.2 1.4s-3.6-.5-5.1-1.4l-2 3.5L6 27.8c-.4.4-1.1 0-.9-.5l.9-3.9 2.3-4.1c-1.5-1.7-2.3-4-2.3-6.4 0-.4 0-.8.1-1.1h3c-.1.4-.1.7-.1 1.1 0 1.3.4 2.5 1 3.6l2.3-3.9-.6-.8V7.2c0-.6.4-1 1-1h1.2V4zm.6 11.4-2 3.6c1.1.6 2.3 1 3.6 1s2.6-.4 3.6-1l-2.1-3.6-.8 1c-.4.5-1.2.5-1.6 0zm-.3-3.6c.4.7 1.1 1.1 1.9 1.1s1.6-.4 1.9-1.1c.2-.3.3-.7.3-1.1 0-1.2-1-2.2-2.2-2.2s-2.2 1-2.2 2.2c0 .4.1.8.3 1.1"
-                clipRule="evenodd"
-            ></path>
-        </svg>,
-        'Integration Tests': () => (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-10 h-10"
-                fill="none"
-                viewBox="0 0 109 113"
-                role="img"
-                aria-labelledby="integrationTestsTitle"
-            >
-                <title id="integrationTestsTitle">Integration Tests (IT)</title>
-                <defs>
-                    <radialGradient id="g" cx="50%" cy="35%" r="65%">
-                        <stop offset="0%" stopColor="#7C3AED" />
-                        <stop offset="60%" stopColor="#5EEAD4" />
-                        <stop offset="100%" stopColor="#60A5FA" />
-                    </radialGradient>
-                </defs>
-                <circle cx="54.5" cy="56.5" r="48" fill="url(#g)" />
-                <circle
-                    cx="54.5"
-                    cy="56.5"
-                    r="48"
-                    stroke="rgba(255,255,255,0.12)"
-                    strokeWidth="4"
-                    fill="none"
-                />
-                <text
-                    x="50%"
-                    y="56.5"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontFamily="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial"
-                    fontWeight="700"
-                    fontSize="34"
-                    fill="#FFFFFF"
-                    style={{ letterSpacing: "-0.02em" }}
-                >
-                    IT
-                </text>
-            </svg>
-        ),
-        Riverpod: () =>  <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10" viewBox="0 0 1636 1096">
-            <path
-                fill="#41D0FD"
-                d="M972 370.647c8.82.016 17.638.014 26.457.012q24.4-.005 48.802.024 24.12.028 48.24.032l3.043.001 15.3.003q54.027.01 108.054.055a246877 246877 0 0 0 111.51.064l53.713.018c82.627.028 165.254.089 247.881.144v329c-10.698 1.189-21.35 2.347-32.069 3.234-3.829.318-7.657.646-11.485.973l-2.448.208C1511.558 711.02 1434.366 719.934 1092 814c-7.55 10.006-10.076 18.47-9 31 5.066 23.053 27.026 39.07 45.781 51.098 3.232 2.045 6.476 4.069 9.723 6.09 25.853 16.11 25.853 16.11 29.496 26.812 1.39 6.16 1.147 10.46-2 16-2.122 2.898-4.465 5.46-7 8l-1.484 1.52c-34.58 32.35-96.636 43.69-141.152 55.834a2695 2695 0 0 0-6.76 1.858C951.05 1028.34 891.46 1040.742 832 1053l-2.286.472c-35.226 7.265-70.549 13.98-105.929 20.45l-2.163.396a19322 19322 0 0 1-43.454 7.907c-44.807 8.09-89.52 16.434-133.668 27.65l-4.053 1.02c-21.213 5.336-42.23 11.186-63.097 17.747-5.029 1.576-10.07 3.109-15.116 4.631l-2.562.78c-20.167 6.065-40.64 3.934-59.254-5.951-16.434-9.717-28.418-25.519-33.555-43.887-3.3-13.492-2.426-27.747-2.367-41.55.014-4.12.007-8.24.003-12.36q-.002-10.407.034-20.814.036-10.557.021-21.114C364.434 903.183 371.24 822.185 439 662l1.705-2.96C453.418 637.1 467.46 616.036 483 596c.455-.593.91-1.186 1.38-1.796 8.958-11.66 18.459-22.83 28.355-33.704q2.122-2.339 4.213-4.705c5.77-6.513 11.811-12.708 17.973-18.846q2.468-2.463 4.929-4.935c5.545-5.55 11.177-10.923 17.15-16.014a1315 1315 0 0 0 4.625-4.25c5.038-4.546 10.32-8.713 15.68-12.867a390 390 0 0 0 7.328-5.828c9.162-7.463 18.62-14.377 28.367-21.055l1.873-1.288C684.592 422.965 764.067 391.188 873 374l3.616-.456c31.635-3.744 63.584-2.957 95.385-2.897"
-            ></path>
-            <path
-                fill="#07589C"
-                d="M1635 764a202897 202897 0 0 1 .11 137.634l.001 2.93q.015 23.396.043 46.79.029 24.06.034 48.119.004 14.81.028 29.619.015 10.197.011 20.394c-.001 3.905 0 7.81.011 11.713.067 25.129-.83 50.157-3.988 75.113l-.253 2.02c-10.308 81.746-38.192 160.815-123.544 288.91-2.09 2.527-4.143 5.083-6.203 7.633-3.589 4.384-7.323 8.611-11.14 12.797a282 282 0 0 0-5.485 6.265c-3.384 3.898-7.038 7.508-10.712 11.128-2.33 2.307-4.57 4.61-6.6 7.185-2.476 2.944-5.154 5.28-8.075 7.766-2.519 2.233-4.874 4.587-7.238 6.984-4.179 4.217-8.483 8.153-13 12l-3.012 2.64c-8.353 7.3-17.01 14.112-25.88 20.77a730 730 0 0 0-6.006 4.586c-22.955 17.593-47.678 32.891-73.197 46.455a925 925 0 0 0-6.392 3.444 388 388 0 0 1-26.138 12.918l-1.996.899c-14.23 6.39-28.689 12.037-43.379 17.288l-3.275 1.182c-14.37 5.139-28.917 9.358-43.662 13.255l-2.462.654c-39.012 10.303-73.053 6.038-109.414-10.403l-4.708-2.113c-32.924-14.81-65.224-30.453-96.479-48.575l-2.507-1.446c-31.464-18.224-62.183-39.147-88.774-64.023-2.488-2.316-5.03-4.55-7.594-6.781-12.187-10.998-22.513-23.487-32.125-36.75l-1.358-1.84c-12.317-16.811-20.653-35.986-25.642-56.16l-.766-3.02c-5.91-27.479-.458-56.079 11.766-80.98l.917-1.905c4.958-10.19 11.084-19.201 18.083-28.095l2.445-3.129C879.04 1263.641 892.35 1250.08 907 1239l2.703-2.184c36.065-28.748 78.414-50.24 121.297-66.816l3.588-1.396c14.598-5.635 29.34-10.673 44.287-15.292l2.042-.637c27.156-8.44 55.041-14.31 82.828-20.228a8441 8441 0 0 0 30.148-6.493c111.305-23.715 111.305-23.715 216.107-66.954l1.805-.959c23.562-12.657 44.258-28.561 52.797-54.896 3.341-17.987-2.816-34.338-12.602-49.145-2.511-3.484-5.18-6.762-8-10l-1.871-2.203c-3.664-4.2-7.485-8.171-11.457-12.078l-2.383-2.35a664 664 0 0 0-4.73-4.598c-11.542-11.31-20.196-24.57-20.934-41.021.265-11.133 4.406-20.257 11.375-28.75l1.996-2.488c45.791-54.026 143.602-69.812 208.844-84.711l2.424-.557C1632.762 764 1632.762 764 1635 764"
-            ></path>
-            <path
-                fill="#064479"
-                d="M1635 764v98l-24 9c-29.679 12.796-65.821 28.854-79.941 60.082-3.654 11.728-1.13 23.848 4.226 34.465 4.608 8.266 10.99 14.79 17.688 21.371 18.872 18.547 38.26 39.965 39.402 67.832-.37 16.99-8.796 30.464-20.375 42.25l-1.574 1.65c-4.038 4.162-8.24 7.714-12.988 11.037l-2.197 1.539c-37.22 25.46-82.957 40.3-126.128 51.927a840 840 0 0 0-9.394 2.624c-29.605 8.426-59.554 15.283-89.64 21.743a1751 1751 0 0 0-32.092 7.187 1165 1165 0 0 1-19.245 4.3l-2.464.531q-6.018 1.294-12.04 2.571c-9.804 2.09-19.528 4.404-29.238 6.891l-7.082 1.781q-3.366.858-6.73 1.719l-3.405.855c-6.26 1.606-12.299 3.47-18.347 5.748-3.174 1.169-6.359 2.075-9.623 2.96-5.06 1.372-9.925 3.054-14.813 4.937l-5.66 2.129c-52.947 20.06-106.038 45.115-148.11 83.824a245 245 0 0 1-6.293 5.547c-8.173 7.156-15.21 14.985-21.937 23.5l-2.402 2.922c-23.607 29.387-34.477 63.964-31.396 101.544.544 4.294 1.592 8.384 2.798 12.534l.57 2.114c6.661 24.584 18.96 46.527 35.43 65.886l2.594 3.148c5.593 6.73 11.472 13.098 17.656 19.29l1.967 1.969c26.205 25.905 57.283 46.747 88.783 65.593-4.434 1.478-7.427-.695-11.46-2.566-.85-.386-1.7-.77-2.575-1.168a1608 1608 0 0 1-8.34-3.829l-5.759-2.635c-22.102-10.132-44.012-20.482-65.246-32.352a547 547 0 0 0-7.952-4.302c-37.76-20.146-74.61-44.3-105.95-73.617-2.487-2.316-5.029-4.55-7.593-6.781-12.187-10.998-22.513-23.487-32.125-36.75l-1.358-1.84c-12.317-16.811-20.653-35.986-25.642-56.16l-.766-3.02c-5.91-27.479-.458-56.079 11.766-80.98l.917-1.905c4.958-10.19 11.084-19.201 18.083-28.095l2.445-3.129C879.04 1263.641 892.35 1250.08 907 1239l2.703-2.184c36.065-28.748 78.414-50.24 121.297-66.816l3.588-1.396c14.598-5.635 29.34-10.673 44.287-15.292l2.042-.637c27.156-8.44 55.041-14.31 82.828-20.228a8441 8441 0 0 0 30.148-6.493c111.305-23.715 111.305-23.715 216.107-66.954l1.805-.959c23.562-12.657 44.258-28.561 52.797-54.896 3.341-17.987-2.816-34.338-12.602-49.145-2.511-3.484-5.18-6.762-8-10l-1.871-2.203c-3.664-4.2-7.485-8.171-11.457-12.078l-2.383-2.35a664 664 0 0 0-4.73-4.598c-11.542-11.31-20.196-24.57-20.934-41.021.265-11.133 4.406-20.257 11.375-28.75l1.996-2.488c45.791-54.026 143.602-69.812 208.844-84.711l2.424-.557C1632.762 764 1632.762 764 1635 764"
-            ></path>
-        </svg>,
-        Figma: () =>  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="w-10 h-10">
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill="#1ABCFE"
-                    d="M8.55 8c0-1.289 1.019-2.333 2.275-2.333S13.1 6.71 13.1 8c0 1.289-1.018 2.333-2.275 2.333C9.57 10.333 8.55 9.29 8.55 8"
-                ></path>
-                <path
-                    fill="#0ACF83"
-                    d="M4 12.667c0-1.289 1.019-2.334 2.275-2.334H8.55v2.334C8.55 13.955 7.531 15 6.275 15S4 13.955 4 12.667"
-                ></path>
-                <path
-                    fill="#FF7262"
-                    d="M8.55 1v4.667h2.275c1.257 0 2.275-1.045 2.275-2.334C13.1 2.045 12.082 1 10.825 1z"
-                ></path>
-                <path
-                    fill="#F24E1E"
-                    d="M4 3.333c0 1.289 1.019 2.334 2.275 2.334H8.55V1H6.275C5.019 1 4 2.045 4 3.333"
-                ></path>
-                <path
-                    fill="#A259FF"
-                    d="M4 8c0 1.289 1.019 2.333 2.275 2.333H8.55V5.667H6.275C5.019 5.667 4 6.71 4 8"
-                ></path>
-            </g>
-        </svg>,
-        'GitHub Actions': () => <svg
-            className="w-10 h-10"
-            xmlns="http://www.w3.org/2000/svg"
-            id="Layer_2"
-            fill="#000"
-            data-name="Layer 2"
-            viewBox="0 0 48 48"
-        >
-            <path
-                id="SVGRepo_iconCarrier"
-                fill="none"
-                fillRule="evenodd"
-                stroke="#000"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M24 2.5a21.5 21.5 0 0 0-6.8 41.9c1.08.2 1.47-.46 1.47-1v-3.65c-6 1.3-7.24-2.88-7.24-2.88A5.7 5.7 0 0 0 9 33.68c-1.95-1.33.15-1.31.15-1.31a4.52 4.52 0 0 1 3.29 2.22c1.92 3.29 5 2.34 6.26 1.79a4.6 4.6 0 0 1 1.37-2.88c-4.78-.54-9.8-2.38-9.8-10.62a8.3 8.3 0 0 1 2.22-5.77 7.68 7.68 0 0 1 .21-5.69s1.8-.58 5.91 2.2a20.46 20.46 0 0 1 10.76 0c4.11-2.78 5.91-2.2 5.91-2.2a7.74 7.74 0 0 1 .21 5.69 8.28 8.28 0 0 1 2.21 5.77c0 8.26-5 10.07-9.81 10.61a5.12 5.12 0 0 1 1.46 4v5.9c0 .71.39 1.24 1.48 1A21.5 21.5 0 0 0 24 2.5"
-            ></path>
-        </svg>,
-        Cupertino: () =>  <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlSpace="preserve"
-            id="Layer_1"
-            className="w-10 h-10"
-            fill="#000"
-            version="1.1"
-            viewBox="0 0 512 512"
-        >
-            <g id="SVGRepo_iconCarrier">
-                <path d="M460.333 163.833c-33.691-38.937-78.613-60.382-126.488-60.382-19.978 0-39.86 3.89-58.629 11.361 8.117-15.647 19.942-29.302 35.374-40.764 17.399-12.922 33.079-18.073 33.212-18.115a10.45 10.45 0 0 0 6.315-14.351c-.438-.944-10.882-23.279-26.125-38.522a10.45 10.45 0 0 0-11.902-2.035c-33.348 15.969-55.416 44.776-63.818 83.304-2.787 12.777-3.626 24.59-3.693 33.834-21.014-9.653-43.655-14.712-66.424-14.712-47.875 0-92.797 21.444-126.488 60.383C18.349 202.34 0 253.442 0 307.725S18.349 413.11 51.667 451.617C85.358 490.555 130.28 512 178.155 512c26.955 0 53.739-7.065 77.845-20.481C280.106 504.935 306.89 512 333.845 512c47.875 0 92.797-21.444 126.488-60.383C493.651 413.111 512 362.009 512 307.725s-18.349-105.385-51.667-143.892M314.283 23.464c4.724 5.759 8.758 12.098 11.695 17.175-13.861 6.387-37.553 19.951-56.383 44.271 6.941-27.746 21.948-48.371 44.688-61.446m19.562 467.638c-25.53 0-49.897-6.931-72.425-20.601a10.45 10.45 0 0 0-10.842 0c-22.526 13.67-46.893 20.601-72.423 20.601-86.712 0-157.257-82.263-157.257-183.376S91.443 124.35 178.155 124.35c23.705 0 46.404 5.985 67.562 17.782-.34 15.273.962 43.645 12.575 70.707 2.276 5.303 8.421 7.758 13.723 5.482s7.757-8.42 5.482-13.723c-9.796-22.827-11.075-47.486-10.878-61.021 18.144 2.604 56.22 11.156 79.38 38.355 23.119 27.163 25.568 66.118 25.273 84.583-13.599-1.958-38.214-7.24-59.542-21.134-4.834-3.15-11.307-1.783-14.458 3.051-3.15 4.836-1.784 11.309 3.052 14.458 33.958 22.122 73.695 25.225 79.809 25.578a10.3 10.3 0 0 0 2.879-.133 10.46 10.46 0 0 0 8.517-9.377c.794-7.65 5.866-68.886-29.618-110.575-18.083-21.237-42.974-32.87-64.031-39.224a136 136 0 0 1 35.965-4.81c86.712 0 157.257 82.263 157.257 183.376s-70.545 183.377-157.257 183.377"></path>
-                <path d="M158.221 167.176c-1.607-5.542-7.396-8.732-12.946-7.126-59.081 17.13-100.344 77.856-100.344 147.675 0 5.771 4.679 10.449 10.449 10.449s10.449-4.678 10.449-10.449c0-60.575 35.063-113.048 85.267-127.604 5.541-1.607 8.732-7.403 7.125-12.945M178.155 155.379h-.128c-5.77 0-10.449 4.678-10.449 10.449s4.679 10.449 10.449 10.449h.128c5.77 0 10.449-4.678 10.449-10.449s-4.679-10.449-10.449-10.449M291.952 228.244c-3.737-4.395-10.309-4.917-14.709-1.185-4.398 3.731-4.927 10.338-1.197 14.739.014.016.069.083.083.097a10.34 10.34 0 0 0 7.875 3.625c2.405 0 4.825-.831 6.804-2.519 4.382-3.739 4.874-10.365 1.144-14.757"></path>
-            </g>
-        </svg>,
-    };
     const techCategories = [
-        {title: 'React Native', icons: ['JavaScript','React', 'React Navigation', 'Redux', 'TypeScript', 'Expo']},
-        {title: 'Flutter', icons: ['Dart', 'Material 3', 'Cupertino','Provider','BloC', 'Riverpod','GetX']},
-        {title: 'Backend', icons: ['Node js', 'Firebase', 'Supabase', 'AWS Amplify','GraphQL']},
-        {title: 'Testing', icons: ['Jest', 'Detox', 'Flutter Test', 'Integration Tests']},
-        {title: 'Tools', icons: ['VS Code', 'Xcode', 'Android Studio', 'Figma', 'GitHub Actions']},
+        {
+            name: "iOS Development",
+            technologies: [
+                {
+                    name: "Swift",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="-252 343.9 106.1 106.1">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#F05138"
+                                d="M-145.9 373.3v-3.2c-.1-2.3-.2-4.7-.6-7s-1.1-4.5-2.2-6.6-2.4-4-4.1-5.6c-1.7-1.7-3.6-3-5.6-4.1-2.1-1.1-4.3-1.8-6.6-2.2s-4.6-.6-7-.6h-53.7c-.6 0-1.2 0-1.7.1-1.7.1-3.5.2-5.2.5s-3.4.8-5 1.4c-.5.2-1.1.5-1.6.7-1.6.8-3 1.8-4.4 2.9-.4.4-.9.8-1.3 1.2-1.7 1.7-3 3.6-4.1 5.6-1.1 2.1-1.8 4.3-2.2 6.6s-.5 4.6-.6 7v53.7c.1 2.3.2 4.7.6 7s1.1 4.5 2.2 6.6 2.4 4 4.1 5.6c1.7 1.7 3.6 3 5.6 4.1 2.1 1.1 4.3 1.8 6.6 2.2s4.6.6 7 .6h53.7c2.3-.1 4.7-.2 7-.6s4.5-1.1 6.6-2.2 4-2.4 5.6-4.1c1.7-1.7 3-3.6 4.1-5.6 1.1-2.1 1.8-4.3 2.2-6.6s.6-4.6.6-7v-50.4"
+                            ></path>
+                            <path
+                                fill="#FFF"
+                                d="m-168 409.4.3-1.2c4.4-17.5-6.3-38.3-24.5-49.2 8 10.8 11.5 23.9 8.4 35.3-.3 1-.6 2-1 3-.4-.3-.9-.6-1.6-.9 0 0-18.1-11.2-37.7-30.9-.5-.5 10.5 15.7 22.9 28.8-5.9-3.3-22.2-15.2-32.6-24.6 1.3 2.1 2.8 4.2 4.4 6.1 8.6 11 19.9 24.5 33.4 34.9-9.5 5.8-22.9 6.3-36.2 0-3.3-1.5-6.4-3.4-9.3-5.5 5.6 9 14.3 16.8 24.9 21.4 12.6 5.4 25.2 5.1 34.5.1 0 0 .1 0 .1-.1.4-.2.8-.5 1.2-.7 4.5-2.3 13.3-4.6 18.1 4.6 1.4 2.1 3.9-9.9-5.3-21.1"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "SwiftUI",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="-252 343.9 106.1 106.1">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#F05138"
+                                d="M-145.9 373.3v-3.2c-.1-2.3-.2-4.7-.6-7s-1.1-4.5-2.2-6.6-2.4-4-4.1-5.6c-1.7-1.7-3.6-3-5.6-4.1-2.1-1.1-4.3-1.8-6.6-2.2s-4.6-.6-7-.6h-53.7c-.6 0-1.2 0-1.7.1-1.7.1-3.5.2-5.2.5s-3.4.8-5 1.4c-.5.2-1.1.5-1.6.7-1.6.8-3 1.8-4.4 2.9-.4.4-.9.8-1.3 1.2-1.7 1.7-3 3.6-4.1 5.6-1.1 2.1-1.8 4.3-2.2 6.6s-.5 4.6-.6 7v53.7c.1 2.3.2 4.7.6 7s1.1 4.5 2.2 6.6 2.4 4 4.1 5.6c1.7 1.7 3.6 3 5.6 4.1 2.1 1.1 4.3 1.8 6.6 2.2s4.6.6 7 .6h53.7c2.3-.1 4.7-.2 7-.6s4.5-1.1 6.6-2.2 4-2.4 5.6-4.1c1.7-1.7 3-3.6 4.1-5.6 1.1-2.1 1.8-4.3 2.2-6.6s.6-4.6.6-7v-50.4"
+                            ></path>
+                            <path
+                                fill="#FFF"
+                                d="m-168 409.4.3-1.2c4.4-17.5-6.3-38.3-24.5-49.2 8 10.8 11.5 23.9 8.4 35.3-.3 1-.6 2-1 3-.4-.3-.9-.6-1.6-.9 0 0-18.1-11.2-37.7-30.9-.5-.5 10.5 15.7 22.9 28.8-5.9-3.3-22.2-15.2-32.6-24.6 1.3 2.1 2.8 4.2 4.4 6.1 8.6 11 19.9 24.5 33.4 34.9-9.5 5.8-22.9 6.3-36.2 0-3.3-1.5-6.4-3.4-9.3-5.5 5.6 9 14.3 16.8 24.9 21.4 12.6 5.4 25.2 5.1 34.5.1 0 0 .1 0 .1-.1.4-.2.8-.5 1.2-.7 4.5-2.3 13.3-4.6 18.1 4.6 1.4 2.1 3.9-9.9-5.3-21.1"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "UIKit",
+                    icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="-20.5 0 297 297"
+                    >
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fill="#2396F3"
+                            d="M174.656 28.438 125.717 0 74.646 31.723l49.621 27.414zm23.403 12.245L147.52 71.424l57.28 33.109V192l-77.248 43.904L51.2 192v-68.267L0 98.304v123.563l125.717 74.666L256 222.422V74.155z"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Combine",
+                    icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlSpace="preserve"
+                        id="Layer_1"
+                        width="200"
+                        height="200"
+                        fill="#000"
+                        version="1.1"
+                        viewBox="0 0 226.8 226.8"
+                    >
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            d="M113.4 0C50.8 0 0 50.8 0 113.4s50.8 113.4 113.4 113.4S226.8 176 226.8 113.4 176 0 113.4 0M81.3 57.6l30 17.3-30 17.3zM48 76.9l30 17.3-30 17.3zm0 38.6 30 17.3-30 17.3zm31 53.9L49 152l30-17.3zm0-38.6-30-17.3 30-17.3zm0-38.5L49 75l30-17.3zm2.3 42.2 30 17.3-30 17.3zm30.9 53.8-30-17.3 30-17.3zm0-115.2-30-17.3 30-17.3zm35.6-15.5 30 17.3-30 17.3zm0 38.6 30 17.3-30 17.3zm-33.2-57.7 30 17.3-30 17.3zm0 149.8v-34.6l30 17.3zm30.9-19.2-30-17.3 30-17.3zm0-38.3-30-17.3 30-17.3zm0-38.5-30-17.3 30-17.3zm2.3 77.1v-34.6l30 17.3zm31-19.3-30-17.3 30-17.3zm0-38.5-30-17.3 30-17.3z"
+                            className="st0"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Core Data",
+                    icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 100 100"
+                    >
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <text
+                            x="50"
+                            y="50"
+                            fill="#fff"
+                            dominantBaseline="central"
+                            fontFamily="Inter, Arial, Helvetica, sans-serif"
+                            fontSize="40"
+                            fontWeight="700"
+                            textAnchor="middle"
+                        >
+                            CD
+                        </text>
+                    </svg>)
+                },
+                {
+                    name: "Core ML",
+                    icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+
+                        viewBox="0 0 100 100"
+                    >
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <text
+                            x="50"
+                            y="50"
+                            fill="#fff"
+                            dominantBaseline="central"
+                            fontFamily="Inter, Arial, Helvetica, sans-serif"
+                            fontSize="40"
+                            fontWeight="700"
+                            textAnchor="middle"
+                        >
+                            CM
+                        </text>
+                    </svg>)
+                },
+                {
+                    name: "Xcode",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#235ee1"
+                                d="M22.623 13.746c.056-.177.1-.331.145-.484a51 51 0 0 1 1.645-5.168 1.83 1.83 0 0 1 1.6-1.274c.524-.056 1.08-.1 1.435.4a1.31 1.31 0 0 0 .879.564 2.4 2.4 0 0 1 .524.137c.234.089.323-.008.387-.226.2-.71.411-1.411.621-2.112.234-.8.234-.79-.54-1.064a1.22 1.22 0 0 0-.951-.016 1.27 1.27 0 0 1-1.492-.306 4.34 4.34 0 0 0-1.637-1.056 11.5 11.5 0 0 0-5.639-.618 6 6 0 0 0-2.612.951 3 3 0 0 0-.306.274 14.3 14.3 0 0 1 3.112.032 2.5 2.5 0 0 1 1.774.911 3.77 3.77 0 0 1 .661 2.1 8.2 8.2 0 0 1-.4 3.032c-.306 1.048-.6 2.112-.895 3.161-.04.137-.073.258.113.306.52.149 1.028.295 1.576.456M17.665 29.6a1.19 1.19 0 0 0 1.177-.645 3.3 3.3 0 0 0 .347-.863q1.161-4.8 2.306-9.611c.314-1.33.613-2.661.935-3.991.065-.258 0-.363-.25-.419a16 16 0 0 1-1.016-.282c-.621-.185-.5-.161-.685.355Q18.193 20.66 15.9 27.17a2 2 0 0 0-.129.556 1.755 1.755 0 0 0 1.894 1.874"
+                            ></path>
+                            <path
+                                fill="#235ee1"
+                                d="M2.023 10.255c.032.266.065.492.1.71.234 1.548.476 3.1.7 4.644s.46 3.12.685 4.676c.234 1.572.468 3.136.71 4.709.145.992.3 1.983.443 2.983.032.21.1.306.355.266q2.2-.363 4.4-.7c2.1-.331 4.185-.645 6.281-.976.081-.016.145-.113.218-.177-.089-.048-.194-.137-.274-.129-1.145.161-2.282.339-3.427.516-2.314.363-4.628.718-6.934 1.088-.242.04-.323-.016-.355-.25a180 180 0 0 0-.435-3.007c-.331-2.225-.677-4.451-1.008-6.668-.363-2.419-.718-4.846-1.088-7.273-.04-.266.048-.387.314-.419.468-.065.935-.145 1.395-.218 1.9-.306 3.806-.621 5.708-.927l4.989-.824c1.548-.25 3.088-.5 4.636-.758.726-.121 1.443-.234 2.169-.371.089-.016.153-.145.226-.218-.1-.04-.194-.081-.29-.113-.024-.008-.056.008-.089.016-.9.153-1.806.306-2.7.452-1.9.314-3.806.621-5.708.935-1.774.29-3.548.589-5.321.879q-2.733.451-5.467.895c-.201.033-.306.089-.233.259M25 7.578a1 1 0 0 1-.145-.008 2.7 2.7 0 0 0-.073.613c.089.653.218 1.306.323 1.959l.871 5.257c.29 1.75.581 3.507.879 5.257.185 1.121.379 2.241.564 3.354.032.169 0 .29-.21.323l-4.644.726q-1.1.169-2.2.363c-.065.008-.121.113-.177.177.081.04.153.113.226.113.234-.016.46-.056.685-.089l5.144-.822c.516-.081 1.024-.169 1.58-.258Q26.421 16.04 25 7.578"
+                            ></path>
+                            <path
+                                fill="#235ee1"
+                                d="M18.882 17.737a.3.3 0 0 0 .024-.476c-.508-.6-1-1.209-1.508-1.814-1.411-1.7-2.83-3.411-4.241-5.12a1.16 1.16 0 0 1-.242-.5.76.76 0 0 1 .516-.8.814.814 0 0 1 .984.323c1.387 1.661 2.782 3.322 4.168 4.983.331.4.669.79 1.016 1.2a.3.3 0 0 0 .024-.476c-.556-.661-1.113-1.33-1.669-1.991-1.121-1.338-2.233-2.677-3.362-4a1.115 1.115 0 0 0-1.637-.121 1.05 1.05 0 0 0-.056 1.58q2.612 3.157 5.225 6.305c.25.31.5.6.758.907M13.319 14.342a1 1 0 0 0-.194-.129c-.556-.21-1.113-.4-1.669-.613-.177-.065-.258 0-.323.153Q9.61 17.5 8.086 21.244c-.081.185-.024.274.145.339.524.21 1.048.411 1.564.645.282.129.4.065.5-.218.968-2.475 1.951-4.942 2.927-7.41.024-.056.048-.137.097-.258M18.632 17.8c-.4-.508-.774-.927-1.08-1.379-.274-.419-.581-.637-1.088-.427a1.6 1.6 0 0 1-.387.065l-3.233.556a.42.42 0 0 0-.387.274c-.21.6-.435 1.185-.653 1.782a1.5 1.5 0 0 0-.04.258c2.297-.37 4.536-.741 6.868-1.129M9.57 17.084c-1.322.218-2.58.419-3.878.629.089.6.185 1.177.25 1.758.032.25.137.282.363.25q.993-.152 2-.274a.46.46 0 0 0 .411-.29c.242-.581.5-1.161.75-1.742.039-.097.055-.178.104-.331M23.744 22.115c-.79-.484-1.572-.959-2.427-1.475.032.153.016.331.1.419a2 2 0 0 0 .54.419c.274.153.564.258.847.4a1.07 1.07 0 0 1 .71.992.8.8 0 0 0 .073.25l.081-.04a.4.4 0 0 0 .052-.08 2.73 2.73 0 0 0 .306-2.314 3.07 3.07 0 0 0-1.532-2.137c-.242-.121-.4-.016-.572.1a.5.5 0 0 0-.242.556 2 2 0 0 0 .32-.21c.2-.21.387-.161.613-.016a3.21 3.21 0 0 1 1.131 3.136M7.53 25.493a.5.5 0 0 0 .1.04l2.419-3.024c-.121-.065-.194-.113-.274-.145-.516-.21-1.032-.4-1.54-.621-.242-.1-.314-.032-.331.218-.065.677-.145 1.355-.218 2.04-.059.499-.108.999-.156 1.492M12.73 11.593a1.04 1.04 0 0 0-.951.653c-.121.3-.234.6-.371.887-.081.169-.056.274.137.339q.812.279 1.613.6c.194.073.274.008.347-.161.121-.306.258-.613.387-.919a.74.74 0 0 0-.274-1 6 6 0 0 0-.888-.399M22.188 17.156a76 76 0 0 0 2.008-.282c.056-.008.129-.153.121-.218a27 27 0 0 0-.29-1.6.32.32 0 0 0-.234-.194 11 11 0 0 0-1.016.129c-.169.024-.29.1-.194.347.306-.04.621-.089.935-.113.073-.008.21.056.218.1.089.4.153.822.234 1.25-.524.073-1.016.137-1.5.2-.177.035-.339.075-.282.381M22.623 13.746c-.54-.161-1.056-.306-1.564-.452-.185-.056-.153-.169-.113-.306.3-1.056.589-2.112.895-3.161a8.3 8.3 0 0 0 .4-3.032 3.73 3.73 0 0 0-.661-2.1 2.5 2.5 0 0 0-1.78-.907 14.3 14.3 0 0 0-3.112-.032c.1-.089.194-.194.306-.274a6 6 0 0 1 2.612-.951 11.56 11.56 0 0 1 5.636.613A4.25 4.25 0 0 1 26.88 4.2a1.27 1.27 0 0 0 1.492.306 1.22 1.22 0 0 1 .951.016c.774.274.774.266.54 1.064-.21.7-.419 1.4-.621 2.112-.065.218-.153.306-.387.226a2.4 2.4 0 0 0-.524-.137 1.24 1.24 0 0 1-.879-.564 1.4 1.4 0 0 0-1.435-.4 1.83 1.83 0 0 0-1.6 1.274 51 51 0 0 0-1.645 5.168c-.044.15-.092.295-.149.481M17.665 29.6a1.755 1.755 0 0 1-1.895-1.871 2 2 0 0 1 .129-.556q2.286-6.519 4.588-13.021c.177-.516.065-.532.685-.355.339.1.677.2 1.016.282.25.056.314.161.25.419-.323 1.33-.621 2.661-.935 3.991q-1.149 4.8-2.306 9.611a3.3 3.3 0 0 1-.347.863 1.22 1.22 0 0 1-1.185.637"
+                            ></path>
+                            <path
+                                fill="#235ee1"
+                                d="M2.023 10.255c-.073-.169.032-.226.242-.258 1.822-.29 3.644-.6 5.467-.895 1.774-.29 3.548-.589 5.321-.879 1.9-.314 3.806-.621 5.708-.935.9-.145 1.806-.3 2.7-.452.032-.008.065-.024.089-.016.1.032.194.073.29.113-.073.073-.137.2-.226.218-.718.137-1.443.25-2.169.371-1.548.25-3.088.5-4.636.758L9.82 9.1q-2.854.472-5.708.927c-.468.073-.927.161-1.395.218-.266.032-.355.153-.314.419.371 2.419.726 4.846 1.088 7.273.331 2.225.677 4.451 1.008 6.668.153 1 .3 2.008.435 3.007.032.234.1.29.355.25 2.306-.371 4.62-.726 6.934-1.088 1.145-.177 2.282-.355 3.427-.516.081-.008.185.081.274.129-.073.065-.137.161-.218.177q-3.132.5-6.281.976-2.2.339-4.4.7c-.25.04-.323-.056-.355-.266a450 450 0 0 0-.443-2.983c-.234-1.572-.476-3.136-.71-4.709-.234-1.556-.46-3.12-.685-4.676l-.7-4.644a8 8 0 0 1-.109-.707M25 7.578l2.838 16.98c-.556.089-1.064.177-1.58.258l-5.144.822c-.226.032-.46.073-.685.089-.073.008-.153-.073-.226-.113.056-.065.113-.161.177-.177q1.1-.194 2.2-.363c1.548-.242 3.1-.492 4.644-.726.21-.032.234-.153.21-.323-.185-1.121-.379-2.233-.564-3.354-.29-1.75-.581-3.507-.879-5.257s-.581-3.507-.871-5.257c-.11-.657-.231-1.305-.32-1.957a2.8 2.8 0 0 1 .073-.613.7.7 0 0 1 .127-.009"
+                            ></path>
+                            <path
+                                fill="#235ee1"
+                                d="M18.882 17.737c-.258-.306-.508-.6-.758-.9q-2.612-3.157-5.225-6.305a1.05 1.05 0 0 1 .056-1.58 1.1 1.1 0 0 1 1.637.121c1.129 1.322 2.241 2.669 3.362 4 .556.661 1.1 1.33 1.669 1.991a.3.3 0 0 1-.024.476c-.347-.411-.685-.806-1.016-1.2-1.383-1.667-2.783-3.327-4.168-4.988a.8.8 0 0 0-.984-.323.75.75 0 0 0-.516.8 1 1 0 0 0 .242.5 2391 2391 0 0 0 4.241 5.12c.5.6 1 1.209 1.508 1.814a.3.3 0 0 1-.024.474M13.319 14.342a3 3 0 0 1-.1.274c-.976 2.467-1.959 4.934-2.927 7.41-.113.282-.218.347-.5.218-.508-.234-1.04-.435-1.564-.645-.177-.073-.226-.153-.145-.339q1.536-3.737 3.048-7.49c.065-.161.145-.226.323-.153.556.21 1.113.4 1.669.613a.7.7 0 0 1 .196.112m-1.9-.4c-.137.347-.266.653-.387.959q-1.246 3.06-2.5 6.12c-.1.242-.048.339.177.419a10 10 0 0 1 .951.387c.242.121.339.073.435-.177a605 605 0 0 1 1.911-4.83c.306-.766.6-1.532.919-2.33-.509-.18-.985-.357-1.509-.551ZM18.632 17.8c-2.33.387-4.572.75-6.861 1.129a1.6 1.6 0 0 1 .04-.258c.218-.6.452-1.185.653-1.782a.41.41 0 0 1 .387-.274l3.233-.556a2 2 0 0 0 .387-.059c.508-.2.806.016 1.088.427.299.455.67.866 1.073 1.373m-6.418.734c1.967-.323 3.878-.645 5.829-.968-.347-.435-.645-.822-.959-1.2a.37.37 0 0 0-.282-.089c-.282.032-.556.081-.83.129-.959.161-1.919.323-2.87.5-.121.024-.3.1-.339.194-.202.451-.363.919-.549 1.435ZM9.57 17.084c-.048.153-.073.234-.1.314-.25.581-.508 1.161-.75 1.742a.44.44 0 0 1-.411.29 58 58 0 0 0-2 .274c-.226.032-.331 0-.363-.25-.073-.572-.161-1.145-.25-1.758 1.294-.196 2.551-.396 3.874-.612m-.5.411c-.968.153-1.862.29-2.741.443-.089.016-.234.161-.234.234a8 8 0 0 0 .161 1.04.28.28 0 0 0 .218.145c.548-.065 1.1-.137 1.637-.226a.45.45 0 0 0 .3-.153c.231-.467.425-.951.659-1.483M23.744 22.115a3.18 3.18 0 0 0-1.129-3.12.413.413 0 0 0-.613.016 2.5 2.5 0 0 1-.323.218.5.5 0 0 1 .242-.556.49.49 0 0 1 .572-.1 3.07 3.07 0 0 1 1.533 2.127 2.73 2.73 0 0 1-.306 2.314.4.4 0 0 1-.056.073c-.016.016-.032.016-.081.04a1 1 0 0 1-.073-.25 1.07 1.07 0 0 0-.71-.992c-.282-.137-.581-.242-.847-.4a2 2 0 0 1-.54-.419c-.081-.089-.065-.266-.1-.419.859.508 1.641.984 2.431 1.468M7.53 25.493c.048-.5.089-.992.145-1.492.073-.677.161-1.355.218-2.04.024-.25.089-.323.331-.218.508.218 1.024.411 1.54.621.081.032.153.081.274.145a1333 1333 0 0 0-2.419 3.024 1 1 0 0 1-.089-.04m.411-.935c.024.008.048.008.065.016.508-.645 1.008-1.282 1.532-1.951-.476-.185-.887-.347-1.33-.524-.09.854-.178 1.661-.267 2.459M12.73 11.593a5.5 5.5 0 0 1 .887.4.74.74 0 0 1 .274 1c-.129.306-.266.6-.387.919-.065.169-.153.234-.347.161-.532-.21-1.072-.4-1.613-.6-.194-.065-.21-.169-.137-.339.129-.29.242-.6.371-.887a1.03 1.03 0 0 1 .952-.654m-.984 1.6c.468.177.911.347 1.346.492.048.016.161-.056.194-.121.113-.234.2-.476.314-.718a.4.4 0 0 0-.137-.556 2.7 2.7 0 0 0-.734-.3.52.52 0 0 0-.629.339c-.12.28-.224.546-.353.871ZM22.188 17.156c-.065-.306.1-.347.282-.371l1.5-.2c-.081-.427-.145-.839-.234-1.25-.008-.048-.145-.113-.218-.1-.314.024-.629.073-.935.113-.089-.25.032-.323.194-.347.339-.048.677-.1 1.016-.129a.3.3 0 0 1 .234.194q.169.8.29 1.6c.008.065-.073.21-.121.218-.662.095-1.323.176-2.008.272"
+                            ></path>
+                            <path
+                                fill="#235ee1"
+                                d="M11.416 13.939c.524.194 1 .363 1.508.548-.314.8-.621 1.564-.919 2.33-.637 1.613-1.282 3.217-1.911 4.83-.1.25-.2.3-.435.177a8 8 0 0 0-.951-.387c-.226-.081-.274-.177-.177-.419q1.258-3.06 2.5-6.12c.119-.306.24-.612.385-.959M12.214 18.535c.194-.516.347-.976.54-1.427.04-.1.218-.169.339-.194.959-.177 1.919-.339 2.87-.5.274-.048.556-.1.83-.129a.38.38 0 0 1 .282.089c.314.379.621.766.959 1.2-1.942.316-3.852.626-5.82.961M9.07 17.495c-.234.532-.427 1.016-.661 1.475a.45.45 0 0 1-.3.153c-.54.089-1.088.161-1.637.226-.073.008-.21-.081-.218-.145a7 7 0 0 1-.161-1.04c-.008-.073.137-.218.234-.234.88-.145 1.773-.282 2.743-.435M7.941 24.558c.089-.806.177-1.6.274-2.459.435.169.855.339 1.33.524-.524.669-1.032 1.306-1.532 1.951a.2.2 0 0 1-.072-.016M11.747 13.2c.129-.323.234-.589.355-.855A.524.524 0 0 1 12.73 12a2.4 2.4 0 0 1 .734.3.406.406 0 0 1 .137.556c-.1.234-.2.484-.314.718-.032.056-.145.137-.194.121-.443-.151-.879-.32-1.346-.495"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "TestFlight",
+                    icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlSpace="preserve"
+                        id="Capa_1"
+                        width="200"
+                        height="200"
+                        fill="#000"
+                        version="1.1"
+                        viewBox="0 0 52 52"
+                    >
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            d="M52 26C52 11.727 40.438.108 26.189.005c-.016 0-.032-.005-.048-.005h-.281c-.017 0-.032.005-.049.005C11.561.108 0 11.727 0 26a25.83 25.83 0 0 0 3.36 12.76c.02.038.031.079.053.117l.141.245c.021.037.05.066.073.102C8.16 46.864 16.49 52 26 52s17.84-5.135 22.373-12.776c.023-.037.053-.066.075-.104l.139-.242c.021-.037.032-.077.052-.114A25.84 25.84 0 0 0 52 26m-2 0c0 3.095-.595 6.051-1.667 8.77a3.76 3.76 0 0 0-1.264-1.066l-16.131-8.317A4.97 4.97 0 0 0 29 22.026l.863-18.123a3.74 3.74 0 0 0-.298-1.636C41.114 3.994 50 13.978 50 26m-3.356 12.22a1.7 1.7 0 0 1-1.016.727 1.71 1.71 0 0 1-1.341-.234l-14.481-9.307 1.046-1.813 15.299 7.888c.434.224.746.595.878 1.043.12.41.071.845-.126 1.243q-.126.229-.259.453m-38.932.492c-.411.265-.889.35-1.342.238a1.7 1.7 0 0 1-1.016-.732q-.133-.225-.261-.453a1.7 1.7 0 0 1-.121-1.24c.132-.451.443-.821.875-1.044l15.299-7.888 1.046 1.813zM23 26c0-1.654 1.346-3 3-3s3 1.346 3 3-1.346 3-3 3-3-1.346-3-3m1.954-5-.819-17.193a1.72 1.72 0 0 1 .465-1.282c.311-.326.74-.507 1.209-.52Q25.904 2.002 26 2q.096.002.19.005a1.7 1.7 0 0 1 1.208.523c.324.34.49.794.467 1.279L27.046 21zM22.432 2.266a3.7 3.7 0 0 0-.295 1.635v.001L23 22.026a4.97 4.97 0 0 0-1.938 3.361L4.931 33.704c-.51.263-.931.632-1.263 1.069A23.9 23.9 0 0 1 2 26C2 13.979 10.885 3.995 22.432 2.266M26 50c-7.578 0-14.342-3.534-18.744-9.036a3.8 3.8 0 0 0 1.537-.568v-.001l15.246-9.797a5 5 0 0 0 3.922-.001l15.246 9.797c.477.307 1 .495 1.539.567C40.344 46.465 33.579 50 26 50"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Instruments",
+                    icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlSpace="preserve"
+                        id="PEN"
+                        fill="#000"
+                        version="1.1"
+                        viewBox="0 0 1800 1800"
+                    >
+                        <g id="SVGRepo_iconCarrier" fill="#333">
+                            <path
+                                d="M1741.402 786.797h-35.999c-32.197-298.013-226.637-548.089-492.951-659.834h305.92v31.245c0 17.376 14.079 31.46 31.461 31.46h125.409c17.381 0 31.459-14.084 31.459-31.46V32.798c0-17.375-14.078-31.46-31.459-31.46h-125.409c-17.382 0-31.461 14.084-31.461 31.46v31.245H994.163V32.798c0-17.375-14.079-31.46-31.46-31.46H837.287c-17.376 0-31.46 14.084-31.46 31.46v31.245H281.618V32.798c0-17.375-14.084-31.46-31.46-31.46H124.751c-17.375 0-31.459 14.084-31.459 31.46v125.41c0 17.376 14.084 31.46 31.459 31.46h125.406c17.375 0 31.46-14.084 31.46-31.46v-31.245H587.55C321.228 238.708 126.792 488.785 94.596 786.797H58.597c-17.376 0-31.46 14.084-31.46 31.46v125.409c0 17.375 14.083 31.459 31.46 31.459h125.418c17.376 0 31.46-14.084 31.46-31.459V818.257c0-17.375-14.083-31.46-31.46-31.46h-26.088c39.887-339.954 308.838-610.875 647.899-653.703v25.114c0 17.376 14.084 31.46 31.46 31.46h125.417c17.381 0 31.46-14.084 31.46-31.46v-25.116c339.064 42.821 608.012 313.747 647.908 653.706h-26.08c-17.38 0-31.46 14.084-31.46 31.46v125.409c0 17.375 14.08 31.459 31.46 31.459h125.411c17.38 0 31.46-14.084 31.46-31.459v-125.41c0-17.375-14.08-31.46-31.46-31.46m-97.62-660.049h-62.49v-62.49h62.49zm-1487.57-62.49h62.485v62.49h-62.485zm-3.656 813.665v34.282H90.057v-54.73c.052-2.589.119-5.174.193-7.758h62.306zM900.005 64.258c10.461 0 20.871.266 31.237.661v61.829h-62.496v-61.83c10.376-.394 20.787-.66 31.259-.66m809.936 793.562v54.385h-62.489v-62.488h62.287c.089 2.698.15 5.399.202 8.103"></path>
+                            <path
+                                d="M928.829 250.905a31.46 31.46 0 0 0-28.833-18.875 31.46 31.46 0 0 0-28.831 18.875l-409.868 939.046a31.47 31.47 0 0 0-.601 23.701l.487 1.291a31.46 31.46 0 0 0 19.421 18.713c98.036 32.9 163.906 124.49 163.906 227.906 0 43.082-11.574 85.383-33.466 122.33a31 31 0 0 0-1.782 3.541 31.28 31.28 0 0 0-5.662 17.973v159.314c0 17.285 13.948 31.338 31.231 31.463l529.877 3.816h.238c17.266 0 31.328-13.939 31.45-31.23.122-17.377-13.859-31.566-31.23-31.689l-498.646-3.59v-79.055h486.778c13.14 0 24.902-8.168 29.484-20.479l8.585-23.059a31.44 31.44 0 0 0-2.423-27.02c-21.884-36.934-33.452-79.23-33.452-122.316 0-103.416 65.86-195.006 163.901-227.906a31.5 31.5 0 0 0 19.452-18.801l.482-1.291a31.5 31.5 0 0 0-.632-23.613zm-28.833 875.661c34.811 0 63.138 28.318 63.138 63.123 0 34.809-28.327 63.125-63.138 63.125-34.809 0-63.126-28.316-63.126-63.125 0-34.804 28.317-63.123 63.126-63.123m192.575 334.997c0 45.088 10.052 89.504 29.241 129.953H678.187c19.198-40.457 29.244-84.869 29.244-129.953 0-119.287-69.455-226.105-175.883-275.271l336.988-772.079v653.407c-54.331 14.008-94.586 63.43-94.586 122.07 0 69.504 56.543 126.045 126.047 126.045 69.51 0 126.058-56.541 126.058-126.045 0-58.646-40.265-108.063-94.601-122.07V414.214l336.994 772.077c-106.425 49.176-175.877 155.984-175.877 275.272"></path>
+                        </g>
+                    </svg>)
+                },
+            ]
+        },
+        {
+            name: "Android Development",
+            technologies: [
+                {
+                    name: "Kotlin", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-10 h-10"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                        data-name="Layer 1"
+                        viewBox="0 0 125 125"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <defs>
+                                <linearGradient
+                                    id="b"
+                                    x1="-21.045"
+                                    x2="95.274"
+                                    y1="114.925"
+                                    y2="-1.395"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop offset="0.108" stopColor="#c757bc"></stop>
+                                    <stop offset="0.173" stopColor="#cd5ca9"></stop>
+                                    <stop offset="0.492" stopColor="#e8744f"></stop>
+                                    <stop offset="0.716" stopColor="#f88316"></stop>
+                                    <stop offset="0.823" stopColor="#ff8900"></stop>
+                                </linearGradient>
+                                <linearGradient
+                                    id="a"
+                                    x1="39.893"
+                                    x2="96.589"
+                                    y1="147.552"
+                                    y2="90.856"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop offset="0.296" stopColor="#00afff"></stop>
+                                    <stop offset="0.694" stopColor="#5282ff"></stop>
+                                    <stop offset="1" stopColor="#945dff"></stop>
+                                </linearGradient>
+                                <linearGradient
+                                    xlinkHref="#a"
+                                    id="c"
+                                    x1="-1.501"
+                                    x2="38.272"
+                                    y1="34.501"
+                                    y2="-5.273"
+                                ></linearGradient>
+                            </defs>
+                            <path
+                                fill="url(#b)"
+                                d="M62.759 0 0 65.999V125l62.669-62.779L125 0z"
+                            ></path>
+                            <path
+                                fill="url(#a)"
+                                d="m0 125 62.669-62.778L125 125z"
+                                data-name="&lt;Path&gt;"
+                            ></path>
+                            <path fill="url(#c)" d="M0 0h62.759L0 65.999z"></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Java", icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#E76F00"
+                                d="M16.05 8.44C22.638 3.327 19.257 0 19.257 0c.503 5.287-5.444 6.536-7.038 10.17-1.088 2.479.745 4.65 3.829 7.385-.273-.606-.694-1.194-1.12-1.79-1.451-2.034-2.964-4.152 1.122-7.324"
+                            ></path>
+                            <path
+                                fill="#E76F00"
+                                d="M17.102 18.677s1.982-1.6.412-3.376c-5.32-6.03 5.82-8.765 5.82-8.765-6.802 3.277-5.787 5.221-4.077 7.584 1.83 2.534-2.155 4.557-2.155 4.557"
+                            ></path>
+                            <path
+                                fill="#5382A1"
+                                d="M22.937 23.446c6.105-3.12 3.282-6.118 1.312-5.714-.483.099-.698.184-.698.184s.18-.276.522-.396c3.898-1.347 6.895 3.975-1.259 6.083 0 0 .095-.083.123-.157M10.233 19.497c-3.82-.502 2.095-1.883 2.095-1.883s-2.297-.152-5.122 1.19c-3.34 1.59 8.262 2.312 14.268.759.624-.42 1.487-.783 1.487-.783s-2.457.431-4.905.634c-2.995.247-6.21.295-7.823.083M11.686 22.476c-2.13-.217-.735-1.232-.735-1.232-5.512 1.799 3.067 3.839 10.769 1.624-.819-.284-1.34-.803-1.34-.803-3.764.713-5.939.69-8.694.41M12.615 25.7c-2.129-.241-.886-.953-.886-.953-5.003 1.375 3.044 4.215 9.414 1.53-1.043-.398-1.79-.859-1.79-.859-2.842.529-4.16.57-6.739.281"
+                            ></path>
+                            <path
+                                fill="#5382A1"
+                                d="M25.939 27.339s.92.745-1.014 1.322c-3.677 1.096-15.304 1.426-18.534.044-1.161-.497 1.016-1.186 1.701-1.33.714-.153 1.123-.125 1.123-.125-1.292-.894-8.347 1.757-3.584 2.516 12.988 2.071 23.677-.933 20.308-2.427"
+                            ></path>
+                            <path
+                                fill="#5382A1"
+                                d="M28 28.968c-.213 2.727-9.212 3.3-15.073 2.931-3.823-.24-4.589-.843-4.6-.852 3.659.593 9.828.701 14.83-.224C27.59 30.002 28 28.968 28 28.968"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Jetpack Compose", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="m30.915 23.03-4.759-7.784.648-1.122-.133-.077c1.072-1.96 1.104-4.514-.021-7.492-2.454.394-4.331 1.259-5.591 2.515a3.8 3.8 0 0 0-.644-.371c.464-1.72.287-3.774-.585-6.082-3.168.509-5.374 1.803-6.533 3.707l-.133-.077-.648 1.122-9.119-.231-2.872 4.975 7.45 3.122-.818 1.417 1.782 1.029c-1.858.759-3.238 1.877-4.107 3.299l6.561 3.789c.797-1.464 1.086-3.215.828-5.192l1.757 1.014 1.909-3.307-1.909 3.307 1.782 1.029c-1.858.759-3.238 1.877-4.107 3.299l6.561 3.789c.797-1.464 1.086-3.215.828-5.192l1.757 1.014.818-1.417 6.429 4.892 2.872-4.975z"></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Material Design", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="0 -26 256 256"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#00B0FF"
+                                d="M0 110.848V0l96 55.424v36.95l-64-36.95v73.899z"
+                            ></path>
+                            <path
+                                fill="#0081CB"
+                                d="M96 55.424 192 0v110.848l-64 36.95-32-18.475 64-36.95V55.424l-64 36.95z"
+                            ></path>
+                            <path fill="#00B0FF" d="M96 129.323v36.949l64 36.95v-36.95z"></path>
+                            <path
+                                fill="#0081CB"
+                                d="m160 203.221 96-55.424V73.9l-32 18.474v36.95l-64 36.949zm64-147.797v-36.95L256 0v36.95z"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: " Android Architecture Components", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        ariaLabelledby="aacTitle"
+                        viewBox="0 0 100 100"
+                    >
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <text
+                            x="50"
+                            y="54"
+                            fill="#fff"
+                            dominantBaseline="central"
+                            fontFamily="Inter, Arial, Helvetica, sans-serif"
+                            fontSize="32"
+                            fontWeight="700"
+                            textAnchor="middle"
+                        >
+                            AAC
+                        </text>
+                    </svg>)
+                },
+                {
+                    name: "Android Studio", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlSpace="preserve"
+                        id="Camada_1"
+                        fill="#000"
+                        version="1.1"
+                        viewBox="0 0 32 32"
+                    >
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fillRule="evenodd"
+                            d="M13.8 4h4.5v2.2h1.2c.6 0 1 .4 1 1v4.6l-.6.8 6.2 10.8.9 3.9c.1.5-.5.9-.9.5l-2.9-2.7-2-3.5c-1.6.9-3.3 1.4-5.2 1.4s-3.6-.5-5.1-1.4l-2 3.5L6 27.8c-.4.4-1.1 0-.9-.5l.9-3.9 2.3-4.1c-1.5-1.7-2.3-4-2.3-6.4 0-.4 0-.8.1-1.1h3c-.1.4-.1.7-.1 1.1 0 1.3.4 2.5 1 3.6l2.3-3.9-.6-.8V7.2c0-.6.4-1 1-1h1.2V4zm.6 11.4-2 3.6c1.1.6 2.3 1 3.6 1s2.6-.4 3.6-1l-2.1-3.6-.8 1c-.4.5-1.2.5-1.6 0zm-.3-3.6c.4.7 1.1 1.1 1.9 1.1s1.6-.4 1.9-1.1c.2-.3.3-.7.3-1.1 0-1.2-1-2.2-2.2-2.2s-2.2 1-2.2 2.2c0 .4.1.8.3 1.1"
+                            clipRule="evenodd"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Gradle", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#006533"
+                                d="M13.5 6.965h7.923l4 6.887h4.557a14.1 14.1 0 0 0-18.956-10.92z"
+                            ></path>
+                            <path
+                                fill="#82b816"
+                                d="m25.628 18-4.209 7.252H10.806L5.5 16.108 9.739 8.8 7.4 4.981A14.03 14.03 0 1 0 30 18z"
+                            ></path>
+                            <path
+                                fill="#006532"
+                                d="M21.061 15.963a5.026 5.026 0 1 1-5.026-5 5.013 5.013 0 0 1 5.026 5"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Firebase", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#ffc24a"
+                                d="m5.8 24.6.17-.237 8.02-15.214.017-.161-3.535-6.64a.656.656 0 0 0-1.227.207Z"
+                            ></path>
+                            <path
+                                fill="#ffa712"
+                                d="m5.9 24.42.128-.25 7.937-15.056-3.526-6.666a.6.6 0 0 0-1.133.206Z"
+                            ></path>
+                            <path
+                                fill="#f4bd62"
+                                d="m16.584 14.01 2.632-2.7-2.633-5.021a.678.678 0 0 0-1.195 0l-1.407 2.682V9.2Z"
+                            ></path>
+                            <path
+                                fill="#ffa50e"
+                                d="m16.537 13.9 2.559-2.62-2.559-4.88a.589.589 0 0 0-1.074-.047l-1.414 2.729-.042.139Z"
+                            ></path>
+                            <path
+                                fill="#f6820c"
+                                d="m5.802 24.601.077-.078.279-.113 10.26-10.222.13-.354-2.559-4.878z"
+                            ></path>
+                            <path
+                                fill="#fde068"
+                                d="m16.912 29.756 9.288-5.179-2.654-16.331a.635.635 0 0 0-1.075-.346L5.8 24.6l9.233 5.155a1.93 1.93 0 0 0 1.878 0"
+                            ></path>
+                            <path
+                                fill="#fcca3f"
+                                d="M26.115 24.534 23.483 8.326a.557.557 0 0 0-.967-.353L5.9 24.569l9.131 5.1a1.91 1.91 0 0 0 1.863 0Z"
+                            ></path>
+                            <path
+                                fill="#eeab37"
+                                d="M16.912 29.6a1.93 1.93 0 0 1-1.878 0l-9.158-5.078-.076.078 9.233 5.155a1.93 1.93 0 0 0 1.878 0l9.289-5.178-.023-.14Z"
+                            ></path>
+                        </g>
+                    </svg>)
+                }
+            ]
+        },
+        {
+            name: "Cross-Platform",
+            technologies: [
+                {
+                    name: "JavaScript",
+                    icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-12 h-12">
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="#FFCA28" d="M2 2h28v28H2z"></path>
+                                <path
+                                    fill="#3E3E3E"
+                                    d="m19 25.288 2.061-1.364c.162.507 1.185 1.713 2.477 1.713 1.293 0 1.893-.706 1.893-1.174 0-1.275-1.32-1.725-1.954-1.94a4 4 0 0 1-.246-.09l-.133-.053c-.705-.269-3.306-1.262-3.306-4.143 0-3.172 3.062-3.537 3.754-3.537.453 0 2.63.056 3.716 2.094l-2 1.396c-.439-.889-1.167-1.182-1.616-1.182-1.108 0-1.338.812-1.338 1.182 0 1.037 1.203 1.502 2.22 1.894.265.103.518.2.734.303 1.107.523 2.738 1.38 2.738 4.076C28 25.813 26.867 28 24.015 28c-3.83 0-4.846-2.3-5.015-2.712M9 25.559l2.149-1.364c.168.508.822 1.443 1.772 1.443.949 0 1.435-.975 1.435-1.443V15h2.642v9.195c.043 1.269-.66 3.805-3.765 3.805C10.38 28 9.193 26.304 9 25.56"
+                                ></path>
+                            </g>
+                        </svg>)
+                },
+                {
+                    name: "TypeScript", icon: (<svg viewBox="0 0 256 256" className="w-8 h-8">
+                        <rect width="256" height="256" rx="24" fill="#3178C6"/>
+                        <text x="128" y="165" textAnchor="middle" fontSize="100" fill="#fff" fontWeight="bold">TS</text>
+                    </svg>)
+                },
+                {
+                    name: "React", icon: (<svg viewBox="0 0 128 128" className="w-14 h-14">
+                        <circle cx="64" cy="64" r="11.4" fill="#61dafb"/>
+                        <g stroke="#61dafb" strokeWidth="6" fill="none">
+                            <ellipse rx="56" ry="22" cx="64" cy="64"/>
+                            <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(60 64 64)"/>
+                            ;
+                            <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(120 64 64)"/>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Redux", icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fill="#764ABC"
+                            d="M21.787 21.556a2.114 2.114 0 0 0 1.909-2.177c-.039-1.126-.993-2.027-2.138-2.027h-.077a2.115 2.115 0 0 0-2.061 2.177c.038.563.267 1.051.61 1.389-1.297 2.515-3.283 4.354-6.26 5.893-2.024 1.05-4.123 1.426-6.223 1.163-1.718-.225-3.054-.976-3.894-2.214-1.222-1.84-1.336-3.829-.305-5.818.725-1.426 1.87-2.477 2.596-3.003a20 20 0 0 1-.497-1.914c-5.535 3.941-4.963 9.27-3.283 11.786 1.26 1.876 3.818 3.04 6.643 3.04.763 0 1.527-.075 2.29-.263 4.887-.938 8.59-3.79 10.69-8.032m6.719-4.654c-2.901-3.34-7.177-5.18-12.064-5.18h-.61a2.1 2.1 0 0 0-1.871-1.126h-.077a2.115 2.115 0 0 0-2.061 2.177c.038 1.126.992 2.027 2.138 2.027h.076a2.15 2.15 0 0 0 1.87-1.276h.688c2.901 0 5.65.825 8.132 2.44 1.908 1.238 3.283 2.852 4.046 4.804.65 1.576.61 3.115-.076 4.429-1.07 1.989-2.863 3.077-5.23 3.077-1.527 0-2.978-.45-3.742-.788a23 23 0 0 1-1.718 1.351c1.642.751 3.322 1.164 4.925 1.164 3.665 0 6.376-1.99 7.406-3.979 1.107-2.177 1.031-5.93-1.832-9.12M9.112 22.194c.039 1.126.993 2.027 2.138 2.027h.077a2.115 2.115 0 0 0 2.061-2.177c-.038-1.126-.993-2.027-2.138-2.027h-.076c-.076 0-.191 0-.267.037-1.566-2.552-2.215-5.33-1.985-8.332.152-2.252.916-4.204 2.252-5.818 1.107-1.388 3.245-2.064 4.696-2.101 4.046-.076 5.764 4.879 5.879 6.868.496.113 1.336.376 1.909.563-.459-6.08-4.276-9.233-7.941-9.233-3.436 0-6.605 2.44-7.865 6.043-1.756 4.804-.61 9.42 1.527 13.061-.19.263-.305.676-.267 1.089"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Dart", icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fill="#000"
+                            d="M8.207.13c.26.075.458.286.517.55l1.199 5.397 5.396 1.2a.741.741 0 0 1 .364 1.247l-7.159 7.159a.74.74 0 0 1-.685.2L1.982 14.58a.74.74 0 0 1-.563-.563L.118 8.16a.74.74 0 0 1 .2-.685L7.475.317A.74.74 0 0 1 8.207.13m.283 6.332-.92-4.141-5.917 5.915.92 4.142zm-4.868 6.964 4.142.92 5.915-5.915-4.141-.92z"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Cupertino widgets",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#40d0fd"
+                                d="m15.383 18.316 3.361-3.274h8.349l-7.396 7.396z"
+                            ></path>
+                            <path
+                                fill="#41d0fd"
+                                d="m4.907 16.125 4.199 4.299L27.093 2.287h-8.349z"
+                                style={{isolation: "isolate"}}
+                            ></path>
+                            <path
+                                fill="#1fbcfd"
+                                d="m11.176 22.479 4.259 4.196 4.262-4.237-4.314-4.122z"
+                            ></path>
+                            <path
+                                fill="#095a9d"
+                                d="m15.435 26.675 4.262-4.237 7.292 7.375h-8.396z"
+                            ></path>
+                            <path fill="#0e5199" d="m15.435 26.675 3.971-1.321-1.338-1.297z"></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Provider", icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fill="#000"
+                            fillRule="evenodd"
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m-.5 1.519a6.5 6.5 0 0 0-2 .48V5.19l2-1.09V1.518zM1.532 7.356A6.5 6.5 0 0 1 4 2.876V6.01zm.05 1.68L4 7.719v5.406a6.5 6.5 0 0 1-2.418-4.087zM7.5 11.423l-2 1.143V6.9l2-1.091zm1.5-.857V4.991L11 3.9v5.522zm2 .585-2 1.143v2.13a6.5 6.5 0 0 0 2-.655zm1.5 1.54v-2.397l1.887-1.079A6.5 6.5 0 0 1 12.5 12.69zm0-4.125V3.31a6.48 6.48 0 0 1 1.976 4.126L12.5 8.565zm-5 4.585-1.697.97a6.5 6.5 0 0 0 1.697.361zM9 3.282V1.576a6.5 6.5 0 0 1 1.961.636z"
+                            clipRule="evenodd"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Fuller SDKs",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#40d0fd"
+                                d="m15.383 18.316 3.361-3.274h8.349l-7.396 7.396z"
+                            ></path>
+                            <path
+                                fill="#41d0fd"
+                                d="m4.907 16.125 4.199 4.299L27.093 2.287h-8.349z"
+                                style={{isolation: "isolate"}}
+                            ></path>
+                            <path
+                                fill="#1fbcfd"
+                                d="m11.176 22.479 4.259 4.196 4.262-4.237-4.314-4.122z"
+                            ></path>
+                            <path
+                                fill="#095a9d"
+                                d="m15.435 26.675 4.262-4.237 7.292 7.375h-8.396z"
+                            ></path>
+                            <path fill="#0e5199" d="m15.435 26.675 3.971-1.321-1.338-1.297z"></path>
+                        </g>
+                    </svg>)
+                },
+            ]
+        },
+        {
+            name: "Backend & Services",
+            technologies: [
+                {
+                    name: "Node.js", icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                        <g id="SVGRepo_iconCarrier" fill="#8CC84B">
+                            <path
+                                d="M17.173 2.299a2.45 2.45 0 0 0-2.346 0L4.152 8.189C3.46 8.553 2.992 9.297 3 10.07v11.864c-.005.787.486 1.538 1.197 1.897 1.022.544 2.015 1.143 3.055 1.65 1.203.59 2.706.721 3.923.105.988-.51 1.427-1.646 1.425-2.689.008-3.915.002-7.83.003-11.746.024-.174-.107-.36-.297-.356-.454-.007-.91-.004-1.364-.001-.172-.017-.34.126-.327.299-.006 3.89.001 7.781-.004 11.672a1.32 1.32 0 0 1-.872 1.237c-1.198.42-4.617-1.8-4.617-1.8a.34.34 0 0 1-.193-.33V10.13a.36.36 0 0 1 .225-.365q5.318-2.93 10.637-5.862a.38.38 0 0 1 .418.001q5.318 2.93 10.638 5.86a.37.37 0 0 1 .224.366q.001 5.87-.001 11.741a.34.34 0 0 1-.19.334c-3.514 1.941-7.067 3.82-10.548 5.818-.152.087-.325.186-.495.09-.915-.507-1.82-1.033-2.732-1.544-.1-.062-.226-.089-.33-.02-.408.216-.793.39-1.263.577-.66.261-.554.368.04.714q1.603.905 3.204 1.81c.703.439 1.646.47 2.372.065q5.337-2.943 10.675-5.886c.708-.361 1.202-1.109 1.197-1.896V10.069c.007-.756-.442-1.487-1.114-1.856-3.57-1.974-7.142-3.942-10.713-5.914"></path>
+                            <path
+                                d="M22.542 11.206c-1.397-.747-3.058-.787-4.61-.69-1.122.112-2.301.421-3.118 1.225-.838.808-1.02 2.113-.622 3.168.285.745 1.003 1.23 1.745 1.486.957.338 1.96.442 2.966.546.916.096 1.833.19 2.714.463.36.12.778.302.889.693.101.464-.01 1.003-.387 1.325-1.195.946-4.521.801-5.702.056-.478-.317-.684-.879-.768-1.414-.009-.167-.143-.32-.324-.307a69 69 0 0 0-1.36 0c-.159-.014-.323.099-.332.26-.093 2.452 2.158 3.52 4.27 3.756 1.208.115 2.441.108 3.63-.15.893-.204 1.789-.579 2.404-1.267.758-.836.907-2.081.567-3.123-.26-.777-1.003-1.276-1.762-1.532-1.033-.354-2.258-.545-3.193-.634-1.36-.13-2.976-.076-3.361-.97-.153-.468-.023-1.049.407-1.337 1.138-.771 3.453-.669 4.632-.092.54.27.854.827.983 1.389.024.165.135.337.326.33.45.008.901.002 1.351.002.155.011.325-.076.355-.234-.02-1.174-.619-2.376-1.7-2.949"></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Python",
+                    icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-12 h-12">
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    fill="url(#paint0_linear_87_8204)"
+                                    fillRule="evenodd"
+                                    d="M13.016 2C10.82 2 9.038 3.725 9.038 5.852v2.667h6.886v.74H5.978C3.781 9.26 2 10.984 2 13.111v5.778c0 2.127 1.781 3.852 3.978 3.852h2.295v-3.26c0-2.127 1.781-3.851 3.978-3.851h7.345c1.859 0 3.366-1.46 3.366-3.26V5.852C22.962 3.725 21.18 2 18.984 2zm-.918 4.74c.76 0 1.377-.596 1.377-1.333 0-.736-.616-1.333-1.377-1.333-.76 0-1.377.597-1.377 1.333 0 .737.617 1.334 1.377 1.334"
+                                    clipRule="evenodd"
+                                ></path>
+                                <path
+                                    fill="url(#paint1_linear_87_8204)"
+                                    fillRule="evenodd"
+                                    d="M18.983 30c2.197 0 3.979-1.724 3.979-3.852v-2.666h-6.886v-.741h9.946c2.197 0 3.978-1.725 3.978-3.852V13.11c0-2.127-1.781-3.852-3.978-3.852h-2.295v3.26c0 2.127-1.782 3.851-3.979 3.851h-7.344c-1.859 0-3.366 1.46-3.366 3.26v6.518c0 2.128 1.781 3.852 3.978 3.852zm.918-4.74c-.76 0-1.377.596-1.377 1.333 0 .736.617 1.333 1.377 1.333.761 0 1.378-.597 1.378-1.333 0-.737-.617-1.334-1.378-1.334"
+                                    clipRule="evenodd"
+                                ></path>
+                                <defs>
+                                    <linearGradient
+                                        id="paint0_linear_87_8204"
+                                        x1="12.481"
+                                        x2="12.481"
+                                        y1="2"
+                                        y2="22.741"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stopColor="#327EBD"></stop>
+                                        <stop offset="1" stopColor="#1565A7"></stop>
+                                    </linearGradient>
+                                    <linearGradient
+                                        id="paint1_linear_87_8204"
+                                        x1="19.519"
+                                        x2="19.519"
+                                        y1="9.259"
+                                        y2="30"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stopColor="#FFDA4B"></stop>
+                                        <stop offset="1" stopColor="#F9C600"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </g>
+                        </svg>)
+                },
+                {
+                    name: "Firebase", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="-47.5 0 351 351"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <defs>
+                                <filter
+                                    id="filter-2"
+                                    width="200%"
+                                    height="200%"
+                                    x="-50%"
+                                    y="-50%"
+                                    filterUnits="objectBoundingBox"
+                                >
+                                    <feGaussianBlur
+                                        in="SourceAlpha"
+                                        result="shadowBlurInner1"
+                                        stdDeviation="17.5"
+                                    ></feGaussianBlur>
+                                    <feOffset
+                                        in="shadowBlurInner1"
+                                        result="shadowOffsetInner1"
+                                    ></feOffset>
+                                    <feComposite
+                                        in="shadowOffsetInner1"
+                                        in2="SourceAlpha"
+                                        k2="-1"
+                                        k3="1"
+                                        operator="arithmetic"
+                                        result="shadowInnerInner1"
+                                    ></feComposite>
+                                    <feColorMatrix
+                                        in="shadowInnerInner1"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                                    ></feColorMatrix>
+                                </filter>
+                                <filter
+                                    id="filter-4"
+                                    width="200%"
+                                    height="200%"
+                                    x="-50%"
+                                    y="-50%"
+                                    filterUnits="objectBoundingBox"
+                                >
+                                    <feGaussianBlur
+                                        in="SourceAlpha"
+                                        result="shadowBlurInner1"
+                                        stdDeviation="3.5"
+                                    ></feGaussianBlur>
+                                    <feOffset
+                                        dx="1"
+                                        dy="-9"
+                                        in="shadowBlurInner1"
+                                        result="shadowOffsetInner1"
+                                    ></feOffset>
+                                    <feComposite
+                                        in="shadowOffsetInner1"
+                                        in2="SourceAlpha"
+                                        k2="-1"
+                                        k3="1"
+                                        operator="arithmetic"
+                                        result="shadowInnerInner1"
+                                    ></feComposite>
+                                    <feColorMatrix
+                                        in="shadowInnerInner1"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"
+                                    ></feColorMatrix>
+                                </filter>
+                                <path
+                                    id="path-1"
+                                    d="m1.253 280.732 1.605-3.131 99.353-188.518-44.15-83.475C54.392-1.283 45.074.474 43.87 8.188z"
+                                ></path>
+                                <path
+                                    id="path-3"
+                                    d="m134.417 148.974 32.039-32.812-32.039-61.007c-3.042-5.791-10.433-6.398-13.443-.59l-17.705 34.109-.53 1.744z"
+                                ></path>
+                            </defs>
+                            <path
+                                fill="#FFC24A"
+                                d="m0 282.998 2.123-2.972L102.527 89.512l.212-2.017L58.48 4.358C54.77-2.606 44.33-.845 43.114 6.951z"
+                            ></path>
+                            <use xlinkHref="#path-1" fill="#FFA712" fillRule="evenodd"></use>
+                            <use xlinkHref="#path-1" filter="url(#filter-2)"></use>
+                            <path
+                                fill="#F4BD62"
+                                d="m135.005 150.38 32.955-33.75-32.965-62.93c-3.129-5.957-11.866-5.975-14.962 0L102.42 87.287v2.86z"
+                            ></path>
+                            <use xlinkHref="#path-3" fill="#FFA50E" fillRule="evenodd"></use>
+                            <use xlinkHref="#path-3" filter="url(#filter-4)"></use>
+                            <path
+                                fill="#F6820C"
+                                d="m0 282.998.962-.968 3.496-1.42 128.477-128 1.628-4.431-32.05-61.074z"
+                            ></path>
+                            <path
+                                fill="#FDE068"
+                                d="m139.121 347.551 116.275-64.847-33.204-204.495c-1.039-6.398-8.888-8.927-13.468-4.34L0 282.998l115.608 64.548a24.13 24.13 0 0 0 23.513.005"
+                            ></path>
+                            <path
+                                fill="#FCCA3F"
+                                d="M254.354 282.16 221.402 79.218c-1.03-6.35-7.558-8.977-12.103-4.424L1.29 282.6l114.339 63.908a23.94 23.94 0 0 0 23.334.006z"
+                            ></path>
+                            <path
+                                fill="#EEAB37"
+                                d="M139.12 345.64a24.13 24.13 0 0 1-23.512-.005L.931 282.015l-.93.983 115.607 64.548a24.13 24.13 0 0 0 23.513.005l116.275-64.847-.285-1.752z"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "AWS Amplify",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="w-8 h-8">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#252F3E"
+                                d="M4.51 7.687q0 .297.058.475.061.175.17.384a.23.23 0 0 1 .037.123q.001.08-.1.16l-.336.224a.26.26 0 0 1-.138.048q-.08-.001-.16-.074a1.7 1.7 0 0 1-.192-.251 4 4 0 0 1-.165-.315q-.622.737-1.564.737-.672 0-1.064-.385-.393-.384-.394-1.025-.001-.682.484-1.1c.325-.278.756-.416 1.304-.416q.27.002.564.042c.197.027.4.07.612.118v-.39q-.001-.608-.25-.854-.254-.248-.868-.246-.279-.001-.574.07a4 4 0 0 0-.575.181 2 2 0 0 1-.186.07.3.3 0 0 1-.085.016q-.112.001-.112-.166v-.262c0-.085.01-.15.037-.186a.4.4 0 0 1 .15-.113q.278-.144.67-.24.39-.103.83-.101.948 0 1.394.432.44.432.442 1.314v1.73h.01zm-2.161.811q.261 0 .548-.096c.191-.064.362-.182.505-.342a.85.85 0 0 0 .181-.341c.032-.129.054-.283.054-.465V7.03a4 4 0 0 0-.49-.09 4 4 0 0 0-.5-.033c-.357 0-.618.07-.793.214q-.262.215-.26.614-.002.374.196.566.192.198.559.197m4.273.577c-.096 0-.16-.016-.202-.054-.043-.032-.08-.106-.112-.208l-1.25-4.127a1 1 0 0 1-.049-.214c0-.085.043-.133.128-.133h.522q.15-.001.207.053c.043.032.075.107.107.208l.894 3.535.83-3.535q.038-.16.1-.208a.37.37 0 0 1 .214-.053h.425c.102 0 .17.016.213.053.043.032.08.107.101.208l.841 3.578.92-3.578a.46.46 0 0 1 .107-.208.35.35 0 0 1 .208-.053h.495c.085 0 .133.043.133.133q-.002.04-.01.086a1 1 0 0 1-.038.133l-1.283 4.127q-.048.16-.111.209a.34.34 0 0 1-.203.053h-.457q-.15.001-.213-.053c-.043-.038-.08-.107-.101-.214L8.213 5.37l-.82 3.439q-.038.159-.1.213c-.043.038-.118.054-.213.054h-.458zm6.838.144a3.5 3.5 0 0 1-.82-.096c-.266-.064-.473-.134-.612-.214-.085-.048-.143-.101-.165-.15a.4.4 0 0 1-.031-.149v-.272q.001-.167.122-.166a.3.3 0 0 1 .096.016c.032.011.08.032.133.054.18.08.378.144.585.187.213.042.42.064.633.064q.505 0 .777-.176a.57.57 0 0 0 .277-.508.52.52 0 0 0-.144-.373q-.144-.152-.537-.278l-.772-.24c-.388-.123-.676-.305-.851-.545a1.27 1.27 0 0 1-.266-.774q0-.336.143-.593c.096-.17.224-.32.384-.438a1.7 1.7 0 0 1 .553-.277c.213-.064.436-.091.67-.091.118 0 .24.005.357.021a3.4 3.4 0 0 1 .649.145q.143.048.224.096a.5.5 0 0 1 .16.133.3.3 0 0 1 .047.176v.251q-.001.17-.122.171a.6.6 0 0 1-.202-.064 2.4 2.4 0 0 0-1.022-.208c-.303 0-.543.048-.708.15q-.249.148-.25.475 0 .225.16.379c.106.101.303.202.585.293l.756.24q.576.184.825.513.246.33.244.748 0 .345-.138.619a1.4 1.4 0 0 1-.388.47q-.247.197-.591.299a2.5 2.5 0 0 1-.761.112"
+                            ></path>
+                            <g fill="#F90" fillRule="evenodd" clipRule="evenodd">
+                                <path
+                                    d="M14.465 11.813c-1.75 1.297-4.294 1.986-6.481 1.986-3.065 0-5.827-1.137-7.913-3.027-.165-.15-.016-.353.18-.235 2.257 1.313 5.04 2.109 7.92 2.109 1.941 0 4.075-.406 6.039-1.239.293-.133.543.192.255.406"></path>
+                                <path
+                                    d="M15.194 10.98c-.223-.287-1.479-.138-2.048-.069-.17.022-.197-.128-.043-.24 1-.705 2.645-.502 2.836-.267.192.24-.053 1.89-.99 2.68-.143.123-.281.06-.218-.1.213-.53.687-1.72.463-2.003z"></path>
+                            </g>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "PostgreSQL", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMinYMin meet"
+                        viewBox="-4 0 264 264"
+                        className="w-12 h-12"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M255.008 158.086c-1.535-4.649-5.556-7.887-10.756-8.664-2.452-.366-5.26-.21-8.583.475-5.792 1.195-10.089 1.65-13.225 1.738 11.837-19.985 21.462-42.775 27.003-64.228 8.96-34.689 4.172-50.492-1.423-57.64C233.217 10.847 211.614.683 185.552.372c-13.903-.17-26.108 2.575-32.475 4.549-5.928-1.046-12.302-1.63-18.99-1.738-12.537-.2-23.614 2.533-33.079 8.15-5.24-1.772-13.65-4.27-23.362-5.864-22.842-3.75-41.252-.828-54.718 8.685C6.622 25.672-.937 45.684.461 73.634c.444 8.874 5.408 35.874 13.224 61.48 4.492 14.718 9.282 26.94 14.237 36.33 7.027 13.315 14.546 21.156 22.987 23.972 4.731 1.576 13.327 2.68 22.368-4.85 1.146 1.388 2.675 2.767 4.704 4.048 2.577 1.625 5.728 2.953 8.875 3.74 11.341 2.835 21.964 2.126 31.027-1.848.056 1.612.099 3.152.135 4.482.06 2.157.12 4.272.199 6.25.537 13.374 1.447 23.773 4.143 31.049.148.4.347 1.01.557 1.657 1.345 4.118 3.594 11.012 9.316 16.411 5.925 5.593 13.092 7.308 19.656 7.308 3.292 0 6.433-.432 9.188-1.022 9.82-2.105 20.973-5.311 29.041-16.799 7.628-10.86 11.336-27.217 12.007-52.99q.13-1.094.244-2.088l.16-1.362 1.797.158.463.031c10.002.456 22.232-1.665 29.743-5.154 5.935-2.754 24.954-12.795 20.476-26.351"></path>
+                            <path
+                                fill="#336791"
+                                d="M237.906 160.722c-29.74 6.135-31.785-3.934-31.785-3.934 31.4-46.593 44.527-105.736 33.2-120.211-30.904-39.485-84.399-20.811-85.292-20.327l-.287.052c-5.876-1.22-12.451-1.946-19.842-2.067-13.456-.22-23.664 3.528-31.41 9.402 0 0-95.43-39.314-90.991 49.444.944 18.882 27.064 142.873 58.218 105.422 11.387-13.695 22.39-25.274 22.39-25.274 5.464 3.63 12.006 5.482 18.864 4.817l.533-.452c-.166 1.7-.09 3.363.213 5.332-8.026 8.967-5.667 10.541-21.711 13.844-16.235 3.346-6.698 9.302-.471 10.86 7.549 1.887 25.013 4.561 36.813-11.958l-.47 1.885c3.144 2.519 5.352 16.383 4.982 28.952-.37 12.568-.617 21.197 1.86 27.937 2.479 6.74 4.948 21.905 26.04 17.386 17.623-3.777 26.756-13.564 28.027-29.89.901-11.606 2.942-9.89 3.07-20.267l1.637-4.912c1.887-15.733.3-20.809 11.157-18.448l2.64.232c7.99.363 18.45-1.286 24.589-4.139 13.218-6.134 21.058-16.377 8.024-13.686z"
+                            ></path>
+                            <path
+                                fill="#FFF"
+                                d="M108.076 81.525c-2.68-.373-5.107-.028-6.335.902-.69.523-.904 1.129-.962 1.546-.154 1.105.62 2.327 1.096 2.957 1.346 1.784 3.312 3.01 5.258 3.28q.423.059.842.058c3.245 0 6.196-2.527 6.456-4.392.325-2.336-3.066-3.893-6.355-4.35m88.784.073c-.256-1.831-3.514-2.353-6.606-1.923-3.088.43-6.082 1.824-5.832 3.659.2 1.427 2.777 3.863 5.827 3.863q.387 0 .78-.054c2.036-.282 3.53-1.575 4.24-2.32 1.08-1.136 1.706-2.402 1.591-3.225"
+                            ></path>
+                            <path
+                                fill="#FFF"
+                                d="M247.802 160.025c-1.134-3.429-4.784-4.532-10.848-3.28-18.005 3.716-24.453 1.142-26.57-.417 13.995-21.32 25.508-47.092 31.719-71.137 2.942-11.39 4.567-21.968 4.7-30.59.147-9.463-1.465-16.417-4.789-20.665-13.402-17.125-33.072-26.311-56.882-26.563-16.369-.184-30.199 4.005-32.88 5.183-5.646-1.404-11.801-2.266-18.502-2.376-12.288-.199-22.91 2.743-31.704 8.74-3.82-1.422-13.692-4.811-25.765-6.756-20.872-3.36-37.458-.814-49.294 7.571-14.123 10.006-20.643 27.892-19.38 53.16.425 8.501 5.269 34.653 12.913 59.698 10.062 32.964 21 51.625 32.508 55.464 1.347.449 2.9.763 4.613.763 4.198 0 9.345-1.892 14.7-8.33a530 530 0 0 1 20.261-22.926c4.524 2.428 9.494 3.784 14.577 3.92q.016.2.035.398a118 118 0 0 0-2.57 3.175c-3.522 4.471-4.255 5.402-15.592 7.736-3.225.666-11.79 2.431-11.916 8.435-.136 6.56 10.125 9.315 11.294 9.607 4.074 1.02 7.999 1.523 11.742 1.523 9.103 0 17.114-2.992 23.516-8.781-.197 23.386.778 46.43 3.586 53.451 2.3 5.748 7.918 19.795 25.664 19.794 2.604 0 5.47-.303 8.623-.979 18.521-3.97 26.564-12.156 29.675-30.203 1.665-9.645 4.522-32.676 5.866-45.03 2.836.885 6.487 1.29 10.434 1.289 8.232 0 17.731-1.749 23.688-4.514 6.692-3.108 18.768-10.734 16.578-17.36m-44.106-83.48c-.061 3.647-.563 6.958-1.095 10.414-.573 3.717-1.165 7.56-1.314 12.225-.147 4.54.42 9.26.968 13.825 1.108 9.22 2.245 18.712-2.156 28.078a37 37 0 0 1-1.95-4.009c-.547-1.326-1.735-3.456-3.38-6.404-6.399-11.476-21.384-38.35-13.713-49.316 2.285-3.264 8.084-6.62 22.64-4.813m-17.644-61.787c21.334.471 38.21 8.452 50.158 23.72 9.164 11.711-.927 64.998-30.14 110.969a171 171 0 0 0-.886-1.117l-.37-.462c7.549-12.467 6.073-24.802 4.759-35.738-.54-4.488-1.05-8.727-.92-12.709.134-4.22.692-7.84 1.232-11.34.663-4.313 1.338-8.776 1.152-14.037.139-.552.195-1.204.122-1.978-.475-5.045-6.235-20.144-17.975-33.81-6.422-7.475-15.787-15.84-28.574-21.482 5.5-1.14 13.021-2.203 21.442-2.016M66.674 175.778c-5.9 7.094-9.974 5.734-11.314 5.288-8.73-2.912-18.86-21.364-27.791-50.624-7.728-25.318-12.244-50.777-12.602-57.916-1.128-22.578 4.345-38.313 16.268-46.769 19.404-13.76 51.306-5.524 64.125-1.347-.184.182-.376.352-.558.537-21.036 21.244-20.537 57.54-20.485 59.759-.002.856.07 2.068.168 3.735.362 6.105 1.036 17.467-.764 30.334-1.672 11.957 2.014 23.66 10.111 32.109a36 36 0 0 0 2.617 2.468c-3.604 3.86-11.437 12.396-19.775 22.426m22.479-29.993c-6.526-6.81-9.49-16.282-8.133-25.99 1.9-13.592 1.199-25.43.822-31.79-.053-.89-.1-1.67-.127-2.285 3.073-2.725 17.314-10.355 27.47-8.028 4.634 1.061 7.458 4.217 8.632 9.645 6.076 28.103.804 39.816-3.432 49.229-.873 1.939-1.698 3.772-2.402 5.668l-.546 1.466c-1.382 3.706-2.668 7.152-3.465 10.424-6.938-.02-13.687-2.984-18.819-8.34zm1.065 37.9c-2.026-.506-3.848-1.385-4.917-2.114.893-.42 2.482-.992 5.238-1.56 13.337-2.745 15.397-4.683 19.895-10.394 1.031-1.31 2.2-2.794 3.819-4.602l.002-.002c2.411-2.7 3.514-2.242 5.514-1.412 1.621.67 3.2 2.702 3.84 4.938.303 1.056.643 3.06-.47 4.62-9.396 13.156-23.088 12.987-32.921 10.526m69.799 64.952c-16.316 3.496-22.093-4.829-25.9-14.346-2.457-6.144-3.665-33.85-2.808-64.447.011-.407-.047-.8-.159-1.17a15.4 15.4 0 0 0-.456-2.162c-1.274-4.452-4.379-8.176-8.104-9.72-1.48-.613-4.196-1.738-7.46-.903.696-2.868 1.903-6.107 3.212-9.614l.549-1.475c.618-1.663 1.394-3.386 2.214-5.21 4.433-9.848 10.504-23.337 3.915-53.81-2.468-11.414-10.71-16.988-23.204-15.693-7.49.775-14.343 3.797-17.761 5.53-.735.372-1.407.732-2.035 1.082.954-11.5 4.558-32.992 18.04-46.59 8.489-8.56 19.794-12.788 33.568-12.56 27.14.444 44.544 14.372 54.366 25.979 8.464 10.001 13.047 20.076 14.876 25.51-13.755-1.399-23.11 1.316-27.852 8.096-10.317 14.748 5.644 43.372 13.315 57.129 1.407 2.521 2.621 4.7 3.003 5.626 2.498 6.054 5.732 10.096 8.093 13.046.724.904 1.426 1.781 1.96 2.547-4.166 1.201-11.649 3.976-10.967 17.847-.55 6.96-4.461 39.546-6.448 51.059-2.623 15.21-8.22 20.875-23.957 24.25zm68.104-77.936c-4.26 1.977-11.389 3.46-18.161 3.779-7.48.35-11.288-.838-12.184-1.569-.42-8.644 2.797-9.547 6.202-10.503.535-.15 1.057-.297 1.561-.473q.469.383 1.032.756c6.012 3.968 16.735 4.396 31.874 1.271l.166-.033c-2.042 1.909-5.536 4.471-10.49 6.772"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "MySQL", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="-18.458 -22.75 191.151 191.151"
+                        className="w-20 h-20"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill="none" d="M-18.458 6.58h191.151v132.49H-18.458z"></path>
+                            <path
+                                fill="#5d87a1"
+                                d="M40.054 113.583h-5.175q-.275-13.101-1.511-24.642h-.046l-7.879 24.642h-3.94l-7.832-24.642h-.045q-.871 11.082-1.099 24.642H7.81q.457-16.49 2.289-30.919h6.414l7.465 22.719h.046l7.511-22.719h6.137q2.016 16.903 2.382 30.919m22.443-22.812q-3.161 17.15-8.337 24.928-4.03 5.989-8.84 5.99-1.284-.001-3.16-.77v-2.757c.611.088 1.328.138 2.152.138q2.245 0 3.62-1.238 1.647-1.51 1.647-3.388 0-1.285-1.282-5.268L42.618 90.77h5.084l4.076 13.19q1.374 4.492 1.145 6.277 3.343-8.93 4.673-19.468h4.901z"
+                            ></path>
+                            <path
+                                fill="#f8981d"
+                                d="M131.382 113.583h-14.7V82.664h4.945v27.113h9.755zm-18.548.747-5.684-2.805c.504-.414.986-.862 1.42-1.381q3.622-4.256 3.621-12.594 0-15.345-12.045-15.346c-3.938 0-7.01 1.298-9.207 3.895q-3.62 4.259-3.619 12.551c0 5.435 1.068 9.422 3.205 11.951q2.932 3.437 8.843 3.438 2.205 0 4.048-.543l7.4 4.308zm-18.413-6.934q-1.878-3.02-1.878-9.707c0-7.785 2.365-11.682 7.1-11.682q3.71.001 5.449 2.792 1.877 3.025 1.879 9.619 0 11.774-7.099 11.774c-2.476.001-4.29-.928-5.451-2.796m-9.256-2.383q0 3.932-2.884 6.458-2.887 2.518-7.737 2.519c-3.024 0-5.956-.966-8.794-2.888l1.329-2.655q3.662 1.833 6.638 1.831 2.793-.002 4.375-1.232c1.055-.822 1.684-1.975 1.684-3.433 0-1.837-1.281-3.407-3.631-4.722-2.167-1.19-6.501-3.678-6.501-3.678-2.349-1.712-3.525-3.55-3.525-6.578q0-3.76 2.632-6.068 2.635-2.316 6.803-2.315c2.87 0 5.479.769 7.829 2.291l-1.192 2.656q-3.015-1.281-5.951-1.281c-1.585 0-2.809.381-3.66 1.146-.858.762-1.387 1.737-1.387 2.933 0 1.828 1.308 3.418 3.722 4.759 2.196 1.192 6.638 3.723 6.638 3.723 2.409 1.709 3.612 3.53 3.612 6.534"
+                            ></path>
+                            <path
+                                fill="#5d87a1"
+                                d="M137.59 72.308c-2.99-.076-5.305.225-7.248 1.047-.561.224-1.453.224-1.531.933.303.3.338.784.601 1.198.448.747 1.229 1.752 1.942 2.276.783.6 1.569 1.194 2.393 1.717 1.453.899 3.1 1.422 4.516 2.318.825.521 1.645 1.195 2.471 1.756.406.299.666.784 1.193.971v-.114c-.264-.336-.339-.822-.598-1.196l-1.122-1.082c-1.084-1.456-2.431-2.727-3.884-3.771-1.196-.824-3.812-1.944-4.297-3.322l-.076-.076c.822-.077 1.797-.375 2.578-.604 1.271-.335 2.43-.259 3.734-.594.6-.15 1.195-.338 1.797-.523v-.337c-.676-.673-1.158-1.567-1.869-2.203-1.902-1.643-3.998-3.25-6.164-4.595-1.16-.749-2.652-1.231-3.887-1.868-.445-.225-1.195-.336-1.457-.71-.67-.822-1.047-1.904-1.533-2.877-1.08-2.053-2.129-4.331-3.061-6.502-.674-1.456-1.084-2.91-1.906-4.257-3.85-6.35-8.031-10.196-14.457-13.971-1.381-.786-3.024-1.121-4.779-1.533l-2.803-.148c-.598-.262-1.197-.973-1.719-1.309-2.132-1.344-7.621-4.257-9.189-.411-1.01 2.431 1.494 4.821 2.354 6.054.635.856 1.458 1.83 1.902 2.802.263.635.337 1.309.6 1.98.598 1.644 1.157 3.473 1.943 5.007.41.782.857 1.604 1.381 2.312.3.414.822.597.936 1.272-.521.744-.562 1.867-.861 2.801-1.344 4.221-.819 9.45 1.086 12.552.596.934 2.018 2.99 3.92 2.202 1.684-.672 1.311-2.801 1.795-4.668.111-.451.038-.747.262-1.043v.073c.521 1.045 1.047 2.052 1.53 3.1 1.159 1.829 3.177 3.735 4.858 5.002.895.676 1.604 1.832 2.725 2.245V74.1h-.074c-.227-.335-.559-.485-.857-.745-.674-.673-1.42-1.495-1.943-2.241-1.566-2.093-2.952-4.41-4.182-6.801-.602-1.16-1.121-2.428-1.606-3.586-.226-.447-.226-1.121-.601-1.346-.562.821-1.381 1.532-1.791 2.538-.711 1.609-.785 3.588-1.049 5.646l-.147.072c-1.19-.299-1.604-1.53-2.056-2.575-1.119-2.654-1.307-6.914-.336-9.976.26-.783 1.385-3.249.936-3.995-.225-.715-.973-1.122-1.383-1.685-.482-.708-1.01-1.604-1.346-2.39-.896-2.091-1.347-4.408-2.312-6.498-.451-.974-1.234-1.982-1.868-2.879-.712-1.008-1.495-1.718-2.058-2.913-.186-.411-.447-1.083-.148-1.53.073-.3.225-.412.523-.487.484-.409 1.867.111 2.352.336 1.385.56 2.543 1.083 3.699 1.867.523.375 1.084 1.085 1.755 1.272h.786c1.193.26 2.538.072 3.661.41 1.979.636 3.772 1.569 5.38 2.576 4.893 3.103 8.928 7.512 11.652 12.778.447.858.637 1.644 1.045 2.539.787 1.832 1.76 3.7 2.541 5.493.785 1.755 1.533 3.547 2.654 5.005.559.784 2.805 1.195 3.812 1.606.745.335 1.905.633 2.577 1.044 1.271.783 2.537 1.682 3.732 2.543.595.448 2.465 1.382 2.576 2.13M99.484 39.844a5.8 5.8 0 0 0-1.529.188v.075h.072c.301.597.824 1.011 1.197 1.532.301.599.562 1.193.857 1.791l.072-.074c.527-.373.789-.971.789-1.868-.227-.264-.262-.522-.451-.784-.22-.374-.705-.56-1.007-.86"
+                            ></path>
+                            <path
+                                fill="#f8981d"
+                                d="M141.148 113.578h.774v-3.788h-1.161l-.947 2.585-1.029-2.585h-1.118v3.788h.731v-2.882h.041l1.078 2.882h.557l1.074-2.882zm-6.235 0h.819v-3.146h1.072v-.643h-3.008v.643h1.115z"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "MongoDB",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="w-12 h-12">
+                        <g id="SVGRepo_iconCarrier">
+                            <circle cx="512" cy="512" r="512" fill="#13aa52"></circle>
+                            <path
+                                fill="#fff"
+                                d="M648.86 449.44c-32.34-142.73-108.77-189.66-117-207.59-9-12.65-18.12-35.15-18.12-35.15-.15-.38-.39-1.05-.67-1.7-.93 12.65-1.41 17.53-13.37 30.29-18.52 14.48-113.54 94.21-121.27 256.37-7.21 151.24 109.25 241.36 125 252.85l1.79 1.27v-.11c.1.76 5 36 8.44 73.34H526a727 727 0 0 1 13-78.53l1-.65a204.5 204.5 0 0 0 20.11-16.45l.72-.65c33.48-30.93 93.67-102.47 93.08-216.53a347 347 0 0 0-5.05-56.76M512.35 659.12s0-212.12 7-212.08c5.46 0 12.53 273.61 12.53 273.61-9.72-1.17-19.53-45.03-19.53-61.53"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "WebSocket", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="0 -31.5 256 256"
+                    >
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fill="#231F20"
+                            d="M192.44 144.645h31.78V68.339l-35.805-35.804-22.472 22.472 26.497 26.497zm31.864 15.931H113.452L86.954 134.08l11.237-11.236 21.885 21.885h45.028l-44.357-44.441 11.32-11.32 44.357 44.358V88.296l-21.801-21.801 11.152-11.153L110.685 0H0l31.696 31.696v.084h65.74l23.227 23.227-33.96 33.96L63.476 65.74V47.712h-31.78v31.193l55.007 55.007L64.314 156.3l35.805 35.805H256z"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "GraphQL", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#e10098"
+                                d="m4.782 22.747 11.45-19.833 1.028.593L5.81 23.34z"
+                            ></path>
+                            <path fill="#e10098" d="M4.545 21.162h22.902v1.187H4.545z"></path>
+                            <path
+                                fill="#e10098"
+                                d="m4.998 21.829.594-1.028 11.455 6.613-.594 1.028zM14.95 4.591l.594-1.028 11.455 6.614-.594 1.028z"
+                            ></path>
+                            <path
+                                fill="#e10098"
+                                d="M5.001 10.174 16.456 3.56l.594 1.028-11.455 6.614z"
+                            ></path>
+                            <path
+                                fill="#e10098"
+                                d="m14.743 3.508 1.028-.594 11.45 19.833-1.027.593zM5.454 9.386h1.187v13.228H5.454z"
+                            ></path>
+                            <path fill="#e10098" d="M25.36 9.386h1.187v13.228H25.36z"></path>
+                            <path
+                                fill="#e10098"
+                                d="m15.733 27.042 9.963-5.752.519.898-9.963 5.752z"
+                            ></path>
+                            <path
+                                fill="#e10098"
+                                d="M28.12 23a2.5 2.5 0 1 1-.915-3.411A2.5 2.5 0 0 1 28.12 23M8.2 11.5a2.5 2.5 0 1 1-.915-3.411A2.5 2.5 0 0 1 8.2 11.5M3.88 23a2.5 2.5 0 1 1 3.411.915A2.5 2.5 0 0 1 3.88 23M23.8 11.5a2.5 2.5 0 1 1 3.411.915A2.5 2.5 0 0 1 23.8 11.5M16 30a2.5 2.5 0 1 1 2.5-2.5A2.493 2.493 0 0 1 16 30M16 6.991a2.5 2.5 0 1 1 2.5-2.5 2.493 2.493 0 0 1-2.5 2.5"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "REST APIs", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill="none" d="M0 0h20v20H0z"></path>
+                            <path
+                                d="M16 13c-1.3 0-2.4.8-2.8 2H9c0-.7-.2-1.3-.5-1.8l7.1-7.3c.3 0 .6.1.9.1C17.9 6 19 4.9 19 3.5S17.9 1 16.5 1 14 2.1 14 3.5c0 .3.1.7.2 1l-7 7.2c-.6-.5-1.4-.7-2.2-.7V6.8C6.2 6.4 7 5.3 7 4c0-1.7-1.3-3-3-3S1 2.3 1 4c0 1.3.8 2.4 2 2.8v4.7c-1.2.7-2 2-2 3.4 0 2.2 1.8 4 4 4 1.5 0 2.8-.8 3.4-2h4.7c.4 1.1 1.5 2 2.8 2 1.6 0 3-1.3 3-3C19 14.3 17.6 13 16 13"></path>
+                        </g>
+                    </svg>)
+                },
+            ]
+        },
+        {
+            name: "Testing & CI/CD",
+            technologies: [
+                {
+                    name: "Jest", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="-13.5 0 283 283"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#99425B"
+                                d="M239.553 138.96c0-14.508-11.762-26.27-26.27-26.27q-1.4.001-2.762.146l36.082-106.42H93.267l36.032 106.327a26 26 0 0 0-1.597-.052c-14.508 0-26.27 11.76-26.27 26.27 0 11.727 7.686 21.656 18.293 25.034-5.602 9.704-12.652 18.445-20.656 25.997-10.884 10.267-23.34 18.053-36.812 22.85-16.04-8.24-23.614-26.565-16.78-42.632.772-1.815 1.56-3.654 2.313-5.485 11.62-2.712 20.28-13.129 20.28-25.576 0-14.509-11.762-26.27-26.271-26.27s-26.27 11.761-26.27 26.27c0 8.897 4.426 16.756 11.193 21.508-6.502 14.804-16.06 30.298-19.038 48.255-3.569 21.52-.012 44.364 18.601 57.265 43.348 30.044 90.402-18.625 140.014-30.86 17.98-4.433 37.717-3.719 53.558-12.893 11.896-6.89 19.739-18.309 21.964-31.128 2.2-12.664-1.006-25.273-8.378-35.497a26.16 26.16 0 0 0 6.11-16.839"
+                            ></path>
+                            <path
+                                fill="#FFF"
+                                d="M235.5 190.198c-1.932 11.13-8.806 20.851-18.858 26.674-9.371 5.427-20.6 7.047-32.49 8.761-6.369.918-12.955 1.869-19.389 3.455-17.012 4.195-33.49 12.38-49.424 20.295-31.89 15.84-59.43 29.518-85.398 11.52-19.022-13.183-18.144-37.575-15.928-50.941 2.054-12.384 7.607-23.789 12.976-34.818a797 797 0 0 0 2.722-5.634 32.5 32.5 0 0 0 8.443 2.118c-5.466 18.039 3.13 37.653 21.171 46.921l2.47 1.269 2.614-.931c14.263-5.08 27.406-13.23 39.063-24.229 7.535-7.109 14.014-14.974 19.339-23.378a33 33 0 0 0 4.891.367c16.559 0 30.271-12.379 32.393-28.367 6.778-.248 13.977-.25 20.794-.002 2.12 15.99 15.834 28.37 32.393 28.37 6.924 0 13.346-2.17 18.637-5.856 3.673 7.519 5.044 15.979 3.581 24.406M41.8 119.295c10.948 0 19.854 8.907 19.854 19.855 0 3.932-1.154 7.599-3.135 10.687-3.3 5.147-8.91 8.675-15.355 9.115-.451.03-.906.052-1.364.052-2.44 0-4.777-.445-6.938-1.253a19.97 19.97 0 0 1-10.305-8.777 19.7 19.7 0 0 1-2.612-9.824c0-10.948 8.907-19.855 19.855-19.855m66.049 19.666c0-9.947 7.353-18.206 16.907-19.634q1.444-.219 2.947-.22c6.365 0 12.032 3.015 15.666 7.687a20 20 0 0 1 2.318 3.765 19.7 19.7 0 0 1 1.87 8.402c0 1.587-.192 3.13-.545 4.61-1.935 8.1-8.842 14.292-17.306 15.144q-.987.1-2.003.1a19.73 19.73 0 0 1-10.76-3.181c-5.466-3.541-9.094-9.69-9.094-16.673m82.865-23.61a32.7 32.7 0 0 0-8.991 15.117 305 305 0 0 0-22.458 0c-1.68-6.232-5.162-11.73-9.847-15.906l20.545-41.542zM102.216 12.834h135.437l-31.989 94.345a32.5 32.5 0 0 0-4.051 1.255l-31.6-64.463-31.69 64.078a32.5 32.5 0 0 0-4.226-1.139zm130.92 126.128c0 1.99-.297 3.912-.844 5.727a19.93 19.93 0 0 1-7.653 10.545 19.74 19.74 0 0 1-11.357 3.582c-9.167 0-16.9-6.247-19.174-14.707a19.8 19.8 0 0 1-.68-5.147c0-2.714.548-5.302 1.538-7.66a20 20 0 0 1 1.878-3.442c3.573-5.274 9.602-8.752 16.438-8.752q.94.001 1.858.09c10.08.939 17.997 9.442 17.997 19.764m12.833 0c0-15.958-11.498-29.273-26.642-32.117L255.553 0H84.318L120.6 107.061c-14.618 3.253-25.583 16.316-25.583 31.9 0 11.702 6.184 21.98 15.452 27.756-4.458 6.642-9.744 12.892-15.802 18.608-9.608 9.063-20.311 15.937-31.85 20.46-11.623-7.301-16.536-21.07-11.434-33.064l.4-.94.75-1.764c12.766-4.453 21.953-16.603 21.953-30.867 0-18.024-14.663-32.687-32.686-32.687-18.024 0-32.687 14.663-32.687 32.687 0 9.097 3.74 17.335 9.758 23.267a553 553 0 0 1-3.418 7.11c-5.503 11.301-11.739 24.11-14.098 38.335-4.684 28.25 2.872 50.833 21.277 63.588 11.168 7.74 22.51 10.784 33.923 10.784 21.49 0 43.23-10.797 64.493-21.359 15.313-7.605 31.148-15.47 46.789-19.328 5.82-1.435 11.808-2.299 18.148-3.213 12.573-1.814 25.573-3.689 37.089-10.358 13.349-7.732 22.486-20.702 25.07-35.582 2.218-12.775-.451-25.57-6.961-36.422a32.5 32.5 0 0 0 4.787-17.011"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Detox", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlSpace="preserve"
+                        id="designs"
+                        fill="#000"
+                        version="1.1"
+                        viewBox="0 0 32 32"
+                    >
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fill="#111918"
+                            d="M16.531 29a2.1 2.1 0 0 1-.587-.126 2 2 0 0 1-.465-.218c-.378-.26-.629-.524-.766-.806a4.7 4.7 0 0 1-.315-.87 6 6 0 0 0-.177-.58 2 2 0 0 0-.12-.219l-.094-.093a3 3 0 0 0-.294-.159 6 6 0 0 0-1.077-.291c-.197-.021-.391-.033-.585-.047a17 17 0 0 1-.547-.043c-.296-.028-.588-.057-.855-.144q-.252-.083-.5-.173c-.22-.079-.39-.133-.56-.188a7.5 7.5 0 0 1-.967-.358c-.383-.182-.77-.372-1.141-.574-.475-.257-.892-.57-1.273-.87a5 5 0 0 1-1.264-1.534c-.524-.975-.878-1.792-1.114-2.572-.148-.491-.277-.936-.355-1.406a22 22 0 0 1-.205-1.538c-.077-.836-.075-1.734.008-2.825.092-1.222.304-2.447.509-3.631.111-.641.222-1.282.316-1.925l.068-.627c.027-.233.078-.424.246-.592a.83.83 0 0 1 .589-.244c.221-.098.362-.147.503-.147.212 0 .42.087.572.238.161.161.209.34.236.575l.126 1.025.083-.116c.209-.462.424-.854.656-1.197a16 16 0 0 1 1.713-2.141 6.2 6.2 0 0 1 1.128-.909c.48-.305.957-.609 1.489-.672h.016c.378 0 .67.163.812.404.128.22.159.499.091.828l.26-.021c.1-.041.199-.083.302-.117a7.4 7.4 0 0 1 1.195-.267 16 16 0 0 1 2.382-.202q.19 0 .377.007c.427.016.85.062 1.276.112.537.066.974.157 1.372.286.562.181.982.342 1.364.523l.063.029.101-.022.026-.205c.027-.195.218-.402.392-.504a.93.93 0 0 1 .448-.122q.113 0 .209.034c.183.066.261.115.414.236q.066.048.121.102l.13.123q.178.158.365.311l.099.081q.291.238.578.481c.476.406.916.896 1.384 1.541.334.463.681.962.921 1.512.145.337.281.676.4 1.026l.021.061.065-.005c.097-.063.163-.106.235-.139.187-.085.308-.126.527-.142h.03c.146 0 .243.018.334.037.435.092.759.578.821.994.064.453.1.91.12 1.366.038.822.033 1.673-.014 2.603l-.007.128c-.021.402-.042.805-.087 1.205a34 34 0 0 1-.216 1.521c-.077.486-.148.91-.259 1.327-.123.459-.271.912-.433 1.361-.31.848-.716 1.706-1.24 2.623-.242.422-.485.843-.757 1.247-.386.57-.925 1.28-1.675 1.71a7 7 0 0 1-1.4.604c-.456.144-.927.229-1.37.303-.07.011-.135.011-.201.012a7 7 0 0 1-1.031.236 10 10 0 0 1-.866.065q-.226.01-.454.024c-.068.141-.086.244-.106.347-.041.223-.081.446-.159.658-.135.38-.291.777-.569 1.084a1.73 1.73 0 0 1-1.287.592zM5.369 10.085c-.082.454-.163.908-.231 1.365a29 29 0 0 0-.235 2.587c-.03.766.004 1.54.104 2.366.079.509.168 1.084.33 1.619.149.491.31.974.501 1.45.283.631.604 1.294 1.032 1.883.224.258.471.467.683.639.287.204.597.414.94.58l.951.464c.196.071.39.134.583.197q.242.077.482.161c.299.103.638.22.992.283q.262.024.519.043c.216.017.432.033.648.057.552.06 1.04.169 1.492.331.273.098.588.224.859.418q.446.318.654.691c.101.176.182.358.255.546.083.214.142.435.2.656.046.175.092.35.151.522.023.045.044.081.067.117l.169.125.037.01.079-.014a2 2 0 0 0 .093-.176c.084-.238.148-.497.201-.818.089-.532.165-.981.526-1.26.213-.166.401-.284.629-.317a6 6 0 0 1 .88-.077c.294-.003.588-.01.882-.038.092-.015.179-.039.267-.063l.159-.041c-.122-.332-.254-.604-.362-.882-.151-.393-.242-.811-.323-1.18-.164-.758-.333-1.541-.611-2.276a3 3 0 0 0-.147-.279 2 2 0 0 0-.179-.176 4 4 0 0 0-.26-.16 3 3 0 0 0-.327-.086 6 6 0 0 0-.324-.008c-.259 0-.517.012-.775.024q-.306.015-.614.023l-.112.001c-.863 0-1.592-.179-2.165-.532-.307-.189-.635-.521-.878-.888-.22-.339-.355-.642-.415-.924a9 9 0 0 1-.077-.446c-.05-.347-.088-.694-.127-1.042l-.05-.441a1 1 0 0 1-.021-.17 6 6 0 0 0-.289-1.108 4 4 0 0 0-.282-.497 2 2 0 0 0-.131-.136 3.3 3.3 0 0 0-.466-.265 7.5 7.5 0 0 0-1.504-.398l-.286-.042c-.431-.062-.878-.126-1.287-.29-.925-.371-1.962-.843-2.572-1.758-.078-.117-.145-.242-.212-.367l-.068-.128zm14.655 4.831a2 2 0 0 0-.172.046 2 2 0 0 0-.259.262 4 4 0 0 0-.325.559 10.3 10.3 0 0 0-.48 1.825c.345.157.613.286.852.451.17.118.36.26.489.42.16.193.31.376.4.586l.063.144q.059.132.111.263c.248.652.409 1.342.521 1.871l.09.439q.056.291.122.579c.066.284.152.557.257.828.07.147.146.283.234.416.114.127.167.211.218.324l.211-.015c.123-.033.245-.067.366-.112.226-.106.439-.223.64-.364.23-.198.433-.402.624-.629a16.7 16.7 0 0 0 1.779-3.107c.298-.735.521-1.404.679-2.045.145-.583.231-1.19.315-1.776l.04-.279c.106-.871.15-1.73.193-2.682.025-.573.042-1.148.025-1.721-.627.494-1.099 1.1-1.557 1.686q-.269.348-.545.689l-.081.1a10 10 0 0 1-.553.641 3.4 3.4 0 0 1-1.369.878 3.5 3.5 0 0 1-1.11.201q-.415 0-.78-.137l-.254-.099a4.5 4.5 0 0 0-.712-.24h-.032zm-9.646-9.595c-.439.371-.86.818-1.328 1.408-.242.336-.454.63-.633.946-.172.3-.321.606-.462.923-.147.371-.288.739-.418 1.115a1 1 0 0 1-.126.231c.36.307.735.487 1.056.632.373.135.692.222 1.007.275l.175.02c.284.033.569.066.851.115.327.059.645.139.97.244.42.135.858.289 1.205.552l.093.07c.126.094.257.191.355.312.119.146.238.292.336.455.075.122.149.245.21.376.173.355.302.708.383 1.05q.06.252.106.507a3 3 0 0 1 .046.338l.11.935c.046.322.1.663.209.986a3 3 0 0 0 .172.294c.095.11.19.207.293.299q.069.042.129.074c.181.065.359.108.542.145q.181.014.352.014c.3 0 .599-.026.899-.053l.103-.009c.092-.332.151-.62.221-.905.079-.334.172-.67.28-.998q-.775-.753-.913-1.617c-.058-.362-.036-.718-.015-1.062.026-.412.056-.879.02-1.338a4 4 0 0 0-.138-.592 2 2 0 0 0-.097-.169 3 3 0 0 0-.221-.216 4 4 0 0 0-.595-.342 4.7 4.7 0 0 0-.707-.228 11 11 0 0 0-.802-.137l-.133-.016c-.24-.028-.484-.055-.713-.121a4.6 4.6 0 0 1-1.488-.711c-.399-.291-.835-.657-1.055-1.173-.131-.311-.257-.653-.288-1.053a3 3 0 0 1 .032-.609c.04-.301.082-.603.145-.901l.027-.126-.085-.018zm7.977 5.87c.04.248.085.574.085.901-.001.252-.021.503-.041.755a8 8 0 0 0-.039.893l.048.183.073-.016c.194-.203.363-.367.552-.448l.126-.057c.12-.055.242-.111.368-.134.197-.035.386-.063.578-.063q.214 0 .407.05c.283.073.558.191.824.304.146.055.28.1.421.136l.147.005.104-.002q.3-.065.579-.171.16-.081.303-.179c.312-.267.581-.576.826-.871q.336-.401.66-.817c.274-.352.547-.704.84-1.042-.07-.264-.13-.452-.191-.638-.096-.3-.193-.6-.304-.897a7.5 7.5 0 0 0-.503-.961 15 15 0 0 0-.633-.927 8 8 0 0 0-.629-.674c-.167.546-.295 1.086-.467 1.635-.225.712-.586 1.36-1.018 1.823-.529.567-1.272.952-2.088 1.084a6 6 0 0 1-.92.068h-.06zm-1.97-5.971c-.661.012-1.246.05-1.788.114a6.4 6.4 0 0 0-.853.174c-.306.091-.601.204-.897.322l-.651.286c-.048.021-.094.034-.141.048l-.032.009-.052.047a3.4 3.4 0 0 0-.024.536c.026.118.056.224.093.329q.082.16.176.301c.077.086.155.159.238.229.222.157.449.287.688.402.271.096.549.165.858.213l.171.019c.544.059 1.106.121 1.626.296.3.1.639.213.935.378.138.079.229.131.315.194.161.111.33.232.476.369l.088.013q.099-.001.207.013l.131.018q.28.028.563.028.28 0 .56-.025a3.3 3.3 0 0 0 .547-.136 3.5 3.5 0 0 0 .415-.233q.163-.14.299-.298c.174-.252.316-.503.437-.771.164-.427.291-.901.402-1.497-.245-.204-.479-.328-.709-.45a10 10 0 0 0-.674-.332 8.5 8.5 0 0 0-1.746-.49c-.41-.051-.948-.11-1.492-.11z"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "XCTest",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img"
+                                aria-labelledby="aacTitle">
+                            <title id="aacTitle">AAC logo — black circle with white AAC text</title>
+                            <circle cx="50" cy="50" r="50" fill="#000"/>
+                            <text x="50" y="54" text-anchor="middle" dominant-baseline="central"
+                                  font-family="Inter, Arial, Helvetica, sans-serif" font-weight="700" font-size="32"
+                                  fill="#fff">
+                                XCTest
+                            </text>
+                        </svg>
+                    )
+                },
+                {
+                    name: "Espresso",
+                    icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img"
+                                aria-labelledby="aacTitle">
+                            <title id="aacTitle">AAC logo — black circle with white AAC text</title>
+                            <circle cx="50" cy="50" r="50" fill="#000"/>
+                            <text x="50" y="54" text-anchor="middle" dominant-baseline="central"
+                                  font-family="Inter, Arial, Helvetica, sans-serif" font-weight="700" font-size="32"
+                                  fill="#fff">
+                                Esp
+                            </text>
+                        </svg>
+                    )
+                },
+                {
+                    name: "Appium", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fill="#662D91"
+                            d="M.295 119.397c24.814 57.004 87.778 66.563 162.925 18.246 34.66 32.08 43.295 70.11 14.374 108.392C162.341 252.451 145.586 256 128 256 57.308 256 0 198.692 0 128c0-2.89.106-5.758.295-8.602m117.059-24.744c11.205-46.695 42.494-73.48 91.678-65.737C237.702 52.39 256 88.056 256 128c0 50.395-29.126 93.979-71.46 114.857 38.457-54.784 7.03-112.584-67.186-148.204M128 0c27.435 0 52.85 8.635 73.687 23.33-69.951-8.132-102.984 50.175-98.37 130.694-45.452 13.941-82.48 3.669-102.048-44.047C10.03 47.819 63.427 0 128 0"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Fastlane", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="0 -4 256 256"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#0A7BFF"
+                                d="M216.43 65.967c-10.7 0-20.401 4.255-27.523 11.156l-45.162-32.34c.282-1.18.447-2.406.447-3.674 0-8.741-7.086-15.828-15.828-15.828s-15.828 7.087-15.828 15.828c0 8.742 7.087 15.828 15.828 15.828 3.06 0 5.909-.884 8.33-2.388L191.98 94.78c4.31-8.99 13.816-15.99 24.452-15.99 14.77 0 26.746 11.974 26.746 26.745 0 11.804-7.647 21.822-18.257 25.37l3.629 12.309c15.926-5.118 27.45-20.052 27.45-37.68 0-21.852-17.714-39.568-39.568-39.568"
+                            ></path>
+                            <path
+                                fill="#EB3D00"
+                                d="M89.565 27.53c-3.231 10.171-2.116 20.68 2.293 29.534L47.478 90.23a15.8 15.8 0 0 0-3.36-1.534c-8.31-2.64-17.186 1.957-19.825 10.267-2.64 8.31 1.957 17.187 10.266 19.826 8.31 2.64 17.187-1.956 19.827-10.266a15.7 15.7 0 0 0 .245-8.64l54.942-40.407c-7.245-6.812-11.03-17.963-7.818-28.074 4.46-14.042 19.46-21.81 33.503-17.349 11.22 3.564 18.435 13.86 18.605 25.017l12.797.267c-.056-16.685-10.773-32.152-27.53-37.475-20.774-6.599-42.966 4.892-49.565 25.667"
+                            ></path>
+                            <path
+                                fill="#00BCD4"
+                                d="M16.264 134.488a39.44 39.44 0 0 0 28.644 7.258l17.508 52.324a15.6 15.6 0 0 0-2.499 2.67c-5.09 6.976-3.514 16.792 3.52 21.924 7.034 5.133 16.862 3.638 21.952-3.338s3.515-16.791-3.519-21.924a15.76 15.76 0 0 0-8.093-2.985L52.718 125.85c-8.703 4.644-20.428 4.649-28.987-1.596-11.885-8.673-14.548-25.26-5.947-37.047 6.874-9.42 18.86-12.925 29.463-9.528l4.248-11.953C35.7 60.459 17.73 65.61 7.465 79.676c-12.725 17.44-8.786 41.98 8.8 54.812"
+                            ></path>
+                            <path
+                                fill="#86C351"
+                                d="M218.85 195.98c-3.26-10.09-10.25-17.936-18.96-22.54l16.896-52.49a15.8 15.8 0 0 0 3.62-.703c8.285-2.677 12.843-11.53 10.181-19.772-2.663-8.244-11.539-12.756-19.825-10.08s-12.845 11.53-10.182 19.773a15.54 15.54 0 0 0 4.801 7.124l-21.294 64.454c9.835 1.31 19.366 8.13 22.606 18.16 4.5 13.93-3.203 28.889-17.204 33.412-11.189 3.615-23.015-.528-29.61-9.447l-10.563 7.192c9.703 13.45 27.371 19.746 44.08 14.348 20.714-6.692 32.11-28.823 25.453-49.431"
+                            ></path>
+                            <path
+                                fill="#9032E9"
+                                d="M96.273 238.32c8.584-6.28 13.87-15.388 15.533-25.105l55.212-.563a15.8 15.8 0 0 0 1.799 3.21c5.13 7.013 14.975 8.538 21.988 3.408s8.538-14.975 3.408-21.988-14.975-8.539-21.988-3.408a15.64 15.64 0 0 0-5.282 6.805l-67.966.173c1.819 9.742-1.698 20.937-10.231 27.18-11.85 8.67-28.485 6.092-37.155-5.758-6.928-9.47-6.673-21.995-.245-31.069L41.21 183.46c-9.772 13.453-10.252 32.2.093 46.34 12.827 17.533 37.438 21.347 54.97 8.52"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: " GitHub Action", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fillRule="evenodd"
+                            d="M3.04 10h2.58l.65 1H2.54l-.5-.5v-9l.5-.5h12l.5.5v4.77l-1-1.75V2h-11zm5.54 1-1.41 3.47h2.2L15 8.7 14.27 7h-1.63l.82-1.46L12.63 4H9.76l-.92.59-2.28 5L7.47 11zm1.18-6h2.87l-1.87 3h3.51l-5.76 5.84L10.2 10H7.47zM6.95 7H4.04V6H7.4zm-.9 2H4.04V8H6.5z"
+                            clipRule="evenodd"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Bitrise", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="0 -22.5 256 256"
+                    >
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            fill="#683D87"
+                            d="m125.528 36.024 7.387.005c31.975.096 56.366 1.108 71.89 2.05l1.73.107c16.42 1.018 30.04 12.474 33.859 28.512l.574 2.45c3.062 13.143 7.064 31.673 9.817 50.209l.54 3.664c1.87 12.963 3.402 28.145 4.598 45.124.636 10.056-2.673 19.73-9.42 27.24s-16.038 11.837-26.093 12.346l-6.414.287c-21.695.941-52.163 1.974-84.565 2.004l-5.716-.005c-31.333-.086-60.654-1.085-81.711-2l-6.414-.286c-10.183-.382-19.347-4.837-26.094-12.347S-.559 178.201.077 168.145l.242-3.363c1.142-15.579 2.492-29.494 4.22-41.661l.375-2.58c2.928-20.112 7.383-40.35 10.565-53.843 3.777-15.866 17.146-27.371 33.453-28.48l5.317-.319c16.01-.91 40.15-1.829 71.279-1.875m5.036 17.438h-4.882c-34.033.051-59.531 1.168-75.072 2.162-8.783.637-15.91 6.619-17.947 15.147l-.785 3.27c-3.08 12.996-6.95 31.128-9.526 49.045l-.376 2.486c-1.85 12.573-3.26 27.251-4.333 43.719-.382 5.346 1.4 10.437 4.964 14.383s8.4 6.237 13.747 6.492l8.412.375c21.38.916 50.633 1.886 81.794 1.915l5.75-.005c34.382-.096 66.196-1.308 87.336-2.285 5.346-.255 10.183-2.546 13.747-6.492 3.437-3.946 5.219-9.037 5.219-14.383l-.242-3.27c-1.223-16.227-2.678-30.644-4.468-42.935-2.927-19.475-7.255-39.204-10.31-52.315-2.037-8.528-9.292-14.638-17.947-15.147l-4.713-.286c-15.783-.911-39.678-1.83-70.368-1.876m25.82 87.19c0 15.656-12.728 28.384-28.384 28.384-15.626 0-28.257-12.6-28.508-27.92l-.004-.465zm-92.027-35.259c9.667 0 17.352 7.677 17.561 17.169l.004.397h-35.13c0-9.674 7.891-17.566 17.565-17.566m127.286 0c9.667 0 17.353 7.677 17.561 17.169l.005.397h-35.131c0-9.674 7.891-17.566 17.565-17.566M128 0c6.11 0 10.947 4.964 10.947 10.947S133.982 21.766 128 21.766s-10.947-4.964-10.947-10.82C117.053 4.837 122.018 0 128 0"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "CodeMagic", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            d="M22.833 10.117 16.937 7.24c-.07-.035-.106-.106-.142-.177l-2.912-5.896c-.498-1.03-1.776-1.457-2.807-.96a2.1 2.1 0 0 0-.959.96L7.205 7.063a.8.8 0 0 1-.142.177l-5.896 2.913c-1.03.497-1.457 1.776-.96 2.806a2.1 2.1 0 0 0 .96.96l5.896 2.876c.07.036.106.107.142.142l2.948 5.896c.497 1.03 1.776 1.457 2.806.96a2.1 2.1 0 0 0 .959-.96l2.877-5.896c.036-.07.107-.142.142-.142l5.896-2.912c1.03-.498 1.457-1.776.96-2.806-.178-.427-.533-.746-.96-.96m-4.368.427-2.735 2.38c-.533.497-.924 1.136-1.066 1.847l-.71 3.551c-.036.143-.178.25-.32.214-.071 0-.107-.036-.142-.107l-2.38-2.735c-.497-.533-1.137-.923-1.847-1.066l-3.552-.71c-.142-.035-.249-.178-.213-.32 0-.07.035-.106.106-.142l2.735-2.38c.533-.497.924-1.136 1.066-1.847l.71-3.551c.036-.143.178-.25.32-.214a.27.27 0 0 1 .142.071l2.38 2.735c.497.533 1.137.924 1.847 1.066l3.552.71c.142.036.249.178.213.32a.4.4 0 0 1-.106.178"
+                        ></path>
+                    </svg>)
+                },
+
+            ]
+        },
+        {
+            name: "Analytics & Monitoring",
+            technologies: [
+                {
+                    name: "Firebase Analytics", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="-47.5 0 351 351"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <defs>
+                                <filter
+                                    id="filter-2"
+                                    width="200%"
+                                    height="200%"
+                                    x="-50%"
+                                    y="-50%"
+                                    filterUnits="objectBoundingBox"
+                                >
+                                    <feGaussianBlur
+                                        in="SourceAlpha"
+                                        result="shadowBlurInner1"
+                                        stdDeviation="17.5"
+                                    ></feGaussianBlur>
+                                    <feOffset
+                                        in="shadowBlurInner1"
+                                        result="shadowOffsetInner1"
+                                    ></feOffset>
+                                    <feComposite
+                                        in="shadowOffsetInner1"
+                                        in2="SourceAlpha"
+                                        k2="-1"
+                                        k3="1"
+                                        operator="arithmetic"
+                                        result="shadowInnerInner1"
+                                    ></feComposite>
+                                    <feColorMatrix
+                                        in="shadowInnerInner1"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                                    ></feColorMatrix>
+                                </filter>
+                                <filter
+                                    id="filter-4"
+                                    width="200%"
+                                    height="200%"
+                                    x="-50%"
+                                    y="-50%"
+                                    filterUnits="objectBoundingBox"
+                                >
+                                    <feGaussianBlur
+                                        in="SourceAlpha"
+                                        result="shadowBlurInner1"
+                                        stdDeviation="3.5"
+                                    ></feGaussianBlur>
+                                    <feOffset
+                                        dx="1"
+                                        dy="-9"
+                                        in="shadowBlurInner1"
+                                        result="shadowOffsetInner1"
+                                    ></feOffset>
+                                    <feComposite
+                                        in="shadowOffsetInner1"
+                                        in2="SourceAlpha"
+                                        k2="-1"
+                                        k3="1"
+                                        operator="arithmetic"
+                                        result="shadowInnerInner1"
+                                    ></feComposite>
+                                    <feColorMatrix
+                                        in="shadowInnerInner1"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"
+                                    ></feColorMatrix>
+                                </filter>
+                                <path
+                                    id="path-1"
+                                    d="m1.253 280.732 1.605-3.131 99.353-188.518-44.15-83.475C54.392-1.283 45.074.474 43.87 8.188z"
+                                ></path>
+                                <path
+                                    id="path-3"
+                                    d="m134.417 148.974 32.039-32.812-32.039-61.007c-3.042-5.791-10.433-6.398-13.443-.59l-17.705 34.109-.53 1.744z"
+                                ></path>
+                            </defs>
+                            <path
+                                fill="#FFC24A"
+                                d="m0 282.998 2.123-2.972L102.527 89.512l.212-2.017L58.48 4.358C54.77-2.606 44.33-.845 43.114 6.951z"
+                            ></path>
+                            <use xlinkHref="#path-1" fill="#FFA712" fillRule="evenodd"></use>
+                            <use xlinkHref="#path-1" filter="url(#filter-2)"></use>
+                            <path
+                                fill="#F4BD62"
+                                d="m135.005 150.38 32.955-33.75-32.965-62.93c-3.129-5.957-11.866-5.975-14.962 0L102.42 87.287v2.86z"
+                            ></path>
+                            <use xlinkHref="#path-3" fill="#FFA50E" fillRule="evenodd"></use>
+                            <use xlinkHref="#path-3" filter="url(#filter-4)"></use>
+                            <path
+                                fill="#F6820C"
+                                d="m0 282.998.962-.968 3.496-1.42 128.477-128 1.628-4.431-32.05-61.074z"
+                            ></path>
+                            <path
+                                fill="#FDE068"
+                                d="m139.121 347.551 116.275-64.847-33.204-204.495c-1.039-6.398-8.888-8.927-13.468-4.34L0 282.998l115.608 64.548a24.13 24.13 0 0 0 23.513.005"
+                            ></path>
+                            <path
+                                fill="#FCCA3F"
+                                d="M254.354 282.16 221.402 79.218c-1.03-6.35-7.558-8.977-12.103-4.424L1.29 282.6l114.339 63.908a23.94 23.94 0 0 0 23.334.006z"
+                            ></path>
+                            <path
+                                fill="#EEAB37"
+                                d="M139.12 345.64a24.13 24.13 0 0 1-23.512-.005L.931 282.015l-.93.983 115.607 64.548a24.13 24.13 0 0 0 23.513.005l116.275-64.847-.285-1.752z"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Mixpanel", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlSpace="preserve"
+                        id="Capa_1"
+                        width="200"
+                        height="200"
+                        fill="#000"
+                        version="1.1"
+                        viewBox="0 0 58 58"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M8.5 20.5C3.813 20.5 0 24.313 0 29s3.813 8.5 8.5 8.5S17 33.687 17 29s-3.814-8.5-8.5-8.5m0 15C4.916 35.5 2 32.584 2 29s2.916-6.5 6.5-6.5S15 25.416 15 29s-2.916 6.5-6.5 6.5M33 22.5c-3.859 0-7 3.14-7 7s3.141 7 7 7 7-3.14 7-7-3.141-7-7-7m0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5M53 24.5c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5m0 8c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3"></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Amplitude ", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            id="SVGRepo_iconCarrier"
+                            d="M212.898 79.91c-4.538 0-6.847 2.742-7.828 4.09s-1.34 2.29-1.69 3.207c-.705 1.835-1.122 3.578-1.567 5.693-.892 4.23-1.71 9.75-2.536 16.442-1.65 13.384-3.268 31.297-4.71 50.232-2.88 37.87-5.036 79.37-5.036 96.428 0 15.474-2.12 45.862-4.958 71.846-.145 1.334-.31 2.47-.46 3.78-.114-1.007-.243-1.867-.356-2.89-2.838-25.672-4.957-56.006-4.957-72.736v-3.73l-.097-.094c-.243-18.42-2.25-46.27-4.973-70.89-1.45-13.11-3.073-25.12-4.767-34.16-.847-4.522-1.678-8.252-2.693-11.38-.508-1.564-1-2.953-1.99-4.62-.494-.832-1.094-1.772-2.34-2.872-1.243-1.1-3.534-2.506-6.51-2.506-3.054 0-5.366 1.47-6.6 2.592-1.234 1.12-1.82 2.065-2.305 2.902-.97 1.675-1.452 3.077-1.955 4.664-1.005 3.175-1.834 6.98-2.68 11.59-1.69 9.217-3.313 21.447-4.76 34.7-2.898 26.51-5.067 56.746-5.067 73.802 0 15.474-2.1 36.51-4.89 53.23-.177 1.064-.375 1.922-.558 2.95-.13-.733-.274-1.322-.402-2.075-2.784-16.39-4.885-37.375-4.887-54.107 0-18.202-2.186-39.73-5.138-57.117-1.477-8.693-3.122-16.29-4.942-22.187-.91-2.948-1.805-5.437-3.115-7.826-.654-1.194-1.38-2.39-2.737-3.73-1.36-1.34-3.826-3.162-7.432-3.162-3.76 0-6.24 1.956-7.573 3.33s-2.033 2.583-2.672 3.8c-1.28 2.43-2.166 4.982-3.07 8.01-1.803 6.056-3.443 13.862-4.916 22.692-2.948 17.66-5.136 39.137-5.136 56.193 0 15.474-2.085 30.537-4.748 41.266-.293 1.177-.605 2.073-.91 3.14-.89-2.847-1.715-6.005-2.3-9.787-1.76-11.345-2.236-25.753-2.687-39.983-.452-14.23-.848-28.235-2.977-39.875-1.065-5.82-2.498-11.1-5.22-15.83-2.724-4.73-7.54-9.197-13.716-10.274l-.767-.133h-.78c-4.603 0-7.32 2.488-8.988 4.354-1.668 1.865-2.75 3.763-3.785 5.886-2.072 4.245-3.78 9.44-5.315 15.63-3.072 12.374-5.277 28.546-5.277 45.602h18c0-15.473 2.084-30.536 4.748-41.266a92 92 0 0 1 1.94-6.7 51 51 0 0 1 1.455 5.97c1.72 9.397 2.24 22.992 2.69 37.205.452 14.213.863 29.093 2.89 42.17s5.084 25.195 15.132 32.406l2.352 1.69h2.895c4.603 0 7.322-2.488 8.99-4.354s2.75-3.765 3.785-5.888c2.072-4.245 3.776-9.44 5.312-15.628 3.073-12.375 5.28-28.548 5.28-45.604 0-15.475 2.1-36.51 4.888-53.23.178-1.064.376-1.92.56-2.948.13.732.272 1.32.4 2.073 2.782 16.39 4.884 37.375 4.884 54.103.002 18.205 2.19 39.733 5.143 57.12 1.475 8.695 3.118 16.293 4.938 22.19.91 2.947 1.807 5.436 3.117 7.825.655 1.194 1.38 2.392 2.74 3.73 1.357 1.34 3.824 3.162 7.43 3.162 3.763 0 6.24-1.956 7.575-3.33 1.333-1.374 2.03-2.583 2.67-3.8 1.278-2.43 2.165-4.982 3.068-8.01 1.805-6.056 3.446-13.862 4.92-22.692 2.946-17.66 5.134-39.137 5.134-56.193 0-15.474 2.12-45.862 4.96-71.846.145-1.333.31-2.47.458-3.78.116 1.01.245 1.87.358 2.892 2.838 25.672 4.96 56.006 4.96 72.734v3.73l.095.094c.243 18.422 2.25 46.272 4.972 70.893 1.45 13.11 3.074 25.12 4.768 34.16.847 4.52 1.677 8.248 2.693 11.377.508 1.564.998 2.953 1.988 4.62.496.832 1.098 1.774 2.342 2.874 1.245 1.1 3.534 2.504 6.51 2.504 3.054 0 5.365-1.47 6.6-2.592 1.234-1.12 1.82-2.065 2.304-2.902.97-1.675 1.453-3.077 1.955-4.664 1.006-3.175 1.835-6.982 2.68-11.59 1.69-9.217 3.314-21.447 4.762-34.7 2.896-26.51 5.064-56.746 5.064-73.802 0-15.475 2.132-57.52 4.988-95.063.132-1.74.282-3.268.418-4.987.11 1.415.236 2.662.345 4.092 2.857 37.238 4.988 79.227 4.988 95.955 0 18.205 2.158 59.76 5.04 97.334 1.44 18.787 3.058 36.476 4.71 49.678.825 6.6 1.642 12.04 2.537 16.217.447 2.087.867 3.81 1.58 5.637.356.914.722 1.857 1.717 3.2.994 1.342 3.32 4.023 7.783 4.023 4.538 0 6.845-2.742 7.826-4.09.982-1.348 1.34-2.29 1.692-3.207.704-1.835 1.123-3.578 1.57-5.693.89-4.23 1.707-9.75 2.532-16.442 1.65-13.384 3.27-31.296 4.71-50.23 2.88-37.87 5.036-79.368 5.036-96.424 0-15.475 2.132-57.52 4.988-95.065.132-1.735.28-3.26.416-4.973.112 1.41.237 2.654.346 4.08 2.855 37.238 4.984 79.23 4.984 95.957v9h.315c.402 20.462 2.157 54.84 4.725 88.33 1.44 18.787 3.06 36.476 4.71 49.678.827 6.6 1.646 12.038 2.54 16.215.448 2.088.867 3.812 1.58 5.64.357.914.723 1.857 1.717 3.2.995 1.342 3.323 4.023 7.783 4.023 4.54 0 6.848-2.744 7.83-4.092.98-1.348 1.338-2.29 1.69-3.207.703-1.834 1.12-3.576 1.566-5.69.892-4.23 1.71-9.75 2.535-16.442 1.65-13.384 3.266-31.296 4.707-50.23 2.88-37.868 5.04-79.37 5.04-96.424 0-15.475 2.118-45.864 4.958-71.848.145-1.333.31-2.47.46-3.78.114 1.01.243 1.87.356 2.892 2.838 25.67 4.96 56.004 4.96 72.734 0 18.204 2.17 48.495 5.067 74.715 1.45 13.11 3.074 25.12 4.768 34.16.848 4.52 1.68 8.25 2.694 11.377.508 1.564.997 2.953 1.987 4.62.496.832 1.098 1.772 2.342 2.872 1.245 1.1 3.533 2.506 6.51 2.506 3.054 0 5.366-1.47 6.6-2.592 1.234-1.12 1.82-2.065 2.305-2.902.97-1.675 1.452-3.077 1.955-4.664 1.005-3.175 1.836-6.982 2.68-11.59 1.69-9.217 3.315-21.447 4.763-34.7 2.897-26.51 5.066-56.746 5.066-73.802 0-15.475 2.1-36.51 4.89-53.23.177-1.06.374-1.917.557-2.942.13.73.273 1.317.4 2.066 2.783 16.39 4.885 37.376 4.885 54.106.002 18.205 2.19 39.733 5.142 57.12 1.477 8.695 3.12 16.293 4.94 22.19.91 2.946 1.807 5.434 3.117 7.823.656 1.194 1.38 2.39 2.737 3.73s3.827 3.162 7.434 3.162c3.764 0 6.242-1.956 7.575-3.33s2.03-2.583 2.67-3.8c1.28-2.43 2.166-4.982 3.07-8.01 1.803-6.056 3.443-13.862 4.916-22.692 2.948-17.66 5.136-39.137 5.136-56.193 0-15.474 2.085-30.538 4.748-41.268.238-.958.493-1.67.74-2.556.17.612.35 1.06.514 1.71 2.642 10.36 4.735 25.384 4.735 42.114 0 18.204 2.195 34.416 5.29 46.56 1.548 6.07 3.27 11.088 5.397 15.198 1.063 2.055 2.187 3.903 3.908 5.695 1.72 1.792 4.48 4.018 8.772 4.018 4.603 0 7.322-2.488 8.99-4.354s2.75-3.763 3.785-5.886c2.072-4.245 3.777-9.443 5.313-15.63 3.072-12.375 5.28-28.548 5.28-45.604h-18c0 15.474-2.085 30.538-4.75 41.268-.237.957-.493 1.666-.74 2.552-.17-.61-.346-1.06-.51-1.707-2.642-10.36-4.735-25.38-4.735-42.11 0-18.204-2.197-34.42-5.293-46.562-1.548-6.07-3.27-11.09-5.397-15.2-1.063-2.055-2.187-3.903-3.908-5.695-1.72-1.792-4.48-4.018-8.772-4.018-4.603 0-7.322 2.488-8.99 4.354-1.667 1.867-2.75 3.765-3.785 5.888-2.072 4.245-3.776 9.44-5.312 15.628-3.073 12.375-5.28 28.55-5.28 45.606 0 15.474-2.1 36.51-4.888 53.23-.177 1.062-.374 1.918-.557 2.944-.13-.73-.272-1.317-.4-2.067-2.783-16.392-4.886-37.378-4.888-54.11 0-18.203-2.186-39.73-5.14-57.117-1.475-8.694-3.12-16.292-4.94-22.188-.91-2.948-1.805-5.437-3.115-7.826-.655-1.195-1.38-2.393-2.74-3.73-1.357-1.34-3.826-3.163-7.432-3.163-3.764 0-6.24 1.957-7.575 3.332-1.333 1.373-2.03 2.582-2.67 3.797-1.278 2.43-2.164 4.982-3.066 8.01-1.804 6.056-3.445 13.862-4.918 22.692-2.946 17.658-5.135 39.135-5.135 56.192 0 15.474-2.118 45.862-4.958 71.846-.146 1.336-.31 2.475-.46 3.787-.116-1.01-.245-1.872-.358-2.897-2.838-25.67-4.958-56.005-4.96-72.736 0-18.203-2.17-48.494-5.067-74.713-1.45-13.11-3.072-25.12-4.766-34.16-.846-4.52-1.677-8.25-2.692-11.378-.508-1.564-1-2.952-1.99-4.617-.493-.833-1.094-1.775-2.338-2.875-1.245-1.1-3.535-2.506-6.512-2.506-3.054 0-5.365 1.47-6.6 2.592-1.234 1.12-1.82 2.065-2.304 2.902-.97 1.675-1.453 3.077-1.955 4.664-1.007 3.175-1.836 6.98-2.68 11.59-1.69 9.217-3.315 21.445-4.763 34.7-2.897 26.507-5.066 56.745-5.066 73.802 0 15.473-2.13 57.516-4.986 95.058-.132 1.735-.28 3.26-.416 4.975-.11-1.41-.236-2.653-.345-4.078-2.856-37.237-4.987-79.226-4.987-95.956v-9h-.314c-.403-20.46-2.157-54.842-4.725-88.332-1.44-18.787-3.06-36.477-4.71-49.68-.826-6.6-1.645-12.04-2.54-16.217-.447-2.088-.865-3.812-1.578-5.64-.357-.914-.725-1.857-1.72-3.2-.994-1.34-3.32-4.02-7.777-4.023h-.006c-4.536 0-6.846 2.745-7.826 4.092-.98 1.348-1.34 2.29-1.69 3.207-.704 1.836-1.123 3.578-1.57 5.692-.89 4.23-1.707 9.75-2.532 16.442-1.65 13.384-3.27 31.296-4.71 50.23-2.88 37.87-5.038 79.372-5.038 96.43 0 15.474-2.13 57.516-4.986 95.058-.132 1.732-.282 3.254-.416 4.965-.11-1.408-.235-2.648-.344-4.07-2.855-37.237-4.986-79.226-4.986-95.957 0-18.202-2.158-59.757-5.04-97.332-1.44-18.787-3.06-36.477-4.712-49.68-.826-6.6-1.643-12.04-2.537-16.217-.45-2.087-.868-3.81-1.582-5.637-.356-.914-.724-1.857-1.718-3.2-.995-1.342-3.32-4.023-7.782-4.023z"
+                        ></path>
+                    </svg>)
+                },
+                {
+                    name: "Sentry", icon: (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#FB4226"
+                                d="M18.242 4.352a2.53 2.53 0 0 0-3.534-.986 2.64 2.64 0 0 0-.946.986l-3.688 6.658.941.563a18.97 18.97 0 0 1 9 15.179h-2.589A16.24 16.24 0 0 0 9.711 13.9l-.941-.561-3.436 6.226.941.562a9.12 9.12 0 0 1 4.225 6.625H4.587a.436.436 0 0 1-.434-.437.46.46 0 0 1 .058-.231l1.648-2.976a5.9 5.9 0 0 0-1.881-1.119l-1.631 2.969a2.76 2.76 0 0 0 .953 3.683A2.5 2.5 0 0 0 4.587 29h8.138v-1.122a11.37 11.37 0 0 0-4.467-9.1l1.3-2.338A14.09 14.09 0 0 1 15.3 27.868v1.126h6.9V27.87a21.34 21.34 0 0 0-9.19-17.66l2.618-4.733a.42.42 0 0 1 .583-.162.43.43 0 0 1 .156.162L27.78 26.084a.456.456 0 0 1-.155.608.4.4 0 0 1-.221.06h-2.67c.033.752.037 1.5 0 2.252h2.679A2.644 2.644 0 0 0 30 26.307a2.8 2.8 0 0 0-.346-1.347Z"
+                            ></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "Crashlytics", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="-10 0 276 276"
+                    >
+                        <g id="SVGRepo_iconCarrier" fill="#9B1B1D">
+                            <path
+                                d="M105.637 54.539s-.001-25.483.069-35.862c.077-11.206 7.148-18.27 18.243-18.303q16.348-.049 32.697 0c10.982.031 18.073 7.01 18.099 17.932.05 21.279.018 42.558.007 63.837-.001 1.121-.126 2.241-.221 3.826-20.04-11.604-40.489-13.325-61.279-3.697-15.542 7.197-26.312 19.192-32.038 35.368-11.418 32.259 6.047 67.696 38.696 78.75 33.882 11.47 72.208-7.382 81.708-46.091.972.81 33.112 32.373 48.225 47.352 8.212 8.139 8.199 17.887.022 26.022a5513 5513 0 0 1-22.416 22.173c-8.327 8.19-18.198 8.223-26.466.098-7.496-7.366-26.32-25.768-26.32-25.768s.152 26.471.08 37.24c-.07 10.472-7.172 17.578-17.609 17.635-11.158.062-22.317.053-33.475.003-10.65-.046-17.812-7.098-17.94-17.811-.123-10.378-.029-36.85-.029-36.85s-18.152 18.226-25.56 25.497c-8.322 8.168-18.15 8.169-26.466.014a5507 5507 0 0 1-22.166-21.872c-8.581-8.512-8.55-18.034-.13-26.574 8.183-8.3 25.137-25.671 25.137-25.671s-26.843.045-38.131-.013C6.755 171.715.067 164.983.029 153.365c-.035-10.51-.043-21.02.003-31.53.049-11.336 6.793-18.097 18.19-18.173 11.028-.073 38.422-.018 38.422-.018S38.143 85.149 30.516 77.547c-7.828-7.803-7.894-17.677-.138-25.437 7.797-7.8 15.629-15.565 23.532-23.258 7.44-7.241 17.71-7.311 25.038.049 8.499 8.535 26.689 25.638 26.689 25.638"></path>
+                            <path
+                                d="M165.772 137.581c.012 13.963-11.138 25.054-25.232 25.099-14.316.045-25.529-11.063-25.473-25.232.055-13.867 11.424-25.047 25.413-24.99 14.032.057 25.279 11.23 25.292 25.123"></path>
+                        </g>
+                    </svg>)
+                },
+                {
+                    name: "New Relic", icon: (<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid"
+                        viewBox="0 -24 256 256"
+                    >
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                fill="#37808C"
+                                d="M123.326 172.739c-38.872 0-70.371-31.508-70.371-70.379 0-38.86 31.5-70.363 70.371-70.363 38.861 0 70.368 31.503 70.368 70.363 0 38.87-31.507 70.379-70.368 70.379m130.791-96.327c-12.006-55.2-78.2-87.67-147.854-72.525S-10.129 76.06 1.876 131.255c12.002 55.199 78.198 87.669 147.852 72.524 69.654-15.146 116.389-72.174 104.39-127.367"
+                            ></path>
+                            <path
+                                fill="#9BD3CD"
+                                d="M122.998 171.402c-38.216 0-69.184-30.976-69.184-69.19 0-38.206 30.968-69.177 69.184-69.177 38.205 0 69.18 30.971 69.18 69.176 0 38.215-30.975 69.191-69.18 69.191m17.529-156.335c-49.7 0-90 40.295-90 89.996 0 49.704 40.3 90 90 90 49.698 0 90-40.296 90-90 0-49.7-40.302-89.996-90-89.996"
+                            ></path>
+                            <g fill="#1B1A19">
+                                <path
+                                    d="m98.016 94.949-7.548-15.826c-1.801-3.75-3.652-7.986-4.285-9.983l-.146.146c.244 2.825.293 6.38.341 9.35l.195 16.313H81.07V61.252h6.33l8.18 16.459c1.559 3.116 3.02 7.109 3.458 8.667l.146-.146c-.146-1.704-.487-6.525-.487-9.593L98.6 61.252h5.308v33.697zM118.662 73.766c-3.02 0-4.675 2.386-4.675 6.38h9.106c0-3.994-1.753-6.38-4.431-6.38m-4.724 10.324v.39c0 3.408 1.267 7.011 6.087 7.011 2.289 0 4.286-.827 6.136-2.434l2.094 3.262c-2.58 2.191-5.552 3.263-8.862 3.263-6.964 0-11.347-5.016-11.347-12.905 0-4.333.926-7.207 3.068-9.641 1.997-2.289 4.431-3.312 7.548-3.312 2.434 0 4.675.634 6.768 2.533 2.143 1.948 3.214 4.967 3.214 10.713v1.12zM157.13 95.046h-5.017L149.094 83.7c-.779-2.922-1.607-6.72-1.607-6.72h-.097s-.39 2.435-1.607 6.964l-2.97 11.102h-5.016l-6.72-24.396 5.308-.73 2.678 11.93a158 158 0 0 1 1.266 6.476h.147s.486-3.214 1.411-6.623l3.166-11.394h5.259l2.775 11.102c1.023 3.993 1.559 7.013 1.559 7.013h.146s.584-3.75 1.217-6.623l2.532-11.492h5.552zM85.995 109.153h-3.068v10.665H85.8c2.922 0 4.48-.39 5.503-1.412.925-.926 1.51-2.338 1.51-4.091 0-3.409-1.85-5.162-6.818-5.162m7.79 29.169-2.92-5.21c-2.338-4.14-3.896-6.477-5.746-8.328-.634-.633-1.12-.973-2.192-1.022v14.56h-5.502v-33.697H87.7c7.547 0 10.956 4.382 10.956 9.641 0 4.821-3.117 9.252-8.376 9.252 1.218.633 3.457 3.896 5.21 6.72l4.968 8.084zM112.532 117.14c-3.018 0-4.674 2.386-4.674 6.378h9.106c0-3.992-1.753-6.379-4.432-6.379m-4.723 10.323v.39c0 3.408 1.266 7.012 6.087 7.012 2.289 0 4.285-.829 6.136-2.435l2.093 3.262c-2.58 2.191-5.55 3.263-8.862 3.263-6.964 0-11.346-5.016-11.346-12.904 0-4.335.925-7.208 3.068-9.642 1.996-2.289 4.431-3.311 7.547-3.311 2.435 0 4.675.633 6.77 2.532 2.142 1.948 3.213 4.967 3.213 10.713v1.12zM132.545 138.857c-5.405 0-5.405-4.87-5.405-6.963v-20.988c0-3.36-.146-5.162-.487-7.207l5.502-1.217c.39 1.51.438 3.555.438 6.768v20.891c0 3.311.146 3.847.536 4.432.292.438 1.12.68 1.753.389l.876 3.31c-.973.39-1.996.585-3.213.585M139.167 138.322v-24.25l5.405-.974v25.224zm2.678-28.292c-1.948 0-3.458-1.607-3.458-3.555 0-1.996 1.558-3.603 3.555-3.603 1.899 0 3.506 1.558 3.506 3.603 0 1.948-1.607 3.555-3.603 3.555M159.91 138.955c-6.72 0-10.47-4.723-10.47-12.661 0-8.96 5.357-13.245 10.86-13.245 2.678 0 4.625.633 6.816 2.678l-2.678 3.555c-1.46-1.315-2.726-1.9-4.139-1.9-1.704 0-3.116.877-3.895 2.484-.73 1.51-1.023 3.799-1.023 6.866 0 3.36.536 5.503 1.656 6.72.779.877 1.947 1.413 3.262 1.413 1.705 0 3.36-.829 4.967-2.435l2.532 3.262c-2.24 2.24-4.577 3.263-7.888 3.263M172.65 133.903a1.6 1.6 0 0 0-.458-.058h-.292v1.098h.273c.35 0 .505-.039.612-.136a.57.57 0 0 0 .156-.408q0-.38-.292-.496m.427 3.344c-.156-.272-.224-.38-.38-.67-.398-.73-.524-.934-.67-.992a.3.3 0 0 0-.127-.03v1.692h-.797v-4.054h1.507c.72 0 1.196.477 1.196 1.186 0 .613-.408 1.108-.904 1.118a1 1 0 0 1 .165.175c.233.292.972 1.575.972 1.575zm-.71-4.9c-1.536 0-2.77 1.283-2.77 2.897s1.234 2.917 2.77 2.917 2.78-1.303 2.78-2.917-1.244-2.897-2.78-2.897m0 6.514a3.6 3.6 0 0 1-3.597-3.617 3.606 3.606 0 0 1 3.597-3.616 3.606 3.606 0 0 1 3.597 3.616 3.6 3.6 0 0 1-3.597 3.617"></path>
+                            </g>
+                        </g>
+                    </svg>)
+                },
+            ]
+        },
     ];
-    const definitionOne = [
+    const industriesData = [
         {
-            title: "Massive Cost Savings",
-            description:
-                "Reduce mobile app development cost by 40–60% with a single codebase serving both platforms. Invest savings in features, marketing, or other business priorities instead of duplicate development.",
+            icon: ShoppingCart,
+            title: "E-commerce & Retail",
+            description: "Shopping apps, marketplace platforms, AR try-on",
+            color: "from-blue-50 to-blue-100",
         },
         {
-            title: "Launch on Both Platforms Simultaneously",
-            description:
-                "Reach iOS and Android users on day one without waiting for separate builds. Capture maximum market opportunity immediately with a unified launch strategy.",
+            icon: Heart,
+            title: "Healthcare & Fitness",
+            description: "Telemedicine, fitness tracking, wellness apps",
+            color: "from-blue-100 to-blue-50",
         },
         {
-            title: "Single Development Team",
-            description:
-                "One team, one codebase, one timeline. No coordination between separate iOS and Android teams. Streamlined communication and consistent quality across platforms.",
+            icon: TrendingUp,
+            title: "FinTech",
+            description: "Banking, payments, investing, cryptocurrency",
+            color: "from-blue-50 to-blue-100",
         },
         {
-            title: "Faster Time to Market",
-            description:
-                "Ship features 50% faster than native development. Perfect for startups needing quick validation or enterprises maintaining competitive advantage through speed.",
+            icon: Users,
+            title: "Social & Dating",
+            description: "Social networking, messaging, community platforms",
+            color: "from-blue-100 to-blue-50",
+        },
+        {
+            icon: Bike,
+            title: "On-Demand Services",
+            description: "Food delivery, ride-hailing, home services",
+            color: "from-blue-50 to-blue-100",
+        },
+        {
+            icon: GraduationCap,
+            title: "Education",
+            description: "Learning apps, course platforms, language learning",
+            color: "from-blue-100 to-blue-50",
+        },
+        {
+            icon: Film,
+            title: "Entertainment",
+            description: "Streaming, gaming, content platforms",
+            color: "from-blue-50 to-blue-100",
+        },
+        {
+            icon: Briefcase,
+            title: "Business & Productivity",
+            description: "CRM, project management, collaboration tools",
+            color: "from-blue-100 to-blue-50",
         },
     ];
-    const definitionTwo = [
+    const processSteps = [
         {
-            title: "Simplified Maintenance",
-            description:
-                "Update once, deploy everywhere. Bug fixes and new features roll out to all users simultaneously. No version fragmentation or platform-specific issues.",
+            title: "1. Discovery & Strategy",
+            duration: "1–2 Weeks",
+            points: [
+                {
+                    title: "Requirements Gathering",
+                    detail:
+                        "Understand your business goals, target audience, and success metrics. Document features and functionality.",
+                },
+                {
+                    title: "Competitive Analysis",
+                    detail:
+                        "Research competing apps in your category. Identify opportunities for differentiation.",
+                },
+                {
+                    title: "Platform Selection",
+                    detail:
+                        "Choose iOS, Android, or both. Decide native vs cross-platform approach.",
+                },
+                {
+                    title: "Technology Stack",
+                    detail:
+                        "Select optimal frameworks and tools. Plan architecture and integrations.",
+                },
+            ],
+            deliverables:
+                "Requirements document, technical specification, project timeline, cost estimate.",
         },
         {
-            title: "Code Reuse 70–95%",
-            description:
-                "Share business logic, API calls, state management, and most UI across platforms. Focus budget on unique features, not rebuilding identical functionality.",
+            title: "2. Design Phase",
+            duration: "2–3 Weeks",
+            points: [
+                {
+                    title: "UX Design",
+                    detail:
+                        "Create user flows, wireframes, and interactive prototypes. Validate usability with testing.",
+                },
+                {
+                    title: "UI Design",
+                    detail:
+                        "Design beautiful screens following platform guidelines. Create design system and components.",
+                },
+                {
+                    title: "Design Review",
+                    detail:
+                        "Present designs for feedback and approval. Iterate based on stakeholder input.",
+                },
+            ],
+            deliverables:
+                "User flows, wireframes, UI mockups, interactive prototype, design specifications.",
         },
         {
-            title: "Native-Quality Performance",
-            description:
-                "Modern frameworks deliver 60 FPS animations and native component rendering. Users can't tell the difference from native apps—performance is indistinguishable.",
+            title: "3. Development",
+            duration: "8–16 Weeks",
+            points: [
+                {
+                    title: "Sprint Planning",
+                    detail:
+                        "Break work into two-week sprints. Prioritize features for each iteration.",
+                },
+                {
+                    title: "Agile Development",
+                    detail:
+                        "Build features incrementally with regular demos. Continuous integration and testing.",
+                },
+                {
+                    title: "API Development",
+                    detail:
+                        "Build backend APIs and services. Database design and server infrastructure.",
+                },
+                {
+                    title: "Quality Assurance",
+                    detail:
+                        "Test on multiple devices and OS versions. Automated and manual testing throughout.",
+                },
+            ],
+            deliverables:
+                "Working app builds after each sprint, API documentation, test reports.",
         },
         {
-            title: "Future-Proof Technology",
-            description:
-                "React Native backed by Meta, Flutter backed by Google. Both mature, production-proven frameworks used by Fortune 500 companies with thriving ecosystems.",
+            title: "4. Testing & QA",
+            duration: "2–3 Weeks",
+            points: [
+                {
+                    title: "Functional Testing",
+                    detail:
+                        "Verify all features work as specified. Test user flows and edge cases.",
+                },
+                {
+                    title: "Device Testing",
+                    detail:
+                        "Test on real devices across iOS and Android versions. Ensure compatibility.",
+                },
+                {
+                    title: "Performance Testing",
+                    detail:
+                        "Optimize load times, memory usage, battery consumption. Ensure smooth 60 FPS animations.",
+                },
+                {
+                    title: "Security Testing",
+                    detail:
+                        "Test authentication, data encryption, and API security. Perform vulnerability assessments.",
+                },
+            ],
+            deliverables:
+                "Test reports, bug fixes, performance benchmarks.",
         },
-    ];
+    ]
 
     return (
         <div className="font-syne">
@@ -688,6 +1398,7 @@ export default function MobileAppDevelopment() {
             />
             <WebPageJsonLd
                 id="https://2btech.com/services/mobile-app-development"
+
                 name="React Native & Flutter App Development | Cross Platform | 2BTech"
                 description="Expert react native development company and flutter app development specialist. Build iOS and Android apps from single codebase. Reduce mobile app development cost 40-60%. Free consultation."
                 lastReviewed={new Date().toISOString()}
@@ -699,160 +1410,116 @@ export default function MobileAppDevelopment() {
                 }))}
             />
             <HeroSection
-                title="React Native & Flutter App Development"
-                description="Build powerful iOS and Android apps from a single codebase with modern cross-platform technology."
+                title="Build Apps That Users Love"
+                description="Transform your idea into a powerful mobile experience with our mobile app development company. We create iOS, Android, and cross platform app development solutions that drive engagement, revenue, and business growth"
+                buttonText="Get Free App Consultation"
                 formLabel="Get Free App Consultation"
                 TrustBar={() => (
                     <motion.div
                         variants={itemVariants}
-                        className="mt-12 flex flex-col sm:flex-row items-center gap-6 text-sm sm:text-base text-gray-700 font-medium"
+                        className="mt-4 flex flex-col sm:flex-row items-center gap-6 text-sm sm:text-base text-gray-700 font-medium"
                     >
-                        <div className="flex items-center gap-2">
-                            <Rocket className="w-5 h-5 text-blue-600" />
+                        <div className="flex flex-col  gap-2">
+                            <Rocket className="w-5 h-5 text-blue-600"/>
                             <span>300+ Apps Launched</span>
                         </div>
                         <div className="hidden sm:block w-[1px] h-6 bg-black"></div>
-                        <div className="flex items-center gap-2">
-                            <Star className="w-5 h-5 text-yellow-500" />
+                        <div className="flex flex-col gap-2">
+                            <Star className="w-5 h-5 text-yellow-500"/>
                             <span>4.8★ Average App Rating</span>
                         </div>
                         <div className="hidden sm:block w-[1px] h-6 bg-black"></div>
-                        <div className="flex items-center gap-2">
-                            <Globe className="w-5 h-5 text-green-600" />
+                        <div className="flex flex-col gap-2">
+                            <Globe className="w-5 h-5 text-green-600"/>
                             <span>40–60% Cost Savings vs Native</span>
                         </div>
                     </motion.div>
                 )}
             />
             <AboutSection
-                title="Expert React Native and Flutter Development for Modern Businesses"
-                description="2BTech Inc specializes in cross platform app development using React Native and Flutter—the two leading frameworks for building high-quality mobile apps. As a react native development company and flutter app development expert, we help businesses launch on iOS and Android simultaneously from a single codebase. This approach dramatically reduces mobile app development cost by 40-60% compared to building separate native apps. Whether you're a startup launching your first app or an enterprise modernizing legacy systems, our expertise in react native development company services and flutter app development delivers production-ready apps that perform beautifully on both platforms."
+                title="Leading Mobile App Development Company for iOS and Android"
+                description="2BTech Inc is a trusted mobile app development company specializing in native and cross platform app development. Whether you need an ios app development company to build stunning iPhone apps, an android app development company for Google Play, or a react native development company for both platforms, we deliver mobile solutions that users love"
+                descriptionTwo="Our expertise spans flutter app development, creating beautiful, fast apps with a single codebase. We're your complete mobile development partner, from concept and design through development, testing, and App Store launch"
+                descriptionThree="Understanding mobile app development cost is crucial for planning. We provide transparent pricing and flexible engagement models to fit your budget. Our efficient development process using React Native and Flutter reduces costs by 40% compared to building separate native apps, without compromising quality or performance"
                 src="/assets/services/mobileApp/mobileappDevelopment.webp"
                 width={400}
             />
-            <ServiceSection
-                heading="React Native & Flutter Development Services"
-                subHeading="Our Mobile App Development Expertise"
-                description="From design to deployment, our mobile app development services cover the full product lifecycle—powered by React Native and Flutter."
-                arrowImage="/assets/services/down-arrow.svg"
-                services={[
-                    {
-                        id: 1,
-                        title: "React Native Development",
-                        description:
-                            "Expert react native development company building production apps with JavaScript/TypeScript. Leverage React ecosystem, hot reload, and OTA updates for rapid delivery.",
-                    },
-                    {
-                        id: 2,
-                        title: "Flutter Development",
-                        description:
-                            "Professional flutter app development creating stunning apps with Dart, native ARM compilation, and 60/120 FPS performance.",
-                    },
-                    {
-                        id: 3,
-                        title: "Mobile App Design",
-                        highlightImage: "/assets/services/salesForce/integration.svg",
-
-                        description:
-                            "User-centered design for iOS and Android with wireframing, prototyping, and UX/UI systems ensuring intuitive, platform-appropriate experiences.",
-                    },
-                    {
-                        id: 4,
-                        title: "App Modernization",
-                        description:
-                            "Migrate legacy apps to React Native or Flutter. Reduce maintenance costs and enhance performance with modern frameworks.",
-                    },
-                ]}
+            <MobileServicesSection/>
+            <CloudMigrationProcess
+                heading="Our Mobile App Development"
+                highlight="Process"
+                description="A structured and proven approach to ensure a smooth and cost-efficient transition to the cloud."
+                steps={processSteps}
             />
-            <WhatIsSection
-                heading="Why Cross-Platform"
-                highlight="Cross-Platform"
-                description="Cross platform app development using React Native and Flutter represents the modern approach to mobile development. Build once, deploy everywhere—reducing costs, accelerating launches, and simplifying maintenance while delivering native-quality experiences on iOS and Android."
-                definitionOne={definitionOne}
-                definitionTwo={definitionTwo}
-                imageOne="/assets/services/mobileApp/crossPlatform1.webp"
-                imageTwo="/assets/services/mobileApp/crossPlatform2.png"
-            />
-            <OurModals
-                headingHighlight="Flexible Engagement Models for"
-                heading="Every Project Type"
-                src="/assets/services/mobileApp/mobileAppModal.webp"
-                description="Choose between fixed-price packages for defined projects or dedicated teams for ongoing development. Both models deliver quality cross platform app development at transparent pricing."
-                subheading="Fixed-Price Projects"
-                subDescription="Complete app development with defined scope, features, and timeline. Best for MVPs, startups, and projects with clear requirements. Predictable mobile app development cost with no surprises or hidden fees."
-                subheadingTwo="Dedicated Development Team"
-                subDescriptionTwo="Full-time developers working exclusively on your app. Ideal for complex apps, continuous feature development, or replacing in-house mobile teams. Monthly engagement with flexible scope and priorities."
-            />
-
-            <OurStack
-                heading="Modern Mobile Technologies "
-                description="React Native and Flutter with industry-standard tools and services"
-                highlightHeading="We Use Daily"
-                stackIcons={StackIcons}
+            <TechStackServices
                 techCategories={techCategories}
             />
             <OurFlowSection
-                heading="Choosing Your Framework"
-                headingHighlight="React Native vs Flutter"
-                description="As experts in both react native development company services and flutter app development, we help you choose the right framework."
+                heading="for Mobile App Development?"
+                headingHighlight="Why Choose 2BTech"
                 services={[
                     {
-                        title: "React Native Overview",
+                        title: "Full-Stack Mobile Expertise",
                         duration: "",
                         description:
-                            "JavaScript/TypeScript framework by Meta used by Instagram, Facebook, Discord, and Shopify. Massive ecosystem with 50,000+ npm packages. Hot reload, over-the-air updates, and familiar React patterns make it ideal for fast, scalable development.",
+                            "Expert teams for iOS, Android, React Native, and Flutter. 300+ apps launched across all platforms and industries.",
                     },
                     {
-                        title: "Flutter Overview",
+                        title: "Design Excellence",
                         duration: "",
                         description:
-                            "Dart framework by Google used by BMW, Alibaba, and eBay. Compiles to native ARM code for maximum performance. Offers 60/120 FPS animations, pixel-perfect UI, and beautiful Material/Cupertino widgets out of the box.",
+                            "Award-winning designers creating beautiful, intuitive interfaces. 4.8★ average rating across client apps.",
                     },
                     {
-                        title: "Choose React Native When",
+                        title: "Proven Development Process",
                         duration: "",
                         description:
-                            "Your team knows JavaScript/React, you need vast npm library access, want over-the-air updates bypassing app stores, are building content or data-driven apps, or have an existing React web codebase to leverage.",
+                            "Agile methodology with two-week sprints. Regular demos and continuous client involvement.",
                     },
                     {
-                        title: "Choose Flutter When",
+                        title: "Quality Assurance",
                         duration: "",
                         description:
-                            "You want maximum performance and buttery-smooth animations, need heavily customized UI with brand-specific design, are building graphics-intensive apps, targeting mobile + web + desktop, or starting a fresh greenfield project.",
+                            "Rigorous testing on hundreds of devices. Automated and manual QA ensures bug-free launches.",
                     },
                     {
-                        title: "Performance Reality Check",
+                        title: "App Store Success",
                         duration: "",
                         description:
-                            "Both deliver production-ready performance for 95% of apps. React Native uses native components, while Flutter renders with the Skia engine. Both achieve 60 FPS. Choose based on your team's expertise and project needs, not benchmarks.",
+                            "95% first-time approval rate. Expert guidance through App Store and Google Play processes.",
                     },
                     {
-                        title: "Our Honest Recommendation",
+                        title: "Post-Launch Support",
                         duration: "",
                         description:
-                            "Most clients choose React Native for its mature ecosystem and JavaScript familiarity. Flutter excels for visually rich, custom-designed apps. Both drastically reduce mobile app development cost compared to native approaches.",
+                            "We don't disappear after launch. Ongoing support, updates, and optimization included.",
+                    },
+                    {
+                        title: "Cost-Effective Solutions",
+                        duration: "",
+                        description:
+                            "Transparent pricing with no hidden fees. Cross-platform development saves 40-60% vs native.",
                     },
                 ]}
             />
-
+            <IndustriesSection industries={industriesData}/>
             <Banner
                 title="Ready to Build Your Cross-Platform App?"
                 description="Leverage our expertise in React Native and Flutter development to launch powerful iOS and Android apps"
                 src="/assets/services/mobileApp/mobileAppBanner.webp"
             />
-            <TestimonialSection/>
             <FaqSection
                 Faq={faqs}
             />
             <FinalCTASection
-                heading="Ready to Build Your App?"
-                description="Schedule a free consultation to discuss your mobile app idea. We'll recommend the optimal framework (React Native or Flutter), provide timeline and mobile app development cost estimate, and outline the best approach to launch successfully."
+                heading="Ready to Build Your Mobile App?"
+                description="Schedule a free app consultation. We'll discuss your idea, recommend optimal approach (native vs cross-platform), provide timeline and cost estimate, and create a development roadmap"
                 features={[
-                    "Framework recommendation (React Native vs Flutter)",
-                    "Feature prioritization and technical feasibility",
-                    "Architecture and integration planning",
-                    "Realistic timeline and cost breakdown",
+                    "Platform recommendation (iOS/Android/both)",
                     "Technology stack selection",
+                    "Feature prioritization",
+                    "Timeline and cost estimate",
+                    "UI/UX recommendations",
                     "No-obligation proposal",
                 ]}
             />
