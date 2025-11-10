@@ -232,19 +232,19 @@ const ContactUsPage = () => {
                                 <div className="border border-primary rounded-full p-2">
                                     <MapPin className="w-7 h-7 text-primary"/>
                                 </div>
-                                <span>674 Washington Avenue</span>
+                                <span>900 Balcones Drive, STE 4000 Austin, USA</span>
                             </div>
                             <div className="flex items-center space-x-6">
                                 <div className="border border-primary rounded-full p-2">
                                     <Phone className="w-7 h-7 text-primary"/>
                                 </div>
-                                <span>602-216-4143</span>
+                                <span>+1 (856) 386-7630</span>
                             </div>
                             <div className="flex items-center space-x-6">
                                 <div className="border border-primary rounded-full p-2">
                                     <Mail className="w-7 h-7  text-primary"/>
                                 </div>
-                                <span>johnlowa123@gmail.com</span>
+                                <span>info@2btechinc.com</span>
                             </div>
                         </div>
                         <div className="flex  justify-center lg:justify-start items-center ">
