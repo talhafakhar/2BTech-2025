@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Image from "next/image";
 
 interface Project {
     id: number;
@@ -316,7 +317,7 @@ const Portfolio: React.FC = () => {
                 {filteredProjects.map((project) => (
                     <div key={project.id} className="bg-white border  rounded shadow-md overflow-hidden">
                         <div className="relative">
-                            <img src={project.image} alt={project.title} className="w-full h-64 object-cover"/>
+                            <Image src={project.image} alt={project.title} width={200} height={200} className="w-full h-64 object-cover"/>
                         </div>
                         <div className="p-4">
                             <h3 className="font-bold text-lg">{project.title}</h3>
