@@ -973,43 +973,30 @@ const TechStackHome = () => {
             }
         }
     };
-    const categories = [
+    const integrationsData = [
         {
-            name: "AI Platforms & Tools",
-            tools: ["ChatGPT", "Claude", "Gemini", "Perplexity API", "OpenRouter", "Relevance AI"],
-        },
-
-        {
-            name: "Communication & Voice AI",
-            tools: ["Twilio", "Vonage", "Whisper", "ElevenLabs", "AssemblyAI", "Deepgram"],
+            title: "Sales & Marketing Automation",
+            description: "CRMs, outreach tools, and lead generation platforms",
         },
         {
-            name: "Bookkeeping & Accounting",
-            tools: ["QuickBooks", "Xero", "FreshBooks", "Nanonets (OCR)", "Google Sheets API"],
+            title: "Financial Operations",
+            description: "Accounting systems, payment gateways, and automated bookkeeping",
         },
         {
-            name: "Project Management & Productivity",
-            tools: ["ClickUp", "Notion", "Asana", "Trello", "Slack", "Discord"],
+            title: "AI & Voice Technology",
+            description: "LLMs, speech-to-text, voice agents, and intelligent automation",
         },
         {
-            name: "Automation & Workflow",
-            tools: ["n8n", "Make.com", "Zapier", "Airflow"],
-        },
-
-        {
-            name: "Payment & Billing",
-            tools: ["Stripe", "PayPal", "Paddle", "Razorpay"],
-        },
-
-        {
-            name: "Sales & CRM",
-            tools: ["HubSpot", "Salesforce", "Pipedrive", "Apollo.io", "Seamless.AI", "Lemlist", "Instantly", "Smartlead"],
+            title: "Workflow & Productivity",
+            description: "Project management, communication, and no-code/low-code platforms",
         },
         {
-            name: "Real Estate Systems",
-            tools: ["Zillow API", "Realtor.com API", "Airtable", "Calendly", "Google Calendar", "WhatsApp Cloud API"],
+            title: "Industry-Specific Tools",
+            description: "Real estate APIs, specialized databases, and custom integrations",
         },
     ];
+
+    const popularIntegrations = ["HubSpot", "Salesforce", "Stripe", "QuickBooks", "n8n", "OpenAI", "Twilio"];
     const cardVariants = {
         hidden: { opacity: 0, y: 10 },
         show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
@@ -1131,59 +1118,62 @@ const TechStackHome = () => {
                     ))}
                 </motion.div>
                 <div className="w-full mt-16">
-                    <h2 className="text-3xl font-bold mb-10 text-gray-900 text-center">
-                        Integrations & APIs
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900 text-center">
+                        <span className="text-primary">Integrations & APIs </span> We Work With
                     </h2>
+                    <p className="text-center text-gray-600 mb-10 ">
+                        Connect your entire tech stack seamlessly. We integrate with 50+ platforms across
+                    </p>
 
+                    {/* First 3 items in 3-column grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {categories.slice(0, 6).map((category, idx) => (
+                        {integrationsData.slice(0, 3).map((integration, idx) => (
                             <motion.div
                                 key={idx}
                                 variants={cardVariants}
                                 whileHover={{ scale: 1.02, y: -3 }}
-                                className="p-6 rounded-2xl border  bg-white  shadow-lg"
+                                className="p-6 rounded border bg-white shadow-lg"
                             >
-                                <h3 className="text-lg font-semibold text-primary mb-4">
-                                    {category.name}
+                                <h3 className="text-lg font-semibold text-secondary mb-2">
+                                    {integration.title}
                                 </h3>
-                                <div className="flex flex-wrap gap-3">
-                                    {category.tools.map((tool, i) => (
-                                        <motion.div
-                                            key={i}
-                                            whileHover={{ scale: 1.05 }}
-                                            className="flex items-center gap-2 px-3 py-2 rounded-lg border  hover:bg-gray-900 hover:text-white text-secondary transition-all duration-300 text-sm font-medium"
-                                        >
-                                            {tool}
-                                        </motion.div>
-                                    ))}
-                                </div>
+                                <p className="text-gray-600">{integration.description}</p>
                             </motion.div>
                         ))}
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-3">
-                        {categories.slice(6).map((category, idx) => (
-                            <motion.div
-                                key={idx + 6}
-                                variants={cardVariants}
-                                whileHover={{ scale: 1.02, y: -3 }}
-                                className="p-6 rounded-2xl border  bg-white  shadow-lg"
-                            >
-                                <h3 className="text-lg font-semibold text-primary mb-4">
-                                    {category.name}
-                                </h3>
-                                <div className="flex flex-wrap gap-3">
-                                    {category.tools.map((tool, i) => (
-                                        <motion.div
-                                            key={i}
-                                            whileHover={{ scale: 1.05 }}
-                                            className="flex items-center gap-2 px-3 py-2 rounded-lg border  hover:bg-gray-900 hover:text-white text-secondary transition-all duration-300 text-sm font-medium"
-                                        >
-                                            {tool}
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </motion.div>
-                        ))}
+
+                    {integrationsData.length > 3 && (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+                            {integrationsData.slice(3).map((integration, idx) => (
+                                <motion.div
+                                    key={idx + 3}
+                                    variants={cardVariants}
+                                    whileHover={{ scale: 1.02, y: -3 }}
+                                    className="p-6 rounded border bg-white shadow-lg"
+                                >
+                                    <h3 className="text-lg font-semibold text-secondary mb-2">
+                                        {integration.title}
+                                    </h3>
+                                    <p className="text-gray-600">{integration.description}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    )}
+
+
+                    <div className="mt-10 text-center">
+                        <h4 className="text-xl font-semibold mb-2">Popular integrations</h4>
+                        <div className="flex flex-wrap justify-center gap-3">
+                            {popularIntegrations.map((tool, i) => (
+                                <motion.div
+                                    key={i}
+                                    whileHover={{ scale: 1.05 }}
+                                    className="px-2 py-1.5 rounded border border-secondary bg-white hover:bg-primary hover:text-white  transition-all duration-300 text-sm font-medium"
+                                >
+                                    {tool}
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

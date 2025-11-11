@@ -6,9 +6,10 @@ import {Code, Globe, Zap} from "lucide-react";
 import Image from "next/image";
 interface HeroSectionProps {
     title?: string;
+    subtitle?: string;
     buttonText?: string;
 }
-const HeroSection: React.FC<HeroSectionProps> = ({title,buttonText}) => {
+const HeroSection: React.FC<HeroSectionProps> = ({title,subtitle,buttonText}) => {
     const containerVariants = {
         hidden: {opacity: 0},
         visible: {
@@ -82,6 +83,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({title,buttonText}) => {
                             >
                                 {title}
                             </motion.h1>
+                            <motion.p
+                                variants={itemVariants}
+                                className="text-lg text-white/80 leading-tight py-2 max-w-3xl mx-auto"
+                            >{subtitle}
+                            </motion.p>
+
 
                             <motion.div variants={itemVariants} className="mt-4 sm:mt-6 flex justify-center">
                                 <motion.button

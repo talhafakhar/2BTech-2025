@@ -101,7 +101,7 @@ const CTASection: React.FC = () => {
                             <span className="hidden sm:block text-gray-300">|</span>
                             <p className="flex items-center gap-2 hover:text-primary transition-colors">
                                 <span className="text-xl"><Phone/></span>
-                                <span className="font-medium">+1 (856) 386-7630</span>
+                                <span className="font-medium">737 299 0421</span>
                             </p>
                         </div>
                         <motion.span

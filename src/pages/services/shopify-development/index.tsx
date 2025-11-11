@@ -66,7 +66,28 @@ export default function ShopifyDevelopment() {
                 "Whether you're a startup or Fortune 500 company, our custom Shopify development services scale to meet your needs—handling high-volume transactions, complex integrations, and advanced business requirements with proven reliability.",
         },
     ];
-
+    const platforms = [
+        {
+            icon: (  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 0 48 48" className="w-14 h-14">
+                <g id="SVGRepo_iconCarrier">
+                    <g
+                        id="Icons"
+                        fill="none"
+                        fillRule="evenodd"
+                        stroke="none"
+                        strokeWidth="1"
+                    >
+                        <g id="Color-" fill="#81BF37" transform="translate(-203 -660)">
+                            <path
+                                id="Shopify"
+                                d="m233.847 666.995 1.678 1.673s3.67.274 3.843.288a.46.46 0 0 1 .418.39c.033.242 5.214 35.446 5.214 35.446l-12.713 2.763zm-1.95-1.334a2 2 0 0 0-.24.05l-1.428.442c-.852-2.463-2.355-4.726-4.998-4.726q-.111 0-.224.007c-.753-.999-1.684-1.434-2.488-1.434-6.16 0-9.104 7.74-10.026 11.672-2.394.745-4.094 1.274-4.31 1.343-1.338.422-1.38.464-1.555 1.729-.132.958-3.628 28.127-3.628 28.127L230.24 708l.029-.006zm-7.092 1.911-.001.269-4.762 1.481c.917-3.554 2.635-5.272 4.138-5.92.377.954.625 2.323.625 4.17m-2.457-5.912c.268 0 .535.092.792.269-1.975.933-4.09 3.285-4.984 7.98l-3.763 1.172c1.046-3.582 3.531-9.42 7.955-9.42m1.062 20.933s-1.594-.855-3.548-.855c-2.866 0-3.01 1.807-3.01 2.262 0 2.486 6.444 3.438 6.444 9.258 0 4.578-2.89 7.527-6.787 7.527-4.676 0-7.067-2.925-7.067-2.925l1.252-4.157s2.459 2.121 4.533 2.121c1.354 0 1.906-1.072 1.906-1.855 0-3.242-5.288-3.387-5.288-8.714 0-4.481 3.202-8.82 9.665-8.82 2.49 0 3.72.718 3.72.718zm3.009-15.255.001-.5c0-1.53-.212-2.762-.55-3.739 1.362.171 2.27 1.73 2.853 3.522z"
+                            ></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>),
+        },
+    ];
     return (
         <div className="font-syne">
             <NextSeo
@@ -109,7 +130,7 @@ export default function ShopifyDevelopment() {
                 title="Expert Shopify Developer for Revenue"
                 description="Transform your online store with a trusted shopify development company driving measurable results"
                 formLabel="Get Free Shopify development Consultation"
-                buttonText="Get Free Quote"
+                platforms={platforms}
                 TrustBar={() => (
                     <div></div>
                 )}

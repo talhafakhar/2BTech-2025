@@ -191,16 +191,7 @@ const Navbar: React.FC = () => {
                             )}
 
                         </div>
-                        <Link href="/contact-us"
-                              className={`
-    flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
-    ${scrolled ? "text-black hover:text-secondary" : "text-white"}
-    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
-    after:w-0 after:transition-all after:duration-300 hover:after:w-full
-  `}>
-                            <Mail className="h-4 w-4"/>
-                            <span className="font-medium">Contact</span>
-                        </Link>
+
                         <Link href="/our-work"
                               className={`
     flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
@@ -217,7 +208,16 @@ const Navbar: React.FC = () => {
   `}>
                             <span className="font-medium">Blog</span>
                         </Link>
-
+                        <Link href="/contact-us"
+                              className={`
+    flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
+    ${scrolled ? "text-black hover:text-secondary" : "text-white"}
+    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
+    after:w-0 after:transition-all after:duration-300 hover:after:w-full
+  `}>
+                            <Mail className="h-4 w-4"/>
+                            <span className="font-medium">Contact</span>
+                        </Link>
                     </div>
                     <div className="hidden lg:flex">
                         <button
@@ -228,7 +228,7 @@ const Navbar: React.FC = () => {
                                 scrolled
                                     ? "border border-gray-800 text-gray-800 hover:bg-gray-100"
                                     : "border border-white text-white hover:bg-gray-100 hover:text-gray-800"
-                            }`}> Get a purposal
+                            }`}> Get a proposal
                         </button>
                     </div>
                     <div className="lg:hidden">
@@ -356,19 +356,20 @@ const Navbar: React.FC = () => {
                         <Link href="/about-us" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">About</span>
                         </Link>
-                        <Link href="/contact-us" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <Mail className="h-5 w-5"/>
-                            <span className="font-medium">Contact</span>
-                        </Link>
+
                         <Link href="/our-work" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Our Work</span>
                         </Link>
                         <Link href="/blogs" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Blogs</span>
                         </Link>
+                        <Link href="/contact-us" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                            <Mail className="h-5 w-5"/>
+                            <span className="font-medium">Contact</span>
+                        </Link>
                         <div className="pt-4 px-2">
                             <button className="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg">
-                                Get Started
+                                Get a proposal
                             </button>
                         </div>
                     </div>

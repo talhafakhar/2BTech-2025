@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { servicesItems } from "@/components/Header/Navbar";
-
-
 const socialLinks = [
     { icon: Facebook, href: "https://www.facebook.com/2btechinc" },
     { icon: Twitter, href: "https://www.linkedin.com/company/2btechinc/mycompany/" },
@@ -113,7 +111,6 @@ const Footer = () => {
                     </motion.div>
                 </div>
             </div>
-
             <div className="border-t border-gray-200">
                 <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-2">
                     <span>© 2025 2BTech. All Rights Reserved.</span>
@@ -133,5 +130,4 @@ const Footer = () => {
         </footer>
     );
 };
-
 export default Footer;

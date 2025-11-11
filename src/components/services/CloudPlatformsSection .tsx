@@ -138,7 +138,8 @@ const CloudPlatformsSection = () => {
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         Choose from the industry&#39;s leading cloud providers or leverage multi-cloud strategies for maximum flexibility
                     </p>
-                </motion.div><div className="flex flex-wrap justify-center gap-3 mb-12">
+                </motion.div>
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
                     {platforms.map((platform, index) => {
                         const TabIcon = platform.icon;
                         return (

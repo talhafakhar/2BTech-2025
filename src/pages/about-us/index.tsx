@@ -61,7 +61,7 @@ export default function AboutPage() {
                 }}
             />
 
-            <HeroSection title="Building Software That Actually Works" buttonText="Let's Talk About Your Project"/>
+            <HeroSection title="Building Software That Actually Works" subtitle="We're 2BTech: transforming business challenges into results-driven software." buttonText="Let's Talk About Your Project"/>
             <AboutSection
                 title="Who We Are?"
                 description="We started 2BTech because we saw too many companies wasting money on software that didn't fit their needs. Off-the-shelf solutions that required endless workarounds. Development agencies that disappeared after launch. Products built on assumptions instead of understanding.

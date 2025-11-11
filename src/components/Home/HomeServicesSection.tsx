@@ -72,7 +72,7 @@ const HomeServicesSection: React.FC = () => {
                 "Expert development across platforms and ecosystems. We build where your customers are, with technologies that deliver results.",
             icon: <Layers className="w-8 h-8" />,
             items: [
-                "Mobile apps (iOS, Android, React Native, Flutter)",
+                "Mobile apps (Android, React Native, Flutter)",
                 "Cloud engineering (AWS, Azure, Google Cloud)",
                 "E-commerce (Shopify custom development)",
                 "Web platforms (Webflow, custom CMS)",

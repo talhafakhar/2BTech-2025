@@ -71,6 +71,116 @@ export default function MobileAppDevelopment() {
             transition: {duration: 0.5, ease: easeInOut},
         },
     };
+    const platforms = [
+        {
+            icon: ( <svg viewBox="0 0 128 128" className="w-14 h-14">
+                <circle cx="64" cy="64" r="11.4" fill="#61dafb"/>
+                <g stroke="#61dafb" strokeWidth="6" fill="none">
+                    <ellipse rx="56" ry="22" cx="64" cy="64"/>
+                    <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(60 64 64)"/>
+                    ;
+                    <ellipse rx="56" ry="22" cx="64" cy="64" transform="rotate(120 64 64)"/>
+                </g>
+            </svg>),
+        },
+        {
+            icon: (<svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-12 h-12"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                data-name="Layer 1"
+                viewBox="0 0 125 125"
+            >
+                <g id="SVGRepo_iconCarrier">
+                    <defs>
+                        <linearGradient
+                            id="b"
+                            x1="-21.045"
+                            x2="95.274"
+                            y1="114.925"
+                            y2="-1.395"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop offset="0.108" stopColor="#c757bc"></stop>
+                            <stop offset="0.173" stopColor="#cd5ca9"></stop>
+                            <stop offset="0.492" stopColor="#e8744f"></stop>
+                            <stop offset="0.716" stopColor="#f88316"></stop>
+                            <stop offset="0.823" stopColor="#ff8900"></stop>
+                        </linearGradient>
+                        <linearGradient
+                            id="a"
+                            x1="39.893"
+                            x2="96.589"
+                            y1="147.552"
+                            y2="90.856"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop offset="0.296" stopColor="#00afff"></stop>
+                            <stop offset="0.694" stopColor="#5282ff"></stop>
+                            <stop offset="1" stopColor="#945dff"></stop>
+                        </linearGradient>
+                        <linearGradient
+                            xlinkHref="#a"
+                            id="c"
+                            x1="-1.501"
+                            x2="38.272"
+                            y1="34.501"
+                            y2="-5.273"
+                        ></linearGradient>
+                    </defs>
+                    <path
+                        fill="url(#b)"
+                        d="M62.759 0 0 65.999V125l62.669-62.779L125 0z"
+                    ></path>
+                    <path
+                        fill="url(#a)"
+                        d="m0 125 62.669-62.778L125 125z"
+                        data-name="&lt;Path&gt;"
+                    ></path>
+                    <path fill="url(#c)" d="M0 0h62.759L0 65.999z"></path>
+                </g>
+            </svg>),
+        },
+        {
+            icon: ( <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-12 h-12">
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        fill="#40d0fd"
+                        d="m15.383 18.316 3.361-3.274h8.349l-7.396 7.396z"
+                    ></path>
+                    <path
+                        fill="#41d0fd"
+                        d="m4.907 16.125 4.199 4.299L27.093 2.287h-8.349z"
+                        style={{isolation: "isolate"}}
+                    ></path>
+                    <path
+                        fill="#1fbcfd"
+                        d="m11.176 22.479 4.259 4.196 4.262-4.237-4.314-4.122z"
+                    ></path>
+                    <path
+                        fill="#095a9d"
+                        d="m15.435 26.675 4.262-4.237 7.292 7.375h-8.396z"
+                    ></path>
+                    <path fill="#0e5199" d="m15.435 26.675 3.971-1.321-1.338-1.297z"></path>
+                </g>
+            </svg>),
+        },
+        {
+            icon: (   <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" viewBox="-252 343.9 106.1 106.1">
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        fill="#F05138"
+                        d="M-145.9 373.3v-3.2c-.1-2.3-.2-4.7-.6-7s-1.1-4.5-2.2-6.6-2.4-4-4.1-5.6c-1.7-1.7-3.6-3-5.6-4.1-2.1-1.1-4.3-1.8-6.6-2.2s-4.6-.6-7-.6h-53.7c-.6 0-1.2 0-1.7.1-1.7.1-3.5.2-5.2.5s-3.4.8-5 1.4c-.5.2-1.1.5-1.6.7-1.6.8-3 1.8-4.4 2.9-.4.4-.9.8-1.3 1.2-1.7 1.7-3 3.6-4.1 5.6-1.1 2.1-1.8 4.3-2.2 6.6s-.5 4.6-.6 7v53.7c.1 2.3.2 4.7.6 7s1.1 4.5 2.2 6.6 2.4 4 4.1 5.6c1.7 1.7 3.6 3 5.6 4.1 2.1 1.1 4.3 1.8 6.6 2.2s4.6.6 7 .6h53.7c2.3-.1 4.7-.2 7-.6s4.5-1.1 6.6-2.2 4-2.4 5.6-4.1c1.7-1.7 3-3.6 4.1-5.6 1.1-2.1 1.8-4.3 2.2-6.6s.6-4.6.6-7v-50.4"
+                    ></path>
+                    <path
+                        fill="#FFF"
+                        d="m-168 409.4.3-1.2c4.4-17.5-6.3-38.3-24.5-49.2 8 10.8 11.5 23.9 8.4 35.3-.3 1-.6 2-1 3-.4-.3-.9-.6-1.6-.9 0 0-18.1-11.2-37.7-30.9-.5-.5 10.5 15.7 22.9 28.8-5.9-3.3-22.2-15.2-32.6-24.6 1.3 2.1 2.8 4.2 4.4 6.1 8.6 11 19.9 24.5 33.4 34.9-9.5 5.8-22.9 6.3-36.2 0-3.3-1.5-6.4-3.4-9.3-5.5 5.6 9 14.3 16.8 24.9 21.4 12.6 5.4 25.2 5.1 34.5.1 0 0 .1 0 .1-.1.4-.2.8-.5 1.2-.7 4.5-2.3 13.3-4.6 18.1 4.6 1.4 2.1 3.9-9.9-5.3-21.1"
+                    ></path>
+                </g>
+            </svg>),
+        }
+    ];
+
     const techCategories = [
         {
             name: "iOS Development",
@@ -1411,7 +1521,7 @@ export default function MobileAppDevelopment() {
             <HeroSection
                 title="Build Apps That Users Love"
                 description="Transform your idea into a powerful mobile experience with our mobile app development company. We create iOS, Android, and cross platform app development solutions that drive engagement, revenue, and business growth"
-                buttonText="Get Free App Consultation"
+                platforms={platforms}
                 formLabel="Get Free App Consultation"
                 TrustBar={() => (
                     <motion.div
@@ -1420,17 +1530,17 @@ export default function MobileAppDevelopment() {
                     >
                         <div className="flex flex-col  gap-2">
                             <Rocket className="w-5 h-5 text-blue-600"/>
-                            <span>300+ Apps Launched</span>
+                            <span>300+ Apps</span>
                         </div>
                         <div className="hidden sm:block w-[1px] h-6 bg-black"></div>
                         <div className="flex flex-col gap-2">
                             <Star className="w-5 h-5 text-yellow-500"/>
-                            <span>4.8★ Average App Rating</span>
+                            <span>4.8★ Average Rating</span>
                         </div>
                         <div className="hidden sm:block w-[1px] h-6 bg-black"></div>
                         <div className="flex flex-col gap-2">
                             <Globe className="w-5 h-5 text-green-600"/>
-                            <span>40–60% Cost Savings vs Native</span>
+                            <span>40–60% Cost Savings</span>
                         </div>
                     </motion.div>
                 )}

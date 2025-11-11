@@ -12,10 +12,11 @@ interface ServiceHeroProps {
     description?: string;
     buttonText?: string;
     formLabel?: string;
+    platforms?: {icon: React.ReactNode }[];
     TrustBar?: ReactNode | (() => ReactNode);
 }
 
-const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar, formLabel, buttonText }) => {
+const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar, formLabel, buttonText ,platforms}) => {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -156,6 +157,20 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                             >
                                 {description}
                             </motion.p>
+                            {platforms && (
+                                <div className="flex flex-wrap gap-8 mt-6">
+                                    {platforms.map((platform, index) => {
+                                        const TabIcon = platform.icon;
+                                        return (
+                                            <motion.button
+                                                key={index}
+                                            >
+                                                {TabIcon}
+                                            </motion.button>
+                                        );
+                                    })}
+                                </div>
+                            )}
                             {TrustBar ? (
                                 typeof TrustBar === "function" ? (
                                     <TrustBar />
@@ -165,7 +180,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                             ) : (
                                 <motion.div
                                     variants={itemVariants}
-                                    className="mt-12 flex flex-col sm:flex-row items-center gap-6 text-sm sm:text-base text-gray-700 font-medium"
+                                    className="mt-6 flex flex-col sm:flex-row items-center gap-6 text-sm sm:text-base text-gray-700 font-medium"
                                 >
                                     <div className="flex items-center gap-2">
                                         <Rocket className="w-5 h-5 text-blue-600" />
@@ -183,31 +198,34 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                                     </div>
                                 </motion.div>
                             )}
-                            <div className="flex gap-2 sm:gap-6 justify-center md:justify-start items-center mt-8">
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={() =>
-                                        window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
-                                    }
-                                    className="flex items-center border-black px-4 py-2.5 rounded border font-semibold transform transition-all duration-300 shadow-lg hover:shadow-xl"
-                                >
-                                    {buttonText}
-                                    <svg
-                                        className="ml-2 w-5 h-5 transform transition-transform duration-300"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
+
+                            {buttonText && (
+                                <div className="flex gap-2 sm:gap-6 justify-center md:justify-start items-center mt-8">
+                                    <motion.button
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        onClick={() =>
+                                            window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
+                                        }
+                                        className="flex items-center border-black px-4 py-2.5 rounded border font-semibold transform transition-all duration-300 shadow-lg hover:shadow-xl"
                                     >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                        />
-                                    </svg>
-                                </motion.button>
-                            </div>
+                                        {buttonText}
+                                        <svg
+                                            className="ml-2 w-5 h-5 transform transition-transform duration-300"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                            />
+                                        </svg>
+                                    </motion.button>
+                                </div>
+                            )}
                         </motion.div>
 
                         <motion.div variants={itemVariants} initial="hidden" className="w-full md:w-1/3" animate="visible">

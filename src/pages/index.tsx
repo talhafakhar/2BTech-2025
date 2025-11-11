@@ -105,7 +105,8 @@ export default function Home() {
                 ]}
             />
             <HeroSection
-                title="Transforming Ideas Into Tomorrow’s Solutions!"
+                title="Custom Software and AI Agent Development Company"
+                subtitle="On demand engineering partner for VC backed startups."
             />
             <HomeAboutSection/>
             <WhyChooseUs/>
