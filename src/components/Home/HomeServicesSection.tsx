@@ -85,8 +85,8 @@ const HomeServicesSection: React.FC = () => {
     const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => (
         <div className="group relative bg-white rounded p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border overflow-hidden h-full flex flex-col justify-between">
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary to-secondary p-0.5">
-                    <div className="w-full h-full bg-white rounded-2xl" />
+                <div className="absolute inset-0 rounded bg-gradient-to-r from-primary to-secondary p-0.5">
+                    <div className="w-full h-full bg-white rounded" />
                 </div>
             </div>
 

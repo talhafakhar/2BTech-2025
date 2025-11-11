@@ -76,17 +76,12 @@ const Workflow = () => {
     };
 
     return (
-        <section className="relative overflow-hidden py-10 ">
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <div className="absolute top-20 left-0 w-[400px] h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 right-0 w-[400px] h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
-            </div>
-
+        <section className="bg-gray-50 py-10 ">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-4 relative z-10  max-w-7xl mx-auto px-4"
+                className="text-center mb-4   max-w-7xl mx-auto px-4"
             >
                 <h2 className="text-2xl sm:text-4xl font-bold mb-4 leading-tight text-black">
                     How

@@ -88,7 +88,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({title,buttonText}) => {
                                     onClick={() =>
                                         window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
                                     }
-                                    className="group relative px-6 sm:px-8 py-3 border border-white rounded text-white backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out hover:text-black"
+                                    className="group relative px-6 py-2 border border-white rounded text-white backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out hover:text-black"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.97 }}
                                 >
@@ -101,9 +101,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({title,buttonText}) => {
 
                     <div
                         className={`
-        w-full max-w-7xl gap-6 md:gap-10 px-4
+        w-full container gap-6 md:gap-10 px-4
         flex flex-col-reverse md:flex-row justify-center md:justify-between items-center
-        ${`static md:absolute md:bottom-10 md:left-1/2 md:-translate-x-1/2`}
+        ${`static md:absolute md:bottom-2 md:left-1/2 md:-translate-x-1/2`}
         pb-6 mt-6 sm:mt-10
       `}
                     >
@@ -129,8 +129,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({title,buttonText}) => {
                                     className="filter invert brightness-0 max-w-[100px] h-auto"
                                 />
                                 <Image
-                                    src="/assets/services/hero/lotte-kolson.webp"
-                                    alt="Lotte Kolson"
+                                    src="/assets/services/hero/mesha.webp"
+                                    alt="mesha"
                                     width={110}
                                     height={110}
                                     loading="lazy"

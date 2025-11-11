@@ -59,16 +59,16 @@ export default function MVPComparison() {
                     MVP VS FULL PRODUCT
                 </h3>
                 <div className="hidden md:block overflow-x-auto">
-                    <table className="w-full border-collapse border">
+                    <table className="w-full border-separate border border-gray-400 border-spacing-0 shadow-md rounded-xl overflow-hidden">
                         <thead>
-                        <tr className="bg-gray-50">
-                            <th className="border-2  px-6 py-4 text-left font-semibold">
+                        <tr className="bg-gradient-to-r from-blue-50 to-indigo-50 ">
+                            <th className="px-6 py-4 text-left font-semibold text-sm uppercase tracking-wide border-b">
                                 Aspect
                             </th>
-                            <th className="border-2  px-6 py-4 text-left font-semibold">
+                            <th className="px-6 py-4 text-left font-semibold text-sm uppercase tracking-wide border-b">
                                 MVP
                             </th>
-                            <th className="border-2  px-6 py-4 text-left font-semibold">
+                            <th className="px-6 py-4 text-left font-semibold text-sm uppercase tracking-wide border-b">
                                 Full Product
                             </th>
                         </tr>
@@ -77,17 +77,24 @@ export default function MVPComparison() {
                         {comparisonData.map((row, index) => {
                             const Icon = row.icon;
                             return (
-                                <tr key={index} className="bg-white">
-                                    <td className="border px-6 py-4">
+                                <tr
+                                    key={index}
+                                    className={`transition-all duration-300 hover:bg-blue-50 ${
+                                        index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                                    }`}
+                                >
+                                    <td className="px-6 py-4 border-b">
                                         <div className="flex items-center gap-3">
-                                            <Icon className="w-5 h-5 text-primary"/>
+                                            <div className="p-2 bg-blue-100 text-blue-600 rounded-lg">
+                                                <Icon className="w-5 h-5" />
+                                            </div>
                                             <span className="font-medium text-gray-900">{row.aspect}</span>
                                         </div>
                                     </td>
-                                    <td className="border px-6 py-4 text-gray-700">
+                                    <td className="px-6 py-4 border-b text-gray-700 leading-relaxed">
                                         {row.mvp}
                                     </td>
-                                    <td className="border px-6 py-4 text-gray-700">
+                                    <td className="px-6 py-4 border-b text-gray-700 leading-relaxed">
                                         {row.full}
                                     </td>
                                 </tr>
@@ -96,29 +103,42 @@ export default function MVPComparison() {
                         </tbody>
                     </table>
                 </div>
-                <div className="md:hidden space-y-4">
+
+                <div className="md:hidden space-y-5">
                     {comparisonData.map((row, index) => {
                         const Icon = row.icon;
                         return (
-                            <div key={index} className="border rounded-lg p-4 bg-white">
+                            <div
+                                key={index}
+                                className=" border border-gray-400 rounded-xl p-5 bg-gradient-to-br from-white to-blue-50 shadow-sm hover:shadow-md transition-all duration-300"
+                            >
                                 <div className="flex items-center gap-3 mb-4">
-                                    <Icon className="w-5 h-5 text-primary"/>
-                                    <h3 className="font-semibold ">{row.aspect}</h3>
-                                </div>
-                                <div className="space-y-3">
-                                    <div>
-                                        <p className="text-xs font-medium text-gray-500 mb-1">MVP</p>
-                                        <p className="text-gray-700">{row.mvp}</p>
+                                    <div className="p-2 bg-blue-100 text-blue-600 rounded-lg">
+                                        <Icon className="w-5 h-5" />
                                     </div>
-                                    <div>
-                                        <p className="text-xs font-medium text-gray-500 mb-1">Full Product</p>
-                                        <p className="text-gray-700">{row.full}</p>
+                                    <h3 className="font-semibold text-gray-900 text-base">
+                                        {row.aspect}
+                                    </h3>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4 text-sm">
+                                    <div className="bg-white p-3 rounded-lg shadow-inner border">
+                                        <p className="text-xs font-medium text-blue-600 mb-1 uppercase">
+                                            MVP
+                                        </p>
+                                        <p className="text-gray-700 leading-snug">{row.mvp}</p>
+                                    </div>
+                                    <div className="bg-white p-3 rounded-lg shadow-inner border">
+                                        <p className="text-xs font-medium text-green-600 mb-1 uppercase">
+                                            Full Product
+                                        </p>
+                                        <p className="text-gray-700 leading-snug">{row.full}</p>
                                     </div>
                                 </div>
                             </div>
                         );
                     })}
                 </div>
+
                 <div className="text-center mt-8">
                     <motion.button
                         onClick={() =>

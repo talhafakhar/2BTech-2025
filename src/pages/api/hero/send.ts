@@ -6,8 +6,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (req.method !== 'POST') {
             return res.status(405).json({ ok: false, message: 'Method Not Allowed' });
         }
-        const { fullName, email, businessName, phone, signNDA, service, goals } = req.body;
-        if (!fullName || !email || !phone || !service) {
+        const { fullName, email, businessName, phone, signNDA, ticketSize, goals } = req.body;
+        if (!fullName || !email || !phone || !ticketSize) {
             return res.status(400).json({
                 ok: false,
                 message: 'Please fill in all required fields'
@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await resend.emails.send({
             from: 'onboarding@resend.dev',
             to: 'info@2btechinc.com',
-            subject: `New Lead: ${service} - ${businessName || fullName}`,
+            subject: `New Lead: ${businessName || fullName}`,
             html: `
                 <div style="font-family: Arial, sans-serif; background-color: #f9fafb; padding: 20px;">
                     <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
@@ -51,9 +51,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                             <h3 style="font-size: 16px; font-weight: 600; color: #111827; margin: 0 0 12px 0;">Project Details</h3>
                             
                             <p style="font-size: 14px; color: #374151; margin: 8px 0;">
-                                <strong style="color:#111827;">Service Requested:</strong> 
+                                <strong style="color:#111827;">Ticket Size:</strong> 
                                 <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 6px; display: inline-block; margin-left: 8px;">
-                                    ${service}
+                                    ${ticketSize}
                                 </span>
                             </p>
                             

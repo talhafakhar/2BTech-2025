@@ -22,10 +22,9 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
         businessName: '',
         phone: '',
         signNDA: '',
-        service: '',
+        ticketSize: '',
         goals: '',
     });
-
     const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [modalMsg, setModalMsg] = useState('');
@@ -37,7 +36,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        if (!formData.fullName || !formData.email || !formData.phone || !formData.service) {
+        if (!formData.fullName || !formData.email || !formData.phone || !formData.ticketSize) {
             setModalMsg('⚠️ Please fill in all required fields.');
             setIsSuccess(false);
             setShowModal(true);
@@ -80,7 +79,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                 businessName: '',
                 phone: '',
                 signNDA: '',
-                service: '',
+                ticketSize: '',
                 goals: '',
             });
         }
@@ -147,7 +146,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                         <motion.div variants={containerVariants} className="w-full md:w-1/2" initial="hidden" animate="visible">
                             <motion.h1
                                 variants={itemVariants}
-                                className="text-2xl sm:text-4xl md:text-6xl font-bold"
+                                className="text-3xl sm:text-4xl md:text-6xl font-bold"
                             >
                                 {title}
                             </motion.h1>
@@ -268,17 +267,17 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                                             <option className="text-black" value="no">No</option>
                                         </select>
                                         <select
-                                            name="service"
-                                            value={formData.service}
+                                            name="ticketSize"
+                                            value={formData.ticketSize}
                                             onChange={handleInputChange}
                                             required
                                             className="w-full border text-gray-400 border-gray-300 rounded-md px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary"
                                         >
-                                            <option className="text-black" value="">Select Service*</option>
-                                            <option className="text-black" value="custom-software">Custom Software</option>
-                                            <option className="text-black" value="ai-generative">AI & Generative AI Solutions</option>
-                                            <option className="text-black" value="cloud-engineering">Cloud Engineering</option>
-                                            <option className="text-black" value="salesforce">Salesforce</option>
+                                            <option className="text-black" value="">Select Ticket Size*</option>
+                                            <option className="text-black" value="custom-software">$2500</option>
+                                            <option className="text-black" value="ai-generative">$5000</option>
+                                            <option className="text-black" value="cloud-engineering">$10000</option>
+                                            <option className="text-black" value="salesforce">$20000+</option>
                                         </select>
                                     </div>
                                     <textarea

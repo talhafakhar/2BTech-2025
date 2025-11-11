@@ -108,18 +108,18 @@ export default function Home() {
                 title="Transforming Ideas Into Tomorrow’s Solutions!"
             />
             <HomeAboutSection/>
-            <HomeServicesSection/>
             <WhyChooseUs/>
-            <WorkFlow/>
+            <HomeServicesSection/>
             <TechStackHome/>
+            <HomeIndustrySection/>
+            <WorkFlow/>
+            <CTASection/>
+            <CustomTestimonialSection/>
             <Banner
                 title="Ready to Elevate Your Brand? Let's Talk!"
                 description="Schedule a free discovery call today and take the first step towards transforming your brand with us."
                 src="/assets/Home/banner-bg.svg"
             />
-            <HomeIndustrySection/>
-            <CustomTestimonialSection/>
-            <CTASection/>
             <Footer/>
         </div>
     );

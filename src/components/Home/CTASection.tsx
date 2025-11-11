@@ -96,12 +96,12 @@ const CTASection: React.FC = () => {
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
                             <a href={`mailto:hello@2btech.com`} className="flex items-center gap-2 hover:text-primary transition-colors">
                                 <span className="text-xl"><LucideMail/></span>
-                                <span className="font-medium">hello@2btech.com</span>
+                                <span className="font-medium">info@2btechinc.com</span>
                             </a>
                             <span className="hidden sm:block text-gray-300">|</span>
                             <p className="flex items-center gap-2 hover:text-primary transition-colors">
                                 <span className="text-xl"><Phone/></span>
-                                <span className="font-medium">+1 (234) 567-890</span>
+                                <span className="font-medium">+1 (856) 386-7630</span>
                             </p>
                         </div>
                         <motion.span
