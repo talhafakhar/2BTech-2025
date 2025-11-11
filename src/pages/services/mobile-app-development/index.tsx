@@ -371,7 +371,6 @@ export default function MobileAppDevelopment() {
                 {
                     name: " Android Architecture Components", icon: (<svg
                         xmlns="http://www.w3.org/2000/svg"
-                        ariaLabelledby="aacTitle"
                         viewBox="0 0 100 100"
                     >
                         <circle cx="50" cy="50" r="50"></circle>

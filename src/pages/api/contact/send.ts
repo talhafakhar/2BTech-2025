@@ -24,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
         await resend.emails.send({
             from: 'onboarding@resend.dev',
-            to: 'thetalhafakhar@gmail.com',
+            to: 'info@2btechinc.com',
             subject: `${subject}`,
             html: `
        <div style="font-family: Arial, sans-serif; background-color: #f9fafb; padding: 20px;">
