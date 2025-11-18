@@ -56,7 +56,7 @@ const HowWeWork = () => {
                     {processSteps.map((step, index) => (
                         <motion.div
                             key={index}
-                            className={`relative flex justify-between items-start gap-5 flex-col rounded-2xl border p-8 hover:shadow-xl transition-all duration-300 bg-white cursor-pointer 
+                            className={`relative flex justify-between items-start gap-5 flex-col rounded-b-2xl border p-8 hover:shadow-xl transition-all duration-300 bg-white cursor-pointer 
               ${
                                 index >= 3
                                     ? "lg:col-span-1 sm:col-span-1 col-span-1 last:lg:col-span-2"

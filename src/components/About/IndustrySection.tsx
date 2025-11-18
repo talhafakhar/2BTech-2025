@@ -98,7 +98,7 @@ const IndustrySectors: React.FC = () => {
                             >
                                 <div
                                     onMouseEnter={() => toggleCard(sector.id)}
-                                    className={`relative overflow-hidden cursor-pointer ${expandedCard === sector.id     ? "rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none md:rounded-br-none"
+                                    className={`relative overflow-hidden border cursor-pointer ${expandedCard === sector.id     ? "rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none md:rounded-br-none"
                                         : "rounded-2xl"} w-64 sm:w-72 md:w-80 lg:w-96 h-64 md:h-80 flex-shrink-0`}
                                 >
                                     <Image
@@ -107,7 +107,7 @@ const IndustrySectors: React.FC = () => {
                                         width={400}
                                         height={300}
                                         loading="lazy"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        className="w-full h-full object-cover transition-transform duration-700  group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                                     <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">

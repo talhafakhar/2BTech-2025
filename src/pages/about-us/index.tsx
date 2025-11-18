@@ -67,8 +67,8 @@ export default function AboutPage() {
                 description="We started 2BTech because we saw too many companies wasting money on software that didn't fit their needs. Off-the-shelf solutions that required endless workarounds. Development agencies that disappeared after launch. Products built on assumptions instead of understanding.
 We do things differently. We're a software development partner that sticks around. We listen first, build second, and measure what matters. Our team has built everything from AI-powered platforms to custom Shopify stores, always with the same goal: create tools that make your business stronger.
 Whether you're a startup racing to validate an idea or an enterprise modernizing legacy systems, we bring technical expertise and business thinking to every project. No jargon. No overpromising. Just software that works"
-                src="/assets/About/who.webp"
-                width={400}
+                src="/assets/About/who.svg"
+                width={430}
             />
             <GetToKnowUs/>
             <ServicesSection/>
@@ -80,7 +80,7 @@ Whether you're a startup racing to validate an idea or an enterprise modernizing
                 src="/assets/Home/banner-bg.svg"
             />
             <AdvantagesSection/>
-          <TechStack/>
+            <TechStack/>
             <AboutCTASection/>
             <Footer/>
         </div>
