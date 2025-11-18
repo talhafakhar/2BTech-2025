@@ -58,8 +58,8 @@ const WhatIsSection: React.FC<WhatIsSectionProps> = ({
                             <Image
                                 src={imageOne}
                                 alt="Section illustration 1"
-                                width={500}
-                                height={500}
+                                width={400}
+                                height={400}
                                 className="object-contain"
                             />
                         </div>

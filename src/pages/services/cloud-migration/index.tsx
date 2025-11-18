@@ -1167,7 +1167,7 @@ export default function CloudMigration() {
                 description="2BTech delivers comprehensive cloud migration services that move your applications, data, and infrastructure to AWS, Azure, or Google Cloud with zero downtime. As a trusted cloud migration company, we combine technical expertise with strategic cloud consulting services to ensure your transition is smooth, secure, and cost-effective"
                 descriptionTwo="Our cloud infrastructure services cover everything from initial assessment and planning through migration execution and ongoing optimization. Whether you need to migrate to AWS, require azure migration services, or want to leverage multi-cloud strategies, we build cloud solutions that scale with your busines"
                 descriptionThree="We specialize in cloud cost optimization, helping businesses reduce infrastructure expenses by 30-50% while improving performance. Our cloud consulting services provide strategic guidance on architecture, security, compliance, and modernization, ensuring your cloud investment delivers maximum RO"
-                src="/assets/services/cloudMigration/cloud.webp"
+                src="/assets/services/cloudMigration/cloud.svg"
                 width={440}
             />
             <SubServicesSection
@@ -1182,7 +1182,7 @@ export default function CloudMigration() {
                 description="Cloud migration services encompass the complete process of moving your digital assets, applications, databases, and IT infrastructure from on-premises data centers to cloud platforms like AWS, Azure, or Google Cloud. As a specialized cloud migration company, we handle every aspect of your cloud journey"
                 definitionOne={definitionOne}
                 definitionTwo={definitionTwo}
-                imageOne="/assets/services/cloudMigration/cloud-management.webp"
+                imageOne="/assets/services/cloudMigration/cloud-management.svg"
                 imageTwo="/assets/services/cloudMigration/Security.svg"
             />
             <CloudPlatformsSection/>

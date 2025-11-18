@@ -44,7 +44,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({title, description,descripti
                     transition={{duration: 0.8, ease: "easeInOut", delay: 0.2}}
                     viewport={{once: true, amount: 0.3}}
                 >
-                    <h2 className={`${title === "Who We Are?" ? "text-4xl md:text-5xl " : "text-2xl md:text-3xl"}  font-bold leading-tight mb-2`}>
+                    <h2 className={`${(title === "Who We Are?" ||  "Comprehensive AI Digital Transformation Services")  ? "text-4xl md:text-5xl " : "text-2xl md:text-3xl"}  font-bold leading-tight mb-2`}>
                         {title}
                     </h2>
                     <p className={`${title === "Who We Are?" ? "mt-6" : "mb-2"} text-black/70`}>{description}</p>

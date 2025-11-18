@@ -97,13 +97,13 @@ const ServiceSection: React.FC<WebServicesGridProps> = ({
 
                                 <div className="flex flex-col md:flex-row gap-2 w-full">
                                     {service.smallImage && (
-                                        <div className="hidden lg:block w-96">
+                                        <div className="hidden lg:block w-96 h-24">
                                             <Image
-                                                width={200}
+                                                width={100}
                                                 height={100}
                                                 src={service.smallImage}
                                                 alt={service.title}
-                                                className="w-full h-full border object-cover rounded shadow"
+                                                className="p-2 w-96 h-24 border object-cover rounded shadow"
                                             />
                                         </div>
                                     )}

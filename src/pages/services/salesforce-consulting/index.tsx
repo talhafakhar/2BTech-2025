@@ -424,8 +424,8 @@ export default function SalesforceConsulting() {
                 description="2BTech Inc is a trusted salesforce development company delivering end-to-end Salesforce solutions that transform how you engage with customers. Our salesforce consulting services combine strategic planning, technical implementation, and ongoing optimization to maximize your Salesforce investment"
                 descriptionTwo="We provide comprehensive salesforce implementation services covering Sales Cloud, Service Cloud, Marketing Cloud, and custom applications. Our team of certified developers handles salesforce integration services, connecting your CRM with ERP systems, marketing platforms, and third-party applications for seamless data flow"
                 descriptionThree="When you hire salesforce developers from 2BTech, you gain access to experts with proven experience across industries. We specialize in salesforce app development, building custom Lightning components, AppExchange apps, and mobile solutions that extend Salesforce capabilities to meet your unique business requirement"
-                src="/assets/services/salesForce/salesForce.webp"
-                width={600}
+                src="/assets/services/salesForce/salesForce.svg"
+                width={440}
             />
             <SubServicesSection
                 heading="OUR SALESFORCE SERVICES"

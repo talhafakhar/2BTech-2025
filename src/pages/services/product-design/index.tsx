@@ -118,8 +118,8 @@ export default function productDesign() {
             <AboutSection
                 title="Partner Leading Product Design Agency That Delivers Results"
                 description="At 2BTech, we specialize in creating exceptional digital experiences that captivate users and drive measurable business outcomes. As a trusted user experience design agency, we combine strategic thinking with innovative design to transform your vision into powerful digital products. Our comprehensive approach to digital product design ensures every touchpoint is optimized for engagement, retention, and conversion. From initial research to final implementation, we craft solutions that resonate with your audience and align perfectly with your business objectives, delivering interfaces that users love and results that matter"
-                src="/assets/services/product/about.webp"
-                width={500}
+                src="/assets/services/product/about.svg"
+                width={450}
             />
             <ServiceSection
                 heading="Comprehensive Services"
@@ -182,12 +182,12 @@ export default function productDesign() {
                 highlight="Your Product Design Company"
                 description="Choosing 2BTech as your user experience design agency means gaining a strategic partner dedicated to your success. Here's why businesses trust us for their UI UX design services:"
                 definitionOne={definitionOne}
-                imageOne="/assets/services/product/expert.webp"
+                imageOne="/assets/services/product/expert.svg"
             />
             <OurModals
                 headingHighlight="Flexible Engagement Models"
                 heading="Tailored to Your Business Needs"
-                src="/assets/services/product/modal.webp"
+                src="/assets/services/product/modal.svg"
                 description="t 2BTech, we understand that every project is unique. That's why we offer flexible hiring models designed to fit your timeline, budget, and specific requirements"
                 subheading="Fixed Model"
                 subDescription="Perfect for well-defined projects with clear scope and timelines. You receive a fixed quote upfront with defined deliverables, milestones, and deadlines, ensuring complete budget predictability and peace of mind"

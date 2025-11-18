@@ -709,8 +709,8 @@ export default function MvpDevelopment() {
                 description="2BTech specializes in MVP for startups that need to move fast and prove their concept. Our startup MVP development process delivers market-ready products in 8-12 weeks, giving you the speed and quality to compete"
                 descriptionTwo="We provide custom software development services for startups that understand your challenges: tight budgets, investor deadlines, and the pressure to validate product-market fit. Our MVP builds focus on core features that demonstrate value, gather real user feedback, and position you for Series A funding"
                 descriptionThree="descriptionThree=Whether you're a first-time founder or serial entrepreneur, we've helped 50+ startups launch, iterate, and scale. From SaaS platforms to mobile apps, fintech solutions to healthcare tech, we build MVPs that open doors to customers, investors, and growth"
-                src="/assets/services/mvp/about.webp"
-                width={500}
+                src="/assets/services/mvp/about.svg"
+                width={440}
             />
             <SubServicesSection
                 heading="OUR MVP DEVELOPMENT SERVICES"

@@ -243,7 +243,7 @@ const ContactUsPage = () => {
                                 <span>info@2btechinc.com</span>
                             </div>
                         </div>
-                        <div className="flex  justify-center lg:justify-start items-center ">
+                        <div className="flex mt-16 md:mt-24 justify-center  items-center ">
                             <Image
                                 src="/assets/Home/contact.svg" alt="contact"
                                 width={350}

@@ -200,7 +200,7 @@ export default function WebFlowDevelopment() {
             <OurModals
                 headingHighlight="Flexible Engagement Models"
                 heading="Designed for Your Project Success"
-                src="/assets/services/webflow/webflowModal.webp"
+                src="/assets/services/webflow/webflowModal.svg"
                 description=" At 2BTech, we understand every project has unique requirements and budgets. Choose the engagement model that best fits your timeline, scope, and collaboration preferences"
                 subheading="Fixed-Price Model"
                 subDescription="Perfect for well-defined projects with clear deliverables and timelines. You receive a comprehensive fixed quote upfront with defined milestones, ensuring complete budget predictability and peace of mind throughout development"

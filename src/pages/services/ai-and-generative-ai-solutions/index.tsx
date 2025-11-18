@@ -1471,8 +1471,8 @@ export default function AiAndGenerativeAiSolutions() {
                 title="Why Choose Us"
                 description="As a trusted AI development company, 2BTech brings specialized expertise in artificial intelligence and generative AI solutions. We help businesses leverage the full potential of AI by customizing solutions, optimizing processes, and ensuring that AI platforms align with your strategic business objectives"
                 descriptionTwo="Our AI consulting services encompass machine learning, natural language processing, computer vision, and generative AI technologies, tailored to fit your specific business needs for enhanced efficiency and informed strategies. Whether you're looking to automate processes, gain predictive insights, or implement cutting-edge generative AI solutions, our team of experts delivers measurable results."
-                src="/assets/services/genAi/about.webp"
-                width={500}
+                src="/assets/services/genAi/about.svg"
+                width={450}
             />
             <CustomSoftwareServicesSection
                 heading="Our Comprehensive AI & Generative AI Solutions"
@@ -1583,7 +1583,7 @@ export default function AiAndGenerativeAiSolutions() {
             <OurModals
                 headingHighlight="AI Development Engagement Models"
                 heading="Flexible"
-                src="/assets/services/genAi/modal.webp"
+                src="/assets/services/genAi/modal.svg"
                 subheading="Offshore Development Center (ODC)"
                 subDescription="Access to the top 2% of AI and machine learning experts, providing stability and scalability of projects with reduced time-to-market. Build your dedicated AI development team with our ODC model"
                 BestFor="Long-term AI initiatives and continuous development"

@@ -1676,8 +1676,8 @@ export default function AiSoftwareDevelopment() {
                 title="Leading AI Software Development Company"
                 description="At 2BTech, we specialize in AI software development services that empower businesses to unlock their full potential through intelligent automation and data-driven decision-making. As a trusted AI software development company, we create custom AI solutions tailored to your unique challenges and objectives. Our expert team leverages cutting-edge artificial intelligence services including machine learning development, deep learning solutions, and computer vision development to build scalable, high-performance applications. From startups to enterprises, we deliver AI-powered solutions that streamline operations, enhance customer experiences, and drive sustainable competitive advantages in today's digital-first marketplace
                 "
-                src="/assets/services/aiSoftware/aiSoftware.webp"
-                width={500}
+                src="/assets/services/aiSoftware/aiSoftware.svg"
+                width={400}
             />
             <ServiceSection
                 heading="AI Software Development Services"
@@ -1700,7 +1700,7 @@ export default function AiSoftwareDevelopment() {
                     {
                         id: 3,
                         title: "Deep Learning",
-                        highlightImage: "/assets/services/aiSoftware/deepLearning.webp",
+                        highlightImage: "/assets/services/aiSoftware/deepLearning.svg",
                         description:
                             "Develop powerful neural networks for vision, text, and predictive tasks using TensorFlow and PyTorch frameworks."                    },
                     {
@@ -1767,12 +1767,12 @@ export default function AiSoftwareDevelopment() {
                 highlight="Trusted AI Development Partner"
                 description="Choosing the right AI development partner is crucial for successful digital transformation. Here's why 2BTech stands out:"
                 definitionOne={definitionOne}
-                imageOne="/assets/services/aiSoftware/why.webp"
+                imageOne="/assets/services/aiSoftware/why.svg"
             />
             <OurModals
                 headingHighlight=" Flexible Engagement Models "
                 heading="Designed for Your Project Requirements"
-                src="/assets/services/aiSoftware/aiSoftwareModal.webp"
+                src="/assets/services/aiSoftware/aiSoftwareModal.svg"
                 description=" 2BTech offers flexible hiring models for AI software development services, ensuring you get the right team structure, expertise, and budget alignment for successful project delivery and long-term partnership."
                 subheading="Fixed Price Model"
                 subDescription="  Perfect for well-defined AI projects with clear scope and requirements. Get transparent pricing, guaranteed deliverables, and predictable timelines—ideal for businesses seeking budget certainty and structured project execution."
@@ -1780,7 +1780,7 @@ export default function AiSoftwareDevelopment() {
                 subDescriptionTwo="Scale your capabilities with dedicated AI developers who integrate seamlessly into your workflow. Enjoy full control, flexible resource allocation, and direct communication for evolving projects requiring ongoing development"
             />
             <OurStack
-                heading="C Advanced Technologies Powering"
+                heading="Advanced Technologies Powering"
                 description="Industry-leading frameworks and tools for exceptional AI solutions"
                 highlightHeading="Our AI Software Development"
                 stackIcons={StackIcons}

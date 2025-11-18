@@ -88,7 +88,6 @@ const IndustrySectors: React.FC = () => {
                         Tailored Solutions for High-Growth Sectors
                     </p>
                 </motion.div>
-
                 <div className="relative flex items-center z-10">
                     <div ref={scrollRef} className="flex overflow-x-auto gap-4 sm:gap-6 pb-4 scrollbar-hide w-full items-start">
                         {sectors.map((sector) => (
@@ -104,10 +103,10 @@ const IndustrySectors: React.FC = () => {
                                     <Image
                                         src={sector.imageUrl}
                                         alt={sector.title}
-                                        width={400}
+                                        width={300}
                                         height={300}
                                         loading="lazy"
-                                        className="w-full h-full object-cover transition-transform duration-700  group-hover:scale-110"
+                                        className="object-cover transition-transform duration-700 mt-6  mx-auto group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                                     <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">

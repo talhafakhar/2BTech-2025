@@ -862,7 +862,7 @@ export default function aiAgentAsAService() {
             <AboutSection
                 title="Your Business Operations with Intelligent AI Agent Development Solutions"
                 description="At 2BTech, we specialize in AI agent development that empowers businesses to automate complex workflows and scale operations intelligently. Our autonomous AI agents leverage advanced reasoning, learning capabilities, and natural language processing to perform tasks independently from customer service to financial reconciliation. Whether you need custom AI chatbot development, conversational AI development, or AI workflow automation, our expert team delivers tailored solutions that enhance productivity, reduce operational costs, and improve customer experiences. We build AI agents that reason, plan, adapt, and execute tasks seamlessly across diverse business environments, driving measurable results and sustainable competitive advantages"
-                src="/assets/services/AaaS/about.webp"
+                src="/assets/services/AaaS/why.svg"
                 width={400}
             />
             <ServiceSection
@@ -929,7 +929,7 @@ export default function aiAgentAsAService() {
                 highlight="Building AI Agents"
                 description="2BTech excels in building intelligent, autonomous AI agents that streamline operations, enhance decision-making, and drive measurable business transformation efficiently"
                 definitionOne={definitionOne}
-                imageOne="/assets/services/AaaS/why.webp"
+                imageOne="/assets/services/AaaS/what.svg"
             />
             <OurModals
                 heading="Flexible Engagement Models for"

@@ -816,12 +816,12 @@ export default function CustomSoftwareDevelopment() {
                 buttonText="Get Started"
             />
             <AboutSection
-                title="Tailored Software Solutions for Your Unique Business Needs"
+                title="Tailored Software Solutions for Your Business Needs"
                 description="2BTech delivers custom software solutions that transform how businesses operate across America, combining innovation, scalability, and security to create high-performance systems tailored to each client’s unique goals and workflows."
                 descriptionTwo="Our bespoke software development process covers discovery to deployment, ensuring every workflow, feature, and integration is designed precisely for your business — no templates, only purpose-built solutions that evolve with you."
                 descriptionThree="From healthcare to finance and startups, we craft secure, compliant, and scalable software that enhances productivity, drives growth, and gives your business a lasting competitive advantage in today’s digital landscape."
-                src="/assets/services/customSoftware/coding.webp"
-                width={600}
+                src="/assets/services/customSoftware/coding.svg"
+                width={450}
             />
 
             <SubServicesSection

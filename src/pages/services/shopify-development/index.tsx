@@ -138,8 +138,8 @@ export default function ShopifyDevelopment() {
             <AboutSection
                 title="Partner With a Shopify Development Company That Delivers Exceptional Results"
                 description="At 2BTech, we specialize in building high-converting Shopify stores that drive revenue growth and customer satisfaction. As a leading shopify development company, we combine technical expertise with ecommerce strategy to create custom solutions that scale with your business. When you hire shopify expert talent from our team, you're gaining access to seasoned professionals who understand every aspect of the platform. From custom shopify development to complex integrations and performance optimization, our shopify developer team delivers solutions that transform your online presence into a powerful revenue-generating machine"
-                src="/assets/services/shopify/onlineStore.webp"
-                width={500}
+                src="/assets/services/shopify/onlineStore.svg"
+                width={430}
             />
             <ServiceSection
                 heading="Comprehensive Services"
@@ -210,8 +210,7 @@ export default function ShopifyDevelopment() {
             <OurModals
                 headingHighlight="Flexible Engagement Models"
                 heading="Designed for Your Ecommerce Goals"
-                src="/assets/services/shopify/shopifyModal.webp"
-                width={350}
+                src="/assets/services/shopify/shopifyModal.svg"
                 description=" At 2BTech, we understand every Shopify project has unique requirements, timelines, and budgets. Choose the engagement model that best fits your business needs and growth stage"
                 subheading="Fixed-Price Model"
                 subDescription="Perfect for well-defined Shopify projects with clear scope and deliverables. You receive a comprehensive fixed quote upfront with defined milestones, timelines, and outcomes, ensuring complete budget predictability and transparency"

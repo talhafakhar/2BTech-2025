@@ -1546,11 +1546,11 @@ export default function MobileAppDevelopment() {
                 )}
             />
             <AboutSection
-                title="Leading Mobile App Development Company for iOS and Android"
+                title="Premier iOS and Android Development Agency"
                 description="2BTech Inc is a trusted mobile app development company specializing in native and cross platform app development. Whether you need an ios app development company to build stunning iPhone apps, an android app development company for Google Play, or a react native development company for both platforms, we deliver mobile solutions that users love"
                 descriptionTwo="Our expertise spans flutter app development, creating beautiful, fast apps with a single codebase. We're your complete mobile development partner, from concept and design through development, testing, and App Store launch"
                 descriptionThree="Understanding mobile app development cost is crucial for planning. We provide transparent pricing and flexible engagement models to fit your budget. Our efficient development process using React Native and Flutter reduces costs by 40% compared to building separate native apps, without compromising quality or performance"
-                src="/assets/services/mobileApp/mobileappDevelopment.webp"
+                src="/assets/services/mobileApp/mobileappDevelopment.svg"
                 width={400}
             />
             <MobileServicesSection/>
@@ -1615,7 +1615,7 @@ export default function MobileAppDevelopment() {
             <Banner
                 title="Ready to Build Your Cross-Platform App?"
                 description="Leverage our expertise in React Native and Flutter development to launch powerful iOS and Android apps"
-                src="/assets/services/mobileApp/mobileAppBanner.webp"
+                src="/assets/services/mobileApp/mobileAppBanner.jpg"
             />
             <FaqSection
                 Faq={faqs}

@@ -141,8 +141,8 @@ export default function aiDigitalTransformationService() {
             <AboutSection
                 title="Comprehensive AI Digital Transformation Services"
                 description="Most companies know AI matters while few know where to start. That's where we come in. At 2BTech, we help businesses cut through the AI hype and build solutions that actually work. No buzzwords, no one-size-fits-all packages. We assess where you are, figure out what'll move the needle for your business, and build it. Whether you're automating repetitive tasks, improving how customers interact with your brand, or finding patterns in your data you didn't know existed, we focus on outcomes that impact your bottom line"
-                src="/assets/services/aiDigital/aiDigitalTrasnformation.webp"
-                width={500}
+                src="/assets/services/aiDigital/why.svg"
+                width={400}
             />
             <ServiceSection
                 heading="AI Digital Transformation Services"
@@ -165,7 +165,7 @@ export default function aiDigitalTransformationService() {
                     {
                         id: 3,
                         title: "Intelligent Process Automation",
-                        highlightImage: "/assets/services/aiDigital/intelligentProcessAutomation.webp",
+                        highlightImage: "/assets/services/aiDigital/intelligentProcessAutomation.svg",
                         description:
                             "Automate repetitive tasks with AI to reduce costs, improve accuracy, and free your team for higher-value work.",
                     },
@@ -207,12 +207,12 @@ export default function aiDigitalTransformationService() {
                 highlight="AI Digital Transformation"
                 description="As a premier AI digital transformation service provider, 2BTech combines deep technical expertise with a results-driven approach to help businesses harness the power of AI. Our team of seasoned data scientists, AI engineers, and industry experts work closely with you to understand your unique challenges and goals. We prioritize transparency, collaboration, and measurable outcomes in every project. From initial strategy to deployment and ongoing support, we ensure your AI initiatives deliver real business value and position you for future success in an increasingly digital world."
                 definitionOne={definitionOne}
-                imageOne="/assets/services/aiDigital/whyAiDigital.jpeg"
+                imageOne="/assets/services/aiDigital/whyAiDigital.svg"
             />
             <OurModals
                 headingHighlight="Flexible Engagement Models "
                 heading="Tailored to Your Business Needs"
-                src="/assets/services/aiDigital/AiDigitalModal.webp"
+                src="/assets/services/aiDigital/AiDigitalModal.svg"
                 description="2BTech offers flexible engagement models designed to match your project scope, budget, and timeline. Choose the approach that best aligns with your AI transformation objectives"
                 subheading="Fixed Price Model"
                 subDescription=" Ideal for well-defined projects with clear requirements and scope. You receive a fixed quote upfront with guaranteed deliverables, timelines, and costs—perfect for predictable budgeting"
@@ -286,7 +286,7 @@ export default function aiDigitalTransformationService() {
             <Banner
                 title="Unlock Your Potential with AI Digital Transformation"
                 description="Leverage our expertise to implement AI solutions that drive growth across your organization."
-                src="/assets/services/aiDigital/aiBanner.webp"
+                src="/assets/services/aiDigital/aiBanner.jpg"
             />
             <CustomTestimonials/>
             <FaqSection
