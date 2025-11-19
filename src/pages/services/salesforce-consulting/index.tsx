@@ -493,7 +493,7 @@ export default function SalesforceConsulting() {
             <Banner
                 title="Transform Relationships with Expert Salesforce Consulting"
                 description="Leverage our certified Salesforce developers"
-                src="/assets/services/salesForce/salesForceBanner.webp"
+                src="/assets/services/salesForce/salesForceBanner.jpg"
             />
             <FaqSection
                 Faq={faqs}

@@ -212,7 +212,7 @@ export default function WebFlowDevelopment() {
             <Banner
                 title="Empower Your Brand with Webflow"
                 description="Design, build, and launch stunning websites faster."
-                src="/assets/services/webflow/webflowBanner.webp"
+                src="/assets/services/webflow/webflowBanner.jpg"
             />
             <OurFlowSection
                 heading="Critical Elements Missing"
