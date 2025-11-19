@@ -942,9 +942,9 @@ export default function aiAgentAsAService() {
                 subDescriptionTwo=" Scale your AI capabilities with dedicated developers who become extensions of your team. Enjoy full control, flexible resource allocation, direct collaboration, and seamless integration for ongoing projects requiring continuous development."
             />
             <OurStack
-                heading="Salesforce Platform & Technologies"
+                 heading="Technologies We Use to Build"
                 description="Certified expertise across the complete Salesforce ecosystem"
-                highlightHeading="Expertise"
+                      highlightHeading="AI Agents"
                 stackIcons={StackIcons}
                 techCategories={techCategories}
             />
