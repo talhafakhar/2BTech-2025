@@ -91,17 +91,25 @@ const CTASection: React.FC = () => {
                         </span>
                         </h2>
                         <p className="text-lg  text-black/70 text-center max-w-4xl mb-8">
-                            Let&#39;s discuss how our on-demand team can accelerate your growth. Schedule a free consultation and get a project roadmap within 48 hours
+                            Let&#39;s discuss how our on-demand team can accelerate your growth. Schedule a free
+                            consultation and get a project roadmap within 48 hours
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
-                            <a href={`mailto:hello@2btech.com`} className="flex items-center gap-2 hover:text-primary transition-colors">
+                            <a href={`mailto:hello@2btech.com`}
+                               className="flex items-center gap-2 hover:text-primary transition-colors">
                                 <span className="text-xl"><LucideMail/></span>
-                                <span className="font-medium">info@2btechinc.com</span>
+                                <div className="flex flex-col  gap-1">
+                                    <span className="font-medium">info@2btechinc.com</span>
+                                    <span className="font-medium">business@2btechinc.com</span>
+                                </div>
                             </a>
                             <span className="hidden sm:block text-gray-300">|</span>
                             <p className="flex items-center gap-2 hover:text-primary transition-colors">
                                 <span className="text-xl"><Phone/></span>
-                                <span className="font-medium">737 299 0421</span>
+                                <div className="flex flex-col  gap-1">
+                                    <span className="font-medium">737 299 0421</span>
+                                    <span className="font-medium">856 386 7630</span>
+                                </div>
                             </p>
                         </div>
                         <motion.span

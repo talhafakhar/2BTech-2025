@@ -223,31 +223,11 @@ const ContactUsPage = () => {
                     </div>
 
                     <div className="md:w-1/2 w-full">
-                        <div className="space-y-8">
-                            <div className="flex items-center space-x-6">
-                                <div className="border border-primary rounded-full p-2">
-                                    <MapPin className="w-7 h-7 text-primary"/>
-                                </div>
-                                <span>900 Balcones Drive, STE 4000 Austin, USA</span>
-                            </div>
-                            <div className="flex items-center space-x-6">
-                                <div className="border border-primary rounded-full p-2">
-                                    <Phone className="w-7 h-7 text-primary"/>
-                                </div>
-                                <span>+1 (856) 386-7630</span>
-                            </div>
-                            <div className="flex items-center space-x-6">
-                                <div className="border border-primary rounded-full p-2">
-                                    <Mail className="w-7 h-7  text-primary"/>
-                                </div>
-                                <span>info@2btechinc.com</span>
-                            </div>
-                        </div>
-                        <div className="flex mt-16 md:mt-24 justify-center  items-center ">
+                        <div className="flex  justify-center  items-center ">
                             <Image
                                 src="/assets/Home/contact.svg" alt="contact"
-                                width={350}
-                                height={350}
+                                width={400}
+                                height={400}
                                 loading="lazy"
                             />
 
@@ -256,7 +236,6 @@ const ContactUsPage = () => {
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-6xl mx-auto px-4">
-                {/* Address */}
                 <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                         <MapPin className="w-8 h-8 text-white" />
@@ -267,8 +246,6 @@ const ContactUsPage = () => {
                         Austin, TX 78731 USA
                     </p>
                 </div>
-
-                {/* Email */}
                 <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                         <Mail className="w-8 h-8 text-white" />
@@ -280,12 +257,10 @@ const ContactUsPage = () => {
                         </a>
                         <br />
                         <a href="mailto:projects@2btechinc.com" className="hover:text-primary transition-colors">
-                            projects@2btechinc.com
+                            business@2btechinc.com
                         </a>
                     </p>
                 </div>
-
-                {/* Phone */}
                 <div className="text-center p-8 bg-white rounded-2xl border shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                         <Phone className="w-8 h-8 text-white" />
@@ -293,11 +268,11 @@ const ContactUsPage = () => {
                     <h3 className="text-xl font-bold text-black mb-4">Phone Number</h3>
                     <p className="text-gray-600 leading-relaxed">
                         <a href="tel:+18563867630" className="hover:text-primary transition-colors">
-                            +1 (856) 386-7630
+                            737 299 0421
                         </a>
                         <br />
                         <a href="tel:+17372990421" className="hover:text-primary transition-colors">
-                            +1 (737) 299-0421
+                            856 386 7630
                         </a>
                     </p>
                 </div>

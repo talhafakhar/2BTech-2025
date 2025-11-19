@@ -220,7 +220,7 @@ export default function ShopifyDevelopment() {
             <Banner
                 title="Empower Your Brand with Shopify expert"
                 description="Design, build, and launch stunning websites faster."
-                src="/assets/services/shopify/ecommerceBg.jpg"
+                src="/assets/services/shopify/ecommerce.jpg"
             />
             <OurFlowSection
                 heading="Essential Features Limiting"

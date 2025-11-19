@@ -14,11 +14,11 @@ const HomeAboutSection: React.FC= () => {
                     viewport={{once: true, amount: 0.3}}
                 >
                     <Image
-                        src="/assets/Home/about.webp"
+                        src="/assets/Home/about.svg"
                         alt="introduction"
-                        width={550}
+                        width={450}
                         priority
-                        height={550}
+                        height={450}
                     />
                 </motion.div>
                 <motion.div

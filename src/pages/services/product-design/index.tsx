@@ -12,6 +12,7 @@ import OurModals from "@/components/services/ModalSection";
 import WhatIsSection from "@/components/services/WhatIsSection";
 import AIStackSection from "@/components/services/AIStackSection";
 import TestimonialSection from "@/components/Home/TestimonialSection";
+
 export default function productDesign() {
     const faqs = [
         {
@@ -77,7 +78,7 @@ export default function productDesign() {
                 openGraph={{
                     url: "https://2btech.com/services/product-design",
                     title: "Top User Experience Design Agency | UI UX Design Services | 2BTech",
-                    description:"2BTech is a leading user experience design agency offering expert UI UX design services, mobile app design, and digital product design. Transform your digital presence today",
+                    description: "2BTech is a leading user experience design agency offering expert UI UX design services, mobile app design, and digital product design. Transform your digital presence today",
                     images: [
                         {
                             url: "https://2btech.com/assets/services/hero/product-design.webp",
@@ -201,19 +202,19 @@ export default function productDesign() {
                     </>
                 }
                 stackLogos={[
-                    { src: "/assets/services/product/stack/stack-1.svg", alt: "Logo 1" },
-                    { src: "/assets/services/product/stack/stack-2.svg", alt: "Logo 2" },
-                    { src: "/assets/services/product/stack/stack-3.svg", alt: "Logo 3" },
-                    { src: "/assets/services/product/stack/stack-4.svg", alt: "Logo 4" },
-                    { src: "/assets/services/product/stack/stack-5.svg", alt: "Logo 5" },
-                    { src: "/assets/services/product/stack/stack-6.svg", alt: "Logo 6" },
-                    { src: "/assets/services/product/stack/stack-7.svg", alt: "Logo 7" },
-                    { src: "/assets/services/product/stack/stack-8.svg", alt: "Logo 8" },
-                    { src: "/assets/services/product/stack/stack-9.svg", alt: "Logo 9" },
-                    { src: "/assets/services/product/stack/stack-10.svg", alt: "Logo 10" },
-                    { src: "/assets/services/product/stack/stack-11.svg", alt: "Logo 10" },
-                    { src: "/assets/services/product/stack/stack-12.svg", alt: "Logo 10" },
-                    { src: "/assets/services/product/stack/stack-13.svg", alt: "Logo 10" },
+                    {src: "/assets/services/product/stack/stack-1.svg", alt: "Logo 1"},
+                    {src: "/assets/services/product/stack/stack-2.svg", alt: "Logo 2"},
+                    {src: "/assets/services/product/stack/stack-3.svg", alt: "Logo 3"},
+                    {src: "/assets/services/product/stack/stack-4.svg", alt: "Logo 4"},
+                    {src: "/assets/services/product/stack/stack-5.svg", alt: "Logo 5"},
+                    {src: "/assets/services/product/stack/stack-6.svg", alt: "Logo 6"},
+                    {src: "/assets/services/product/stack/stack-7.svg", alt: "Logo 7"},
+                    {src: "/assets/services/product/stack/stack-8.svg", alt: "Logo 8"},
+                    {src: "/assets/services/product/stack/stack-9.svg", alt: "Logo 9"},
+                    {src: "/assets/services/product/stack/stack-10.svg", alt: "Logo 10"},
+                    {src: "/assets/services/product/stack/stack-11.svg", alt: "Logo 10"},
+                    {src: "/assets/services/product/stack/stack-12.svg", alt: "Logo 10"},
+                    {src: "/assets/services/product/stack/stack-13.svg", alt: "Logo 10"},
                 ]}
             />
             <OurFlowSection
@@ -264,7 +265,7 @@ export default function productDesign() {
                 description="Designing intuitive digital products that drive growth"
                 src="/assets/services/product/bannerBg.jpg"
             />
-         <TestimonialSection/>
+            <TestimonialSection/>
             <FaqSection
                 Faq={faqs}
             />
