@@ -441,54 +441,7 @@ export default function SalesforceConsulting() {
                 imageOne="/assets/services/salesForce/crm.svg"
                 imageTwo="/assets/services/salesForce/security.svg"
             />
-            <OurFlowSection
-                heading="for Mobile apps?"
-                headingHighlight="Why Choose 2BTech"
-                services={[
-                    {
-                        title: "Full-Stack Mobile Expertise",
-                        duration: "",
-                        description:
-                            "Expert teams for iOS, Android, React Native, and Flutter. 300+ apps launched across all platforms and industries.",
-                    },
-                    {
-                        title: "Design Excellence",
-                        duration: "",
-                        description:
-                            "Award-winning designers creating beautiful, intuitive interfaces. 4.8★ average rating across client apps.",
-                    },
-                    {
-                        title: "Proven Development Process",
-                        duration: "",
-                        description:
-                            "Agile methodology with two-week sprints. Regular demos and continuous client involvement.",
-                    },
-                    {
-                        title: "Quality Assurance",
-                        duration: "",
-                        description:
-                            "Rigorous testing on hundreds of devices. Automated and manual QA ensures bug-free launches.",
-                    },
-                    {
-                        title: "App Store Success",
-                        duration: "",
-                        description:
-                            "95% first-time approval rate. Expert guidance through App Store and Google Play processes.",
-                    },
-                    {
-                        title: "Post-Launch Support",
-                        duration: "",
-                        description:
-                            "We don't disappear after launch. Ongoing support, updates, and optimization included.",
-                    },
-                    {
-                        title: "Cost-Effective Solutions",
-                        duration: "",
-                        description:
-                            "Transparent pricing with no hidden fees. Cross-platform development saves 40-60% vs native.",
-                    },
-                ]}
-            />
+        
             <IndustriesSection industries={industriesData} />
             <Banner
                 title="Transform Relationships with Expert Salesforce Consulting"
