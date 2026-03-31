@@ -1102,14 +1102,14 @@ export default function CloudMigration() {
             <NextSeo
                 title="Cloud Migration Services | AWS & Azure Migration | 2BTech"
                 description="Expert cloud migration services with zero downtime. Trusted cloud migration company for AWS & Azure. Cloud consulting services and infrastructure management. Get free assessment"
-                canonical="https://2btech.com/services/cloud-migration"
+                canonical="https://2btechinc.com/services/cloud-migration"
                 openGraph={{
-                    url: "https://2btech.com/services/cloud-migration",
+                    url: "https://2btechinc.com/services/cloud-migration",
                     title: "Cloud Migration Services | AWS & Azure Migration | 2BTech",
                     description: "Expert cloud migration services with zero downtime. Trusted cloud migration company for AWS & Azure. Cloud consulting services and infrastructure management. Get free assessment",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/cloud-migration.webp",
+                            url: "https://2btechinc.com.com/assets/services/hero/cloud-migration.webp",
                             width: 1200,
                             height: 630,
                             alt: "Cloud Migration Services | AWS & Azure Migration | 2BTech",
@@ -1124,7 +1124,7 @@ export default function CloudMigration() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/cloud-migration"
+                id="https://2btechinc.com/services/cloud-migration"
                 name="Cloud Migration Services | AWS & Azure Migration | 2BTech"
                 description=" Expert cloud migration services with zero downtime. Trusted cloud migration company for AWS & Azure. Cloud consulting services and infrastructure management. Get free assessment"
                 lastReviewed={new Date().toISOString()}

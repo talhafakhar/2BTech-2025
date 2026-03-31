@@ -1,5 +1,5 @@
 import { GetServerSideProps } from "next";
-const SITE_URL = "https://2btech.us";
+const SITE_URL = "https://2btechinc.com";
 const generateSiteMap = (blogs: { slug: string; updatedAt: string }[]) => {
     return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -18,7 +18,7 @@ ${blogs
 };
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     const API_TOKEN = process.env.STRAPI_API_TOKEN;
-    const STRAPI_URL = process.env.STRAPI_URL || "https://api.2btech.us";
+    const STRAPI_URL = process.env.STRAPI_URL || "https://api.2btechinc.com";
     if (!API_TOKEN) {
         return {
             notFound: true,

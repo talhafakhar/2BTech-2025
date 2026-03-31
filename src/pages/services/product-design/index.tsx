@@ -74,14 +74,14 @@ export default function productDesign() {
             <NextSeo
                 title="Top User Experience Design Agency | UI UX Design Services | 2BTech"
                 description="2BTech is a leading user experience design agency offering expert UI UX design services, mobile app design, and digital product design. Transform your digital presence today"
-                canonical="https://2btech.com/services/product-design"
+                canonical="https://2btechinc.com/services/product-design"
                 openGraph={{
-                    url: "https://2btech.com/services/product-design",
+                    url: "https://2btechinc.com/services/product-design",
                     title: "Top User Experience Design Agency | UI UX Design Services | 2BTech",
                     description: "2BTech is a leading user experience design agency offering expert UI UX design services, mobile app design, and digital product design. Transform your digital presence today",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/product-design.webp",
+                            url: "https://2btechinc.com/assets/services/hero/product-design.webp",
                             width: 1200,
                             height: 630,
                             alt: "Top User Experience Design Agency | UI UX Design Services | 2BTech",
@@ -96,7 +96,7 @@ export default function productDesign() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/product-design"
+                id="https://2btechinc.com/services/product-design"
                 title="Top User Experience Design Agency | UI UX Design Services | 2BTech"
                 description="2BTech is a leading user experience design agency offering expert UI UX design services, mobile app design, and digital product design. Transform your digital presence today"
                 lastReviewed={new Date().toISOString()}

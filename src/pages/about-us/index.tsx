@@ -18,7 +18,7 @@ export default function AboutPage() {
             <NextSeo
                 title="About 2BTech | Leading Software Development & AI Solutions Company"
                 description="Learn about 2BTech — a global team specializing in custom software development, AI solutions, web & mobile apps, and cloud engineering. Discover our mission, values, and how we help businesses grow through technology."
-                canonical="https://2btech.com/about-us"
+                canonical="https://2btechinc.com/about-us"
                 facebook={{
                     appId: '1234567890',
                 }}
@@ -30,12 +30,12 @@ export default function AboutPage() {
                 ]}
                 openGraph={{
                     type: 'website',
-                    url: 'https://2btech.com/about-us',
+                    url: 'https://2btechinc.com/about-us',
                     title: 'About 2BTech | Leading Software Development & AI Solutions Company',
                     description: 'Learn about 2BTech — a global software company building AI-powered, scalable, and custom digital solutions for businesses worldwide.',
                     images: [
                         {
-                            url: 'https://2btech.com/images/about-us.jpg',
+                            url: 'https://2btechinc.com/images/about-us.jpg',
                             width: 1200,
                             height: 630,
                             alt: 'About 2BTech - Software Development & AI Solutions Company',
@@ -51,12 +51,12 @@ export default function AboutPage() {
             />
 
             <WebPageJsonLd
-                id="https://2btech.com/about-us"
-                url="https://2btech.com/about-us"
+                id="https://2btechinc.com/about-us"
+                url="https://2btechinc.com/about-us"
                 name="About 2BTech | Leading Software Development & AI Solutions Company"
                 description="2BTech is a software development and AI solutions company helping global brands innovate through technology. Learn about our story, mission, and expertise."
                 potentialAction={{
-                    target: 'https://2btech.com/about-us',
+                    target: 'https://2btechinc.com/about-us',
                     queryInput: 'required name=search_term_string',
                 }}
             />

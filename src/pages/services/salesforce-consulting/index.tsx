@@ -364,14 +364,14 @@ export default function SalesforceConsulting() {
             <NextSeo
                 title="Salesforce Consulting Services | Implementation & Development | 2BTech"
                 description=" Expert salesforce consulting services with certified developers. Trusted salesforce development company for implementation, integration, and custom app development. Get a free assessment"
-                canonical="https://2btech.com/services/salesforce-consulting"
+                canonical="https://2btechinc.com/services/salesforce-consulting"
                 openGraph={{
-                    url: "https://2btech.com/services/salesforce-consulting",
+                    url: "https://2btechinc.com/services/salesforce-consulting",
                     title: "Salesforce Consulting Services | Implementation & Development | 2BTech",
                     description: " Expert salesforce consulting services with certified developers. Trusted salesforce development company for implementation, integration, and custom app development. Get a free assessment",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/salesforce-consulting.webp",
+                            url: "https://2btechinc.com/assets/services/hero/salesforce-consulting.webp",
                             width: 1200,
                             height: 630,
                             alt: "Salesforce Consulting Services | Implementation & Development | 2BTech",
@@ -386,7 +386,7 @@ export default function SalesforceConsulting() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/salesforce-consulting"
+                id="https://2btechinc.com/services/salesforce-consulting"
                 name="Salesforce Consulting Services | Implementation & Development | 2BTech"
                 description=" Expert salesforce consulting services with certified developers. Trusted salesforce development company for implementation, integration, and custom app development. Get a free assessment"
                 lastReviewed={new Date().toISOString()}

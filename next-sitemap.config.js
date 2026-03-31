@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://wewantagent.com',
+    siteUrl: process.env.SITE_HOSTNAME || 'https://2btechinc.com',
     generateRobotsTxt: true,
     exclude: [
         '/api/*',
@@ -27,7 +27,7 @@ module.exports = {
             { userAgent: 'PerplexityBot', allow: '/' },
         ],
         additionalSitemaps: [
-            'https://2btech.us/server-sitemap.xml',
+            'https://2btechinc.com/server-sitemap.xml',
         ]
     },
     transform: async (config, path) => {

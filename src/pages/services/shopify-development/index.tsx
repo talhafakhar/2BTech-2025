@@ -93,14 +93,14 @@ export default function ShopifyDevelopment() {
             <NextSeo
                 title="Expert Shopify Developer | Shopify Development Company | 2BTech"
                 description="2BTech is a leading shopify development company. Hire shopify expert developers for custom shopify store development, theme development, app development, and migrations. Proven revenue results"
-                canonical="https://2btech.com/services/shopify-development"
+                canonical="https://2btechinc.com/services/shopify-development"
                 openGraph={{
-                    url: "https://2btech.com/services/shopify-development",
+                    url: "https://2btechinc.com/services/shopify-development",
                     title: "Expert Shopify Developer | Shopify Development Company | 2BTech",
                     description: "2BTech is a leading shopify development company. Hire shopify expert developers for custom shopify store development, theme development, app development, and migrations. Proven revenue results",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/shopify-development.webp",
+                            url: "https://2btechinc.com/assets/services/hero/shopify-development.webp",
                             width: 1200,
                             height: 630,
                             alt: "Expert Shopify Developer | Shopify Development Company | 2BTech",
@@ -115,7 +115,7 @@ export default function ShopifyDevelopment() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/shopify-development"
+                id="https://2btechinc.com/services/shopify-development"
                 title="Expert Shopify Developer | Shopify Development Company | 2BTech"
                 description="2BTech is a leading shopify development company. Hire shopify expert developers for custom shopify store development, theme development, app development, and migrations. Proven revenue results"
                 lastReviewed={new Date().toISOString()}

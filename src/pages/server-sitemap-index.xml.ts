@@ -1,7 +1,7 @@
 import { getServerSideSitemapIndex } from 'next-sitemap'
 export const getServerSideProps = async (ctx: any) => {
     return getServerSideSitemapIndex(ctx, [
-        'https://2btech.us/server-sitemap.xml',
+        'https://2btechinc.com/server-sitemap.xml',
     ])
 }
 

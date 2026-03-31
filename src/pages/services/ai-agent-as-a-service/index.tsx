@@ -817,14 +817,14 @@ export default function aiAgentAsAService() {
             <NextSeo
                 title="Build AI Agents | AI Agent Development & Autonomous Solutions - 2BTech"
                 description="Build AI agents with 2BTech's expert AI agent development services. Deploy autonomous AI agents, conversational AI, and custom AI chatbots for workflow automation. Get 20% off your first project."
-                canonical="https://2btech.com/services/ai-agent-as-a-service"
+                canonical="https://2btechinc.com/services/ai-agent-as-a-service"
                 openGraph={{
-                    url: "https://2btech.com/services/ai-agent-as-a-service",
+                    url: "https://2btechinc.com/services/ai-agent-as-a-service",
                     title: "Build AI Agents | AI Agent Development & Autonomous Solutions - 2BTech",
                     description:"Build AI agents with 2BTech's expert AI agent development services. Deploy autonomous AI agents, conversational AI, and custom AI chatbots for workflow automation. Get 20% off your first project.",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/ai-agent-as-a-service.webp",
+                            url: "https://2btechinc.com/assets/services/hero/ai-agent-as-a-service.webp",
                             width: 1200,
                             height: 630,
                             alt: "Build AI Agents | AI Agent Development & Autonomous Solutions - 2BTech",
@@ -839,7 +839,7 @@ export default function aiAgentAsAService() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/ai-agent-as-a-service"
+                id="https://2btechinc.com/services/ai-agent-as-a-service"
                 title="Build AI Agents | AI Agent Development & Autonomous Solutions - 2BTech"
                 description="Build AI agents with 2BTech's expert AI agent development services. Deploy autonomous AI agents, conversational AI, and custom AI chatbots for workflow automation. Get 20% off your first project."
                 lastReviewed={new Date().toISOString()}

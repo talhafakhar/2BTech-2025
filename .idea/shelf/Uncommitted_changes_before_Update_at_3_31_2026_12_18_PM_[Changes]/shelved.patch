@@ -1,0 +1,294 @@
+Index: next-sitemap.config.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/** @type {import('next-sitemap').IConfig} */\r\nmodule.exports = {\r\n    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://wewantagent.com',\r\n    generateRobotsTxt: true,\r\n    exclude: [\r\n        '/api/*',\r\n        '/_next/*',\r\n        '/admin/*',\r\n        '/_error',\r\n        '/404',\r\n        '/500',\r\n        '/blogs',\r\n        '/blogs/[slug]',\r\n        '/server-sitemap.xml',\r\n        '/server-sitemap-index.xml'\r\n    ],\r\n    robotsTxtOptions: {\r\n        policies: [\r\n            { userAgent: '*', allow: '/', disallow: [ '/api/', '/_next/', '/admin/','about-us']},\r\n            { userAgent: 'GPTBot', allow: '/' },\r\n            { userAgent: 'ChatGPT-User', allow: '/' },\r\n            { userAgent: 'CCBot', allow: '/' },\r\n            { userAgent: 'ClaudeBot', allow: '/' },\r\n            { userAgent: 'Google-Extended', allow: '/' },\r\n            { userAgent: 'Amazonbot', allow: '/' },\r\n            { userAgent: 'Applebot', allow: '/' },\r\n            { userAgent: 'PerplexityBot', allow: '/' },\r\n        ],\r\n        additionalSitemaps: [\r\n            'https://2btech.us/server-sitemap.xml',\r\n        ]\r\n    },\r\n    transform: async (config, path) => {\r\n        if (path.startsWith('/blogs')) return null;\r\n\r\n        const priorities = {\r\n            '/': 1.0,\r\n            '/about-us': 0.8,\r\n            '/contact-us': 0.8,\r\n            '/services': 0.9,\r\n        };\r\n        const changeFreqs = {\r\n            '/': 'daily',\r\n            '/contact-us': 'monthly',\r\n            '/about-us': 'monthly',\r\n        };\r\n\r\n        const lastmodDate = new Date();\r\n        const lastmodMonthly = `${lastmodDate.getFullYear()}-${String(\r\n            lastmodDate.getMonth() + 1\r\n        ).padStart(2, '0')}`;\r\n\r\n        return {\r\n            loc: path,\r\n            changefreq: changeFreqs[path] || 'monthly',\r\n            priority: priorities[path] || 0.5,\r\n            lastmod: lastmodMonthly,\r\n        };\r\n    },\r\n};\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/next-sitemap.config.js b/next-sitemap.config.js
+--- a/next-sitemap.config.js	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ b/next-sitemap.config.js	(date 1774941427300)
+@@ -1,6 +1,6 @@
+ /** @type {import('next-sitemap').IConfig} */
+ module.exports = {
+-    siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://wewantagent.com',
++    siteUrl: process.env.NEXT_PUBLIC_SITE_HOSTNAME || 'https://2btech.com',
+     generateRobotsTxt: true,
+     exclude: [
+         '/api/*',
+@@ -27,7 +27,7 @@
+             { userAgent: 'PerplexityBot', allow: '/' },
+         ],
+         additionalSitemaps: [
+-            'https://2btech.us/server-sitemap.xml',
++            'https://2btech.com/server-sitemap.xml',
+         ]
+     },
+     transform: async (config, path) => {
+Index: .idea/2btech-2025-new.iml
+===================================================================
+diff --git a/.idea/2btech-2025-new.iml b/.idea/2btech-2025-new.iml
+deleted file mode 100644
+--- a/.idea/2btech-2025-new.iml	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ /dev/null	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="WEB_MODULE" version="4">
+-  <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$">
+-      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+-      <excludeFolder url="file://$MODULE_DIR$/temp" />
+-      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ /dev/null	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: .idea/git_toolbox_prj.xml
+===================================================================
+diff --git a/.idea/git_toolbox_prj.xml b/.idea/git_toolbox_prj.xml
+deleted file mode 100644
+--- a/.idea/git_toolbox_prj.xml	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ /dev/null	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
+@@ -1,15 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="GitToolBoxProjectSettings">
+-    <option name="commitMessageIssueKeyValidationOverride">
+-      <BoolValueOverride>
+-        <option name="enabled" value="true" />
+-      </BoolValueOverride>
+-    </option>
+-    <option name="commitMessageValidationEnabledOverride">
+-      <BoolValueOverride>
+-        <option name="enabled" value="true" />
+-      </BoolValueOverride>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+deleted file mode 100644
+--- a/.idea/inspectionProfiles/Project_Default.xml	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ /dev/null	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
+@@ -1,37 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <profile version="1.0">
+-    <option name="myName" value="Project Default" />
+-    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+-    <inspection_tool class="HttpUrlsUsage" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+-      <option name="ignoredUrls">
+-        <list>
+-          <option value="http://localhost" />
+-          <option value="http://127.0.0.1" />
+-          <option value="http://0.0.0.0" />
+-          <option value="http://www.w3.org/" />
+-          <option value="http://json-schema.org/draft" />
+-          <option value="http://java.sun.com/" />
+-          <option value="http://xmlns.jcp.org/" />
+-          <option value="http://javafx.com/javafx/" />
+-          <option value="http://javafx.com/fxml" />
+-          <option value="http://maven.apache.org/xsd/" />
+-          <option value="http://maven.apache.org/POM/" />
+-          <option value="http://www.springframework.org/schema/" />
+-          <option value="http://www.springframework.org/tags" />
+-          <option value="http://www.springframework.org/security/tags" />
+-          <option value="http://www.thymeleaf.org" />
+-          <option value="http://www.jboss.org/j2ee/schema/" />
+-          <option value="http://www.jboss.com/xml/ns/" />
+-          <option value="http://www.ibm.com/webservices/xsd" />
+-          <option value="http://activemq.apache.org/schema/" />
+-          <option value="http://schema.cloudfoundry.org/spring/" />
+-          <option value="http://schemas.xmlsoap.org/" />
+-          <option value="http://cxf.apache.org/schemas/" />
+-          <option value="http://primefaces.org/ui" />
+-          <option value="http://tiles.apache.org/" />
+-          <option value="http://" />
+-        </list>
+-      </option>
+-    </inspection_tool>
+-  </profile>
+-</component>
+\ No newline at end of file
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ /dev/null	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/2btech-2025-new.iml" filepath="$PROJECT_DIR$/.idea/2btech-2025-new.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ /dev/null	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: public/robots.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>User-agent: *\r\nAllow: /\r\nSitemap: https://2btech.us/sitemap.xml
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/robots.txt b/public/robots.txt
+--- a/public/robots.txt	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ b/public/robots.txt	(date 1774941246016)
+@@ -1,3 +1,3 @@
+ User-agent: *
+ Allow: /
+-Sitemap: https://2btech.us/sitemap.xml
+\ No newline at end of file
++Sitemap: https://2btech.com/sitemap.xml
+\ No newline at end of file
+Index: public/sitemap-0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\r\n    <url>\r\n        <loc>https://2btech.us/</loc>\r\n        <changefreq>daily</changefreq>\r\n        <priority>1.0</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/about-us</loc>\r\n        <changefreq>weekly</changefreq>\r\n        <priority>0.8</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/contact-us</loc>\r\n        <changefreq>weekly</changefreq>\r\n        <priority>0.8</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/our-work</loc>\r\n        <changefreq>weekly</changefreq>\r\n        <priority>0.8</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/webflow-development</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/shopify-development</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/salesforce-consulting</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/product-design</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/mvp-development</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/mobile-app-development</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/custom-software-development</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/cloud-migration</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/ai-software-development</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/ai-digital-transformation-service</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n    <url>\r\n        <loc>https://2btech.us/services/ai-and-ai-generative-ai-solutions</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n\r\n    <url>\r\n        <loc>https://2btech.us/services/ai-agent-as-a-service</loc>\r\n        <changefreq>monthly</changefreq>\r\n        <priority>0.7</priority>\r\n    </url>\r\n\r\n</urlset>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/sitemap-0.xml b/public/sitemap-0.xml
+--- a/public/sitemap-0.xml	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ b/public/sitemap-0.xml	(date 1774941201464)
+@@ -11,73 +11,73 @@
+         <priority>0.8</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/contact-us</loc>
++        <loc>https://2btech.com/contact-us</loc>
+         <changefreq>weekly</changefreq>
+         <priority>0.8</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/our-work</loc>
++        <loc>https://2btech.com/our-work</loc>
+         <changefreq>weekly</changefreq>
+         <priority>0.8</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/webflow-development</loc>
++        <loc>https://2btech.com/services/webflow-development</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/shopify-development</loc>
++        <loc>https://2btech.com/services/shopify-development</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/salesforce-consulting</loc>
++        <loc>https://2btech.com/services/salesforce-consulting</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/product-design</loc>
++        <loc>https://2btech.com/services/product-design</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/mvp-development</loc>
++        <loc>https://2btech.com/services/mvp-development</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/mobile-app-development</loc>
++        <loc>https://2btech.com/services/mobile-app-development</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/custom-software-development</loc>
++        <loc>https://2btech.com/services/custom-software-development</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/cloud-migration</loc>
++        <loc>https://2btech.com/services/cloud-migration</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/ai-software-development</loc>
++        <loc>https://2btech.com/services/ai-software-development</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/ai-digital-transformation-service</loc>
++        <loc>https://2btech.com/services/ai-digital-transformation-service</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+     <url>
+-        <loc>https://2btech.us/services/ai-and-ai-generative-ai-solutions</loc>
++        <loc>https://2btech.com/services/ai-and-ai-generative-ai-solutions</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+ 
+     <url>
+-        <loc>https://2btech.us/services/ai-agent-as-a-service</loc>
++        <loc>https://2btech.com/services/ai-agent-as-a-service</loc>
+         <changefreq>monthly</changefreq>
+         <priority>0.7</priority>
+     </url>
+Index: public/sitemap.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\r\n    <sitemap><loc>https://2btech.us/sitemap-0.xml</loc></sitemap>\r\n    <sitemap><loc>https://2btech.us/server-sitemap.xml</loc></sitemap>\r\n</sitemapindex>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/sitemap.xml b/public/sitemap.xml
+--- a/public/sitemap.xml	(revision eabb3c7b6e3d9546100c18681ba81963ca52ab66)
++++ b/public/sitemap.xml	(date 1774941067678)
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+-    <sitemap><loc>https://2btech.us/sitemap-0.xml</loc></sitemap>
+-    <sitemap><loc>https://2btech.us/server-sitemap.xml</loc></sitemap>
++    <sitemap><loc>https://2btech.com/sitemap-0.xml</loc></sitemap>
++    <sitemap><loc>https://2btech.com/server-sitemap.xml</loc></sitemap>
+ </sitemapindex>
+\ No newline at end of file

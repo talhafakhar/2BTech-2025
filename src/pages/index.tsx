@@ -17,7 +17,7 @@ export default function Home() {
             <NextSeo
                 title="2BTech  | Custom Software and AI Agent Development Company"
                 description="Custom software and AI agent development company for VC-backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster"
-                canonical="https://2btech.com/"
+                canonical="https://2btechinc.com/"
                 facebook={{
                     appId: '1234567890',
                 }}
@@ -29,18 +29,18 @@ export default function Home() {
                 ]}
                 openGraph={{
                     type: 'website',
-                    url: 'https://2btech.com/',
+                    url: 'https://2btechinc.com/',
                     title: '2BTech  | Custom Software and AI Agent Development Company',
                     description: 'Custom software and AI agent development company for VC-backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster',
                     images: [
                         {
-                            url: 'https://2btech.com/images/og-image.jpg',
+                            url: 'https://2btechinc.com/images/og-image.jpg',
                             width: 1200,
                             height: 630,
                             alt: '2BTech  | Custom Software and AI Agent Development Company ',
                         },
                     ],
-                    site_name: 'https://2btech.com/',
+                    site_name: 'https://2btechinc.com/',
                 }}
                 twitter={{
                     handle: '@2btech',
@@ -50,10 +50,10 @@ export default function Home() {
             />
             <OrganizationJsonLd
                 type="Organization"
-                id="https://2btech.com/#organization"
+                id="https://2btechinc.com/#organization"
                 name="2btech"
-                url="https://2btech.com/"
-                logo="https://2btech.com/images/logo.png"
+                url="https://2btechinc.com/"
+                logo="https://2btechinc.com/images/logo.png"
                 sameAs={[
                     'https://www.facebook.com/2btech',
                     'https://twitter.com/2btech',
@@ -76,12 +76,12 @@ export default function Home() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/#webpage"
-                url="https://2btech.com/"
+                id="https://2btechinc.com/#webpage"
+                url="https://2btechinc.com/"
                 name="2BTech  | Custom Software and AI Agent Development Company"
                 description="Custom software and AI agent development company for VC-backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster"
                 potentialAction={{
-                    target: 'https://2btech.com/?q={search_term_string}',
+                    target: 'https://2btechinc.com/?q={search_term_string}',
                     queryInput: 'required name=search_term_string',
                 }}
             />

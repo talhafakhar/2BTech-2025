@@ -12,7 +12,7 @@ interface BlogDetailProps {
 
 const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
     const imageUrl = blog.attributes.media?.data?.[0]?.attributes?.url;
-    const fullImageUrl = imageUrl ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${imageUrl}` : null;
+    const fullImageUrl = imageUrl ? `${process.env.STRAPI_URL}${imageUrl}` : null;
 
     const formatDate = (iso: string) =>
         new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });

@@ -648,14 +648,14 @@ export default function MvpDevelopment() {
             <NextSeo
                 title="MVP for Startups | Launch in 8-12 Weeks | 2BTech"
                 description="Expert MVP for startups with fixed pricing and guaranteed timelines. Startup MVP development from $25K. Custom software development services for startups. Get free quote"
-                canonical="https://2btech.com/services/mvp-development"
+                canonical="https://2btechinc.com/services/mvp-development"
                 openGraph={{
-                    url: "https://2btech.com/services/mvp-development",
+                    url: "https://2btechinc.com/services/mvp-development",
                     title: "MVP for Startups | Launch in 8-12 Weeks | 2BTech",
                     description: "Expert MVP for startups with fixed pricing and guaranteed timelines. Startup MVP development from $25K. Custom software development services for startups. Get free quote",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/mvp-development.webp",
+                            url: "https://2btechinc.com/assets/services/hero/mvp-development.webp",
                             width: 1200,
                             height: 630,
                             alt: "MVP for Startups | Launch in 8-12 Weeks | 2BTech",
@@ -670,8 +670,8 @@ export default function MvpDevelopment() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/mvp-development"
-                url="https://2btech.com/services/mvp-development"
+                id="https://2btechinc.com/services/mvp-development"
+                url="https://2btechinc.com/services/mvp-development"
                 name="MVP for Startups | Launch in 8-12 Weeks | 2BTech"
                 description="Expert MVP for startups with fixed pricing and guaranteed timelines. Startup MVP development from $25K. Custom software development services for startups. Get free quote"
                 lastReviewed={new Date().toISOString()}

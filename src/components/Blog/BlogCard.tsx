@@ -11,7 +11,7 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ blog, id }) => {
     const imageUrl = blog.attributes.media?.data?.[0]?.attributes?.url;
-    const fullImageUrl = imageUrl ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${imageUrl}` : null;
+    const fullImageUrl = imageUrl ? `${process.env.STRAPI_URL}${imageUrl}` : null;
     const imageAlt = blog.attributes.title;
 
     const formatDate = (dateString: string) => {

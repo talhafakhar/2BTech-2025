@@ -1483,15 +1483,15 @@ export default function MobileAppDevelopment() {
             <NextSeo
                 title="React Native & Flutter App Development | Cross Platform | 2BTech"
                 description="Expert react native development company and flutter app development specialist. Build iOS and Android apps from single codebase. Reduce mobile app development cost 40-60%. Free consultation."
-                canonical="https://2btech.com/services/mobile-app-development"
+                canonical="https://2btechinc.com/services/mobile-app-development"
                 openGraph={{
-                    url: "https://2btech.com/services/mobile-app-development",
+                    url: "https://2btechinc.com/services/mobile-app-development",
                     title: "React Native & Flutter App Development | Cross Platform | 2BTech",
                     description:
                         "Expert react native development company and flutter app development specialist. Build iOS and Android apps from single codebase. Reduce mobile app development cost 40-60%. Free consultation.",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/mobile-app-development.webp",
+                            url: "https://2btechinc.com/assets/services/hero/mobile-app-development.webp",
                             width: 1200,
                             height: 630,
                             alt: "React Native & Flutter App Development | Cross Platform | 2BTech",
@@ -1506,8 +1506,7 @@ export default function MobileAppDevelopment() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/mobile-app-development"
-
+                id="https://2btechinc.com/services/mobile-app-development"
                 name="React Native & Flutter App Development | Cross Platform | 2BTech"
                 description="Expert react native development company and flutter app development specialist. Build iOS and Android apps from single codebase. Reduce mobile app development cost 40-60%. Free consultation."
                 lastReviewed={new Date().toISOString()}

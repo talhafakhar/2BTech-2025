@@ -95,7 +95,7 @@ const CTASection: React.FC = () => {
                             consultation and get a project roadmap within 48 hours
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-600">
-                            <a href={`mailto:hello@2btech.com`}
+                            <a href={`mailto:hello@2btechinc.com`}
                                className="flex items-center gap-2 hover:text-primary transition-colors">
                                 <span className="text-xl"><LucideMail/></span>
                                 <div className="flex flex-col  gap-1">

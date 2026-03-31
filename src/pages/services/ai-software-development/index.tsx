@@ -1629,14 +1629,14 @@ export default function AiSoftwareDevelopment() {
             <NextSeo
                 title="AI Software Development Services | Machine Learning & Custom AI - 2BTech"
                 description="Transform your business with 2BTech's AI software development services. Expert machine learning development, custom AI model development, computer vision, and deep learning solutions. Get 15% off your first project."
-                canonical="https://2btech.com/services/ai-software-development"
+                canonical="https://2btechinc.com/services/ai-software-development"
                 openGraph={{
-                    url: "https://2btech.com/services/ai-software-development",
+                    url: "https://2btechinc.com/services/ai-software-development",
                     title:"AI Software Development Services | Machine Learning & Custom AI - 2BTech",
                     description:"Transform your business with 2BTech's AI software development services. Expert machine learning development, custom AI model development, computer vision, and deep learning solutions. Get 15% off your first project.",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/ai-software-development.webp",
+                            url: "https://2btechinc.com/assets/services/hero/ai-software-development.webp",
                             width: 1200,
                             height: 630,
                             alt: "AI Software Development Services | Machine Learning & Custom AI - 2BTech",
@@ -1651,8 +1651,8 @@ export default function AiSoftwareDevelopment() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/ai-software-development"
-                url="https://2btech.com/services/ai-software-development"
+                id="https://2btechinc.com/services/ai-software-development"
+                url="https://2btechinc.com/services/ai-software-development"
                 title="AI Software Development Services | Machine Learning & Custom AI - 2BTech"
                 description="Transform your business with 2BTech's AI software development services. Expert machine learning development, custom AI model development, computer vision, and deep learning solutions. Get 15% off your first project."
                 lastReviewed={new Date().toISOString()}

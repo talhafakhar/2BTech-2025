@@ -84,14 +84,14 @@ export default function WebFlowDevelopment() {
             <NextSeo
                 title="Expert Webflow Developer | Webflow Development Agency | 2BTech"
                 description="2BTech is a leading webflow development agency. Hire webflow developer experts for custom webflow development, design services, and migrations. Fast delivery, exceptional results"
-                canonical="https://2btech.com/services/webflow-development"
+                canonical="https://2btechinc.com/services/webflow-development"
                 openGraph={{
-                    url: "https://2btech.com/services/webflow-development",
+                    url: "https://2btechinc.com/services/webflow-development",
                     title: "Expert Webflow Developer | Webflow Development Agency | 2BTech",
                     description: "2BTech is a leading webflow development agency. Hire webflow developer experts for custom webflow development, design services, and migrations. Fast delivery, exceptional results",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/webflow-development.webp",
+                            url: "https://2btechinc.com/assets/services/hero/webflow-development.webp",
                             width: 1200,
                             height: 630,
                             alt: "Expert Webflow Developer | Webflow Development Agency | 2BTech",
@@ -106,7 +106,7 @@ export default function WebFlowDevelopment() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/webflow-development"
+                id="https://2btechinc.com/services/webflow-development"
                 title="Expert Webflow Developer | Webflow Development Agency | 2BTech"
                 description="2BTech is a leading webflow development agency. Hire webflow developer experts for custom webflow development, design services, and migrations. Fast delivery, exceptional results"
                 lastReviewed={new Date().toISOString()}

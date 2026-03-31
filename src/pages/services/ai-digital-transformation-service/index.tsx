@@ -96,14 +96,14 @@ export default function aiDigitalTransformationService() {
             <NextSeo
                 title="AI Digital Transformation Services | Custom AI Solutions - 2BTech"
                 description="Transform your business with 2BTech's AI digital transformation services. Custom AI solutions, machine learning integration, and intelligent automation for measurable results. Schedule your consultation today"
-                canonical="https://2btech.com/services/ai-digital-transformation-service"
+                canonical="https://2btechinc.com/services/ai-digital-transformation-service"
                 openGraph={{
-                    url: "https://2btech.com/services/ai-digital-transformation-service",
+                    url: "https://2btechinc.com/services/ai-digital-transformation-service",
                     title: "AI Digital Transformation Services | Custom AI Solutions - 2BTech",
                     description:"Transform your business with 2BTech's AI digital transformation services. Custom AI solutions, machine learning integration, and intelligent automation for measurable results. Schedule your consultation today",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/ai-digital-transformation-service.webp",
+                            url: "https://2btechinc.com/assets/services/hero/ai-digital-transformation-service.webp",
                             width: 1200,
                             height: 630,
                             alt: "AI Digital Transformation Services | Custom AI Solutions - 2BTech",
@@ -118,7 +118,7 @@ export default function aiDigitalTransformationService() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/ai-digital-transformation-service"
+                id="https://2btechinc.com/services/ai-digital-transformation-service"
                 title="AI Digital Transformation Services | Custom AI Solutions - 2BTech"
                 description="Transform your business with 2BTech's AI digital transformation services. Custom AI solutions, machine learning integration, and intelligent automation for measurable results. Schedule your consultation today"
                 lastReviewed={new Date().toISOString()}

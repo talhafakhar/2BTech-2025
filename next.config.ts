@@ -8,10 +8,10 @@ const remotePatterns: any[] = [
         pathname: "/uploads/**",
     },
 ];
-if (process.env.NEXT_PUBLIC_STRAPI_URL) {
+if (process.env.STRAPI_URL) {
     remotePatterns.push({
         protocol: "https",
-        hostname: new URL(process.env.NEXT_PUBLIC_STRAPI_URL).hostname,
+        hostname: new URL(process.env.STRAPI_URL).hostname,
         port: "",
         pathname: "/**",
     });

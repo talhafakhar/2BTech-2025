@@ -1433,14 +1433,14 @@ export default function AiAndGenerativeAiSolutions() {
             <NextSeo
                 title="Custom Software Development Company USA | Bespoke Solutions | 2BTech"
                 description="Expert custom software development services for enterprise, healthcare, and small businesses. Bespoke software solutions built for your unique needs. Free consultation"
-                canonical="https://2btech.com/services/custom-software-development"
+                canonical="https://2btechinc.com/services/custom-software-development"
                 openGraph={{
-                    url: "https://2btech.com/services/custom-software-development",
+                    url: "https://2btechinc.com/services/custom-software-development",
                     title: "Custom Software Development Company USA | Bespoke Solutions | 2BTech",
                     description: "Expert custom software development services for enterprise, healthcare, and small businesses. Bespoke software solutions built for your unique needs. Free consultation",
                     images: [
                         {
-                            url: "https://2btech.com/assets/services/hero/custom-software-development.webp",
+                            url: "https://2btechinc.com/assets/services/hero/custom-software-development.webp",
                             width: 1200,
                             height: 630,
                             alt: "Custom Software Development Company USA | Bespoke Solutions | 2BTech",
@@ -1455,8 +1455,8 @@ export default function AiAndGenerativeAiSolutions() {
                 }}
             />
             <WebPageJsonLd
-                id="https://2btech.com/services/custom-software-development"
-                url="https://2btech.com/services/custom-software-development"
+                id="https://2btechinc.com/services/custom-software-development"
+                url="https://2btechinc.com/services/custom-software-development"
                 name="Custom Software Development Company USA | Bespoke Solutions | 2BTech"
                 description="Expert custom software development services for enterprise, healthcare, and small businesses. Bespoke software solutions built for your unique needs. Free consultation"
                 lastReviewed={new Date().toISOString()}
