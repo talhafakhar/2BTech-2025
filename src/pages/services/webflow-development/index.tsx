@@ -17,7 +17,7 @@ export default function WebFlowDevelopment() {
             id: 1,
             question: "What makes 2BTech different from other Webflow developers?",
             answer:
-                "2BTech combines deep technical expertise with strategic business thinking. As a specialized Webflow development agency, we don't just build beautiful websites we create high-performing digital assets that drive measurable results. Our Webflow experts follow the Client-First methodology, maintain clean code standards, and deliver projects faster than traditional agencies while ensuring exceptional quality and long-term maintainability.",
+                "2BTech combines deep technical expertise with strategic business thinking. As a specialized Webflow development agency, we don't just build beautiful websites we create high-performing digital assets that drive measurable results. Our Webflow experts follow the Client First methodology, maintain clean code standards, and deliver projects faster than traditional agencies while ensuring exceptional quality and long term maintainability.",
         },
         {
             id: 2,
@@ -35,13 +35,13 @@ export default function WebFlowDevelopment() {
             id: 4,
             question: "How long does a typical Webflow development project take?",
             answer:
-                "Project timelines vary based on complexity and scope. A simple landing page takes 1–2 weeks, a standard business website requires 4–6 weeks, while complex enterprise projects may take 8–12 weeks. Our Webflow development agency is known for lightning-fast delivery typically 40% faster than traditional agencies without compromising quality or attention to detail.",
+                "Project timelines vary based on complexity and scope. A simple landing page takes 1–2 weeks, a standard business website requires 4–6 weeks, while complex enterprise projects may take 8–12 weeks. Our Webflow development agency is known for lightning fast delivery typically 40% faster than traditional agencies without compromising quality or attention to detail.",
         },
         {
             id: 5,
-            question: "Can you integrate third-party tools with my Webflow website?",
+            question: "Can you integrate third party tools with my Webflow website?",
             answer:
-                "Definitely! Our Webflow design services include seamless integration with CRMs, marketing automation platforms, payment processors, analytics tools, and virtually any third-party service. We specialize in custom JavaScript development, API integrations, Zapier automation, and advanced functionality that extends Webflow’s native capabilities to meet your specific business requirements perfectly.",
+                "Definitely! Our Webflow design services include seamless integration with CRMs, marketing automation platforms, payment processors, analytics tools, and virtually any third party service. We specialize in custom JavaScript development, API integrations, Zapier automation, and advanced functionality that extends Webflow’s native capabilities to meet your specific business requirements perfectly.",
         },
     ];
     const definitionOne = [
@@ -53,7 +53,7 @@ export default function WebFlowDevelopment() {
         {
             title: "Technical Excellence Guaranteed",
             description:
-                "We use advanced Webflow features, clean code, Client-First methodology, and best practices to ensure scalable, high-performance websites across all devices.",
+                "We use advanced Webflow features, clean code, Client First methodology, and best practices to ensure scalable, high performance websites across all devices.",
         },
         {
             title: "Transparent Communication Always",
@@ -61,7 +61,7 @@ export default function WebFlowDevelopment() {
                 "With daily updates, shared boards, and responsive support, you stay informed every step of the way for a smooth, transparent collaboration.",
         },
         {
-            title: "Results-Driven Approach",
+            title: "Results Driven Approach",
             description:
                 "Beyond design, we focus on conversions, SEO, speed, UX, and analytics to ensure your website drives measurable business growth and ROI.",
         },
@@ -142,7 +142,7 @@ export default function WebFlowDevelopment() {
                         id: 1,
                         title: "Custom Webflow Development",
                         description:
-                            "We build pixel-perfect, high-performance Webflow websites using custom code and advanced animations that captivate users while ensuring seamless responsiveness and fast load times.",
+                            "We build pixel perfect, high performance Webflow websites using custom code and advanced animations that captivate users while ensuring seamless responsiveness and fast load times.",
                     },
                     {
                         id: 2,
@@ -161,7 +161,7 @@ export default function WebFlowDevelopment() {
                         id: 4,
                         title: "Figma to Webflow Conversion",
                         description:
-                            "Transform your Figma designs into fully functional Webflow websites with pixel-perfect precision, responsive layouts, and engaging interactions that bring your vision to life.",
+                            "Transform your Figma designs into fully functional Webflow websites with pixel perfect precision, responsive layouts, and engaging interactions that bring your vision to life.",
                     },
                     {
                         id: 5,
@@ -180,7 +180,7 @@ export default function WebFlowDevelopment() {
                         id: 7,
                         title: "Webflow Maintenance & Support",
                         description:
-                            "Keep your site performing flawlessly with ongoing maintenance, content updates, speed optimization, and proactive technical support for long-term reliability.",
+                            "Keep your site performing flawlessly with ongoing maintenance, content updates, speed optimization, and proactive technical support for long term reliability.",
                     },
                     {
                         id: 8,
@@ -236,7 +236,7 @@ export default function WebFlowDevelopment() {
             <OurFlowSection
                 heading="Critical Elements Missing"
                 headingHighlight="Webflow Sites"
-                description="Many Webflow websites miss these crucial features that impact performance, user experience, conversions, and long-term scalability."
+                description="Many Webflow websites miss these crucial features that impact performance, user experience, conversions, and long term scalability."
                 services={[
                     {
                         title: "Optimized CMS Structure",
@@ -248,13 +248,13 @@ export default function WebFlowDevelopment() {
                         title: "Advanced Interactions & Animations",
                         duration: "",
                         description:
-                            "Static sites fail to engage users. Thoughtful micro-interactions, scroll-triggered animations, and dynamic elements create memorable, conversion-driven experiences.",
+                            "Static sites fail to engage users. Thoughtful micro interactions, scroll-triggered animations, and dynamic elements create memorable, conversion-driven experiences.",
                     },
                     {
                         title: "Mobile-First Responsive Design",
                         duration: "",
                         description:
-                            "Desktop-first design creates poor mobile UX. True mobile-first development ensures flawless performance across devices, improving engagement and rankings.",
+                            "Desktop first design creates poor mobile UX. True mobile first development ensures flawless performance across devices, improving engagement and rankings.",
                     },
                     {
                         title: "SEO & Performance Optimization",
@@ -272,7 +272,7 @@ export default function WebFlowDevelopment() {
                         title: "Clean & Maintainable Code",
                         duration: "",
                         description:
-                            "Messy code causes maintenance issues. Following Client-First methodology ensures your Webflow site stays scalable, organized, and easy to update.",
+                            "Messy code causes maintenance issues. Following Client First methodology ensures your Webflow site stays scalable, organized, and easy to update.",
                     },
                 ]}
             />

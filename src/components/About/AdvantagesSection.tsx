@@ -41,7 +41,7 @@ const AdvantagesSection = () => {
                             What We<span className="text-primary"> Believe</span>
                         </h2>
                         <p className="text-base lg:text-lg leading-relaxed">
-                            At 2BTech, our values shape every decision, interaction, and solution we deliver. We focus on integrity, partnership, and meaningful outcomes that drive long-term success.
+                            At 2BTech, our values shape every decision, interaction, and solution we deliver. We focus on integrity, partnership, and meaningful outcomes that drive long term success.
                         </p>
                     </div>
 

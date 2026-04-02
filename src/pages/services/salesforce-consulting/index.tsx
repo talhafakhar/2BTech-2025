@@ -5,7 +5,6 @@ import AboutSection from "@/components/services/AboutSection";
 import Banner from "@/components/Home/bannerSection";
 import FaqSection from "@/components/Home/FaqSection";
 import {FAQPageJsonLd, NextSeo, WebPageJsonLd} from "next-seo";
-import OurFlowSection from "@/components/services/OurFlowSection";
 import WhatIsSection from "@/components/services/WhatIsSection";
 import {
     Briefcase,
@@ -200,7 +199,7 @@ export default function SalesforceConsulting() {
                 "Grows with your business from startup to enterprise. Highly customizable to fit any industry or process.",
         },
         {
-            title: "Cloud-Based Access",
+            title: "Cloud Based Access",
             description:
                 "Access your data anywhere, anytime. Mobile apps keep teams connected on the go.",
         },
@@ -280,7 +279,7 @@ export default function SalesforceConsulting() {
                 "Certified Experts (PD1, PD2)",
                 "Dedicated & Flexible Teams",
                 "Rapid Onboarding (1-2 weeks)",
-                "Cost-Effective Staffing",
+                "Cost Effective Staffing",
                 "Ongoing Expert Support",
             ],
         },
@@ -292,7 +291,7 @@ export default function SalesforceConsulting() {
                 "Internal Custom Apps",
                 "AppExchange Apps",
                 "Mobile & Portal Apps",
-                "Industry-Specific Solutions",
+                "Industry Specific Solutions",
                 "Project & Contract Management",
             ],
         },
@@ -313,7 +312,7 @@ export default function SalesforceConsulting() {
         {
             icon: Heart,
             title: "Healthcare & Life Sciences",
-            description: "HIPAA-compliant patient management and care coordination",
+            description: "HIPAA compliant patient management and care coordination",
             color: "from-blue-50 to-blue-100"
         },
         {
@@ -422,7 +421,7 @@ export default function SalesforceConsulting() {
             <AboutSection
                 title="Complete Salesforce Consulting Services for Business Growth"
                 description="2BTech Inc is a trusted salesforce development company delivering end-to-end Salesforce solutions that transform how you engage with customers. Our salesforce consulting services combine strategic planning, technical implementation, and ongoing optimization to maximize your Salesforce investment"
-                descriptionTwo="We provide comprehensive salesforce implementation services covering Sales Cloud, Service Cloud, Marketing Cloud, and custom applications. Our team of certified developers handles salesforce integration services, connecting your CRM with ERP systems, marketing platforms, and third-party applications for seamless data flow"
+                descriptionTwo="We provide comprehensive salesforce implementation services covering Sales Cloud, Service Cloud, Marketing Cloud, and custom applications. Our team of certified developers handles salesforce integration services, connecting your CRM with ERP systems, marketing platforms, and third party applications for seamless data flow"
                 descriptionThree="When you hire salesforce developers from 2BTech, you gain access to experts with proven experience across industries. We specialize in salesforce app development, building custom Lightning components, AppExchange apps, and mobile solutions that extend Salesforce capabilities to meet your unique business requirement"
                 src="/assets/services/salesForce/salesForce.svg"
                 width={440}
@@ -435,7 +434,7 @@ export default function SalesforceConsulting() {
             <WhatIsSection
                 heading="what are"
                 highlight="Salesforce consulting services?"
-                description="Salesforce consulting services provide expert guidance and implementation support for businesses adopting or optimizing Salesforce CRM. As a specialized salesforce development company, we help organizations leverage Salesforce to improve sales productivity, enhance customer service, automate marketing, and drive data-driven decision-making"
+                description="Salesforce consulting services provide expert guidance and implementation support for businesses adopting or optimizing Salesforce CRM. As a specialized salesforce development company, we help organizations leverage Salesforce to improve sales productivity, enhance customer service, automate marketing, and drive data driven decision-making"
                 definitionOne={definitionOne}
                 definitionTwo={definitionTwo}
                 imageOne="/assets/services/salesForce/crm.svg"

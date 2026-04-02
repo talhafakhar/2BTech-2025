@@ -2,7 +2,6 @@
 import * as React from "react";
 import Navbar from "../Header/Navbar";
 import ContactUsPage from "@/components/ContactPage/ContactUs";
-import {ArrowRight, Mail, MapPin, Phone} from "lucide-react";
 interface HeroSectionProps {
     title?: string;
 }

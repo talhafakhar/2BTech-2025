@@ -180,7 +180,7 @@ const Footer = () => {
                         />
                         <p className="text-sm leading-relaxed text-gray-600 max-w-xs">
                             Your on-demand design to engineering partner. Building intelligent
-                            software for VC-backed startups and SMEs.
+                            software for VC backed startups and SMEs.
                         </p>
                         <div className="text-sm text-secondary space-y-1">
                             <div>5900 Balcones Drive, STE 4000 Austin TX, USA 78731</div>

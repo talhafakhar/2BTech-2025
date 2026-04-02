@@ -46,7 +46,7 @@ const ServicesSection: React.FC = () => {
             id: 3,
             title: "Cloud Engineering",
             description:
-                "We design secure, scalable, and cost-efficient cloud architectures.",
+                "We design secure, scalable, and cost efficient cloud architectures.",
             icon: <Cloud className="w-8 h-8" />,
         },
         {
@@ -95,7 +95,7 @@ const ServicesSection: React.FC = () => {
             id: 10,
             title: "Webflow Development",
             description:
-                "Pixel-perfect, fast Webflow sites for marketing and content teams.",
+                "Pixel perfect, fast Webflow sites for marketing and content teams.",
             icon: <Globe className="w-8 h-8" />,
         },
         {

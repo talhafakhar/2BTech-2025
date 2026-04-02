@@ -16,7 +16,7 @@ export default function Home() {
         <div className="font-syne">
             <NextSeo
                 title="2BTech  | Custom Software and AI Agent Development Company"
-                description="Custom software and AI agent development company for VC-backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster"
+                description="Custom software and AI agent development company for VC backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster"
                 canonical="https://2btechinc.com/"
                 facebook={{
                     appId: '1234567890',
@@ -31,7 +31,7 @@ export default function Home() {
                     type: 'website',
                     url: 'https://2btechinc.com/',
                     title: '2BTech  | Custom Software and AI Agent Development Company',
-                    description: 'Custom software and AI agent development company for VC-backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster',
+                    description: 'Custom software and AI agent development company for VC backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster',
                     images: [
                         {
                             url: 'https://2btechinc.com/images/og-image.jpg',
@@ -79,7 +79,7 @@ export default function Home() {
                 id="https://2btechinc.com/#webpage"
                 url="https://2btechinc.com/"
                 name="2BTech  | Custom Software and AI Agent Development Company"
-                description="Custom software and AI agent development company for VC-backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster"
+                description="Custom software and AI agent development company for VC backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster"
                 potentialAction={{
                     target: 'https://2btechinc.com/?q={search_term_string}',
                     queryInput: 'required name=search_term_string',

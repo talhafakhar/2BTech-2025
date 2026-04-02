@@ -135,7 +135,7 @@ export default function MvpDevelopment() {
             id: 1,
             title: "Startup MVP Development",
             description:
-                "Purpose-built MVP for startups that need to validate quickly and impress investors. We deliver investor-ready products that demonstrate your vision and prove market demand.",
+                "Purpose built MVP for startups that need to validate quickly and impress investors. We deliver investor-ready products that demonstrate your vision and prove market demand.",
             keyFeatures: [
                 "SaaS platform MVPs",
                 "Mobile app MVPs (iOS/Android)",
@@ -147,9 +147,9 @@ export default function MvpDevelopment() {
             ],
             benefits: [
                 "8–12 week delivery guaranteed",
-                "Fixed-price packages",
-                "Investor-ready documentation",
-                "Post-launch support included",
+                "Fixed price packages",
+                "Investor ready documentation",
+                "Post launch support included",
                 "Built for rapid scaling",
                 "Direct founder communication",
             ],
@@ -172,7 +172,7 @@ export default function MvpDevelopment() {
                 "Lowest cost investment",
                 "Real user data for decisions",
                 "Clear success metrics",
-                "Pivot-friendly architecture",
+                "Pivot friendly architecture",
                 "Proof for funding conversations",
             ],
         },
@@ -187,7 +187,7 @@ export default function MvpDevelopment() {
                 "Custom API integrations",
                 "Advanced security features",
                 "Complex user permissions",
-                "Multi-tenant architecture",
+                "Multi tenant architecture",
             ],
             benefits: [
                 "Unique value proposition",
@@ -217,7 +217,7 @@ export default function MvpDevelopment() {
                 "Great for startups replacing technical co-founders",
                 "Builds technical credibility",
                 "Ensures alignment between vision and tech",
-                "Provides long-term technical leadership",
+                "Provides long term technical leadership",
             ],
         },
     ];
@@ -706,9 +706,9 @@ export default function MvpDevelopment() {
             />
             <AboutSection
                 title="Fast MVP Builds That Win Investors and Customers"
-                description="2BTech specializes in MVP for startups that need to move fast and prove their concept. Our startup MVP development process delivers market-ready products in 8-12 weeks, giving you the speed and quality to compete"
-                descriptionTwo="We provide custom software development services for startups that understand your challenges: tight budgets, investor deadlines, and the pressure to validate product-market fit. Our MVP builds focus on core features that demonstrate value, gather real user feedback, and position you for Series A funding"
-                descriptionThree="descriptionThree=Whether you're a first-time founder or serial entrepreneur, we've helped 50+ startups launch, iterate, and scale. From SaaS platforms to mobile apps, fintech solutions to healthcare tech, we build MVPs that open doors to customers, investors, and growth"
+                description="2BTech specializes in MVP for startups that need to move fast and prove their concept. Our startup MVP development process delivers market ready products in 8-12 weeks, giving you the speed and quality to compete"
+                descriptionTwo="We provide custom software development services for startups that understand your challenges: tight budgets, investor deadlines, and the pressure to validate product market fit. Our MVP builds focus on core features that demonstrate value, gather real user feedback, and position you for Series A funding"
+                descriptionThree="descriptionThree=Whether you're a first time founder or serial entrepreneur, we've helped 50+ startups launch, iterate, and scale. From SaaS platforms to mobile apps, fintech solutions to healthcare tech, we build MVPs that open doors to customers, investors, and growth"
                 src="/assets/services/mvp/about.svg"
                 width={440}
             />
@@ -859,7 +859,7 @@ export default function MvpDevelopment() {
                             {
                                 title: "Rapid Iteration",
                                 detail:
-                                    "Make data-driven improvements quickly. Evolve your MVP based on real user behavior.",
+                                    "Make data driven improvements quickly. Evolve your MVP based on real user behavior.",
                             },
                             {
                                 title: "Deliverables",

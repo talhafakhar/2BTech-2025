@@ -49,7 +49,7 @@ const CloudPlatformsSection = () => {
             why: [
                 'Best Microsoft integration',
                 'Strong hybrid cloud capabilities',
-                'Enterprise-grade compliance',
+                'Enterprise grade compliance',
                 'Azure Active Directory integration',
                 'Excellent for .NET workloads'
             ],
@@ -111,7 +111,7 @@ const CloudPlatformsSection = () => {
             color: 'from-primary to-primary',
             stats: {},
             why: [
-                'Avoid vendor lock-in',
+                'Avoid vendor lock in',
                 'Best-of-breed services',
                 'Geographic redundancy',
                 'Cost optimization',

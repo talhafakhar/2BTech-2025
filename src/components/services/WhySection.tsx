@@ -27,7 +27,7 @@ export default function CustomSoftwareSection() {
             icon: DollarSign,
             title: "Long-Term Value",
             description:
-                "No recurring license fees or per-user charges. Better ROI over time.",
+                "No recurring license fees or per user charges. Better ROI over time.",
         },
         {
             icon: Puzzle,
@@ -44,7 +44,7 @@ export default function CustomSoftwareSection() {
             icon: ShieldCheck,
             title: "True Ownership",
             description:
-                "Complete control over features, updates, and direction. No vendor lock-in.",
+                "Complete control over features, updates, and direction. No vendor lock in.",
         },
     ];
 
@@ -106,7 +106,7 @@ export default function CustomSoftwareSection() {
                     <h2 className="text-3xl sm:text-5xl font-bold mb-4 max-w-4xl mx-auto leading-tight">
                         Why Custom Software Beats{" "}
                         <span className="text-primary">
-                            Off-the-Shelf Solutions
+                            Off the Shelf Solutions
                         </span>
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto mt-2 text-lg">

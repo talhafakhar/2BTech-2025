@@ -1411,7 +1411,7 @@ const TechStack = () => {
                         viewport={{once: true}}
                         transition={{duration: 0.8, delay: 0.3}}
                     >
-                        We&#39;re platform-agnostic. We choose technologies based on what&#39;s best
+                        We&#39;re platform agnostic. We choose technologies based on what&#39;s best
                         for your project, not what we happen to know.
                     </motion.p>
                 </motion.div>

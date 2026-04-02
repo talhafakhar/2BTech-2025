@@ -12,7 +12,7 @@ const sectors: Sector[] = [
     {
         id: 'healthcare-life-sciences',
         title: 'Healthcare & Life Sciences',
-        description: 'HIPAA-compliant applications, patient portals, clinical tools, healthcare data systems',
+        description: 'HIPAA compliant applications, patient portals, clinical tools, healthcare data systems',
         imageUrl: '/assets/Home/slide-1.svg',
     },
     {
@@ -85,7 +85,7 @@ const IndustrySectors: React.FC = () => {
                         Industry <span className="text-primary">We Serve</span>
                     </h2>
                     <p className="text-sm sm:text-base md:text-lg text-black/70">
-                        Tailored Solutions for High-Growth Sectors
+                        Tailored Solutions for High Growth Sectors
                     </p>
                 </motion.div>
                 <div className="relative flex items-center z-10">

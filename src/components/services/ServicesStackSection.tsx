@@ -83,7 +83,7 @@ const TechStackServices: React.FC<TechStackServicesProps> = ({
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                        We’re platform-agnostic. We choose technologies based on what’s best
+                        We’re platform agnostic. We choose technologies based on what’s best
                         for your project, not just what we happen to know.
                     </motion.p>
                 </motion.div>

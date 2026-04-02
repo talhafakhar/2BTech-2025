@@ -36,7 +36,7 @@ export default function CustomSoftwareDevelopment() {
             id: 4,
             question: "Can you integrate with our existing systems?",
             answer:
-                "Absolutely. We specialize in integrating custom software with legacy systems, databases, and third-party APIs.",
+                "Absolutely. We specialize in integrating custom software with legacy systems, databases, and third party APIs.",
         },
         {
             id: 5,
@@ -68,14 +68,14 @@ export default function CustomSoftwareDevelopment() {
                 "Scalable architecture for growth",
                 "Advanced security and compliance",
                 "Seamless system integration",
-                "Real-time analytics and reporting",
+                "Real time analytics and reporting",
             ],
         },
         {
             id: 2,
             title: "Custom Software Development for Healthcare",
             description:
-                "HIPAA-compliant healthcare solutions that improve patient outcomes and streamline operations.",
+                "HIPAA compliant healthcare solutions that improve patient outcomes and streamline operations.",
             keyFeatures: [
                 "Electronic health records (EHR)",
                 "Telemedicine platforms",
@@ -124,8 +124,8 @@ export default function CustomSoftwareDevelopment() {
             benefits: [
                 "40% reduction in manual tasks",
                 "60% faster approval processes",
-                "Real-time business visibility",
-                "Better data-driven decisions",
+                "Real time business visibility",
+                "Better data driven decisions",
             ],
         },
     ];
@@ -817,7 +817,7 @@ export default function CustomSoftwareDevelopment() {
             />
             <AboutSection
                 title="Tailored Software Solutions for Your Business Needs"
-                description="2BTech delivers custom software solutions that transform how businesses operate across America, combining innovation, scalability, and security to create high-performance systems tailored to each client’s unique goals and workflows."
+                description="2BTech delivers custom software solutions that transform how businesses operate across America, combining innovation, scalability, and security to create high performance systems tailored to each client’s unique goals and workflows."
                 descriptionTwo="Our bespoke software development process covers discovery to deployment, ensuring every workflow, feature, and integration is designed precisely for your business no templates, only purpose-built solutions that evolve with you."
                 descriptionThree="From healthcare to finance and startups, we craft secure, compliant, and scalable software that enhances productivity, drives growth, and gives your business a lasting competitive advantage in today’s digital landscape."
                 src="/assets/services/customSoftware/coding.svg"
@@ -827,7 +827,7 @@ export default function CustomSoftwareDevelopment() {
             <SubServicesSection
                 heading="Custom Software Solutions for Every Industry"
                 headingHighlight="WHAT WE BUILD"
-                subtitle="From startups to enterprises, we deliver scalable, secure, and high-performance systems that empower your business to grow."
+                subtitle="From startups to enterprises, we deliver scalable, secure, and high performance systems that empower your business to grow."
                 services={servicesData}
             />
             <CustomSoftwareSection/>
@@ -858,7 +858,7 @@ export default function CustomSoftwareDevelopment() {
                         title: "Testing & Launch",
                         duration: "1-2 Weeks",
                         description:
-                            "Rigorous testing, data migration, and go-live support ensure a smooth deployment.",
+                            "Rigorous testing, data migration, and go live support ensure a smooth deployment.",
                     },
                     {
                         title: "Support",
@@ -884,7 +884,7 @@ export default function CustomSoftwareDevelopment() {
                     "Requirements analysis",
                     "Technical feasibility assessment",
                     "Project timeline and cost estimate",
-                    "No-obligation proposal"
+                    "No obligation proposal"
                 ]}
             />
             <FaqSection Faq={faqs}/>

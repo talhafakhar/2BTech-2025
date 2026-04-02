@@ -17,7 +17,7 @@ export default function ShopifyDevelopment() {
             id: 1,
             question: "What services does your Shopify development company provide?",
             answer:
-                "2BTech offers comprehensive Shopify services including custom Shopify store development, Shopify theme development, Shopify app development, Shopify Plus implementation, store migrations, SEO optimization, conversion rate optimization, and ongoing support. As a full-service Shopify development company, we handle everything from strategy and design through development, launch, and long-term growth optimization for businesses of all sizes.",
+                "2BTech offers comprehensive Shopify services including custom Shopify store development, Shopify theme development, Shopify app development, Shopify Plus implementation, store migrations, SEO optimization, conversion rate optimization, and ongoing support. As a full-service Shopify development company, we handle everything from strategy and design through development, launch, and long term growth optimization for businesses of all sizes.",
         },
         {
             id: 2,
@@ -33,7 +33,7 @@ export default function ShopifyDevelopment() {
         },
         {
             id: 4,
-            question: "Do you provide ongoing support after the store launches?",
+            question: "Do you provide ongoing support after the sflexibletore launches?",
             answer:
                 "Yes! We offer flexible maintenance and support packages for all clients. When you hire Shopify expert services from 2BTech, you gain access to ongoing support including technical troubleshooting, security updates, feature enhancements, theme modifications, app integrations, performance monitoring, and strategic consultation. Our pay-as-you-go model ensures you only pay for the services you actually need and use.",
         },
@@ -41,14 +41,14 @@ export default function ShopifyDevelopment() {
             id: 5,
             question: "What makes 2BTech different from other Shopify developers?",
             answer:
-                "2BTech combines deep technical expertise with ecommerce strategy and proven results. Unlike generalist developers, our team specializes exclusively in Shopify with over 8 years of platform experience. We've generated over $100M in revenue for clients through strategic custom Shopify development, conversion optimization, and growth-focused solutions. Our Shopify development approach focuses on measurable outcomes not just delivering code ensuring your store becomes a powerful revenue-generating asset.",
+                "2BTech combines deep technical expertise with ecommerce strategy and proven results. Unlike generalist developers, our team specializes exclusively in Shopify with over 8 years of platform experience. We've generated over $100M in revenue for clients through strategic custom Shopify development, conversion optimization, and growth-focused solutions. Our Shopify development approach focuses on measurable outcomes not just delivering code ensuring your store becomes a powerful revenue generating asset.",
         },
     ];
     const definitionOne = [
         {
             title: "Proven Revenue Growth",
             description:
-                "Our Shopify store development projects consistently deliver measurable results, with clients experiencing average revenue increases of 156% within the first year through optimized design, strategic enhancements, and conversion-focused development.",
+                "Our Shopify store development projects consistently deliver measurable results, with clients experiencing average revenue increases of 156% within the first year through optimized design, strategic enhancements, and conversion focused development.",
         },
         {
             title: "Deep Platform Expertise",
@@ -58,12 +58,12 @@ export default function ShopifyDevelopment() {
         {
             title: "Full-Service Ecommerce Agency",
             description:
-                "Beyond development, we provide SEO, conversion optimization, marketing strategy, and ongoing support, functioning as your complete ecommerce partner invested in your long-term success.",
+                "Beyond development, we provide SEO, conversion optimization, marketing strategy, and ongoing support, functioning as your complete ecommerce partner invested in your long term success.",
         },
         {
-            title: "Enterprise-Grade Solutions",
+            title: "Enterprise Grade Solutions",
             description:
-                "Whether you're a startup or Fortune 500 company, our custom Shopify development services scale to meet your needs handling high-volume transactions, complex integrations, and advanced business requirements with proven reliability.",
+                "Whether you're a startup or Fortune 500 company, our custom Shopify development services scale to meet your needs handling high volume transactions, complex integrations, and advanced business requirements with proven reliability.",
         },
     ];
     const platforms = [
@@ -137,7 +137,7 @@ export default function ShopifyDevelopment() {
             />
             <AboutSection
                 title="Partner With a Shopify Development Company That Delivers Exceptional Results"
-                description="At 2BTech, we specialize in building high-converting Shopify stores that drive revenue growth and customer satisfaction. As a leading shopify development company, we combine technical expertise with ecommerce strategy to create custom solutions that scale with your business. When you hire shopify expert talent from our team, you're gaining access to seasoned professionals who understand every aspect of the platform. From custom shopify development to complex integrations and performance optimization, our shopify developer team delivers solutions that transform your online presence into a powerful revenue-generating machine"
+                description="At 2BTech, we specialize in building high converting Shopify stores that drive revenue growth and customer satisfaction. As a leading shopify development company, we combine technical expertise with ecommerce strategy to create custom solutions that scale with your business. When you hire shopify expert talent from our team, you're gaining access to seasoned professionals who understand every aspect of the platform. From custom shopify development to complex integrations and performance optimization, our shopify developer team delivers solutions that transform your online presence into a powerful revenue generating machine"
                 src="/assets/services/shopify/onlineStore.svg"
                 width={430}
             />
@@ -151,7 +151,7 @@ export default function ShopifyDevelopment() {
                         id: 1,
                         title: "Custom Shopify Store Development",
                         description:
-                            "We build stunning, high-performance Shopify stores with custom designs, advanced features, optimized checkout flows, and seamless user experiences that maximize conversions across all devices.",
+                            "We build stunning, high performance Shopify stores with custom designs, advanced features, optimized checkout flows, and seamless user experiences that maximize conversions across all devices.",
                     },
                     {
                         id: 2,
@@ -170,7 +170,7 @@ export default function ShopifyDevelopment() {
                         id: 4,
                         title: "Shopify Plus Enterprise Solutions",
                         description:
-                            "Scale effortlessly with Shopify Plus wholesale channels, custom checkout experiences, advanced automation, and multi-store management built for high-volume enterprises.",
+                            "Scale effortlessly with Shopify Plus wholesale channels, custom checkout experiences, advanced automation, and multi-store management built for high volume enterprises.",
                     },
                     {
                         id: 5,
@@ -189,13 +189,13 @@ export default function ShopifyDevelopment() {
                         id: 7,
                         title: "Shopify Conversion Rate Optimization",
                         description:
-                            "Maximize revenue with checkout optimization, A/B testing, trust-building elements, and data-driven design improvements that convert more visitors into loyal customers.",
+                            "Maximize revenue with checkout optimization, A/B testing, trust building elements, and data driven design improvements that convert more visitors into loyal customers.",
                     },
                     {
                         id: 8,
                         title: "Ongoing Shopify Support & Maintenance",
                         description:
-                            "Ensure continuous peak performance with proactive maintenance, updates, feature enhancements, and strategic consultation for long-term success and growth.",
+                            "Ensure continuous peak performance with proactive maintenance, updates, feature enhancements, and strategic consultation for long- term success and growth.",
                     },
                 ]}
 
@@ -228,10 +228,10 @@ export default function ShopifyDevelopment() {
                 description="Many Shopify stores lack these crucial elements that impact conversions, retention, visibility, and overall revenue performance."
                 services={[
                     {
-                        title: "Mobile-Optimized Checkout Experience",
+                        title: "Mobile Optimized Checkout Experience",
                         duration: "",
                         description:
-                            "Generic checkouts lose sales on mobile where 70% of shopping happens. We craft mobile-first checkout flows with trust badges and one-click payments to boost completion rates.",
+                            "Generic checkouts lose sales on mobile where 70% of shopping happens. We craft mobile first checkout flows with trust badges and one-click payments to boost completion rates.",
                     },
                     {
                         title: "Advanced Product Filtering & Search",
@@ -240,7 +240,7 @@ export default function ShopifyDevelopment() {
                             "Basic navigation frustrates large catalogs. Intelligent filters, predictive search, and visual sorting enhance product discovery, satisfaction, and conversions.",
                     },
                     {
-                        title: "Strategic Trust-Building Elements",
+                        title: "Strategic Trust Building Elements",
                         duration: "",
                         description:
                             "Without trust, customers hesitate to buy. Reviews, security badges, guarantees, and social proof strengthen credibility and reduce cart abandonment.",
@@ -249,13 +249,13 @@ export default function ShopifyDevelopment() {
                         title: "Performance & Speed Optimization",
                         duration: "",
                         description:
-                            "Slow stores lose shoppers instantly. Image compression, lazy loading, and code optimization ensure lightning-fast load times that retain customers.",
+                            "Slow stores lose shoppers instantly. Image compression, lazy loading, and code optimization ensure lightning fast load times that retain customers.",
                     },
                     {
                         title: "Email Capture & Abandonment Recovery",
                         duration: "",
                         description:
-                            "Recover lost visitors with smart popups, exit-intent offers, and automated cart recovery flows that convert traffic into loyal customers.",
+                            "Recover lost visitors with smart popups, exit intent offers, and automated cart recovery flows that convert traffic into loyal customers.",
                     },
                     {
                         title: "Analytics & Conversion Tracking",
@@ -269,7 +269,7 @@ export default function ShopifyDevelopment() {
                 Faq={faqs}
             />
             <FinalCTASection
-                heading="Ready to Build a High-Converting Shopify Store?"
+                heading="Ready to Build a High Converting Shopify Store?"
                 description="When you hire shopify expert developers from 2BTech, you're choosing a shopify development company committed to your revenue growth. Our comprehensive services including shopify store development, shopify theme development, shopify app development, and custom shopify development solutions combine technical excellence with ecommerce strategy. Whether you're launching your first store or scaling to Shopify Plus, we have the expertise and dedication to exceed your expectations and drive measurable results"
             />
             <Footer/>

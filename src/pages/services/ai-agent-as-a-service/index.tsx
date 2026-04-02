@@ -888,7 +888,7 @@ export default function aiAgentAsAService() {
                         title: "Conversational AI Development",
                         highlightImage: "/assets/services/AaaS/Conversational.svg",
                         description:
-                            "Develop conversational AI systems for natural, human-like interactions across voice assistants, chat, and multi-channel platforms.",
+                            "Develop conversational AI systems for natural, human like interactions across voice assistants, chat, and multi-channel platforms.",
                     },
                     {
                         id: 4,
@@ -919,7 +919,7 @@ export default function aiAgentAsAService() {
                         id: 8,
                         title: "RAG-Powered AI Agents",
                         description:
-                            "Enhance AI agents with RAG for accurate, context-aware responses grounded in your proprietary business data.",
+                            "Enhance AI agents with RAG for accurate, context aware responses grounded in your proprietary business data.",
                     },
                 ]}
 
@@ -939,7 +939,7 @@ export default function aiAgentAsAService() {
                 subheading="Fixed Price Model"
                 subDescription=" Ideal for well defined AI agent projects with clear requirements and deliverables. Receive transparent pricing, guaranteed outcomes, and predictable timelines perfect for businesses seeking budget certainty and structured implementation schedules"
                 subheadingTwo="Dedicated Team Model"
-                subDescriptionTwo=" Scale your AI capabilities with dedicated developers who become extensions of your team. Enjoy full control, flexible resource allocation, direct collaboration, and seamless integration for ongoing projects requiring continuous development."
+                subDescriptionTwo=" Scale your AI capabilities with dedicated developers who become extensions of your team. Enjoy full control,  resource allocation, direct collaboration, and seamless integration for ongoing projects requiring continuous development."
             />
             <OurStack
                  heading="AI Agent Development"

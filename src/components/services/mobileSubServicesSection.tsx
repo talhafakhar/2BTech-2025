@@ -30,7 +30,7 @@ const MobileServicesSection = () => {
         {
             title: "React Native Development Company",
             description:
-                "We build high-performance cross-platform apps using Facebook's React Native framework. Trusted by Instagram, Tesla, and Shopify.",
+                "We build high performance cross-platform apps using Facebook's React Native framework. Trusted by Instagram, Tesla, and Shopify.",
             image: "/assets/services/react-native.svg",
             keyFeatures: [
                 "JavaScript/TypeScript with React paradigm.",
@@ -61,7 +61,7 @@ const MobileServicesSection = () => {
             ],
             benefits: [
                 "Truly native performance",
-                "Pixel-perfect UI",
+                "Pixel perfect UI",
                 "Great animation & graphics support",
                 "Strong Google ecosystem",
                 "Excellent documentation",
@@ -94,7 +94,7 @@ const MobileServicesSection = () => {
                 "User Research – interviews & analysis.",
                 "Information Architecture – logical flow mapping.",
                 "Wireframing – low-fidelity prototypes.",
-                "UI Design – pixel-perfect mockups for iOS/Android.",
+                "UI Design – pixel perfect mockups for iOS/Android.",
                 "Prototyping – interactive Figma or XD flows.",
                 "Design Systems – reusable, scalable styles.",
             ],

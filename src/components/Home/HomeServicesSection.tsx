@@ -54,7 +54,7 @@ const HomeServicesSection: React.FC = () => {
             id: 3,
             title: "Product Design",
             description:
-                "Create exceptional user experiences that convert. Our design team crafts intuitive interfaces backed by user research, bringing your vision to life with pixel-perfect execution.",
+                "Create exceptional user experiences that convert. Our design team crafts intuitive interfaces backed by user research, bringing your vision to life with pixel perfect execution.",
             icon: <Palette className="w-8 h-8" />,
             items: [
                 "UX/UI design",
@@ -126,7 +126,7 @@ const HomeServicesSection: React.FC = () => {
                         Our <span className="text-primary">Services</span>
                     </h2>
                     <p className=" text-gray-600 mt-6 max-w-3xl mx-auto leading-relaxed">
-                        End-to-end product development from discovery and design to AI-powered solutions and enterprise-grade systems.
+                        End-to-end product development from discovery and design to AI-powered solutions and enterprise grade systems.
                     </p>
                 </div>
 

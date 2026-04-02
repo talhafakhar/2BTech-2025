@@ -30,7 +30,7 @@ const processSteps = [
         id: 5,
         title: "We Stick Around",
         description:
-            "Launch isn't the end, it's the beginning. We provide ongoing support, monitor performance, fix bugs, and build new features as your needs evolve. Many of our client relationships span years because we're invested in their long-term success, not just project completion.",
+            "Launch isn't the end, it's the beginning. We provide ongoing support, monitor performance, fix bugs, and build new features as your needs evolve. Many of our client relationships span years because we're invested in their long term success, not just project completion.",
     },
 ];
 

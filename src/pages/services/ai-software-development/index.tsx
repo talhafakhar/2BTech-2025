@@ -30,7 +30,7 @@ export default function AiSoftwareDevelopment() {
             id: 3,
             question: "What is the cost of AI software development?",
             answer:
-                "AI software development costs depend on project complexity, technology requirements, data volume, and integration needs. Basic AI solutions start at $30,000-$75,000, while enterprise-grade custom AI model development ranges from $100,000-$500,000+. We offer flexible engagement models (fixed price or dedicated team) and provide detailed cost breakdowns with transparent pricing that demonstrates clear ROI potential.",
+                "AI software development costs depend on project complexity, technology requirements, data volume, and integration needs. Basic AI solutions start at $30,000-$75,000, while enterprise grade custom AI model development ranges from $100,000-$500,000+. We offer flexible engagement models (fixed price or dedicated team) and provide detailed cost breakdowns with transparent pricing that demonstrates clear ROI potential.",
         },
         {
             id: 4,
@@ -1674,7 +1674,7 @@ export default function AiSoftwareDevelopment() {
             />
             <AboutSection
                 title="Leading AI Software Development Company"
-                description="At 2BTech, we specialize in AI software development services that empower businesses to unlock their full potential through intelligent automation and data-driven decision-making. As a trusted AI software development company, we create custom AI solutions tailored to your unique challenges and objectives. Our expert team leverages cutting-edge artificial intelligence services including machine learning development, deep learning solutions, and computer vision development to build scalable, high-performance applications. From startups to enterprises, we deliver AI-powered solutions that streamline operations, enhance customer experiences, and drive sustainable competitive advantages in today's digital-first marketplace
+                description="At 2BTech, we specialize in AI software development services that empower businesses to unlock their full potential through intelligent automation and data driven decision-making. As a trusted AI software development company, we create custom AI solutions tailored to your unique challenges and objectives. Our expert team leverages cutting-edge artificial intelligence services including machine learning development, deep learning solutions, and computer vision development to build scalable, high performance applications. From startups to enterprises, we deliver AI-powered solutions that streamline operations, enhance customer experiences, and drive sustainable competitive advantages in today's digital-first marketplace
                 "
                 src="/assets/services/aiSoftware/aiSoftware.svg"
                 width={400}
@@ -1727,7 +1727,7 @@ export default function AiSoftwareDevelopment() {
                         id: 7,
                         title: "Conversational AI",
                         description:
-                            "Build intelligent, context-aware chatbots using Rasa, LangChain, and Dialogflow for seamless customer interaction.",
+                            "Build intelligent, context aware chatbots using Rasa, LangChain, and Dialogflow for seamless customer interaction.",
                     },
                     {
                         id: 8,
@@ -1773,7 +1773,7 @@ export default function AiSoftwareDevelopment() {
                 headingHighlight=" Flexible Engagement Models "
                 heading="Designed for Your Project Requirements"
                 src="/assets/services/aiSoftware/aiSoftwareModal.svg"
-                description=" 2BTech offers flexible hiring models for AI software development services, ensuring you get the right team structure, expertise, and budget alignment for successful project delivery and long-term partnership."
+                description=" 2BTech offers flexible hiring models for AI software development services, ensuring you get the right team structure, expertise, and budget alignment for successful project delivery and long term partnership."
                 subheading="Fixed Price Model"
                 subDescription="  Perfect for well-defined AI projects with clear scope and requirements. Get transparent pricing, guaranteed deliverables, and predictable timelines ideal for businesses seeking budget certainty and structured project execution."
                 subheadingTwo="Dedicated Team Model"
@@ -1817,7 +1817,7 @@ export default function AiSoftwareDevelopment() {
                             "Deliver personalized, 24/7 customer engagement through AI chatbots and recommendation engines. Increase satisfaction by 45%, reduce response times dramatically, and build lasting relationships that drive loyalty and retention.",
                     },
                     {
-                        title: "Scale Seamlessly & Cost-Effectively",
+                        title: "Scale Seamlessly & Cost Effectively",
                         duration: "",
                         description:
                             "Build AI infrastructure that grows with your business demands. Our scalable solutions handle increased workloads, expanding user bases, and new market entries without compromising performance or requiring major reinvestment.",

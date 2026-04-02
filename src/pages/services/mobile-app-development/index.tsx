@@ -574,7 +574,7 @@ export default function MobileAppDevelopment() {
             ]
         },
         {
-            name: "Cross-Platform",
+            name: "Cross Platform",
             technologies: [
                 {
                     name: "JavaScript",
@@ -1427,7 +1427,7 @@ export default function MobileAppDevelopment() {
                 {
                     title: "Sprint Planning",
                     detail:
-                        "Break work into two-week sprints. Prioritize features for each iteration.",
+                        "Break work into two week sprints. Prioritize features for each iteration.",
                 },
                 {
                     title: "Agile Development",
@@ -1556,7 +1556,7 @@ export default function MobileAppDevelopment() {
             <CloudMigrationProcess
                 heading="Our Mobile App Development"
                 highlight="Process"
-                description="A structured and proven approach to ensure a smooth and cost-efficient transition to the cloud."
+                description="A structured and proven approach to ensure a smooth and cost efficient transition to the cloud."
                 steps={processSteps}
             />
             <TechStackServices
@@ -1576,34 +1576,34 @@ export default function MobileAppDevelopment() {
                         title: "Design Excellence",
                         duration: "",
                         description:
-                            "Award-winning designers creating beautiful, intuitive interfaces. 4.8★ average rating across client apps.",
+                            "Award winning designers creating beautiful, intuitive interfaces. 4.8★ average rating across client apps.",
                     },
                     {
                         title: "Proven Development Process",
                         duration: "",
                         description:
-                            "Agile methodology with two-week sprints. Regular demos and continuous client involvement.",
+                            "Agile methodology with two week sprints. Regular demos and continuous client involvement.",
                     },
                     {
                         title: "Quality Assurance",
                         duration: "",
                         description:
-                            "Rigorous testing on hundreds of devices. Automated and manual QA ensures bug-free launches.",
+                            "Rigorous testing on hundreds of devices. Automated and manual QA ensures bug free launches.",
                     },
                     {
                         title: "App Store Success",
                         duration: "",
                         description:
-                            "95% first-time approval rate. Expert guidance through App Store and Google Play processes.",
+                            "95% first time approval rate. Expert guidance through App Store and Google Play processes.",
                     },
                     {
-                        title: "Post-Launch Support",
+                        title: "Post Launch Support",
                         duration: "",
                         description:
                             "We don't disappear after launch. Ongoing support, updates, and optimization included.",
                     },
                     {
-                        title: "Cost-Effective Solutions",
+                        title: "Cost Effective Solutions",
                         duration: "",
                         description:
                             "Transparent pricing with no hidden fees. Cross-platform development saves 40-60% vs native.",
@@ -1612,7 +1612,7 @@ export default function MobileAppDevelopment() {
             />
             <IndustriesSection industries={industriesData}/>
             <Banner
-                title="Ready to Build Your Cross-Platform App?"
+                title="Ready to Build Your Cross Platform App?"
                 description="Leverage our expertise in React Native and Flutter development to launch powerful iOS and Android apps"
                 src="/assets/services/mobileApp/mobileAppBanner.jpg"
             />
@@ -1628,7 +1628,7 @@ export default function MobileAppDevelopment() {
                     "Feature prioritization",
                     "Timeline and cost estimate",
                     "UI/UX recommendations",
-                    "No-obligation proposal",
+                    "No obligation proposal",
                 ]}
             />
             <Footer/>

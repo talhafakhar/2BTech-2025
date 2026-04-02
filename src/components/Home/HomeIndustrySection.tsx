@@ -42,7 +42,7 @@ const HomeIndustrySection: React.FC = () => {
                         Industry <span className="text-primary">We Serve</span>
                     </h2>
                     <p className="text-sm sm:text-base md:text-lg text-black/70">
-                        Tailored Solutions for High-Growth Sectors
+                        Tailored Solutions for High Growth Sectors
                     </p>
                 </motion.div>
 

@@ -37,7 +37,7 @@ export default function productDesign() {
             id: 4,
             question: "Do you provide ongoing support after the design is complete?",
             answer:
-                "Yes. We offer post-launch support including usability monitoring, iterative improvements, design system maintenance, and optimization. Our goal is long-term success and continuous evolution with your users’ needs.",
+                "Yes. We offer post-launch support including usability monitoring, iterative improvements, design system maintenance, and optimization. Our goal is long term success and continuous evolution with your users’ needs.",
         },
         {
             id: 5,
@@ -131,7 +131,7 @@ export default function productDesign() {
                     {
                         id: 1,
                         title: "User Research & Strategy",
-                        description: "We conduct comprehensive user research, competitive analysis, and stakeholder interviews to craft data-driven strategies that guide every design decision and ensure alignment with target audiences.",
+                        description: "We conduct comprehensive user research, competitive analysis, and stakeholder interviews to craft data driven strategies that guide every design decision and ensure alignment with target audiences.",
                     },
                     {
                         id: 2,
@@ -142,13 +142,13 @@ export default function productDesign() {
                         id: 3,
                         title: "Web App Design Services",
                         highlightImage: "/assets/services/product/websiteDesign.svg",
-                        description: "We design responsive, conversion-focused web applications that blend elegant aesthetics with flawless functionality across all devices and browsers.",
+                        description: "We design responsive, conversion focused web applications that blend elegant aesthetics with flawless functionality across all devices and browsers.",
                     },
                     {
                         id: 4,
                         title: "UI Design & Visual Identity",
                         description:
-                            "Our designers build pixel-perfect interfaces and cohesive visual systems that enhance brand identity, capture attention, and elevate user engagement.",
+                            "Our designers build pixel perfect interfaces and cohesive visual systems that enhance brand identity, capture attention, and elevate user engagement.",
                     },
                     {
                         id: 5,

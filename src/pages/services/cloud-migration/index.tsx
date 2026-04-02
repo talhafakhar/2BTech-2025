@@ -129,7 +129,7 @@ export default function CloudMigration() {
         {
             icon: Heart,
             title: "Healthcare",
-            description: "HIPAA-compliant cloud migrations and secure infrastructure",
+            description: "HIPAA compliant cloud migrations and secure infrastructure",
             color: "from-blue-50 to-blue-100"
         },
         {
@@ -165,7 +165,7 @@ export default function CloudMigration() {
         {
             icon: Cpu,
             title: "SaaS Companies",
-            description: "Multi-tenant architectures and global deployment",
+            description: "Multi tenant architectures and global deployment",
             color: "from-blue-50 to-blue-100"
         },
         {
@@ -250,7 +250,7 @@ export default function CloudMigration() {
             benefits: [
                 "Largest global cloud provider",
                 "Broadest service portfolio (200+ services)",
-                "Enterprise-grade security and compliance",
+                "Enterprise grade security and compliance",
                 "Pay-as-you-go pricing with reserved instances",
                 "Mature ecosystem and integrations",
             ],
@@ -333,7 +333,7 @@ export default function CloudMigration() {
             description:
                 "Design and manage multi-cloud or hybrid environments for flexibility, resilience, and cost control.",
             keyFeatures: [
-                "Avoid vendor lock-in with multi-cloud strategy",
+                "Avoid vendor lock in with multi-cloud strategy",
                 "Use best services from each provider",
                 "Achieve geographic redundancy",
                 "Hybrid connectivity with on-prem infrastructure",
@@ -1189,7 +1189,7 @@ export default function CloudMigration() {
             <CloudMigrationProcess
                 heading="Our Cloud"
                 highlight="Migration Process"
-                description="A structured and proven approach to ensure a smooth and cost-efficient transition to the cloud."
+                description="A structured and proven approach to ensure a smooth and cost efficient transition to the cloud."
                 steps={processSteps}
             />
             <TechStackServices
@@ -1233,7 +1233,7 @@ export default function CloudMigration() {
                         title: "Post-Migration Support",
                         duration: "",
                         description:
-                            "We don't disappear after go-live. Ongoing optimization, monitoring, and support included.",
+                            "We don't disappear after go live. Ongoing optimization, monitoring, and support included.",
                     },
                 ]}
             />

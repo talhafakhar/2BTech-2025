@@ -3,7 +3,6 @@ import Image from "next/image";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import ReCAPTCHA from 'react-google-recaptcha';
-import {ArrowRight} from "lucide-react";
 declare global {
     interface Window {
         grecaptcha?: {

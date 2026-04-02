@@ -135,7 +135,7 @@ export default function AiAndGenerativeAiSolutions() {
                 "Designing intelligent conversational agents that provide customer support, automate responses, and enhance user engagement across multiple channels.",
             keyFeatures: [
                 "Multi-language support and understanding",
-                "Context-aware conversations",
+                "Context aware conversations",
                 "Intent recognition and entity extraction",
                 "Integration with business systems",
                 "Analytics and performance tracking",
@@ -1565,7 +1565,7 @@ export default function AiAndGenerativeAiSolutions() {
             />
             <Banner
                 title="Power Your Business with AI Innovation"
-                description="Empower your business with intelligent, data-driven AI solutions"
+                description="Empower your business with intelligent, data driven AI solutions"
                 src="/assets/services/genAi/aiBanner.jpg"
             />
             <OurStack

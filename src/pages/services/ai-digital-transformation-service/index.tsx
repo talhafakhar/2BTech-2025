@@ -160,14 +160,14 @@ export default function aiDigitalTransformationService() {
                         id: 2,
                         title: "AI Strategy & Consulting",
                         description:
-                            "Our experts assess your processes, identify AI opportunities, and create clear strategies that maximize ROI and long-term growth.",
+                            "Our experts assess your processes, identify AI opportunities, and create clear strategies that maximize ROI and long term growth.",
                     },
                     {
                         id: 3,
                         title: "Intelligent Process Automation",
                         highlightImage: "/assets/services/aiDigital/intelligentProcessAutomation.svg",
                         description:
-                            "Automate repetitive tasks with AI to reduce costs, improve accuracy, and free your team for higher-value work.",
+                            "Automate repetitive tasks with AI to reduce costs, improve accuracy, and free your team for higher value work.",
                     },
                     {
                         id: 4,
