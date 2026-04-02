@@ -89,7 +89,7 @@ export default function AiAndGenerativeAiSolutions() {
             id: 3,
             title: "Custom AI Solutions for Business",
             description:
-                "We develop custom AI solutions for business that address your specific challenges and opportunities. Our team creates AI-powered applications that integrate seamlessly with your existing systems and workflows.",
+                "We develop custom AI solutions for business that address your specific challenges and opportunities. Our team creates AI powered applications that integrate seamlessly with your existing systems and workflows.",
             keyFeatures: [
                 "Predictive analytics and forecasting models",
                 "Intelligent automation and process optimization",
@@ -103,7 +103,7 @@ export default function AiAndGenerativeAiSolutions() {
             id: 4,
             title: "AI Implementation Services",
             description:
-                "Our AI implementation services ensure smooth integration of AI technologies into your business operations. We handle everything from proof of concept to full-scale production deployment with minimal disruption.",
+                "Our AI implementation services ensure smooth integration of AI technologies into your business operations. We handle everything from proof of concept to full scale production deployment with minimal disruption.",
             keyFeatures: [
                 "Requirements analysis and feasibility studies",
                 "Data infrastructure setup and preparation",
@@ -160,7 +160,7 @@ export default function AiAndGenerativeAiSolutions() {
             id: 8,
             title: "AI-Powered Process Automation",
             description:
-                "Automating routine, rule-based tasks to increase efficiency and reduce human error, transforming business processes through intelligent automation.",
+                "Automating routine, rule based tasks to increase efficiency and reduce human error, transforming business processes through intelligent automation.",
             keyFeatures: [
                 "Robotic Process Automation (RPA)",
                 "Intelligent document processing",
@@ -1513,7 +1513,7 @@ export default function AiAndGenerativeAiSolutions() {
                         title: "AI Model Development",
                         duration: "Creating Intelligence",
                         description:
-                            "We develop and train sophisticated AI models using cutting-edge algorithms and frameworks, customized to your specific business requirements and performance objectives.",
+                            "We develop and train sophisticated AI models using cutting edge algorithms and frameworks, customized to your specific business requirements and performance objectives.",
                         keyActivities: [
                             "Algorithm selection and architecture design",
                             "Model training and validation",
@@ -1537,7 +1537,7 @@ export default function AiAndGenerativeAiSolutions() {
                     },
                     {
                         title: "Training & Knowledge Transfer",
-                        duration: "Empowering Your Team\n",
+                        duration: "Empowering Your Team",
                         description:
                             "Our service includes comprehensive training for your team on managing and utilizing the AI solution, ensuring sustainable adoption and maximizing the value of your AI investment.",
                         keyActivities: [
@@ -1552,7 +1552,7 @@ export default function AiAndGenerativeAiSolutions() {
                         title: "Monitoring & Optimization",
                         duration: "Continuous Improvement",
                         description:
-                            "As your AI solution progresses from deployment to full-scale operation, we work with you to optimize performance and scale the solution across your organization, maximizing return on your AI investment.",
+                            "As your AI solution progresses from deployment to full scale operation, we work with you to optimize performance and scale the solution across your organization, maximizing return on your AI investment.",
                         keyActivities: [
                             "Performance monitoring and analytics",
                             "Model retraining and updates",

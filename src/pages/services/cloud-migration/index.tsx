@@ -1164,8 +1164,8 @@ export default function CloudMigration() {
             />
             <AboutSection
                 title="Expert Cloud Migration Services for Business Transformation"
-                description="2BTech delivers comprehensive cloud migration services that move your applications, data, and infrastructure to AWS, Azure, or Google Cloud with zero downtime. As a trusted cloud migration company, we combine technical expertise with strategic cloud consulting services to ensure your transition is smooth, secure, and cost-effective"
-                descriptionTwo="Our cloud infrastructure services cover everything from initial assessment and planning through migration execution and ongoing optimization. Whether you need to migrate to AWS, require azure migration services, or want to leverage multi-cloud strategies, we build cloud solutions that scale with your busines"
+                description="2BTech delivers comprehensive cloud migration services that move your applications, data, and infrastructure to AWS, Azure, or Google Cloud with zero downtime. As a trusted cloud migration company, we combine technical expertise with strategic cloud consulting services to ensure your transition is smooth, secure, and cost effective"
+                descriptionTwo="Our cloud infrastructure services cover everything from initial assessment and planning through migration execution and ongoing optimization. Whether you need to migrate to AWS, require azure migration services, or want to leverage multi cloud strategies, we build cloud solutions that scale with your busines"
                 descriptionThree="We specialize in cloud cost optimization, helping businesses reduce infrastructure expenses by 30-50% while improving performance. Our cloud consulting services provide strategic guidance on architecture, security, compliance, and modernization, ensuring your cloud investment delivers maximum RO"
                 src="/assets/services/cloudMigration/cloud.svg"
                 width={440}
@@ -1227,7 +1227,7 @@ export default function CloudMigration() {
                         title: "Transparent Process",
                         duration: "",
                         description:
-                            "Weekly status updates, real-time dashboards, and direct access to the migration team. No surprises.",
+                            "Weekly status updates, real time dashboards, and direct access to the migration team. No surprises.",
                     },
                     {
                         title: "Post-Migration Support",
@@ -1254,7 +1254,7 @@ export default function CloudMigration() {
                     "Cloud readiness evaluation",
                     "TCO analysis (cloud vs on-premises)",
                     "Migration roadmap and timeline",
-                    "No-obligation proposal"
+                    "No obligation proposal"
                 ]}
             />
             <Footer/>

@@ -875,7 +875,7 @@ export default function aiAgentAsAService() {
                         id: 1,
                         title: "Autonomous AI Agents Development",
                         description:
-                            "Build self-operating AI agents using advanced reasoning and memory systems to automate complex tasks across industries.",
+                            "Build self operating AI agents using advanced reasoning and memory systems to automate complex tasks across industries.",
                     },
                     {
                         id: 2,
@@ -913,7 +913,7 @@ export default function aiAgentAsAService() {
                         id: 7,
                         title: "Voice AI Agent Development",
                         description:
-                            "Design voice-enabled AI agents using ASR, NLU, and TTS to power IVR systems, assistants, and voice automation solutions.",
+                            "Design voice enabled AI agents using ASR, NLU, and TTS to power IVR systems, assistants, and voice automation solutions.",
                     },
                     {
                         id: 8,
@@ -937,7 +937,7 @@ export default function aiAgentAsAService() {
                 src="/assets/services/AaaS/modal.svg"
                 description="2BTech offers flexible hiring models to build AI agents that align with your project scope, timeline, and budget. Choose the engagement approach that best fits your business requirements."
                 subheading="Fixed Price Model"
-                subDescription=" Ideal for well-defined AI agent projects with clear requirements and deliverables. Receive transparent pricing, guaranteed outcomes, and predictable timelines perfect for businesses seeking budget certainty and structured implementation schedules"
+                subDescription=" Ideal for well defined AI agent projects with clear requirements and deliverables. Receive transparent pricing, guaranteed outcomes, and predictable timelines perfect for businesses seeking budget certainty and structured implementation schedules"
                 subheadingTwo="Dedicated Team Model"
                 subDescriptionTwo=" Scale your AI capabilities with dedicated developers who become extensions of your team. Enjoy full control, flexible resource allocation, direct collaboration, and seamless integration for ongoing projects requiring continuous development."
             />
@@ -957,19 +957,19 @@ export default function aiAgentAsAService() {
                         title: "Automate Complex Workflows End-to-End",
                         duration: "",
                         description:
-                            "Build AI agents that autonomously manage multi-step processes from customer inquiries to financial reconciliation. Reduce manual work by 70%, eliminate errors, and free teams to focus on strategy and growth.",
+                            "Build AI agents that autonomously manage multi step processes from customer inquiries to financial reconciliation. Reduce manual work by 70%, eliminate errors, and free teams to focus on strategy and growth.",
                     },
                     {
                         title: "Deliver 24/7 Intelligent Customer Support",
                         duration: "",
                         description:
-                            "Deploy AI agents that offer personalized, real-time assistance around the clock. Improve satisfaction by 45%, reduce response time by 80%, and handle unlimited inquiries without increasing team size.",
+                            "Deploy AI agents that offer personalized, real time assistance around the clock. Improve satisfaction by 45%, reduce response time by 80%, and handle unlimited inquiries without increasing team size.",
                     },
                     {
                         title: "Accelerate Decision-Making with AI Intelligence",
                         duration: "",
                         description:
-                            "Empower business leaders with AI agents that analyze data, detect trends, and deliver actionable insights. Make faster, smarter decisions backed by real-time analytics and predictive intelligence.",
+                            "Empower business leaders with AI agents that analyze data, detect trends, and deliver actionable insights. Make faster, smarter decisions backed by real time analytics and predictive intelligence.",
                     },
                     {
                         title: "Scale Operations Without Increasing Headcount",
@@ -981,7 +981,7 @@ export default function aiAgentAsAService() {
                         title: "Enhance Employee Productivity & Satisfaction",
                         duration: "",
                         description:
-                            "Free employees from repetitive tasks with AI-driven workflow automation. Boost productivity, enhance job satisfaction, and foster innovation as your team focuses on high-value initiatives.",
+                            "Free employees from repetitive tasks with AI driven workflow automation. Boost productivity, enhance job satisfaction, and foster innovation as your team focuses on high-value initiatives.",
                     },
                     {
                         title: "Reduce Operational Costs Significantly",
