@@ -78,7 +78,7 @@ export default function AiSoftwareDevelopment() {
             id: 11,
             question: "How does custom AI model development differ from using pre-built AI?",
             answer:
-                "Custom AI model development creates solutions specifically designed for your unique data, business processes, and objectives, delivering superior performance and competitive advantages. Pre-built AI offers faster deployment but limited customization. We assess your needs and recommend the optimal approach—sometimes combining pre-trained models with custom development for the best balance of speed, cost, and performance.",
+                "Custom AI model development creates solutions specifically designed for your unique data, business processes, and objectives, delivering superior performance and competitive advantages. Pre-built AI offers faster deployment but limited customization. We assess your needs and recommend the optimal approach sometimes combining pre-trained models with custom development for the best balance of speed, cost, and performance.",
         },
         {
             id: 12,
@@ -1775,7 +1775,7 @@ export default function AiSoftwareDevelopment() {
                 src="/assets/services/aiSoftware/aiSoftwareModal.svg"
                 description=" 2BTech offers flexible hiring models for AI software development services, ensuring you get the right team structure, expertise, and budget alignment for successful project delivery and long-term partnership."
                 subheading="Fixed Price Model"
-                subDescription="  Perfect for well-defined AI projects with clear scope and requirements. Get transparent pricing, guaranteed deliverables, and predictable timelines—ideal for businesses seeking budget certainty and structured project execution."
+                subDescription="  Perfect for well-defined AI projects with clear scope and requirements. Get transparent pricing, guaranteed deliverables, and predictable timelines ideal for businesses seeking budget certainty and structured project execution."
                 subheadingTwo="Dedicated Team Model"
                 subDescriptionTwo="Scale your capabilities with dedicated AI developers who integrate seamlessly into your workflow. Enjoy full control, flexible resource allocation, and direct communication for evolving projects requiring ongoing development"
             />

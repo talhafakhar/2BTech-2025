@@ -41,7 +41,7 @@ export default function ShopifyDevelopment() {
             id: 5,
             question: "What makes 2BTech different from other Shopify developers?",
             answer:
-                "2BTech combines deep technical expertise with ecommerce strategy and proven results. Unlike generalist developers, our team specializes exclusively in Shopify with over 8 years of platform experience. We've generated over $100M in revenue for clients through strategic custom Shopify development, conversion optimization, and growth-focused solutions. Our Shopify development approach focuses on measurable outcomes—not just delivering code—ensuring your store becomes a powerful revenue-generating asset.",
+                "2BTech combines deep technical expertise with ecommerce strategy and proven results. Unlike generalist developers, our team specializes exclusively in Shopify with over 8 years of platform experience. We've generated over $100M in revenue for clients through strategic custom Shopify development, conversion optimization, and growth-focused solutions. Our Shopify development approach focuses on measurable outcomes not just delivering code ensuring your store becomes a powerful revenue-generating asset.",
         },
     ];
     const definitionOne = [
@@ -63,7 +63,7 @@ export default function ShopifyDevelopment() {
         {
             title: "Enterprise-Grade Solutions",
             description:
-                "Whether you're a startup or Fortune 500 company, our custom Shopify development services scale to meet your needs—handling high-volume transactions, complex integrations, and advanced business requirements with proven reliability.",
+                "Whether you're a startup or Fortune 500 company, our custom Shopify development services scale to meet your needs handling high-volume transactions, complex integrations, and advanced business requirements with proven reliability.",
         },
     ];
     const platforms = [
@@ -170,7 +170,7 @@ export default function ShopifyDevelopment() {
                         id: 4,
                         title: "Shopify Plus Enterprise Solutions",
                         description:
-                            "Scale effortlessly with Shopify Plus—wholesale channels, custom checkout experiences, advanced automation, and multi-store management built for high-volume enterprises.",
+                            "Scale effortlessly with Shopify Plus wholesale channels, custom checkout experiences, advanced automation, and multi-store management built for high-volume enterprises.",
                     },
                     {
                         id: 5,
@@ -231,7 +231,7 @@ export default function ShopifyDevelopment() {
                         title: "Mobile-Optimized Checkout Experience",
                         duration: "",
                         description:
-                            "Generic checkouts lose sales on mobile—where 70% of shopping happens. We craft mobile-first checkout flows with trust badges and one-click payments to boost completion rates.",
+                            "Generic checkouts lose sales on mobile where 70% of shopping happens. We craft mobile-first checkout flows with trust badges and one-click payments to boost completion rates.",
                     },
                     {
                         title: "Advanced Product Filtering & Search",

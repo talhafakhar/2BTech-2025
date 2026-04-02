@@ -74,14 +74,14 @@ const ServicesSection: React.FC = () => {
             id: 7,
             title: "AI Software Solutions",
             description:
-                "We infuse AI into products — from chatbots to predictive analytics.",
+                "We infuse AI into products from chatbots to predictive analytics.",
             icon: <Cpu className="w-8 h-8" />,
         },
         {
             id: 8,
             title: "AI Agents as a Service",
             description:
-                "Deploy AI agents for content, support, data, and research — on demand.",
+                "Deploy AI agents for content, support, data, and research on demand.",
             icon: <Bot className="w-8 h-8" />,
         },
         {

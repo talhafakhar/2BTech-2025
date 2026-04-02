@@ -66,7 +66,7 @@ export default function aiAgentAsAService() {
         {
             title: "Proven Expertise",
             description:
-                "Our AI specialists have delivered 250+ autonomous AI agents across industries—combining deep technical mastery in LLMs, reasoning frameworks, and multi-agent systems with practical business insight for measurable results.",
+                "Our AI specialists have delivered 250+ autonomous AI agents across industries combining deep technical mastery in LLMs, reasoning frameworks, and multi-agent systems with practical business insight for measurable results.",
         },
         {
             title: "Custom-Tailored Approach",
@@ -81,7 +81,7 @@ export default function aiAgentAsAService() {
         {
             title: "End-to-End Support",
             description:
-                "From strategy and development to deployment and optimization, 2BTech provides complete lifecycle support—ensuring seamless integration, continuous improvement, and ongoing success for your AI initiatives.",
+                "From strategy and development to deployment and optimization, 2BTech provides complete lifecycle support ensuring seamless integration, continuous improvement, and ongoing success for your AI initiatives.",
         },
     ];
     const StackIcons = {
@@ -937,7 +937,7 @@ export default function aiAgentAsAService() {
                 src="/assets/services/AaaS/modal.svg"
                 description="2BTech offers flexible hiring models to build AI agents that align with your project scope, timeline, and budget. Choose the engagement approach that best fits your business requirements."
                 subheading="Fixed Price Model"
-                subDescription=" Ideal for well-defined AI agent projects with clear requirements and deliverables. Receive transparent pricing, guaranteed outcomes, and predictable timelines—perfect for businesses seeking budget certainty and structured implementation schedules"
+                subDescription=" Ideal for well-defined AI agent projects with clear requirements and deliverables. Receive transparent pricing, guaranteed outcomes, and predictable timelines perfect for businesses seeking budget certainty and structured implementation schedules"
                 subheadingTwo="Dedicated Team Model"
                 subDescriptionTwo=" Scale your AI capabilities with dedicated developers who become extensions of your team. Enjoy full control, flexible resource allocation, direct collaboration, and seamless integration for ongoing projects requiring continuous development."
             />
@@ -957,7 +957,7 @@ export default function aiAgentAsAService() {
                         title: "Automate Complex Workflows End-to-End",
                         duration: "",
                         description:
-                            "Build AI agents that autonomously manage multi-step processes—from customer inquiries to financial reconciliation. Reduce manual work by 70%, eliminate errors, and free teams to focus on strategy and growth.",
+                            "Build AI agents that autonomously manage multi-step processes from customer inquiries to financial reconciliation. Reduce manual work by 70%, eliminate errors, and free teams to focus on strategy and growth.",
                     },
                     {
                         title: "Deliver 24/7 Intelligent Customer Support",

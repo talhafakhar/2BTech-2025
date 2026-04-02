@@ -226,7 +226,7 @@ export default function SalesforceConsulting() {
         {
             title: "Salesforce Consulting Services",
             description:
-                "Strategic Salesforce consulting that aligns CRM capabilities with your business goals — from strategy and process design to change management and ROI tracking.",
+                "Strategic Salesforce consulting that aligns CRM capabilities with your business goals from strategy and process design to change management and ROI tracking.",
             keyFeatures: [
                 "CRM Strategy & Planning",
                 "Business Process Analysis",
@@ -239,7 +239,7 @@ export default function SalesforceConsulting() {
         {
             title: "Salesforce Implementation Services",
             description:
-                "End-to-end Salesforce implementation — from discovery to deployment. We follow Salesforce best practices for seamless rollouts.",
+                "End-to-end Salesforce implementation from discovery to deployment. We follow Salesforce best practices for seamless rollouts.",
             keyFeatures: [
                 "Discovery & Design Phases",
                 "Configuration & Customization",
@@ -287,7 +287,7 @@ export default function SalesforceConsulting() {
         {
             title: "Salesforce App Development",
             description:
-                "Custom Salesforce app development — internal, mobile, or AppExchange apps designed for scalability, user experience, and performance.",
+                "Custom Salesforce app development internal, mobile, or AppExchange apps designed for scalability, user experience, and performance.",
             keyFeatures: [
                 "Internal Custom Apps",
                 "AppExchange Apps",

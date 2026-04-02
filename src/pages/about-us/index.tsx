@@ -17,7 +17,7 @@ export default function AboutPage() {
         <div className="font-syne">
             <NextSeo
                 title="About 2BTech | Leading Software Development & AI Solutions Company"
-                description="Learn about 2BTech — a global team specializing in custom software development, AI solutions, web & mobile apps, and cloud engineering. Discover our mission, values, and how we help businesses grow through technology."
+                description="Learn about 2BTech a global team specializing in custom software development, AI solutions, web & mobile apps, and cloud engineering. Discover our mission, values, and how we help businesses grow through technology."
                 canonical="https://2btechinc.com/about-us"
                 facebook={{
                     appId: '1234567890',
@@ -32,7 +32,7 @@ export default function AboutPage() {
                     type: 'website',
                     url: 'https://2btechinc.com/about-us',
                     title: 'About 2BTech | Leading Software Development & AI Solutions Company',
-                    description: 'Learn about 2BTech — a global software company building AI-powered, scalable, and custom digital solutions for businesses worldwide.',
+                    description: 'Learn about 2BTech a global software company building AI-powered, scalable, and custom digital solutions for businesses worldwide.',
                     images: [
                         {
                             url: 'https://2btechinc.com/images/about-us.jpg',
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 }}
             />
 
-            <HeroSection title="Building Software That Actually Works" subtitle="We're 2BTech: transforming business challenges into results-driven software." buttonText="Let's Talk About Your Project"/>
+            <HeroSection title="Building Software That Actually Works" subtitle="We're 2BTech: transforming business challenges into results driven software." buttonText="Let's Talk About Your Project"/>
             <AboutSection
                 title="Who We Are?"
                 description="We started 2BTech because we saw too many companies wasting money on software that didn't fit their needs. Off-the-shelf solutions that required endless workarounds. Development agencies that disappeared after launch. Products built on assumptions instead of understanding.

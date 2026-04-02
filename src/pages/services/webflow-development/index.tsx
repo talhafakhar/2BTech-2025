@@ -17,7 +17,7 @@ export default function WebFlowDevelopment() {
             id: 1,
             question: "What makes 2BTech different from other Webflow developers?",
             answer:
-                "2BTech combines deep technical expertise with strategic business thinking. As a specialized Webflow development agency, we don't just build beautiful websites—we create high-performing digital assets that drive measurable results. Our Webflow experts follow the Client-First methodology, maintain clean code standards, and deliver projects faster than traditional agencies while ensuring exceptional quality and long-term maintainability.",
+                "2BTech combines deep technical expertise with strategic business thinking. As a specialized Webflow development agency, we don't just build beautiful websites we create high-performing digital assets that drive measurable results. Our Webflow experts follow the Client-First methodology, maintain clean code standards, and deliver projects faster than traditional agencies while ensuring exceptional quality and long-term maintainability.",
         },
         {
             id: 2,
@@ -35,7 +35,7 @@ export default function WebFlowDevelopment() {
             id: 4,
             question: "How long does a typical Webflow development project take?",
             answer:
-                "Project timelines vary based on complexity and scope. A simple landing page takes 1–2 weeks, a standard business website requires 4–6 weeks, while complex enterprise projects may take 8–12 weeks. Our Webflow development agency is known for lightning-fast delivery—typically 40% faster than traditional agencies—without compromising quality or attention to detail.",
+                "Project timelines vary based on complexity and scope. A simple landing page takes 1–2 weeks, a standard business website requires 4–6 weeks, while complex enterprise projects may take 8–12 weeks. Our Webflow development agency is known for lightning-fast delivery typically 40% faster than traditional agencies without compromising quality or attention to detail.",
         },
         {
             id: 5,
@@ -48,7 +48,7 @@ export default function WebFlowDevelopment() {
         {
             title: "Lightning-Fast Delivery",
             description:
-                "Our streamlined processes and expert Webflow team deliver projects 40% faster than traditional agencies—launching your site quickly without sacrificing quality.",
+                "Our streamlined processes and expert Webflow team deliver projects 40% faster than traditional agencies launching your site quickly without sacrificing quality.",
         },
         {
             title: "Technical Excellence Guaranteed",
@@ -155,7 +155,7 @@ export default function WebFlowDevelopment() {
                         title: "Webflow Migration Services",
                         highlightImage: "/assets/services/webflow/webflowMigration.svg",
                         description:
-                            "We migrate websites from WordPress, Wix, Shopify, or other platforms to Webflow—preserving SEO, maintaining content integrity, and enhancing site performance throughout the process.",
+                            "We migrate websites from WordPress, Wix, Shopify, or other platforms to Webflow preserving SEO, maintaining content integrity, and enhancing site performance throughout the process.",
                     },
                     {
                         id: 4,

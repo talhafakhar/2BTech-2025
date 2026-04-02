@@ -22,7 +22,6 @@ const sectors: Sector[] = [
     { id: "wellness-fitness", title: "Wellness & Fitness", imageUrl: "/assets/Home/slide-19.svg" },
 ];
 
-// Duplicate the logos to make the scroll loop seamless
 const duplicatedLogos = [...sectors, ...sectors, ...sectors];
 
 const HomeIndustrySection: React.FC = () => {
@@ -87,7 +86,7 @@ const HomeIndustrySection: React.FC = () => {
 
                 .animate-infinite-scroll {
                     display: flex;
-                    animation: infinite-scroll 300s linear infinite;
+                    animation: infinite-scroll 100s linear infinite;
                 }
             `}</style>
         </section>

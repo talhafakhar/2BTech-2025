@@ -36,7 +36,7 @@ export default function aiDigitalTransformationService() {
             id: 4,
             question: "Which industries can benefit from AI digital transformation services?",
             answer:
-                "Virtually every industry benefits from AI transformation. We specialize in financial services, healthcare, retail, manufacturing, education, logistics, and more. Each industry has unique challenges and opportunities for AI application—from fraud detection in finance to predictive maintenance in manufacturing to personalized learning in education.",
+                "Virtually every industry benefits from AI transformation. We specialize in financial services, healthcare, retail, manufacturing, education, logistics, and more. Each industry has unique challenges and opportunities for AI application from fraud detection in finance to predictive maintenance in manufacturing to personalized learning in education.",
         },
         {
             id: 5,
@@ -205,7 +205,7 @@ export default function aiDigitalTransformationService() {
             <WhatIsSection
                 heading="Why 2BTech Leads in"
                 highlight="AI Digital Transformation"
-                description="As a premier AI digital transformation service provider, 2BTech combines deep technical expertise with a results-driven approach to help businesses harness the power of AI. Our team of seasoned data scientists, AI engineers, and industry experts work closely with you to understand your unique challenges and goals. We prioritize transparency, collaboration, and measurable outcomes in every project. From initial strategy to deployment and ongoing support, we ensure your AI initiatives deliver real business value and position you for future success in an increasingly digital world."
+                description="As a premier AI digital transformation service provider, 2BTech combines deep technical expertise with a results driven approach to help businesses harness the power of AI. Our team of seasoned data scientists, AI engineers, and industry experts work closely with you to understand your unique challenges and goals. We prioritize transparency, collaboration, and measurable outcomes in every project. From initial strategy to deployment and ongoing support, we ensure your AI initiatives deliver real business value and position you for future success in an increasingly digital world."
                 definitionOne={definitionOne}
                 imageOne="/assets/services/aiDigital/whyAiDigital.svg"
             />
@@ -215,7 +215,7 @@ export default function aiDigitalTransformationService() {
                 src="/assets/services/aiDigital/AiDigitalModal.svg"
                 description="2BTech offers flexible engagement models designed to match your project scope, budget, and timeline. Choose the approach that best aligns with your AI transformation objectives"
                 subheading="Fixed Price Model"
-                subDescription=" Ideal for well-defined projects with clear requirements and scope. You receive a fixed quote upfront with guaranteed deliverables, timelines, and costs—perfect for predictable budgeting"
+                subDescription=" Ideal for well-defined projects with clear requirements and scope. You receive a fixed quote upfront with guaranteed deliverables, timelines, and costs perfect for predictable budgeting"
                 subheadingTwo="Dedicated Team Model"
                 subDescriptionTwo="Scale your capabilities with dedicated AI specialists who integrate seamlessly with your team. Full control over resources, flexible scaling, and direct communication ensure alignment with evolving needs"
             />
@@ -294,7 +294,7 @@ export default function aiDigitalTransformationService() {
             />
             <FinalCTASection
                 heading="Ready to Transform Your Business with AI?"
-                description="Don't let your competitors gain the AI advantage. Partner with 2BTech today and unlock the transformative power of artificial intelligence. Our expert team is ready to guide you through every step of your AI digital transformation journey—from strategy and development to deployment and beyond"
+                description="Don't let your competitors gain the AI advantage. Partner with 2BTech today and unlock the transformative power of artificial intelligence. Our expert team is ready to guide you through every step of your AI digital transformation journey from strategy and development to deployment and beyond"
             />
             <Footer/>
         </div>

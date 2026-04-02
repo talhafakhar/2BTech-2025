@@ -126,7 +126,7 @@ const HomeServicesSection: React.FC = () => {
                         Our <span className="text-primary">Services</span>
                     </h2>
                     <p className=" text-gray-600 mt-6 max-w-3xl mx-auto leading-relaxed">
-                        End-to-end product development — from discovery and design to AI-powered solutions and enterprise-grade systems.
+                        End-to-end product development from discovery and design to AI-powered solutions and enterprise-grade systems.
                     </p>
                 </div>
 

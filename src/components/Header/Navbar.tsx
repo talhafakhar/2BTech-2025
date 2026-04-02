@@ -1,180 +1,124 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-    Cpu,
-    Cloud,
-    Code,
-    Smartphone,
-    Rocket,
-    PenTool,
-    ShoppingBag,
-    Layout,
-    Bot,
-    Workflow,
-    Database,
-    ChevronDown,
-    Home,
-    Mail, Network,
+    Cpu, Cloud, Code, Smartphone, Rocket, PenTool,
+    ShoppingBag, Layout, Bot, Workflow, Database,
+    ChevronDown, Home, Mail, Network,
 } from "lucide-react";
 
 export const servicesItems = [
-    {
-        icon: Bot,
-        title: "AI Agent as a Service",
-        path: "/services/ai-agent-as-a-service",
-    },
-
-    {
-        icon: Cpu,
-        title: "AI Software Development",
-        path: "/services/ai-software-development",
-    },
-    {
-        icon: Cloud,
-        title: "Cloud Migration",
-        path: "/services/cloud-migration",
-    },
-
-    {
-        icon: Smartphone,
-        title: "Mobile App Development",
-        path: "/services/mobile-app-development",
-    },
-    {
-        icon: Rocket,
-        title: "MVP Development",
-        path: "/services/mvp-development",
-    },
-    {
-        icon: Network,
-        title: "AI & Generative Ai Solution",
-        path: "/services/ai-and-generative-ai-solutions",
-    },
-
-    {
-        icon: Database,
-        title: "Salesforce Consulting",
-        path: "/services/salesforce-consulting",
-    },
-
-    {
-        icon: ShoppingBag,
-        title: "Shopify Development",
-        path: "/services/shopify-development",
-    },
-
-    {
-        icon: Layout,
-        title: "Webflow Development",
-        path: "/services/webflow-development",
-    },
-    {
-        icon: Code,
-        title: "Custom Software Development",
-        path: "/services/custom-software-development",
-    },
-    {
-        icon: PenTool,
-        title: "Product Design",
-        path: "/services/product-design",
-    },
-
-    {
-        icon: Workflow,
-        title: "AI Digital Transformation Service",
-        path: "/services/ai-digital-transformation-service",
-    },
+    { icon: Bot, title: "AI Agent as a Service", path: "/services/ai-agent-as-a-service" },
+    { icon: Cpu, title: "AI Software Development", path: "/services/ai-software-development" },
+    { icon: Cloud, title: "Cloud Migration", path: "/services/cloud-migration" },
+    { icon: Smartphone, title: "Mobile App Development", path: "/services/mobile-app-development" },
+    { icon: Rocket, title: "MVP Development", path: "/services/mvp-development" },
+    { icon: Network, title: "AI & Generative Ai Solution", path: "/services/ai-and-generative-ai-solutions" },
+    { icon: Database, title: "Salesforce Consulting", path: "/services/salesforce-consulting" },
+    { icon: ShoppingBag, title: "Shopify Development", path: "/services/shopify-development" },
+    { icon: Layout, title: "Webflow Development", path: "/services/webflow-development" },
+    { icon: Code, title: "Custom Software Development", path: "/services/custom-software-development" },
+    { icon: PenTool, title: "Product Design", path: "/services/product-design" },
+    { icon: Workflow, title: "AI Digital Transformation Service", path: "/services/ai-digital-transformation-service" },
 ];
 
+const CALENDLY_URL = 'https://calendly.com/2btechinc/discoverywith2btech';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [scrolled, setScrolled] = useState(false);
-    const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 40);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+    const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+    const handleScroll = useCallback(() => {
+        setScrolled(window.scrollY > 40);
     }, []);
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-        setActiveDropdown(null);
-    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [handleScroll]);
+
+    // Close menu on resize to desktop
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setIsOpen(false);
+                setMobileServicesOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize, { passive: true });
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [isOpen]);
+
+    const closeMobileMenu = useCallback(() => {
+        setIsOpen(false);
+        setMobileServicesOpen(false);
+    }, []);
+
+    const openCalendly = useCallback(() => {
+        window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+    }, []);
+
+    const navLinkClass = (isScrolled: boolean) => `
+        flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
+        ${isScrolled ? "text-black hover:text-secondary" : "text-white"}
+        after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
+        after:w-0 after:transition-all after:duration-300 hover:after:w-full
+    `;
 
     return (
-        <nav style={{zIndex:99999}} className={`fixed top-0 w-full transition-all duration-300   ${
-            scrolled || isOpen
-                ? 'bg-white shadow-lg border-b border-gray-100'
-                : ''
-        }`}>
+        <nav style={{ zIndex: 99999 }} className={`fixed top-0 w-full transition-all duration-300 ${scrolled || isOpen ? 'bg-white shadow-lg border-b border-gray-100' : ''}`}>
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center py-2">
-                    <div className="flex items-center">
-                        <Link href="/">
-                            <Image
-                                src="/assets/header/2btech_header_logo.svg"
-                                alt="Logo"
-                                width={80}
-                                height={80}
-                                loading="lazy"
-                            />
-                        </Link>
-                    </div>
-                    <div className="hidden lg:flex items-center space-x-1 ">
-                        <Link
-                            href="/"
-                            className={`
-    flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
-    ${scrolled ? "text-black hover:text-secondary" : "text-white"}
-    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
-    after:w-0 after:transition-all after:duration-300 hover:after:w-full
-  `}
-                        >
+
+                    {/* Logo */}
+                    <Link href="/" onClick={closeMobileMenu}>
+                        <Image
+                            src="/assets/header/2btech_header_logo.svg"
+                            alt="2BTech Logo"
+                            width={80}
+                            height={80}
+                            loading="lazy"
+                        />
+                    </Link>
+
+                    {/* Desktop Nav */}
+                    <div className="hidden lg:flex items-center space-x-1">
+                        <Link href="/" className={navLinkClass(scrolled)}>
                             <Home className="h-4 w-4" />
                             <span className="font-medium">Home</span>
                         </Link>
 
-                        <Link href="/about-us" className={`
-    flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
-    ${scrolled ? "text-black hover:text-secondary" : "text-white"}
-    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
-    after:w-0 after:transition-all after:duration-300 hover:after:w-full
-  `}>
+                        <Link href="/about-us" className={navLinkClass(scrolled)}>
                             <span className="font-medium">About</span>
                         </Link>
+
+                        {/* Services Dropdown */}
                         <div
                             className="relative"
                             onMouseEnter={() => setActiveDropdown("services")}
                             onMouseLeave={() => setActiveDropdown(null)}
                         >
-                            <button
-                                className={`
-    flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
-    ${scrolled ? "text-black hover:text-secondary" : "text-white"}
-    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
-    after:w-0 after:transition-all after:duration-300 hover:after:w-full
-  `}
-                            >
+                            <button className={navLinkClass(scrolled)}>
                                 <span className="font-medium">Services</span>
-                                <ChevronDown
-                                    className={`h-4 w-4 transition-transform duration-200 ${
-                                        activeDropdown === "services" ? "rotate-180" : ""
-                                    }`}
-                                />
+                                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180" : ""}`} />
                             </button>
 
                             {activeDropdown === "services" && (
                                 <div className="absolute top-full left-1/2 -translate-x-1/2 w-[950px] bg-white shadow-2xl rounded-md py-6 px-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                                     <div className="grid grid-cols-3 gap-4">
-                                        {servicesItems.map((item, index) => (
-                                            <a
-                                                key={index}
+                                        {servicesItems.map((item) => (
+                                            <Link
+                                                key={item.path}
                                                 href={item.path}
-                                                className="flex flex-col items-start p-5 rounded  hover:border-primary border  hover:shadow-md transition-all duration-200 group bg-gray-50 hover:bg-blue-50"
+                                                className="flex flex-col items-start p-5 rounded hover:border-primary border hover:shadow-md transition-all duration-200 group bg-gray-50 hover:bg-blue-50"
                                             >
                                                 <div className="flex items-center space-x-3">
                                                     <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-primary transition-colors">
@@ -184,191 +128,115 @@ const Navbar: React.FC = () => {
                                                         {item.title}
                                                     </h4>
                                                 </div>
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>
                             )}
-
                         </div>
 
-                        <Link href="/our-work"
-                              className={`
-    flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
-    ${scrolled ? "text-black hover:text-secondary" : "text-white"}
-    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
-    after:w-0 after:transition-all after:duration-300 hover:after:w-full
-  `}><span className="font-medium">Our Work</span></Link>
-                        <Link href="/blogs"
-                              className={`
-    flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
-    ${scrolled ? "text-black hover:text-secondary" : "text-white"}
-    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
-    after:w-0 after:transition-all after:duration-300 hover:after:w-full
-  `}>
+                        <Link href="/our-work" className={navLinkClass(scrolled)}>
+                            <span className="font-medium">Our Work</span>
+                        </Link>
+
+                        <Link href="/blogs" className={navLinkClass(scrolled)}>
                             <span className="font-medium">Blog</span>
                         </Link>
-                        <Link href="/contact-us"
-                              className={`
-    flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
-    ${scrolled ? "text-black hover:text-secondary" : "text-white"}
-    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
-    after:w-0 after:transition-all after:duration-300 hover:after:w-full
-  `}>
-                            <Mail className="h-4 w-4"/>
+
+                        <Link href="/contact-us" className={navLinkClass(scrolled)}>
+                            <Mail className="h-4 w-4" />
                             <span className="font-medium">Contact</span>
                         </Link>
                     </div>
+
+                    {/* Desktop CTA */}
                     <div className="hidden lg:flex">
                         <button
-                            onClick={() =>
-                                window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
-                            }
-                            className={`px-6 py-2 rounded   font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl ${
+                            onClick={openCalendly}
+                            className={`px-6 py-2 rounded font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl ${
                                 scrolled
                                     ? "border border-gray-800 text-gray-800 hover:bg-gray-100"
                                     : "border border-white text-white hover:bg-gray-100 hover:text-gray-800"
-                            }`}> Get a proposal
+                            }`}
+                        >
+                            Get a proposal
                         </button>
                     </div>
+
+                    {/* Mobile Hamburger */}
                     <div className="lg:hidden">
                         <button
-                            onClick={toggleMenu}
-                            className="p-2 rounded-lg  transition-colors duration-200"
+                            onClick={() => setIsOpen(prev => !prev)}
+                            aria-label="Toggle menu"
+                            className="p-2 rounded-lg transition-colors duration-200"
                         >
                             <div className="w-6 h-6 flex flex-col justify-center items-center relative">
-    <span
-        className={`block absolute h-0.5 w-6  transition-all duration-300 ${
-            scrolled ||isOpen  ? "bg-black" : "bg-white"
-        } ${
-            isOpen  ? "rotate-45 top-2.5" : "top-1"
-        }`}
-    />
-                                <span
-                                    className={`block absolute h-0.5 w-6 bg-gray-700 transition-all duration-300 ${
-                                        scrolled ||isOpen  ? "bg-black" : "bg-white"
-                                    } ${
-                                        isOpen ? "opacity-0" : "top-2.5"
-                                    }`}
-                                />
-                                <span
-                                    className={`block absolute h-0.5 w-6 bg-gray-700 transition-all duration-300  ${
-                                        scrolled ||isOpen  ? "bg-black" : "bg-white"
-                                    } ${
-                                        isOpen ? "-rotate-45 top-2.5" : "top-4"
-                                    }`}
-                                />
+                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "rotate-45 top-2.5" : "top-1"}`} />
+                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "opacity-0" : "top-2.5"}`} />
+                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "-rotate-45 top-2.5" : "top-4"}`} />
                             </div>
                         </button>
                     </div>
                 </div>
-                <div
-                    className={`lg:hidden overflow-hidden transition-all duration-300 ${
-                        isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-                    }`}
-                >
-                    <div className="py-4 space-y-2 border-t border-black">
-                        <Link href="/" className="flex items-center space-x-2 px-2 py-3   hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+
+                {/* Mobile Menu */}
+                <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}>
+                    <div className="py-4 space-y-2 border-t border-black max-h-[calc(100vh-70px)] overflow-y-auto">
+
+                        <Link href="/" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <Home className="h-5 w-5" />
                             <span className="font-medium">Home</span>
                         </Link>
-                        <div className="max-h-[calc(100vh-120px)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+
+                        {/* Mobile Services Accordion */}
+                        <div>
                             <button
-                                onClick={() =>
-                                    setActiveDropdown(
-                                        activeDropdown === "mobile-services" ? null : "mobile-services"
-                                    )
-                                }
-                                className={`w-full flex items-center justify-between px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200 text-black`}
+                                onClick={() => setMobileServicesOpen(prev => !prev)}
+                                className="w-full flex items-center justify-between px-2 py-3 text-black hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200"
                             >
                                 <span className="font-medium">Services</span>
-                                <ChevronDown
-                                    className={`h-4 w-4 transition-transform duration-200 ${
-                                        activeDropdown === "mobile-services" ? "rotate-180" : ""
-                                    }`}
-                                />
+                                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
                             </button>
 
-                            {activeDropdown === "mobile-services" && (
-                                <div className="mt-2 space-y-1  animate-slideDown">
-                                    {servicesItems.map((item, index) => (
-                                        <div
-                                            key={index}
-                                            className="border-b border-gray-100 last:border-b-0"
+                            <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                <div className="mt-1 space-y-1">
+                                    {servicesItems.map((item) => (
+                                        <Link
+                                            key={item.path}
+                                            href={item.path}
+                                            onClick={closeMobileMenu}
+                                            className="flex items-center space-x-3 p-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200 border-b border-gray-100 last:border-b-0"
                                         >
-                                            <button
-                                                onClick={() =>
-                                                    setActiveSubmenu(
-                                                        activeSubmenu === `service-${index}` ? null : `service-${index}`
-                                                    )
-                                                }
-                                                className="w-full flex items-center justify-between p-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200"
-                                            >
-                                                <div className="flex items-center space-x-3">
-                                                    <item.icon className="h-4 w-4" />
-                                                    <div className="text-left">
-                                                        <span className="font-medium block">{item.title}</span>
-                                                    </div>
-                                                </div>
-                                            </button>
-
-                                        </div>
+                                            <item.icon className="h-4 w-4 shrink-0" />
+                                            <span className="font-medium text-sm">{item.title}</span>
+                                        </Link>
                                     ))}
                                 </div>
-                            )}
+                            </div>
                         </div>
-                        <style jsx>{`
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            max-height: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            max-height: 500px;
-            transform: translateY(0);
-        }
-    }
-    
-    .animate-slideDown {
-        animation: slideDown 0.3s ease-out forwards;
-    }
-    
-    /* Custom scrollbar styles */
-    .scrollbar-thin {
-        scrollbar-width: thin;
-    }
-    
-    .scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
-        background-color: rgb(209 213 219);
-        border-radius: 6px;
-    }
-    
-    .scrollbar-track-gray-100::-webkit-scrollbar-track {
-        background-color: rgb(243 244 246);
-    }
-    
-    .scrollbar-thin::-webkit-scrollbar {
-        width: 6px;
-    }
-`}</style>
-                        <Link href="/about-us" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+
+                        <Link href="/about-us" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">About</span>
                         </Link>
 
-                        <Link href="/our-work" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                        <Link href="/our-work" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Our Work</span>
                         </Link>
-                        <Link href="/blogs" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <span className="font-medium">Blogs</span>
+
+                        <Link href="/blogs" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                            <span className="font-medium">Blog</span>
                         </Link>
-                        <Link href="/contact-us" className="flex items-center space-x-2 px-2 py-3  hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <Mail className="h-5 w-5"/>
+
+                        <Link href="/contact-us" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                            <Mail className="h-5 w-5" />
                             <span className="font-medium">Contact</span>
                         </Link>
-                        <div className="pt-4 px-2">
-                            <button className="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg">
+
+                        <div className="pt-4 px-2 pb-4">
+                            <button
+                                onClick={openCalendly}
+                                className="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:opacity-90"
+                            >
                                 Get a proposal
                             </button>
                         </div>
@@ -378,4 +246,5 @@ const Navbar: React.FC = () => {
         </nav>
     );
 };
-export default Navbar
+
+export default Navbar;

@@ -6,7 +6,7 @@ const reviews = [
         id: 1,
         rating: 5,
         title: "Outstanding Development Partner",
-        content: "2BTech helped us launch our AI-powered healthtech MVP in just 5 weeks. From dev to cloud, they handled it all — and delivered on time.",
+        content: "2BTech helped us launch our AI-powered healthtech MVP in just 5 weeks. From dev to cloud, they handled it all and delivered on time.",
         reviewer: "John Smith",
         company: "CTO, HealthTech Startup.",
         date: "Dec 15, 2024",

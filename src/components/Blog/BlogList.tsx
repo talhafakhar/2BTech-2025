@@ -35,7 +35,7 @@ function EmptyState() {
             transition={{ duration: 0.6 }}
         >
             <p className="text-black/50 text-center max-w-sm mb-8 leading-relaxed">
-                We&#39;re working on some great content. Check back soon — insights, guides, and stories are on their way.
+                We&#39;re working on some great content. Check back soon insights, guides, and stories are on their way.
             </p>
 
             {/* Decorative dots */}
