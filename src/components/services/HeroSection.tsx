@@ -54,7 +54,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
             const data = await res.json();
 
             if (data.ok) {
-                setModalMsg(data.message || '✅ Form submitted successfully!');
+                setModalMsg(data.message || ' Form submitted successfully!');
                 setIsSuccess(true);
                 setShowModal(true);
             } else {
@@ -278,7 +278,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                                             name="signNDA"
                                             value={formData.signNDA}
                                             onChange={handleInputChange}
-                                            className="w-full border text-gray-400 border-gray-300 rounded-md px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+                                            className="w-full border  border-gray-300 rounded-md px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary"
                                         >
                                             <option className="text-black" value="">Sign NDA?</option>
                                             <option className="text-black" value="yes">Yes</option>
@@ -289,7 +289,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                                             value={formData.ticketSize}
                                             onChange={handleInputChange}
                                             required
-                                            className="w-full border text-gray-400 border-gray-300 rounded-md px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+                                            className="w-full border  border-gray-300 rounded-md px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary"
                                         >
                                             <option className="text-black" value="">Select Ticket Size*</option>
                                             <option className="text-black" value="custom-software">$2500</option>
