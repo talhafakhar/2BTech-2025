@@ -1627,8 +1627,8 @@ export default function AiSoftwareDevelopment() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="AI Software Development Services | Machine Learning & Custom AI - 2BTech"
-                description="Transform your business with 2BTech's AI software development services. Expert machine learning development, custom AI model development, computer vision, and deep learning solutions. Get 15% off your first project."
+                title="AI Software Development Services | Custom AI & ML - 2BTech"
+                description="Transform your business with 2BTech’s AI software development services. Machine learning, custom AI models, computer vision, and deep learning solutions."
                 canonical="https://2btechinc.com/services/ai-software-development"
                 openGraph={{
                     url: "https://2btechinc.com/services/ai-software-development",

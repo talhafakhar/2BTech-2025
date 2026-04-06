@@ -82,8 +82,8 @@ export default function WebFlowDevelopment() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="Expert Webflow Developer | Webflow Development Agency | 2BTech"
-                description="2BTech is a leading webflow development agency. Hire webflow developer experts for custom webflow development, design services, and migrations. Fast delivery, exceptional results"
+                title="Webflow Development Agency | Expert Webflow Developers - 2BTech"
+                description="2BTech is a Webflow development agency offering expert developers for custom Webflow sites, design services, and seamless migrations with fast delivery."
                 canonical="https://2btechinc.com/services/webflow-development"
                 openGraph={{
                     url: "https://2btechinc.com/services/webflow-development",

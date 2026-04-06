@@ -1481,8 +1481,8 @@ export default function MobileAppDevelopment() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="React Native & Flutter App Development | Cross Platform | 2BTech"
-                description="Expert react native development company and flutter app development specialist. Build iOS and Android apps from single codebase. Reduce mobile app development cost 40-60%. Free consultation."
+                title="React Native & Flutter App Development | 2BTech"
+                description="Expert React Native and Flutter app development for iOS and Android. Build cross-platform apps from a single codebase and reduce development costs."
                 canonical="https://2btechinc.com/services/mobile-app-development"
                 openGraph={{
                     url: "https://2btechinc.com/services/mobile-app-development",

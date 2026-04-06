@@ -646,9 +646,9 @@ export default function MvpDevelopment() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="MVP for Startups | Launch in 8-12 Weeks | 2BTech"
-                description="Expert MVP for startups with fixed pricing and guaranteed timelines. Startup MVP development from $25K. Custom software development services for startups. Get free quote"
-                canonical="https://2btechinc.com/services/mvp-development"
+                title="MVP Development for Startups | Launch in 8–12 Weeks - 2BTech"
+                description="Build MVPs for startups with fixed pricing and fast delivery. Custom startup MVP development with scalable software solutions tailored to your business needs."
+                             canonical="https://2btechinc.com/services/mvp-development"
                 openGraph={{
                     url: "https://2btechinc.com/services/mvp-development",
                     title: "MVP for Startups | Launch in 8-12 Weeks | 2BTech",

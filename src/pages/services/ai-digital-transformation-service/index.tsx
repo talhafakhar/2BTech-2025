@@ -95,7 +95,7 @@ export default function aiDigitalTransformationService() {
         <div className="font-syne">
             <NextSeo
                 title="AI Digital Transformation Services | Custom AI Solutions - 2BTech"
-                description="Transform your business with 2BTech's AI digital transformation services. Custom AI solutions, machine learning integration, and intelligent automation for measurable results. Schedule your consultation today"
+                description="Transform your business with 2BTech’s AI digital transformation services. Custom AI solutions, machine learning integration, and intelligent automation for results."
                 canonical="https://2btechinc.com/services/ai-digital-transformation-service"
                 openGraph={{
                     url: "https://2btechinc.com/services/ai-digital-transformation-service",

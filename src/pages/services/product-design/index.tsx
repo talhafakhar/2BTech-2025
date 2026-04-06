@@ -72,8 +72,8 @@ export default function productDesign() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="Top User Experience Design Agency | UI UX Design Services | 2BTech"
-                description="2BTech is a leading user experience design agency offering expert UI UX design services, mobile app design, and digital product design. Transform your digital presence today"
+                title="UI/UX Design Agency | User Experience Design Services - 2BTech"
+                description="2BTech is a UI/UX design agency offering expert user experience, mobile app design, and digital product design services to enhance your digital presence."
                 canonical="https://2btechinc.com/services/product-design"
                 openGraph={{
                     url: "https://2btechinc.com/services/product-design",

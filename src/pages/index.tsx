@@ -16,7 +16,7 @@ export default function Home() {
         <div className="font-syne">
             <NextSeo
                 title="2BTech  | Custom Software and AI Agent Development Company"
-                description="Custom software and AI agent development company for VC backed startups and SMEs. On-demand design to engineering teams. MVP, SaaS, AI solutions. Launch faster"
+                description="Custom software and AI development for VC-backed startups and SMEs. On-demand design and engineering teams for MVPs, SaaS, and AI solutions. Launch faster "
                 canonical="https://2btechinc.com/"
                 facebook={{
                     appId: '1234567890',

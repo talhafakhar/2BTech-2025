@@ -9,8 +9,8 @@ export default function OurWork() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="Our Work | 2BTech"
-                description="Explore 2BTech's portfolio of custom software, AI solutions, MVPs, SaaS products, and digital transformation projects built for startups and growing businesses."
+                title="Our Work | 2BTech Portfolio of AI & Software Projects"
+                description="Explore 2BTech’s portfolio of custom software, AI solutions, MVPs, SaaS products, and digital transformation projects for startups and growing businesses."
                 canonical="https://2btechinc.com/our-work"
                 additionalMetaTags={[
                     { name: "keywords", content: "2BTech portfolio, our work, case studies, software development projects, AI solutions, MVP development, SaaS development" },

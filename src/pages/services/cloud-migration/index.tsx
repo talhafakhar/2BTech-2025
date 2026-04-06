@@ -1100,8 +1100,8 @@ export default function CloudMigration() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="Cloud Migration Services | AWS & Azure Migration | 2BTech"
-                description="Expert cloud migration services with zero downtime. Trusted cloud migration company for AWS & Azure. Cloud consulting services and infrastructure management. Get free assessment"
+                title="Cloud Migration Services | AWS & Azure Experts - 2BTech"
+                description="Expert cloud migration services with zero downtime. AWS & Azure migration, cloud consulting, and infrastructure management for scalable business growth."
                 canonical="https://2btechinc.com/services/cloud-migration"
                 openGraph={{
                     url: "https://2btechinc.com/services/cloud-migration",

@@ -82,6 +82,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                                         key={idx}
                                         href={award.url}
                                         target="_blank"
+                                        title={award.alt}
                                         rel="noopener noreferrer"
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         animate={{ opacity: 1, scale: 1 }}
@@ -135,6 +136,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                                             <Image
                                                 src={logo.src}
                                                 alt={logo.alt}
+                                                title={logo.alt}
                                                 width={110}
                                                 height={50}
                                                 loading="lazy"
