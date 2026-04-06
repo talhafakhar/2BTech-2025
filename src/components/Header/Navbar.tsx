@@ -8,18 +8,18 @@ import {
 } from "lucide-react";
 
 export const servicesItems = [
-    { icon: Bot, title: "AI Agent as a Service", path: "/services/ai-agent-as-a-service" },
-    { icon: Cpu, title: "AI Software Development", path: "/services/ai-software-development" },
-    { icon: Cloud, title: "Cloud Migration", path: "/services/cloud-migration" },
-    { icon: Smartphone, title: "Mobile App Development", path: "/services/mobile-app-development" },
-    { icon: Rocket, title: "MVP Development", path: "/services/mvp-development" },
-    { icon: Network, title: "AI & Generative Ai Solution", path: "/services/ai-and-generative-ai-solutions" },
-    { icon: Database, title: "Salesforce Consulting", path: "/services/salesforce-consulting" },
-    { icon: ShoppingBag, title: "Shopify Development", path: "/services/shopify-development" },
-    { icon: Layout, title: "Webflow Development", path: "/services/webflow-development" },
-    { icon: Code, title: "Custom Software Development", path: "/services/custom-software-development" },
-    { icon: PenTool, title: "Product Design", path: "/services/product-design" },
-    { icon: Workflow, title: "AI Digital Transformation Service", path: "/services/ai-digital-transformation-service" },
+    {icon: Bot, title: "AI Agent as a Service", path: "/services/ai-agent-as-a-service"},
+    {icon: Cpu, title: "AI Software Development", path: "/services/ai-software-development"},
+    {icon: Cloud, title: "Cloud Migration", path: "/services/cloud-migration"},
+    {icon: Smartphone, title: "Mobile App Development", path: "/services/mobile-app-development"},
+    {icon: Rocket, title: "MVP Development", path: "/services/mvp-development"},
+    {icon: Network, title: "AI & Generative Ai Solution", path: "/services/ai-and-generative-ai-solutions"},
+    {icon: Database, title: "Salesforce Consulting", path: "/services/salesforce-consulting"},
+    {icon: ShoppingBag, title: "Shopify Development", path: "/services/shopify-development"},
+    {icon: Layout, title: "Webflow Development", path: "/services/webflow-development"},
+    {icon: Code, title: "Custom Software Development", path: "/services/custom-software-development"},
+    {icon: PenTool, title: "Product Design", path: "/services/product-design"},
+    {icon: Workflow, title: "AI Digital Transformation Service", path: "/services/ai-digital-transformation-service"},
 ];
 
 const CALENDLY_URL = 'https://calendly.com/2btechinc/discoverywith2btech';
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
     }, []);
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('scroll', handleScroll, {passive: true});
         return () => window.removeEventListener('scroll', handleScroll);
     }, [handleScroll]);
 
@@ -47,14 +47,16 @@ const Navbar: React.FC = () => {
                 setMobileServicesOpen(false);
             }
         };
-        window.addEventListener('resize', handleResize, { passive: true });
+        window.addEventListener('resize', handleResize, {passive: true});
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     // Prevent body scroll when mobile menu is open
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : '';
-        return () => { document.body.style.overflow = ''; };
+        return () => {
+            document.body.style.overflow = '';
+        };
     }, [isOpen]);
 
     const closeMobileMenu = useCallback(() => {
@@ -66,15 +68,15 @@ const Navbar: React.FC = () => {
         window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
     }, []);
 
-    const navLinkClass = (isScrolled: boolean) => `
+    const navLinkClass = () => `
         flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
-        ${isScrolled ? "text-black hover:text-secondary" : "text-white"}
         after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
         after:w-0 after:transition-all after:duration-300 hover:after:w-full
     `;
 
     return (
-        <nav style={{ zIndex: 99999 }} className={`fixed top-0 w-full transition-all duration-300 ${scrolled || isOpen ? 'bg-white shadow-lg border-b border-gray-100' : 'bg-white/20 backdrop-blur-md border-b border-white/10'}`}>
+        <nav style={{zIndex: 99999}}
+             className={`fixed top-0 w-full transition-all duration-300 bg-white shadow border-b border-gray-100`}>
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center py-2">
 
@@ -91,11 +93,11 @@ const Navbar: React.FC = () => {
 
                     {/* Desktop Nav */}
                     <div className="hidden lg:flex items-center space-x-1">
-                        <Link href="/" className={navLinkClass(scrolled)}>
+                        <Link href="/" className={navLinkClass()}>
                             <span className="font-medium">Home</span>
                         </Link>
 
-                        <Link href="/about-us" className={navLinkClass(scrolled)}>
+                        <Link href="/about-us" className={navLinkClass()}>
                             <span className="font-medium">About</span>
                         </Link>
 
@@ -105,13 +107,15 @@ const Navbar: React.FC = () => {
                             onMouseEnter={() => setActiveDropdown("services")}
                             onMouseLeave={() => setActiveDropdown(null)}
                         >
-                            <button className={navLinkClass(scrolled)}>
+                            <button className={navLinkClass()}>
                                 <span className="font-medium">Services</span>
-                                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180" : ""}`} />
+                                <ChevronDown
+                                    className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180" : ""}`}/>
                             </button>
 
                             {activeDropdown === "services" && (
-                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[950px] bg-white shadow-2xl rounded-md py-6 px-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                <div
+                                    className="absolute top-full left-1/2 -translate-x-1/2 w-[950px] bg-white shadow-2xl rounded-md py-6 px-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                                     <div className="grid grid-cols-3 gap-4">
                                         {servicesItems.map((item) => (
                                             <Link
@@ -120,8 +124,10 @@ const Navbar: React.FC = () => {
                                                 className="flex flex-col items-start p-5 rounded hover:border-primary border hover:shadow-md transition-all duration-200 group bg-gray-50 hover:bg-blue-50"
                                             >
                                                 <div className="flex items-center space-x-3">
-                                                    <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-primary transition-colors">
-                                                        <item.icon className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
+                                                    <div
+                                                        className="bg-blue-100 p-3 rounded-lg group-hover:bg-primary transition-colors">
+                                                        <item.icon
+                                                            className="h-5 w-5 text-primary group-hover:text-white transition-colors"/>
                                                     </div>
                                                     <h4 className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">
                                                         {item.title}
@@ -134,11 +140,11 @@ const Navbar: React.FC = () => {
                             )}
                         </div>
 
-                        <Link href="/blogs" className={navLinkClass(scrolled)}>
+                        <Link href="/blogs" className={navLinkClass()}>
                             <span className="font-medium">Blog</span>
                         </Link>
 
-                        <Link href="/contact-us" className={navLinkClass(scrolled)}>
+                        <Link href="/contact-us" className={navLinkClass()}>
                             <span className="font-medium">Contact</span>
                         </Link>
                     </div>
@@ -147,11 +153,8 @@ const Navbar: React.FC = () => {
                     <div className="hidden lg:flex">
                         <button
                             onClick={openCalendly}
-                            className={`px-6 py-2 rounded font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl ${
-                                scrolled
-                                    ? "border border-gray-800 text-gray-800 hover:bg-gray-100"
-                                    : "border border-white text-white hover:bg-gray-100 hover:text-gray-800"
-                            }`}
+                            className={`px-6 py-2 rounded font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border border-gray-800 text-gray-800 hover:bg-gray-100
+                           `}
                         >
                             Get a proposal
                         </button>
@@ -165,19 +168,24 @@ const Navbar: React.FC = () => {
                             className="p-2 rounded-lg transition-colors duration-200"
                         >
                             <div className="w-6 h-6 flex flex-col justify-center items-center relative">
-                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "rotate-45 top-2.5" : "top-1"}`} />
-                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "opacity-0" : "top-2.5"}`} />
-                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "-rotate-45 top-2.5" : "top-4"}`} />
+                                <span
+                                    className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "rotate-45 top-2.5" : "top-1"}`}/>
+                                <span
+                                    className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "opacity-0" : "top-2.5"}`}/>
+                                <span
+                                    className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "-rotate-45 top-2.5" : "top-4"}`}/>
                             </div>
                         </button>
                     </div>
                 </div>
 
                 {/* Mobile Menu */}
-                <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "h-screen opacity-100" : "max-h-0 opacity-0"}`}>
+                <div
+                    className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "h-screen opacity-100" : "max-h-0 opacity-0"}`}>
                     <div className="py-4 space-y-2 border-t border-black max-h-[calc(100vh-70px)] overflow-y-auto">
 
-                        <Link href="/" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                        <Link href="/" onClick={closeMobileMenu}
+                              className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Home</span>
                         </Link>
 
@@ -188,10 +196,12 @@ const Navbar: React.FC = () => {
                                 className="w-full flex items-center justify-between px-2 py-3 text-black hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200"
                             >
                                 <span className="font-medium">Services</span>
-                                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                                <ChevronDown
+                                    className={`h-4 w-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`}/>
                             </button>
 
-                            <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
+                            <div
+                                className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
                                 <div className="mt-1 space-y-1">
                                     {servicesItems.map((item) => (
                                         <Link
@@ -200,7 +210,7 @@ const Navbar: React.FC = () => {
                                             onClick={closeMobileMenu}
                                             className="flex items-center space-x-3 p-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200 border-b border-gray-100 last:border-b-0"
                                         >
-                                            <item.icon className="h-4 w-4 shrink-0" />
+                                            <item.icon className="h-4 w-4 shrink-0"/>
                                             <span className="font-medium text-sm">{item.title}</span>
                                         </Link>
                                     ))}
@@ -208,15 +218,18 @@ const Navbar: React.FC = () => {
                             </div>
                         </div>
 
-                        <Link href="/about-us" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                        <Link href="/about-us" onClick={closeMobileMenu}
+                              className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">About</span>
                         </Link>
 
-                        <Link href="/blogs" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                        <Link href="/blogs" onClick={closeMobileMenu}
+                              className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Blog</span>
                         </Link>
 
-                        <Link href="/contact-us" onClick={closeMobileMenu} className="flex items-center px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                        <Link href="/contact-us" onClick={closeMobileMenu}
+                              className="flex items-center px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Contact</span>
                         </Link>
 

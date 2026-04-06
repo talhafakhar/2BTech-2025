@@ -1,23 +1,22 @@
 'use client';
 import * as React from "react";
-import { useState } from "react";
-import { easeInOut, motion } from "framer-motion";
+import {useState} from "react";
+import {easeInOut, motion} from "framer-motion";
 import Navbar from "@/components/Blog/BlogHeader";
 import InfiniteLogoSlider from "@/components/Common/LogoSlider";
-import { Globe, Rocket, Star } from "lucide-react";
-import { ReactNode } from "react";
+import {Globe, Rocket, Star} from "lucide-react";
+import {ReactNode} from "react";
 
 interface ServiceHeroProps {
     title?: string;
     description?: string;
     buttonText?: string;
     formLabel?: string;
-    platforms?: {icon: React.ReactNode }[];
+    platforms?: { icon: React.ReactNode }[];
     TrustBar?: ReactNode | (() => ReactNode);
-    backgroundImage?: string;
 }
 
-const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar, formLabel, buttonText ,platforms,backgroundImage}) => {
+const HeroSection: React.FC<ServiceHeroProps> = ({title, description, TrustBar, formLabel, buttonText, platforms}) => {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -32,8 +31,8 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
     const [modalMsg, setModalMsg] = useState('');
     const [isSuccess, setIsSuccess] = useState(false);
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        const {name, value} = e.target;
+        setFormData({...formData, [name]: value});
     };
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -48,7 +47,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
         try {
             const res = await fetch('/api/hero/send', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(formData),
             });
 
@@ -88,7 +87,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
     };
 
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: {opacity: 0},
         visible: {
             opacity: 1,
             transition: {
@@ -100,12 +99,12 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
         },
         exit: {
             opacity: 0,
-            transition: { duration: 0.6, ease: easeInOut },
+            transition: {duration: 0.6, ease: easeInOut},
         },
     };
 
     const itemVariants: any = {
-        hidden: { opacity: 0, y: 40, scale: 0.95 },
+        hidden: {opacity: 0, y: 40, scale: 0.95},
         visible: {
             opacity: 1,
             y: 0,
@@ -120,20 +119,15 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
             opacity: 0,
             y: -20,
             scale: 0.9,
-            transition: { duration: 0.5, ease: easeInOut },
+            transition: {duration: 0.5, ease: easeInOut},
         },
     };
 
     return (
-        <div className="min-h-screen relative overflow-hidden bg-center bg-cover bg-no-repeat" style={{
-            backgroundImage: `url(${backgroundImage || "/assets/services/hero/hero-service-bg.svg"})`
-        }}>
-            <Navbar />
-            {backgroundImage ?(
-                <div className="inset-0 bg-white/30 absolute z-0"></div>
-            ):(
-                <div className="inset-0 bg-white/60 absolute z-0"></div>
-            )}
+        <div className="min-h-screen relative overflow-hidden bg-center bg-cover bg-no-repeat"   style={{ backgroundImage: `url("/assets/services/hero/hero-service-bg.svg")` }}
+        >
+            <Navbar/>
+            <div className="inset-0 bg-white/60 absolute z-0"></div>
 
             {showModal && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[999999]">
@@ -152,7 +146,8 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
             <div className="min-h-screen px-4 flex flex-col justify-between items-center relative z-10 py-8">
                 <div className="w-full max-w-8xl mx-auto flex-1 flex items-center px-4">
                     <div className="mt-32 md:mt-20 flex md:flex-row flex-col justify-between items-center gap-6 w-full">
-                        <motion.div variants={containerVariants} className="w-full md:w-1/2" initial="hidden" animate="visible">
+                        <motion.div variants={containerVariants} className="w-full md:w-1/2" initial="hidden"
+                                    animate="visible">
                             <motion.h1
                                 variants={itemVariants}
                                 className="text-3xl sm:text-4xl md:text-6xl font-bold"
@@ -181,7 +176,7 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                             )}
                             {TrustBar ? (
                                 typeof TrustBar === "function" ? (
-                                    <TrustBar />
+                                    <TrustBar/>
                                 ) : (
                                     TrustBar
                                 )
@@ -191,17 +186,17 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                                     className="mt-6 flex flex-col sm:flex-row items-center gap-6 text-sm sm:text-base text-gray-700 font-medium"
                                 >
                                     <div className="flex items-center gap-2">
-                                        <Rocket className="w-5 h-5 text-blue-600" />
+                                        <Rocket className="w-5 h-5 text-blue-600"/>
                                         <span>500+ Solutions Delivered</span>
                                     </div>
                                     <div className="hidden sm:block w-[1px] h-6 bg-black"></div>
                                     <div className="flex items-center gap-2">
-                                        <Star className="w-5 h-5 text-yellow-500" />
+                                        <Star className="w-5 h-5 text-yellow-500"/>
                                         <span>98% Client Satisfaction</span>
                                     </div>
                                     <div className="hidden sm:block w-[1px] h-6 bg-black"></div>
                                     <div className="flex items-center gap-2">
-                                        <Globe className="w-5 h-5 text-green-600" />
+                                        <Globe className="w-5 h-5 text-green-600"/>
                                         <span>15+ Industries</span>
                                     </div>
                                 </motion.div>
@@ -210,8 +205,8 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                             {buttonText && (
                                 <div className="flex gap-2 sm:gap-6 justify-center md:justify-start items-center mt-8">
                                     <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
+                                        whileHover={{scale: 1.05}}
+                                        whileTap={{scale: 0.95}}
                                         onClick={() =>
                                             window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
                                         }
@@ -236,7 +231,8 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                             )}
                         </motion.div>
 
-                        <motion.div variants={itemVariants} initial="hidden" className="w-full md:w-1/3" animate="visible">
+                        <motion.div variants={itemVariants} initial="hidden" className="w-full md:w-1/3"
+                                    animate="visible">
                             <div className="bg-white shadow-lg rounded-xl p-6 border border-gray-200">
                                 <h2 className="text-xl font-bold text-secondary">
                                     {formLabel}
@@ -333,7 +329,6 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                     animate="visible"
                 >
                     <InfiniteLogoSlider
-                        showBg={backgroundImage}
                     />
                 </motion.div>
             </div>

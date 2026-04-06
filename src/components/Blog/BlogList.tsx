@@ -34,21 +34,9 @@ function EmptyState() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
         >
-            <p className="text-black/50 text-center max-w-sm mb-8 leading-relaxed">
+            <p className="text-black/50 text-center mb-8 leading-relaxed">
                 We&#39;re working on some great content. Check back soon insights, guides, and stories are on their way.
             </p>
-
-            {/* Decorative dots */}
-            <div className="flex gap-2">
-                {[0, 1, 2].map((i) => (
-                    <motion.div
-                        key={i}
-                        className="w-2 h-2 rounded-full bg-primary/40"
-                        animate={{ opacity: [0.3, 1, 0.3] }}
-                        transition={{ repeat: Infinity, duration: 1.5, delay: i * 0.3 }}
-                    />
-                ))}
-            </div>
         </motion.div>
     );
 }

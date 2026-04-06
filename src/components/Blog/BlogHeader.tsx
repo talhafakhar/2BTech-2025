@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import {
     ChevronDown,
-    Home,
-    Mail,
 } from 'lucide-react';
 import Link from 'next/link';
 import {servicesItems} from "@/components/Header/Navbar";
@@ -50,7 +48,6 @@ const BlogNavbar: React.FC = () => {
                     {/* Desktop Nav */}
                     <div className="hidden lg:flex items-center space-x-1">
                         <Link href="/" className={`flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200 text-black hover:text-secondary after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current after:w-0 after:transition-all after:duration-300 hover:after:w-full`}>
-                            <Home className="h-4 w-4"/>
                             <span className="font-medium">Home</span>
                         </Link>
                         <Link href="/about-us" className={`flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200 text-black hover:text-secondary after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current after:w-0 after:transition-all after:duration-300 hover:after:w-full`}>
@@ -88,14 +85,10 @@ const BlogNavbar: React.FC = () => {
                                 </div>
                             )}
                         </div>
-                        <Link href="/our-work" className={`flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200 text-black hover:text-secondary after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current after:w-0 after:transition-all after:duration-300 hover:after:w-full`}>
-                            <span className="font-medium">Our Work</span>
-                        </Link>
                         <Link href="/blogs" className={`flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200 text-black hover:text-secondary after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current after:w-0 after:transition-all after:duration-300 hover:after:w-full`}>
                             <span className="font-medium">Blog</span>
                         </Link>
                         <Link href="/contact-us" className={`flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200 text-black hover:text-secondary after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current after:w-0 after:transition-all after:duration-300 hover:after:w-full`}>
-                            <Mail className="h-4 w-4"/>
                             <span className="font-medium">Contact</span>
                         </Link>
                     </div>
@@ -124,7 +117,6 @@ const BlogNavbar: React.FC = () => {
                 <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}>
                     <div className="py-4 space-y-2 border-t border-black">
                         <Link href="/" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <Home className="h-5 w-5"/>
                             <span className="font-medium">Home</span>
                         </Link>
 
@@ -162,14 +154,10 @@ const BlogNavbar: React.FC = () => {
                         <Link href="/about-us" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">About</span>
                         </Link>
-                        <Link href="/our-work" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <span className="font-medium">Our Work</span>
-                        </Link>
                         <Link href="/blogs" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Blogs</span>
                         </Link>
                         <Link href="/contact-us" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <Mail className="h-5 w-5"/>
                             <span className="font-medium">Contact</span>
                         </Link>
 

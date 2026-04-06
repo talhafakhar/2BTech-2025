@@ -855,7 +855,6 @@ export default function aiAgentAsAService() {
                 description="Deploy autonomous AI agents that automate workflows, enhance customer experiences, and accelerate intelligent business transformation"
                 formLabel="Start building AI Agent"
                 buttonText="Free Consultation"
-                backgroundImage="/assets/services/ai-agent-bg.jpg"
                 TrustBar={() => (
                     <div></div>
                 )}

@@ -1,9 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-interface  Props{
-    showBg?: any;
-}
-const InfiniteLogoSlider: React.FC<Props> = ({ showBg }) => {
+
+const InfiniteLogoSlider: React.FC = () => {
     const logos = [
         {name: "Abacus", url: "/assets/services/hero/abacus.webp"},
         {name: "AQ", url: "/assets/services/hero/aq.webp"},
@@ -30,7 +28,7 @@ const InfiniteLogoSlider: React.FC<Props> = ({ showBg }) => {
 
     const duplicatedLogos = Array.from({length: 12}, () => logos).flat();
     return (
-        <section className={`relative w-full overflow-hidden ${showBg ? null : "bg-white/60"}`}>
+        <section className={`relative w-full overflow-hidden bg-white/60`}>
             <div className="max-w-8xl mx-auto  w-full flex flex-col md:flex-row px-4 items-center  gap-6 md:gap-0 ">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold py-4 border-black border-b-2 md:border-b-0 md:border-r-4  w-full">
                     Trusted by Leading Brands

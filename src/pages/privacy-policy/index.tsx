@@ -1,7 +1,222 @@
-import React from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import Footer from "@/components/Footer/footer";
 import { NextSeo, WebPageJsonLd } from "next-seo";
+import  {servicesItems} from "@/components/Header/Navbar";
+import Link from "next/link";
+import Image from "next/image";
+import {ChevronDown} from "lucide-react";
+const CALENDLY_URL = 'https://calendly.com/2btechinc/discoverywith2btech';
 
+const Navbar: React.FC = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+    const [scrolled, setScrolled] = useState(false);
+    const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+    const handleScroll = useCallback(() => {
+        setScrolled(window.scrollY > 40);
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [handleScroll]);
+
+    // Close menu on resize to desktop
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setIsOpen(false);
+                setMobileServicesOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize, { passive: true });
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [isOpen]);
+
+    const closeMobileMenu = useCallback(() => {
+        setIsOpen(false);
+        setMobileServicesOpen(false);
+    }, []);
+
+    const openCalendly = useCallback(() => {
+        window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+    }, []);
+
+    const navLinkClass = (isScrolled: boolean) => `
+        flex items-center space-x-1 px-2 py-1.5 relative transition-colors duration-200
+        ${isScrolled ? "text-black hover:text-secondary" : "text-white"}
+        after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-current
+        after:w-0 after:transition-all after:duration-300 hover:after:w-full
+    `;
+
+    return (
+        <nav style={{ zIndex: 99999 }} className={`fixed top-0 w-full transition-all duration-300  ${scrolled || isOpen ? 'bg-white shadow-lg border-b border-gray-100' : 'bg-white/40'}`}>
+            <div className="container mx-auto px-4">
+                <div className="flex justify-between items-center py-2">
+
+                    {/* Logo */}
+                    <Link href="/" onClick={closeMobileMenu}>
+                        <Image
+                            src="/assets/header/2btech_header_logo.svg"
+                            alt="2BTech Logo"
+                            width={80}
+                            height={80}
+                            loading="lazy"
+                        />
+                    </Link>
+
+                    {/* Desktop Nav */}
+                    <div className="hidden lg:flex items-center space-x-1">
+                        <Link href="/" className={navLinkClass(scrolled)}>
+                            <span className="font-medium">Home</span>
+                        </Link>
+
+                        <Link href="/about-us" className={navLinkClass(scrolled)}>
+                            <span className="font-medium">About</span>
+                        </Link>
+
+                        {/* Services Dropdown */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setActiveDropdown("services")}
+                            onMouseLeave={() => setActiveDropdown(null)}
+                        >
+                            <button className={navLinkClass(scrolled)}>
+                                <span className="font-medium">Services</span>
+                                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "services" ? "rotate-180" : ""}`} />
+                            </button>
+
+                            {activeDropdown === "services" && (
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-[950px] bg-white shadow-2xl rounded-md py-6 px-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                                    <div className="grid grid-cols-3 gap-4">
+                                        {servicesItems.map((item) => (
+                                            <Link
+                                                key={item.path}
+                                                href={item.path}
+                                                className="flex flex-col items-start p-5 rounded hover:border-primary border hover:shadow-md transition-all duration-200 group bg-gray-50 hover:bg-blue-50"
+                                            >
+                                                <div className="flex items-center space-x-3">
+                                                    <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-primary transition-colors">
+                                                        <item.icon className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
+                                                    </div>
+                                                    <h4 className="font-semibold text-gray-800 group-hover:text-primary transition-colors text-sm">
+                                                        {item.title}
+                                                    </h4>
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <Link href="/blogs" className={navLinkClass(scrolled)}>
+                            <span className="font-medium">Blog</span>
+                        </Link>
+
+                        <Link href="/contact-us" className={navLinkClass(scrolled)}>
+                            <span className="font-medium">Contact</span>
+                        </Link>
+                    </div>
+
+                    {/* Desktop CTA */}
+                    <div className="hidden lg:flex">
+                        <button
+                            onClick={openCalendly}
+                            className={`px-6 py-2 rounded font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl ${
+                                scrolled
+                                    ? "border border-gray-800 text-gray-800 hover:bg-gray-100"
+                                    : "border border-white text-white hover:bg-gray-100 hover:text-gray-800"
+                            }`}
+                        >
+                            Get a proposal
+                        </button>
+                    </div>
+
+                    {/* Mobile Hamburger */}
+                    <div className="lg:hidden">
+                        <button
+                            onClick={() => setIsOpen(prev => !prev)}
+                            aria-label="Toggle menu"
+                            className="p-2 rounded-lg transition-colors duration-200"
+                        >
+                            <div className="w-6 h-6 flex flex-col justify-center items-center relative">
+                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "rotate-45 top-2.5" : "top-1"}`} />
+                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "opacity-0" : "top-2.5"}`} />
+                                <span className={`block absolute h-0.5 w-6 transition-all duration-300 ${scrolled || isOpen ? "bg-black" : "bg-white"} ${isOpen ? "-rotate-45 top-2.5" : "top-4"}`} />
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                {/* Mobile Menu */}
+                <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "h-screen opacity-100" : "max-h-0 opacity-0"}`}>
+                    <div className="py-4 space-y-2 border-t border-black max-h-[calc(100vh-70px)] overflow-y-auto">
+
+                        <Link href="/" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                            <span className="font-medium">Home</span>
+                        </Link>
+
+                        {/* Mobile Services Accordion */}
+                        <div>
+                            <button
+                                onClick={() => setMobileServicesOpen(prev => !prev)}
+                                className="w-full flex items-center justify-between px-2 py-3 text-black hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                            >
+                                <span className="font-medium">Services</span>
+                                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                            </button>
+
+                            <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
+                                <div className="mt-1 space-y-1">
+                                    {servicesItems.map((item) => (
+                                        <Link
+                                            key={item.path}
+                                            href={item.path}
+                                            onClick={closeMobileMenu}
+                                            className="flex items-center space-x-3 p-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors duration-200 border-b border-gray-100 last:border-b-0"
+                                        >
+                                            <item.icon className="h-4 w-4 shrink-0" />
+                                            <span className="font-medium text-sm">{item.title}</span>
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        <Link href="/about-us" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                            <span className="font-medium">About</span>
+                        </Link>
+
+                        <Link href="/blogs" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                            <span className="font-medium">Blog</span>
+                        </Link>
+
+                        <Link href="/contact-us" onClick={closeMobileMenu} className="flex items-center px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                            <span className="font-medium">Contact</span>
+                        </Link>
+
+                        <div className="pt-4 px-2 pb-4">
+                            <button
+                                onClick={openCalendly}
+                                className="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:opacity-90"
+                            >
+                                Get a proposal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    );
+};
 export default function PrivacyPolicy() {
     return (
         <div className="font-syne bg-white ">
@@ -42,7 +257,7 @@ export default function PrivacyPolicy() {
                 name="Privacy Policy | 2BTech"
                 description="Read the Privacy Policy of 2BTech to understand how we collect, use, and protect your personal information."
             />
-
+<Navbar/>
             <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 py-24 lg:py-32">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_30%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.14),transparent_30%)]" />
@@ -68,8 +283,8 @@ export default function PrivacyPolicy() {
             </section>
 
             <section className="py-16 sm:py-20">
-                <div className="mx-auto max-w-5xl px-6 lg:px-8">
-                    <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm sm:p-10 lg:p-12">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm sm:p-10 lg:p-12">
                         <div className="space-y-10 text-gray-700">
                             <div>
                                 <h2 className="text-2xl font-semibold text-gray-900">

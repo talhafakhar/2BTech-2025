@@ -37,6 +37,20 @@ const HeroSection: React.FC = () => {
             }
         }
     };
+
+    const orbVariants = {
+        animate: (delay: number) => ({
+            y: [-40, 40, -40],
+            x: [-20, 20, -20],
+            scale: [1, 1.2, 1],
+            transition: {
+                duration: 8,
+                repeat: Infinity,
+                ease: easeInOut,
+                delay: delay,
+            }
+        })
+    };
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(0);
@@ -75,11 +89,48 @@ const HeroSection: React.FC = () => {
         };
     }, []);
     return (
-        <div className="relative min-h-screen overflow-hidden"
-             style={{
-                 background: 'linear-gradient(140deg, rgba(255, 255, 255, 1) 0%, rgba(15, 87, 188, 1) 24%, rgba(191, 30, 46, 1) 100%)'
-             }}>
+        <div className="relative w-full min-h-screen  overflow-hidden border-b ">
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                <div className="absolute top-20 left-0 w-[400px] h-[200px] bg-secondary/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-60 right-0 w-[400px] h-[200px] bg-primary/20 rounded-full blur-3xl"></div>
+            </div>
+
             <Navbar/>
+
+            {/* Left Animated Orbs */}
+            <motion.div
+                className="absolute top-1/4 left-4 md:left-8 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full blur-2xl opacity-30 hidden md:block"
+                custom={0}
+                animate="animate"
+                variants={orbVariants}
+            />
+            <motion.div
+                className="absolute bottom-1/3 left-8 md:left-16 w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full blur-2xl opacity-25 hidden md:block"
+                custom={2}
+                animate="animate"
+                variants={orbVariants}
+            />
+
+            {/* Right Animated Orbs */}
+            <motion.div
+                className="absolute top-1/3 right-4 md:right-8 w-14 h-14 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full blur-2xl opacity-30 hidden md:block"
+                custom={1}
+                animate="animate"
+                variants={orbVariants}
+            />
+            <motion.div
+                className="absolute bottom-1/4 right-6 md:right-12 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full blur-2xl opacity-25 hidden md:block"
+                custom={3}
+                animate="animate"
+                variants={orbVariants}
+            />
+            <motion.div
+                className="absolute top-2/3 right-20 md:right-24 w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full blur-2xl opacity-30 hidden md:block"
+                custom={2.5}
+                animate="animate"
+                variants={orbVariants}
+            />
+
             <motion.div
                 className="absolute top-20 right-20 text-purple-400 hidden md:block"
                 variants={floatingVariants}
@@ -114,17 +165,23 @@ const HeroSection: React.FC = () => {
                         <motion.div variants={containerVariants} initial="hidden" animate="visible">
                             <motion.h1
                                 variants={itemVariants}
-                                className="text-[28px] md:text-[40px] font-bold leading-tight sm:leading-[60px] max-w-4xl mx-auto text-white"
+                                className="text-[28px] md:text-[40px] font-bold leading-tight sm:leading-[60px] max-w-4xl mx-auto "
                             >
-                                Remarkable Outcomes <br/> Achieved
+                                Delivering Remarkable Outcomes for Our Clients
                             </motion.h1>
+                            <motion.p
+                                variants={itemVariants}
+                                className="text-lg  mx-auto text-gray-700 max-w-3xl leading-relaxed mt-4"
+                            >
+                                We have a proven track record of delivering exceptional results for our clients.
+                            </motion.p>
 
                             <motion.div variants={itemVariants} className="mt-4 sm:mt-6 flex justify-center">
                                 <motion.button
                                     onClick={() =>
                                         window.open('https://calendly.com/2btechinc/discoverywith2btech', '_blank')
                                     }
-                                    className="group relative px-6 sm:px-8 py-3 border border-white rounded text-white backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out hover:text-black"
+                                    className="group relative px-6 sm:px-8 py-3 border border-black rounded  backdrop-blur-sm overflow-hidden transition-all duration-300 ease-in-out hover:text-black"
                                     whileHover={{scale: 1.05}}
                                     whileTap={{scale: 0.97}}
                                 >
@@ -146,19 +203,19 @@ const HeroSection: React.FC = () => {
                     >
                         <div className="text-center md:text-left">
                             <div className="flex items-center justify-center md:justify-start gap-4 sm:gap-6 flex-wrap">
-                                <div className="border border-white rounded px-4 py-2 text-white">
+                                <div className="border border-black rounded px-4 py-2 ">
                                     <div className="text-5xl font-bold  mb-1 font-clash">
                                         {count1}+
                                     </div>
                                     <div className="text-sm">HAPPY CUSTOMERS</div>
                                 </div>
-                                <div className="border border-white rounded px-4 py-2 text-white">
+                                <div className="border border-black rounded px-4 py-2 ">
                                     <div className="text-5xl font-bold   mb-1 font-clash">
                                         {count2}+
                                     </div>
                                     <div className="text-sm">PROJECTS DONE</div>
                                 </div>
-                                <div className="border border-white text-white rounded px-4 py-2">
+                                <div className="border border-black rounded px-4 py-2">
                                     <div className="text-5xl font-bold  mb-1 font-clash">
                                         {count3}+
                                     </div>
@@ -168,26 +225,55 @@ const HeroSection: React.FC = () => {
                         </div>
 
                         <div className="text-center md:text-left">
-                            <h3 className="font-semibold text-white mb-2 sm:mb-4 text-[16px] sm:text-[18px]">
+                            <h3 className="font-semibold mb-2 sm:mb-4 text-[16px] sm:text-[18px]">
                                 Awards and Recognition
                             </h3>
                             <div className="flex items-center justify-center md:justify-start gap-4 sm:gap-6 flex-wrap">
-                                <Image
-                                    src="/assets/Home/clutch-logo.svg"
-                                    alt="Clutch"
-                                    width={70}
-                                    height={70}
-                                    loading="lazy"
-                                    className="max-w-[70px] h-auto"
-                                />
-                                <Image
-                                    src="/assets/Home/top-website-development-companies.svg"
-                                    alt="Top Website Development Companies"
-                                    width={70}
-                                    height={70}
-                                    loading="lazy"
-                                    className="max-w-[70px] h-auto"
-                                />
+                                <a
+                                    href="https://clutch.co/2btech"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:opacity-80 transition-opacity"
+                                >
+                                    <Image
+                                        src="/assets/Home/clutch-logo.svg"
+                                        alt="Clutch"
+                                        width={70}
+                                        height={70}
+                                        loading="lazy"
+                                        className="max-w-[70px] h-auto"
+                                    />
+                                </a>
+                                <a
+                                    href="https://www.goodfirms.co/company/2btech"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:opacity-80 transition-opacity"
+                                >
+                                    <Image
+                                        src="/assets/Home/top-website-development-companies.svg"
+                                        alt="Top Website Development Companies"
+                                        width={70}
+                                        height={70}
+                                        loading="lazy"
+                                        className="max-w-[70px] h-auto"
+                                    />
+                                </a>
+                                <a
+                                    href="https://www.trustpilot.com/review/2btechinc.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:opacity-80 transition-opacity"
+                                >
+                                    <Image
+                                        src="/assets/Home/trustpilot.svg"
+                                        alt="Trustpilot"
+                                        width={70}
+                                        height={70}
+                                        loading="lazy"
+                                        className="max-w-[70px] h-auto"
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>

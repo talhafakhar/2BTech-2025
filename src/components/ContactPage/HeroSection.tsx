@@ -7,9 +7,9 @@ interface HeroSectionProps {
 }
 const HeroSection: React.FC<HeroSectionProps> = () => {
     return (
-        <div className="relative min-h-screen overflow-hidden" style={{ backgroundImage: 'url("/assets/Home/contact-bg.png")' }}>      
+        <div className="relative min-h-screen">
              <Navbar/>
-             <div className="relative z-10 min-h-screen pt-20 flex items-center">
+             <div className=" min-h-screen pt-20 flex items-center">
                 <ContactUsPage/>
              </div> 
         </div>
