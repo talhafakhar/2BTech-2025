@@ -361,8 +361,8 @@ export default function SalesforceConsulting() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="Salesforce Consulting Services | Implementation & Development | 2BTech"
-                description=" Expert salesforce consulting services with certified developers. Trusted salesforce development company for implementation, integration, and custom app development. Get a free assessment"
+                title="Salesforce Consulting Services | Implementation & Development - 2BTech"
+                description="Expert Salesforce consulting services with certified developers. Implementation, integration, and custom app development for scalable business solutions."
                 canonical="https://2btechinc.com/services/salesforce-consulting"
                 openGraph={{
                     url: "https://2btechinc.com/services/salesforce-consulting",

@@ -779,8 +779,8 @@ export default function CustomSoftwareDevelopment() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="Custom Software Development Company USA | Bespoke Solutions | 2BTech"
-                description="Expert custom software development services for enterprise, healthcare, and small businesses. Bespoke software solutions built for your unique needs. Free consultation"
+                title="Custom Software Development Company USA | 2BTech"
+                description="Expert custom software development for enterprises, healthcare, and startups. Bespoke solutions built for your unique business needs."
                 canonical="https://2btechinc.com/services/custom-software-development"
                 openGraph={{
                     url: "https://2btechinc.com/services/custom-software-development",

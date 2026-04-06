@@ -30,8 +30,8 @@ export default function BlogsIndex({ initialBlogs, pagination }: Props) {
     return (
         <>
             <NextSeo
-                title="Blogs | 2BTech"
-                description="Explore the latest blogs, insights, and expert articles from 2BTech on software development, AI agents, SaaS, product engineering, and digital transformation."
+                title="2BTech Blogs | Insights on AI, SaaS & Software Development"
+                description="Explore blogs, insights, and expert articles from 2BTech on AI agents, SaaS, software development, product engineering, and digital transformation"
                 canonical="https://2btechinc.com/blogs"
                 additionalMetaTags={[
                     {

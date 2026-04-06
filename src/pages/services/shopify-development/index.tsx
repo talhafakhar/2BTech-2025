@@ -91,9 +91,8 @@ export default function ShopifyDevelopment() {
     return (
         <div className="font-syne">
             <NextSeo
-                title="Expert Shopify Developer | Shopify Development Company | 2BTech"
-                description="2BTech is a leading shopify development company. Hire shopify expert developers for custom shopify store development, theme development, app development, and migrations. Proven revenue results"
-                canonical="https://2btechinc.com/services/shopify-development"
+                title="Shopify Development Company | Expert Shopify Developers - 2BTech"
+                description="2BTech is a Shopify development company offering expert developers for custom store setup, theme design, app development, and migrations." canonical="https://2btechinc.com/services/shopify-development"
                 openGraph={{
                     url: "https://2btechinc.com/services/shopify-development",
                     title: "Expert Shopify Developer | Shopify Development Company | 2BTech",

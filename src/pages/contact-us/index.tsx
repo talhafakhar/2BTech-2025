@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
     return (
         <div className="font-syne">
             <NextSeo
-                title="Contact Us | 2BTech"
+               title="Contact 2BTech | Get in Touch for AI & Software Solutions"
                 description="Get in touch with 2BTech for custom software development, AI agent solutions, SaaS products, MVP development, and digital transformation services."
                 canonical="https://2btechinc.com/contact-us"
                 additionalMetaTags={[

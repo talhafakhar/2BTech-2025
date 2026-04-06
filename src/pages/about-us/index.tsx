@@ -17,7 +17,7 @@ export default function AboutPage() {
         <div className="font-syne">
             <NextSeo
                 title="About 2BTech | Leading Software Development & AI Solutions Company"
-                description="Learn about 2BTech a global team specializing in custom software development, AI solutions, web & mobile apps, and cloud engineering. Discover our mission, values, and how we help businesses grow through technology."
+                description="Learn about 2BTech, a global team specializing in custom software, AI solutions, web and mobile apps, and cloud engineering to help businesses grow."
                 canonical="https://2btechinc.com/about-us"
                 facebook={{
                     appId: '1234567890',
