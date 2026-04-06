@@ -232,33 +232,21 @@ const Footer = () => {
                                 );
                             })}
                         </div>
-                        <h3 className="font-semibold text-gray-900 mt-4 text-lg">
+                        <h3 className="font-semibold  mt-4 text-lg">
                             Quick Links
                         </h3>
                         <div className="flex flex-col gap-2 mt-2">
                             <Link
-                                href="/"
+                                href="/our-work"
                                 className="text-sm text-gray-600 hover:text-primary transition-colors duration-200"
                             >
-                                Home
+                                Our Work
                             </Link>
                             <Link
-                                href="/about-us"
+                                href="/privacy-policy"
                                 className="text-sm text-gray-600 hover:text-primary transition-colors duration-200"
                             >
-                                About Us
-                            </Link>
-                            <Link
-                                href="/contact-us"
-                                className="text-sm text-gray-600 hover:text-primary transition-colors duration-200"
-                            >
-                                Contact Us
-                            </Link>
-                            <Link
-                                href="/blogs"
-                                className="text-sm text-gray-600 hover:text-primary transition-colors duration-200"
-                            >
-                                Blog
+                                Privacy Policy
                             </Link>
                         </div>
 

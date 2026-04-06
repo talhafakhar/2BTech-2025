@@ -111,11 +111,11 @@ export default function Home() {
             <HomeAboutSection/>
             <WhyChooseUs/>
             <HomeServicesSection/>
-            <TechStackHome/>
+            <CustomTestimonialSection/>
             <HomeIndustrySection/>
+            <TechStackHome/>
             <WorkFlow/>
             <CTASection/>
-            <CustomTestimonialSection/>
             <Banner
                 title="Ready to Elevate Your Brand? Let's Talk!"
                 description="Schedule a free discovery call today and take the first step towards transforming your brand with us."

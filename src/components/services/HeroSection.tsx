@@ -14,9 +14,10 @@ interface ServiceHeroProps {
     formLabel?: string;
     platforms?: {icon: React.ReactNode }[];
     TrustBar?: ReactNode | (() => ReactNode);
+    backgroundImage?: string;
 }
 
-const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar, formLabel, buttonText ,platforms}) => {
+const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar, formLabel, buttonText ,platforms,backgroundImage}) => {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -124,9 +125,16 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
     };
 
     return (
-        <div className="min-h-screen relative overflow-hidden" style={{ backgroundImage: 'url("/assets/services/hero/hero-service-bg.svg")' }}>
+        <div className="min-h-screen relative overflow-hidden bg-center bg-cover bg-no-repeat" style={{
+            backgroundImage: `url(${backgroundImage || "/assets/services/hero/hero-service-bg.svg"})`
+        }}>
             <Navbar />
-            <div className="inset-0 bg-white/60 absolute z-0"></div>
+            {backgroundImage ?(
+                <div className="inset-0 bg-white/30 absolute z-0"></div>
+            ):(
+                <div className="inset-0 bg-white/60 absolute z-0"></div>
+            )}
+
             {showModal && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[999999]">
                     <div className="bg-white rounded-lg p-6 max-w-md mx-4 shadow-xl">
@@ -324,7 +332,9 @@ const HeroSection: React.FC<ServiceHeroProps> = ({ title, description, TrustBar,
                     initial="hidden"
                     animate="visible"
                 >
-                    <InfiniteLogoSlider />
+                    <InfiniteLogoSlider
+                        showBg={backgroundImage}
+                    />
                 </motion.div>
             </div>
         </div>

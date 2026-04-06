@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {
     Cpu, Cloud, Code, Smartphone, Rocket, PenTool,
     ShoppingBag, Layout, Bot, Workflow, Database,
-    ChevronDown, Home, Mail, Network,
+    ChevronDown, Network,
 } from "lucide-react";
 
 export const servicesItems = [
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
     `;
 
     return (
-        <nav style={{ zIndex: 99999 }} className={`fixed top-0 w-full transition-all duration-300 ${scrolled || isOpen ? 'bg-white shadow-lg border-b border-gray-100' : ''}`}>
+        <nav style={{ zIndex: 99999 }} className={`fixed top-0 w-full transition-all duration-300 ${scrolled || isOpen ? 'bg-white shadow-lg border-b border-gray-100' : 'bg-white/20 backdrop-blur-md border-b border-white/10'}`}>
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center py-2">
 
@@ -92,7 +92,6 @@ const Navbar: React.FC = () => {
                     {/* Desktop Nav */}
                     <div className="hidden lg:flex items-center space-x-1">
                         <Link href="/" className={navLinkClass(scrolled)}>
-                            <Home className="h-4 w-4" />
                             <span className="font-medium">Home</span>
                         </Link>
 
@@ -135,16 +134,11 @@ const Navbar: React.FC = () => {
                             )}
                         </div>
 
-                        <Link href="/our-work" className={navLinkClass(scrolled)}>
-                            <span className="font-medium">Our Work</span>
-                        </Link>
-
                         <Link href="/blogs" className={navLinkClass(scrolled)}>
                             <span className="font-medium">Blog</span>
                         </Link>
 
                         <Link href="/contact-us" className={navLinkClass(scrolled)}>
-                            <Mail className="h-4 w-4" />
                             <span className="font-medium">Contact</span>
                         </Link>
                     </div>
@@ -180,11 +174,10 @@ const Navbar: React.FC = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "h-screen opacity-100" : "max-h-0 opacity-0"}`}>
                     <div className="py-4 space-y-2 border-t border-black max-h-[calc(100vh-70px)] overflow-y-auto">
 
-                        <Link href="/" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <Home className="h-5 w-5" />
+                        <Link href="/" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Home</span>
                         </Link>
 
@@ -215,20 +208,15 @@ const Navbar: React.FC = () => {
                             </div>
                         </div>
 
-                        <Link href="/about-us" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                        <Link href="/about-us" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">About</span>
                         </Link>
 
-                        <Link href="/our-work" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <span className="font-medium">Our Work</span>
-                        </Link>
-
-                        <Link href="/blogs" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                        <Link href="/blogs" onClick={closeMobileMenu} className="flex items-center  px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Blog</span>
                         </Link>
 
-                        <Link href="/contact-us" onClick={closeMobileMenu} className="flex items-center space-x-2 px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                            <Mail className="h-5 w-5" />
+                        <Link href="/contact-us" onClick={closeMobileMenu} className="flex items-center px-2 py-3 hover:text-secondary hover:bg-gray-50 rounded-lg transition-colors duration-200">
                             <span className="font-medium">Contact</span>
                         </Link>
 
